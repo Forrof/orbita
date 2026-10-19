@@ -227,6 +227,14 @@ test('v2 missions still validate and preserve version-specific seeds after the r
 test('reviewed boundaries reject bad translated taxonomy candidates and unrelated people', () => {
   for (const [id, word] of [['q3-trees', 'ratón'], ['q3-trees', 'ababol'], ['q3-fish', 'gallipato de mar'], ['q3-footballers', 'Paulino Uzcudun'], ['q3-materials', 'pirimidine'], ['q3-health', 'flebótomo'], ['q3-transport', 'misil sidewinder']]) assert.equal(matchAnswer(word, category(id), false).accepted, false, `${id}: ${word}`);
 });
+test('a qualified series never borrows the readership statistic of an unqualified novel or film', () => {
+  const result = matchAnswer('La casa de los espíritus', category('q3-series'), false);
+  assert.ok(result.accepted);
+  assert.equal(result.basis, 'editorial-2026');
+  assert.equal(result.count, null);
+  // This snapshot does contain the qualified Carrie series article; retain its real signal.
+  assert.equal(matchAnswer('Carrie', category('q3-series'), false).basis, 'interest-2026');
+});
 test('basic Spanish answers work across every revised question, including gender and common aliases', () => {
   const examples = {
     transport:'metro ligero', market:'arroz', menu:'paella', kitchen:'sartén', home:'sofá', sports:'fútbol', drinks:'agua', desserts:'flan',

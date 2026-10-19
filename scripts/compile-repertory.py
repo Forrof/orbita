@@ -150,7 +150,9 @@ def build(spec):
             score = 10 if count >= 100000 else 30 if count >= 20000 else 60 if count >= 2000 else 85 if count >= 100 else 100
             basis = row['basis']
         elif is_named:
-            signal = signals.get(norm(row.get('article', word))) or signals.get(norm(word))
+            # A qualified article must match its own signal. A film, novel and series
+            # can share a title; borrowing the unqualified page would invent evidence.
+            signal = signals.get(norm(row.get('article', word)))
             if signal:
                 count, days = signal['publishedViews'], signal['daysListed']
                 basis = 'interest-2026'
