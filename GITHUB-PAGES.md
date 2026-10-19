@@ -1,5 +1,7 @@
 # Publish Órbita on GitHub Pages
 
+Live game: **https://forrof.github.io/orbita/** · Repository: **https://github.com/Forrof/orbita**.
+
 The project works as a static website, including its full vocabulary snapshot. The workflow publishes only `dist/` plus data attribution and methodology. Source backups, research scripts, cache files, and browser evidence stay out of the deployed website.
 
 ## One-time setup

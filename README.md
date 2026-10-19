@@ -2,6 +2,8 @@
 
 A complete static web game in Spanish, aimed at Spain. Seven categories, 25 seconds per answer, and more points for less common answers. An original illustrated space expedition replaces Krillion's underwater setting.
 
+**Play online:** [forrof.github.io/orbita](https://forrof.github.io/orbita/) · **Repository:** [Forrof/orbita](https://github.com/Forrof/orbita)
+
 ## GitHub Pages
 
 The included [GitHub Actions workflow](.github/workflows/pages.yml) tests the game, prepares `_site/`, and publishes it to GitHub Pages whenever `main` is updated. In the repository's **Settings → Pages → Build and deployment**, select **GitHub Actions**. See [GITHUB-PAGES.md](GITHUB-PAGES.md) for upload and deployment instructions.
