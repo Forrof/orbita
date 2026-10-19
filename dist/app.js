@@ -245,6 +245,7 @@ function openModal(title, content) {
   modalReturnFocus = document.activeElement;
   $('.modal-content', dialog).innerHTML = `<div class="modal-top"><h2 id="modal-title">${title}</h2><button data-action="close-modal" aria-label="Cerrar ventana">×</button></div>${content}`;
   if (!dialog.open) dialog.showModal();
+  dialog.scrollTop = 0;
 }
 function help() {
   openModal('Tu guía de vuelo.', `<div class="eyebrow">SIETE SEÑALES PARA PENSAR DIFERENTE</div><div class="checklist"><div><span class="mono">01</span><span>Recibes una categoría y tienes <strong>3 segundos de preparación</strong>, seguidos de <strong>25 segundos para escribir una respuesta</strong>.</span></div><div><span class="mono">02</span><span>Escribe algo que encaje y pulsa Enter. Solo se guarda <strong>una respuesta aceptada</strong> por señal. Si no está en el repertorio, puedes volver a intentarlo antes de que se agote el tiempo.</span></div><div><span class="mono">03</span><span><strong>Las respuestas menos familiares en España puntúan más.</strong> Cada punto suma 10 kilómetros a tu viaje. Siete joyas de 100 puntos hacen una misión perfecta: 700 puntos.</span></div></div>${rarityGrid()}<p>La escala actual tiene cinco niveles: <strong>10, 30, 60, 85 y 100 puntos</strong>. Puede haber varias respuestas de 100 puntos. Las partidas antiguas conservan sus reglas y el nivel editorial de 15 puntos.</p><p>Las tildes y las mayúsculas no importan. La <strong>ñ</strong> es una letra distinta. Se aceptan las variantes recogidas en cada categoría. Las correcciones de una errata requieren que las confirmes y el reloj sigue corriendo.</p><p>Al llegar a cero se comprueba lo que hayas escrito. Si no hay una respuesta válida, sumas 0. Entre señales puedes respirar: el reloj se detiene hasta que pulses «Siguiente señal».</p><div class="notice">Una misión diaria por fecha, compartida por todo el mundo, con cambio de día a medianoche de Madrid. La recarga conserva tu partida y el tiempo transcurrido; los menús tampoco detienen el reloj.</div><p>En <strong>Sin límites</strong> puedes seguir explorando. Las <strong>Constelaciones</strong> reúnen temas concretos y el <strong>Archivo</strong> te deja visitar otras fechas. Solo las misiones diarias cuentan para la racha.</p><button class="primary" data-action="close-modal" style="margin-top:15px">Entendido, capitana ↗</button>`);
@@ -373,7 +374,7 @@ window.addEventListener('storage', event => {
 
 async function init() {
   try {
-    const responses = await Promise.all([fetch('./data.json?v=3'), fetch('./repertory.json?v=3')]);
+    const responses = await Promise.all([fetch('./data.json?v=3.1', { cache: 'no-cache' }), fetch('./repertory.json?v=3.1', { cache: 'no-cache' })]);
     if (responses.some(response => !response.ok)) throw new Error('No se ha podido cargar el repertorio.');
     const [base, curated] = await Promise.all(responses.map(response => response.json()));
     if (base.version !== DATA_VERSION || curated.version !== DATA_VERSION) throw new Error('Actualización incompleta. Recarga la página.');
