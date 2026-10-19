@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17262d">
+  <meta name="description" content="Siete categorías. Veinticinco segundos. Una palabra poco común puede llevarte muy lejos. Un juego diario de vocabulario y cultura española.">
+  <title>ÓRBITA · Las palabras raras llegan más lejos</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/icon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="wordmark" href="#daily" aria-label="Órbita, inicio"><img src="./assets/icon.svg" alt="" width="34" height="34"><span>ÓRBITA</span></a>
+      <nav aria-label="Navegación principal">
+        <a href="#daily" data-nav="daily">Misión diaria</a>
+        <a href="#unlimited" data-nav="unlimited">Sin límites <span>∞</span></a>
+        <a href="#packs" data-nav="packs">Constelaciones</a>
+        <a href="#archive" data-nav="archive">Archivo</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" data-action="stats" aria-label="Mi cuaderno de vuelo" title="Mi cuaderno de vuelo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 20V12M12 20V4M19 20V8"/><path d="M2 21H22"/></svg></button>
+        <button class="icon-button" data-action="settings" aria-label="Ajustes" title="Ajustes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7H20M4 17H20"/><circle cx="9" cy="7" r="3" fill="var(--bg)"/><circle cx="15" cy="17" r="3" fill="var(--bg)"/></svg></button>
+      </div>
+    </header>
+    <main id="main" tabindex="-1"><div class="loading"><img src="./assets/icon.svg" alt="" width="48" height="48"><p>Preparando el despegue…</p></div></main>
+    <footer class="site-footer"><span>Un pequeño viaje. Una palabra extraordinaria.</span><div><button data-action="help">Cómo se juega</button><span>·</span><button data-action="sources">Datos y fuentes</button><span class="edition">HECHO PARA PENSAR EN ESPAÑOL ↗</span></div></footer>
+  </div>
+  <dialog id="modal" aria-labelledby="modal-title"><div class="modal-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript>Órbita necesita JavaScript para preparar las categorías y guardar tu partida.</noscript>
+</body>
+</html>

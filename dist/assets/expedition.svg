@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+<defs>
+ <radialGradient id="space"><stop stop-color="#263b43" stop-opacity=".65"/><stop offset="1" stop-color="#121e26" stop-opacity="0"/></radialGradient>
+ <linearGradient id="earth" x1="190" y1="420" x2="350" y2="600" gradientUnits="userSpaceOnUse"><stop stop-color="#afc4b2"/><stop offset="1" stop-color="#517c77"/></linearGradient>
+ <linearGradient id="trail" x1="216" y1="416" x2="381" y2="190" gradientUnits="userSpaceOnUse"><stop stop-color="#d5b480" stop-opacity="0"/><stop offset="1" stop-color="#e7bc70" stop-opacity=".6"/></linearGradient>
+ <pattern id="grain" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="1" cy="2" r=".5" fill="#fff" opacity=".07"/><circle cx="5" cy="6" r=".5" fill="#000" opacity=".18"/></pattern>
+ <clipPath id="globe"><circle cx="238" cy="486" r="115"/></clipPath>
+</defs>
+<circle cx="300" cy="300" r="290" fill="url(#space)"/>
+<g stroke="#b9c6c6" stroke-opacity=".17"><circle cx="300" cy="302" r="226"/><circle cx="300" cy="302" r="164" stroke-dasharray="2 7"/><ellipse cx="300" cy="302" rx="280" ry="112" transform="rotate(-42 300 302)"/><path d="M300 29V47M300 557V575M28 302H46M554 302H572"/></g>
+<path d="M194 453C314 423 321 320 389 195" stroke="url(#trail)" stroke-width="32"/>
+<path d="M190 453C310 423 325 317 391 194" stroke="#e7bc70" stroke-opacity=".6" stroke-dasharray="3 8"/>
+<g clip-path="url(#globe)">
+ <circle cx="238" cy="486" r="115" fill="url(#earth)"/>
+ <path d="M123 445L157 425L192 430L213 449L206 467L221 487L207 503L211 526L184 547L182 579H133M263 377L281 409L263 426L272 448L252 462L270 483L298 488L316 518L354 530L357 404M211 383L221 405L209 414L195 406L186 388" fill="#d7d6b8" opacity=".65"/>
+ <g stroke="#e5e5cb" stroke-opacity=".17"><ellipse cx="238" cy="486" rx="62" ry="115"/><ellipse cx="238" cy="486" rx="22" ry="115"/><ellipse cx="238" cy="486" rx="115" ry="41"/><path d="M123 486H353M238 371V601"/></g>
+ <circle cx="238" cy="486" r="115" fill="url(#grain)"/>
+ <path d="M303 385C235 462 257 550 290 591H368V381" fill="#152d36" fill-opacity=".36"/>
+</g>
+<circle cx="238" cy="486" r="119" stroke="#a4beb2" stroke-opacity=".16" stroke-width="3"/>
+<ellipse cx="239" cy="487" rx="174" ry="37" transform="rotate(-21 239 487)" stroke="#bfcebd" stroke-opacity=".3"/>
+<g transform="translate(373 230) rotate(30)">
+ <path d="M-14 27L-23 60L0 51L23 60L14 27" fill="#c56c4f"/>
+ <path d="M-15 34C-20-4-12-40 0-56C12-40 20-4 15 34Z" fill="#ede5d0"/>
+ <path d="M0-56C8-43 12-33 15-21H-15C-12-33-8-43 0-56" fill="#cc7657"/>
+ <circle cy="-1" r="9" fill="#1b3640" stroke="#c4bda8" stroke-width="4"/>
+ <path d="M-7 39L-10 64L0 81L10 64L7 39" fill="#edbc72"/>
+ <path d="M-4 40L0 66L4 40" fill="#fff0bd"/>
+ <path d="M0 18V47" stroke="#b5b09e" stroke-width="2"/>
+</g>
+<g transform="translate(462 113) rotate(-18)"><circle r="29" fill="#c9bca0"/><circle cx="-8" cy="-6" r="8" fill="#a99e8a" opacity=".6"/><circle cx="10" cy="12" r="5" fill="#a99e8a" opacity=".5"/><path d="M16-25C2-2 9 17 22 20A29 29 0 0 0 16-25" fill="#887f71" opacity=".5"/></g>
+<g fill="#e0d5b7"><path d="M148 119L151 129L161 132L151 135L148 145L145 135L135 132L145 129Z"/><path d="M477 351L480 360L489 363L480 366L477 375L474 366L465 363L474 360Z"/><path d="M288 81L290 87L296 89L290 91L288 97L286 91L280 89L286 87Z"/></g>
+<g fill="#c5d0c4" opacity=".65"><circle cx="103" cy="295" r="2"/><circle cx="216" cy="169" r="1.5"/><circle cx="379" cy="96" r="1.5"/><circle cx="500" cy="238" r="2"/><circle cx="344" cy="377" r="1.5"/><circle cx="112" cy="209" r="1"/><circle cx="410" cy="450" r="1"/><circle cx="452" cy="510" r="1.5"/><circle cx="209" cy="285" r="1.3"/><circle cx="531" cy="401" r="1.3"/><circle cx="63" cy="411" r="1.3"/><circle cx="327" cy="162" r="1"/></g>
+<g font-family="monospace" font-size="10" letter-spacing="2" fill="#a0b0ad"><text x="53" y="366">TIERRA</text><path d="M101 362L141 396" stroke="#8d9b96" stroke-width=".6"/><text x="406" y="302">LO INESPERADO</text><path d="M411 311H505" stroke="#8d9b96" stroke-width=".6"/><text x="116" y="76" transform="rotate(-28 116 76)">EL LÍMITE LO PONES TÚ</text></g>
+</svg>

@@ -1,0 +1,49 @@
+# Data and asset attribution
+
+## Version 2: SPALEX recognition data
+
+**Aguasvivas, José, et al. · SPALEX, Word information, version 4.** [Dataset and authorship](https://figshare.com/articles/dataset/Word_information/5924794), DOI [10.6084/m9.figshare.5924794.v4](https://doi.org/10.6084/m9.figshare.5924794.v4). Distributed under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/). Original file: [word_info.csv](https://ndownloader.figshare.com/files/11826623).
+
+Changes: selected `spelling`, `percent_nts`, and `count_nts` from the native-Spain cohort, retained adequate samples, converted to compact records, linked independently attested inflections to measured lemmas, and derived game score bands and editorial gems. Recognition data collected in 2014–2017 is not a representative current population poll. The source authors do not endorse Órbita or its derived scoring.
+
+## Version 2: form validation and attestation
+
+[Spanish Data by doozan](https://github.com/doozan/spanish_data), [es_allforms.csv](https://github.com/doozan/spanish_data/blob/master/es_allforms.csv), provides Spanish form-to-lemma and part-of-speech mappings derived from [Wiktionary](https://en.wiktionary.org/). The repository identifies its general license as [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), with source-specific exceptions. Wiktionary-derived material retains its applicable attribution and share-alike obligations; see [Wikimedia Terms of Use](https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use) and [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). This attribution supplements, and does not remove, the original Wiktionary contributor attribution accessible through page histories.
+
+[FrequencyWords by Hermit Dave](https://github.com/hermitdave/FrequencyWords), specifically [2018/es/es_full.txt](https://github.com/hermitdave/FrequencyWords/blob/master/content/2018/es/es_full.txt), uses OpenSubtitles-derived counts. Its data is [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) and its generator code is MIT. Version 2 uses only the presence of a form to validate that an inflection is attested; its pan-Hispanic occurrence counts do not determine rarity. Changes include filtering, joins to measured lemmas, deduplication, and compact JSON conversion. Derived lexical mappings retain the applicable attribution and share-alike terms.
+
+## Version 2: Wikimedia country statistics and article metadata
+
+Source: **Wikimedia Foundation / Wikimedia Analytics**, public aggregated country-ES daily top-page lists, all access methods, September 2026, filtered to Spanish Wikipedia. See the [official API reference](https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/reference/page-views.html) and [country-data documentation](https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/concepts/country-data.html). These are published aggregate statistics, not downloaded individual reader records.
+
+Changes: summed published rounded entries, required at least three listed days, resolved article redirects, and derived category-relative interest bands. The index is not a complete exact monthly count. Article category metadata, titles, and aliases come from Wikipedia's public API and are credited to **Wikipedia contributors**, subject to applicable [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) attribution/share-alike terms. Article titles retained in the data identify their source articles; contributor histories are accessible through those articles. Editorial category boundaries and aliases were added for the game. Wikimedia does not endorse these selections or scores.
+
+Source URLs, periods, and SHA-256 hashes are recorded in `dist/data.json`. The full transformation and interpretation are documented in [DATA-EXPANSION.md](DATA-EXPANSION.md).
+
+## Version 1 legacy Spanish frequency data
+
+Source: [Spanish Data, by doozan](https://github.com/doozan/spanish_data), specifically [frequency.csv](https://github.com/doozan/spanish_data/blob/master/frequency.csv). The author describes this as Spanish lemmas with parts of speech and combined word forms and credits [Hermit Dave's FrequencyWords](https://github.com/hermitdave/FrequencyWords).
+
+Spanish Data explicitly identifies `frequency.csv` as **CC BY-SA 3.0**, with FrequencyWords attribution. [CC BY-SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/). FrequencyWords separately identifies its content as **CC BY-SA 4.0** and its generator code as MIT; [CC BY-SA 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/).
+
+Underlying corpus: [OpenSubtitles](https://www.opensubtitles.org/), via the FrequencyWords corpus described by its maintainers. The corpus is pan-Hispanic and not restricted to Spain.
+
+Changes made for Órbita: selected lowercase Spanish alphabetic lemmas with noun, verb, adjective or adverb tags, no warning flags, 3–18 characters, and at least ten occurrences; retained observed inflections for semantic-category aliases. Stored compact JSON records and used category-relative ranks for game scoring. The derived lexical data retains the attribution and share-alike terms of the credited frequency source. This is not an endorsement by the source authors.
+
+The imported source hash, URL and import date are included in `dist/data.json`. Independently curated semantic sets and gems live in `dist/categories.js`; missing numeric observations remain null, never fabricated.
+
+## Version 1 legacy Spanish population statistics
+
+**Source: INE, www.ine.es.** Municipal-register figures at **1 January 2025**, made official in [Real Decreto 1117/2025, BOE-A-2025-25362](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-25362), published 11 December 2025. Imported the annex's provincial/autonomous-city, provincial-capital, and island population tables.
+
+Changes: parsed published integer population figures, added familiar Spanish and co-official place aliases, filtered category subsets, and derived rarity ranks. The exactness and reliability of the derived game scoring are the responsibility of Órbita, not the INE or BOE.
+
+## Fonts
+
+**DM Sans**, Colophon Foundry and its credited contributors, distributed under the SIL Open Font License 1.1. Font files are hosted locally. The complete license is at `dist/assets/DM-Sans-LICENSE.txt`. Downloaded from Google Fonts' official font service.
+
+## Artwork and reference game
+
+The rocket, planets, orbit graphics, icon, interface and CSS were created for this project. No Krillion artwork, sound files, text, question banks, answer sets or source-code implementations are included.
+
+[Krillion](https://krillion.io/) was studied as the requested game-design reference. Its name and assets belong to their respective owners. Órbita's source is an independent implementation of the observed gameplay rules.
