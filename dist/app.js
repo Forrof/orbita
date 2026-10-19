@@ -1,6 +1,6 @@
-import { TIERS, ROUNDS, ANSWER_MS, DATA_VERSION, SUPPORTED_VERSIONS, madridDate, dateOffset, missionNumber, band, normalize, createRun, validateRun, startRound, finishRound, advanceClock, matchAnswer, totalScore, tierFor, streaks } from './engine.js?v=3';
+import { TIERS, ROUNDS, ANSWER_MS, DATA_VERSION, SUPPORTED_VERSIONS, madridDate, dateOffset, missionNumber, band, normalize, createRun, validateRun, startRound, finishRound, advanceClock, matchAnswer, totalScore, streaks } from './engine.js?v=3';
 import { buildCategories, PACKS } from './categories.js?v=3';
-import { sourcePanel } from './sources-panel.js?v=3';
+import { sourcePanel } from './sources-panel.js?v=3.2';
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const main = $('#main'), dialog = $('#modal');
@@ -12,8 +12,6 @@ const today = () => madridDate();
 const defaults = () => ({ schema: 1, runs: {}, settings: { sound: false, corrections: true, clearRejected: false, reducedMotion: false, outfit: 'ivory' }, unlimited: 1, chapters: {}, archivePage: 0 });
 let data, categories, byId, store = defaults(), run = null, currentKey = '', route = 'daily', challenge = null, lastDay = today(), lastTimerSecond = -1, storageWarning = false, audio;
 let feedbackMessage = '', toastTimeout, modalReturnFocus;
-let catalogLimit = 48;
-const answerBrowserCache = new Map();
 const outfits = [
   { id: 'ivory', name: 'Pionera', days: 0, color: '#ede5d0', symbol: '↗' },
   { id: 'sage', name: 'Exploradora', days: 5, color: '#abc2a5', symbol: '✦' },
@@ -137,7 +135,7 @@ function evidenceText(result) {
 }
 function feedbackScreen(c) {
   const result = run.results.at(-1), tier = TIERS[result.tier], metric = evidenceText(result);
-  return `<div class="game-copy feedback" style="--tier:${tier.color}"><div class="result-tier"><span>${tier.symbol}</span>${tier.name}</div><h1 id="feedback-title">${result.accepted ? `«${esc(result.answer)}»` : result.skipped ? 'Dejamos pasar esta señal.' : result.raw ? `«${esc(result.raw)}»` : 'Se acabó el tiempo.'}</h1><div class="points-award">+${result.score}<small>PUNTOS · ${fmt(result.score * 10)} KM MÁS LEJOS</small></div><p>${esc(tier.text)}</p>${!result.accepted && result.raw && !result.skipped ? `<p class="smallprint">La respuesta no está en el repertorio de esta categoría. Al final podrás consultar todas las respuestas aceptadas.</p>` : ''}<p class="source-note">${result.accepted ? esc(metric) : 'Una señal sin respuesta suma 0 puntos.'}</p><button id="continue" class="primary" data-action="continue">${run.results.length === ROUNDS ? 'Ver mi expedición' : 'Siguiente señal'}<span class="arrow" aria-hidden="true">↗</span></button><p class="smallprint">${run.results.length === ROUNDS ? 'Las siete señales están completas.' : `${ROUNDS - run.results.length} ${ROUNDS - run.results.length === 1 ? 'señal' : 'señales'} por descubrir. Respira: aquí el reloj está parado.`}</p></div>`;
+  return `<div class="game-copy feedback" style="--tier:${tier.color}"><div class="result-tier"><span>${tier.symbol}</span>${tier.name}</div><h1 id="feedback-title">${result.accepted ? `«${esc(result.answer)}»` : result.skipped ? 'Dejamos pasar esta señal.' : result.raw ? `«${esc(result.raw)}»` : 'Se acabó el tiempo.'}</h1><div class="points-award">+${result.score}<small>PUNTOS · ${fmt(result.score * 10)} KM MÁS LEJOS</small></div><p>${esc(tier.text)}</p>${!result.accepted && result.raw && !result.skipped ? `<p class="smallprint">La respuesta no está en el repertorio de esta categoría.</p>` : ''}<p class="source-note">${result.accepted ? esc(metric) : 'Una señal sin respuesta suma 0 puntos.'}</p><button id="continue" class="primary" data-action="continue">${run.results.length === ROUNDS ? 'Ver mi expedición' : 'Siguiente señal'}<span class="arrow" aria-hidden="true">↗</span></button><p class="smallprint">${run.results.length === ROUNDS ? 'Las siete señales están completas.' : `${ROUNDS - run.results.length} ${ROUNDS - run.results.length === 1 ? 'señal' : 'señales'} por descubrir. Respira: aquí el reloj está parado.`}</p></div>`;
 }
 function submitAnswer(raw, confirmed = false) {
   run = advanceClock(run, categories);
@@ -171,54 +169,18 @@ function finishMission() {
 }
 function resultScreen() {
   const score = totalScore(run), tier = TIERS[band(score)];
-  main.innerHTML = `<section class="results-heading"><div><div class="eyebrow"><span class="status-dot"></span>EXPEDICIÓN COMPLETADA · ${esc(modeDetail())}</div><h1>${esc(tier.name)}.<br><em style="color:var(--gold)">Tu curiosidad te ha traído aquí.</em></h1><p>${fmt(score * 10)} km de viaje · ${run.results.filter(r => r.accepted).length} señales recibidas · 7 palabras para recordar.</p></div><div class="final-score">${score}<small>/ 700 puntos</small></div></section>${challenge && run.mode === 'challenge' ? comparison() : ''}<div class="trajectory" aria-label="Puntuaciones de las siete rondas">${run.results.map((r, i) => `<div style="--tier:${TIERS[r.tier].color};--score:${r.score}" title="Señal ${i + 1}: ${r.score} puntos"><span class="trail-symbol">${TIERS[r.tier].symbol}</span><div class="trail"></div><small>${String(i + 1).padStart(2, '0')} · ${r.score}</small></div>`).join('')}</div><div class="results-tools"><button class="primary" data-action="share">Compartir resultado <span class="arrow">↗</span></button><button class="secondary" data-action="challenge-link">Retar a alguien ◎</button>${run.mode === 'pack' ? `<button class="secondary" data-action="next-chapter">Siguiente capítulo →</button>` : `<button class="secondary" data-action="next-unlimited">Seguir explorando ∞</button>`}</div>${run.mode === 'daily' ? `<p class="daily-next">La próxima misión llega a medianoche, hora de Madrid. <span id="next-daily-countdown"></span></p>` : ''}<div class="section-label" style="margin-top:29px"><span class="mono">TU CUADERNO DE SEÑALES</span><p>Abre cada categoría para descubrir las respuestas.</p></div><section class="reveal-list" aria-label="Respuestas y categorías">${run.results.map((r, i) => { const c = byId.get(r.prompt), t = TIERS[r.tier]; return `<details class="reveal-item" data-category="${c.id}"><summary style="--tier:${t.color}"><span class="num">${String(i + 1).padStart(2, '0')}</span><span>${esc(c.text)}</span><span class="answer">${esc(r.answer || 'Sin señal')}</span><span class="points">+${r.score}</span><span class="chevron">+</span></summary><div class="reveal-body"><p>${esc(c.source)}</p><p><span style="color:var(--gold)">✷ Ejemplo de 100 puntos: ${esc(c.gem)}</span> · 100 puntos. ${c.clever?.length ? `Falsa pista: ${esc(c.clever.join(', '))} · 15 puntos. ` : ''}Consulta las fuentes para ver qué puntuaciones usan datos y cuáles son estimaciones editoriales.</p><input class="search-answers" type="search" placeholder="Buscar en esta categoría…" aria-label="Buscar respuestas de ${esc(c.text)}" data-search="${c.id}"><div class="answer-filters" role="group" aria-label="Filtrar respuestas por rareza"><button class="filter-chip active" data-filter="all" aria-pressed="true">Todas</button>${Object.entries(TIERS).filter(([id]) => id !== 'miss' && c.answers.some(a => tierFor(a, c) === id)).map(([id, t]) => `<button class="filter-chip" data-filter="${id}" aria-pressed="false">${t.symbol} ${t.score} pts</button>`).join('')}</div><div class="answer-list" data-list="${c.id}"></div><span class="answer-count" data-count="${c.id}"></span></div></details>`; }).join('')}</section><div class="inline-actions" style="margin-bottom:25px"><button class="text-button" data-action="stats">Mi cuaderno de vuelo ↗</button><a href="#packs" class="text-button">Explorar constelaciones ↗</a><button class="text-button" data-action="sources">Cómo se calcula la rareza ↗</button></div>`;
+  main.innerHTML = `<section class="results-heading"><div><div class="eyebrow"><span class="status-dot"></span>EXPEDICIÓN COMPLETADA · ${esc(modeDetail())}</div><h1>${esc(tier.name)}.<br><em style="color:var(--gold)">Tu curiosidad te ha traído aquí.</em></h1><p>${fmt(score * 10)} km de viaje · ${run.results.filter(r => r.accepted).length} señales recibidas · 7 palabras para recordar.</p></div><div class="final-score">${score}<small>/ 700 puntos</small></div></section>${challenge && run.mode === 'challenge' ? comparison() : ''}<div class="trajectory" aria-label="Puntuaciones de las siete rondas">${run.results.map((r, i) => `<div style="--tier:${TIERS[r.tier].color};--score:${r.score}" title="Señal ${i + 1}: ${r.score} puntos"><span class="trail-symbol">${TIERS[r.tier].symbol}</span><div class="trail"></div><small>${String(i + 1).padStart(2, '0')} · ${r.score}</small></div>`).join('')}</div><div class="results-tools"><button class="primary" data-action="share">Compartir resultado <span class="arrow">↗</span></button><button class="secondary" data-action="challenge-link">Retar a alguien ◎</button>${run.mode === 'pack' ? `<button class="secondary" data-action="next-chapter">Siguiente capítulo →</button>` : `<button class="secondary" data-action="next-unlimited">Seguir explorando ∞</button>`}</div>${run.mode === 'daily' ? `<p class="daily-next">La próxima misión llega a medianoche, hora de Madrid. <span id="next-daily-countdown"></span></p>` : ''}<div class="section-label" style="margin-top:29px"><span class="mono">TU CUADERNO DE SEÑALES</span><p>Tus respuestas y puntos de esta expedición.</p></div><ol class="mission-recap" aria-label="Tus respuestas de esta partida">${run.results.map((r, i) => { const c = byId.get(r.prompt), t = TIERS[r.tier]; return `<li class="recap-row" style="--tier:${t.color}"><span class="num">${String(i + 1).padStart(2, '0')}</span><span class="recap-question">${esc(c.text)}</span><span class="recap-answer">${esc(r.answer || r.raw || 'Sin señal')}</span><span class="recap-points">+${r.score}</span></li>`; }).join('')}</ol><div class="inline-actions" style="margin-bottom:25px"><button class="text-button" data-action="stats">Mi cuaderno de vuelo ↗</button><a href="#packs" class="text-button">Explorar constelaciones ↗</a><button class="text-button" data-action="sources">Cómo se calcula la rareza ↗</button></div>`;
   updateCountdown();
 }
 function comparison() {
   const score = totalScore(run), diff = score - challenge.score;
   return `<div class="challenge-comparison"><div><span class="mono">TU RESULTADO</span><br><strong>${score}</strong></div><p>${diff > 0 ? `Has llegado ${diff} puntos más lejos.` : diff < 0 ? `Te han sacado ${-diff} puntos. La próxima señal puede ser tuya.` : 'La misma altura. ¡Empate orbital!'}<br>Comparación con la puntuación compartida por quien te retó.</p><div><span class="mono">SU RESULTADO</span><br><strong>${challenge.score}</strong></div></div>`;
 }
-function updateAnswerList(details) {
-  const c = byId.get(details.dataset.category), query = normalize($('[data-search]', details)?.value || ''), filter = $('.filter-chip.active', details)?.dataset.filter || 'all';
-  if (!answerBrowserCache.has(c)) {
-    answerBrowserCache.set(c, c.answers.map(a => ({ ...a, tier: tierFor(a, c), search: [a.key || normalize(a.word), ...(a.aliases || []).map(normalize)] })).sort((a, b) => TIERS[b.tier].score - TIERS[a.tier].score || a.word.localeCompare(b.word, 'es')));
-    if (answerBrowserCache.size > 7) answerBrowserCache.delete(answerBrowserCache.keys().next().value);
-  }
-  const all = answerBrowserCache.get(c).filter(a => (filter === 'all' || a.tier === filter) && (!query || a.search.some(s => s.includes(query))));
-  const playerAnswer = run.results.find(r => r.prompt === c.id)?.answer;
-  // All matches stay available through search; cap DOM size per category for smooth typing.
-  $('[data-list]', details).innerHTML = all.slice(0, 300).map(a => `<div style="--tier:${TIERS[a.tier].color}"><span class="${a.word === playerAnswer ? 'your-answer' : ''}">${esc(a.word)}${a.word === playerAnswer ? ' ← tú' : ''}</span><span class="answer-score">+${TIERS[a.tier].score}</span></div>`).join('') || '<p>Sin coincidencias.</p>';
-  $('[data-count]', details).textContent = `${all.length > 300 ? '300 de ' : ''}${fmt(all.length)} ${all.length === 1 ? 'respuesta' : 'respuestas'}${all.length > 300 ? ' · Usa el buscador para encontrar cualquiera del repertorio.' : ''}`;
-}
 function databaseBanner() {
-  return `<section class="database-banner" aria-label="Base de preguntas ampliada"><div><span class="mono">LA MISMA CURIOSIDAD. MUCHO MÁS UNIVERSO.</span><p><strong>${fmt(categories.filter(c => !c.legacy).length)}</strong> preguntas diferentes · <strong>100+</strong> respuestas por pregunta · 7 constelaciones</p><small>Edición de octubre de 2026. Datos españoles recientes y estimaciones editoriales identificadas.</small></div><a class="secondary" href="#catalog">Explorar preguntas ↗</a></section>`;
-}
-function catalogScreen() {
-  catalogLimit = 48;
-  main.innerHTML = `<div class="page-heading"><div class="eyebrow"><span class="status-dot"></span>EL MUNDO ENTERO, MIRADO DESDE ESPAÑA</div><h1>Un universo de preguntas.</h1><p>Temas diferentes, respuestas de todo el mundo y rareza pensada para España. Abre una pregunta para comprobar cualquier respuesta y su puntuación.</p></div><div class="data-facts"><div><b>${fmt(categories.filter(c => !c.legacy).length)}</b><span>preguntas diferentes</span></div><div><b>100+</b><span>respuestas distintas por pregunta, sin contar alias</span></div><div><b>2026</b><span>edición revisada · datos y estimaciones identificados</span></div></div><div class="catalog-controls"><input class="search-answers" id="catalog-search" type="search" aria-label="Buscar preguntas" placeholder="Busca: transporte, película, fútbol, animal…"><select id="catalog-pack" aria-label="Filtrar preguntas por constelación"><option value="all">Todos los temas</option>${Object.entries(PACKS).filter(([id]) => id !== 'all').map(([id, p]) => `<option value="${id}">${p.name}</option>`).join('')}</select></div><div id="catalog-results"></div><button class="text-button" data-action="sources" style="margin:15px 0 35px">Entender las estadísticas de España ↗</button>`;
-  catalogResults();
-}
-function catalogResults() {
-  const query = normalize($('#catalog-search')?.value || ''), pack = $('#catalog-pack')?.value || 'all';
-  const matches = categories.filter(c => !c.legacy && (pack === 'all' || c.pack === pack) && (!query || normalize(`${c.text} ${PACKS[c.pack].name}`).includes(query)));
-  $('#catalog-results').innerHTML = `<p class="smallprint">${fmt(matches.length)} ${matches.length === 1 ? 'pregunta' : 'preguntas'} · ${Math.min(matches.length, catalogLimit)} ${Math.min(matches.length, catalogLimit) === 1 ? 'mostrada' : 'mostradas'}</p><div class="catalog-grid">${matches.slice(0, catalogLimit).map(c => `<button class="catalog-card" data-action="inspect-question" data-category="${c.id}"><span class="mono">${esc(PACKS[c.pack].name)}</span><strong>${esc(c.text)}</strong><small>${fmt(c.answers.length)} respuestas · Rareza desde España</small><span class="catalog-arrow">↗</span></button>`).join('')}</div>${matches.length > catalogLimit ? '<button class="secondary" data-action="catalog-more" style="margin:23px 0">Ver más preguntas ↓</button>' : ''}`;
-}
-function basisLabel(answer, category) {
-  if (answer.basis?.startsWith('ine-')) return 'INE · publicado en 2026';
-  if (answer.basis === 'interest-2026') return 'Interés ES · sep–oct 2026';
-  return answer.basis === 'editorial-historical' || category.metric === 'dictionary-es-2026' ? 'Editorial · referencia 2014–2017' : 'Editorial · 2026';
-}
-function inspectQuestion(id) {
-  const c = byId.get(id); if (!c || c.legacy) return;
-  const answers = [...c.answers].sort((a, b) => TIERS[tierFor(a, c)].score - TIERS[tierFor(b, c)].score || a.word.localeCompare(b.word, 'es')).slice(0, 16);
-  openModal('Una señal del universo.', `<div class="eyebrow">${esc(PACKS[c.pack].name)}</div><h3 style="font:400 26px/1.3 Georgia,serif">${esc(c.text)}</h3><p>${esc(c.source)}</p><form id="check-answer-form" data-category="${c.id}" class="answer-checker"><label for="check-answer">Comprueba una respuesta</label><div><input class="search-answers" id="check-answer" maxlength="100" autocomplete="off" placeholder="Escribe aquí…" required><button class="secondary" type="submit">Comprobar ↗</button></div><p id="check-result" role="status" aria-live="polite"></p></form><p class="smallprint">${fmt(c.answers.length)} respuestas distintas, además de sus alias. Muestra de respuestas del nivel más común:</p><div class="question-samples">${answers.map(a => `<div><span>${esc(a.word)}</span><small>${basisLabel(a, c)}</small><b style="color:${TIERS[tierFor(a, c)].color}">+${TIERS[tierFor(a, c)].score}</b></div>`).join('')}</div><p class="smallprint">✷ Ejemplo de 100 puntos: ${esc(c.gem)}. Puede haber varias respuestas en este nivel.</p><button class="text-button" data-action="sources">Datos y metodología ↗</button>`);
-}
-function checkCatalogAnswer(form) {
-  const result = matchAnswer($('#check-answer').value, byId.get(form.dataset.category), false);
-  $('#check-result').innerHTML = result.accepted ? `<strong style="color:${TIERS[result.tier].color}">✓ ${esc(result.answer)} · +${result.score} puntos</strong><br><span class="smallprint">${esc(evidenceText(result))}</span>` : 'Esta respuesta no está en el repertorio. Puedes probar otra.';
+  return `<section class="database-banner" aria-label="Base de preguntas ampliada"><div><span class="mono">LA MISMA CURIOSIDAD. MUCHO MÁS UNIVERSO.</span><p><strong>${fmt(categories.filter(c => !c.legacy).length)}</strong> preguntas diferentes · <strong>100+</strong> respuestas por pregunta · 7 constelaciones</p><small>Edición de octubre de 2026. Datos españoles recientes y estimaciones editoriales identificadas.</small></div></section>`;
 }
 function packsScreen() {
-  main.innerHTML = `<div class="page-heading"><div class="eyebrow"><span class="status-dot"></span>SIETE UNIVERSOS, LA MISMA CURIOSIDAD</div><h1>Constelaciones.</h1><p>Elige un tema y explora sus 30 capítulos. Los temas recorren el mundo; la rareza se valora desde España.</p><a class="text-button" href="#catalog">Explorar el banco de preguntas ↗</a></div><div class="pack-grid">${Object.entries(PACKS).filter(([id]) => id !== 'all').map(([id, p]) => { const done = new Set(completed().filter(r => r.mode === 'pack' && r.pack === id).map(r => r.seed)).size; return `<article class="pack-card"><span class="pack-icon" aria-hidden="true">${p.icon}</span><span class="mono" style="font-size:9px;color:var(--muted)">${categories.filter(c => !c.legacy && c.pack === id).length} CATEGORÍAS · 30 CAPÍTULOS</span><h2>${p.name}</h2><p>${p.subtitle}</p><a class="secondary" href="#pack/${id}/${store.chapters[id] || 1}">Explorar constelación ↗</a><span class="pack-progress">${done} / 30</span></article>`; }).join('')}</div><p class="archive-note">Cada capítulo combina siete categorías del tema. Algunas categorías reaparecen para que puedas probar respuestas distintas.</p>`;
+  main.innerHTML = `<div class="page-heading"><div class="eyebrow"><span class="status-dot"></span>SIETE UNIVERSOS, LA MISMA CURIOSIDAD</div><h1>Constelaciones.</h1><p>Elige un tema y explora sus 30 capítulos. Los temas recorren el mundo; la rareza se valora desde España.</p></div><div class="pack-grid">${Object.entries(PACKS).filter(([id]) => id !== 'all').map(([id, p]) => { const done = new Set(completed().filter(r => r.mode === 'pack' && r.pack === id).map(r => r.seed)).size; return `<article class="pack-card"><span class="pack-icon" aria-hidden="true">${p.icon}</span><span class="mono" style="font-size:9px;color:var(--muted)">${categories.filter(c => !c.legacy && c.pack === id).length} CATEGORÍAS · 30 CAPÍTULOS</span><h2>${p.name}</h2><p>${p.subtitle}</p><a class="secondary" href="#pack/${id}/${store.chapters[id] || 1}">Explorar constelación ↗</a><span class="pack-progress">${done} / 30</span></article>`; }).join('')}</div><p class="archive-note">Cada capítulo combina siete categorías del tema. Algunas categorías reaparecen para que puedas probar respuestas distintas.</p>`;
 }
 function archiveScreen() {
   const end = dateOffset(today(), -1 - store.archivePage * 28), start = dateOffset(end, -27);
@@ -232,12 +194,13 @@ function statsScreen() {
 }
 function render() {
   document.querySelectorAll('[data-nav]').forEach(a => { const active = a.dataset.nav === route || a.dataset.nav === 'packs' && route.startsWith('pack/') || a.dataset.nav === 'archive' && route.startsWith('archive/'); a.classList.toggle('active', active); if (active) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
-  if (route === 'catalog') catalogScreen(); else if (route === 'packs') packsScreen(); else if (route === 'archive') archiveScreen(); else if (route === 'stats') statsScreen();
+  if (route === 'packs') packsScreen(); else if (route === 'archive') archiveScreen(); else if (route === 'stats') statsScreen();
   else if (run) { if (run.phase === 'intro') landing(); else if (run.phase === 'done') resultScreen(); else gameScreen(); }
   else { location.hash = '#daily'; }
 }
 function navigate() {
   save(); route = location.hash.slice(1) || (challenge ? 'challenge' : 'daily');
+  if (route === 'catalog' || route.startsWith('catalog/')) { route = 'daily'; history.replaceState(null, '', '#daily'); }
   if (dialog.open) dialog.close();
   routeRun(); render(); window.scrollTo({ top: 0, behavior: 'instant' });
 }
@@ -314,8 +277,6 @@ function updateCountdown() {
 }
 document.addEventListener('click', async event => {
   if (event.target.closest('.skip-link')) { event.preventDefault(); main.focus(); return; }
-  const filter = event.target.closest('[data-filter]');
-  if (filter) { const details = filter.closest('details'); details.querySelectorAll('[data-filter]').forEach(b => { b.classList.toggle('active', b === filter); b.setAttribute('aria-pressed', String(b === filter)); }); updateAnswerList(details); return; }
   const button = event.target.closest('[data-action]'); if (!button || !categories) return;
   const action = button.dataset.action;
   if (action === 'launch') { run = startRound(run); save(); sound(); render(); }
@@ -324,8 +285,6 @@ document.addEventListener('click', async event => {
   else if (action === 'suggest') submitAnswer(button.dataset.value, true);
   else if (action === 'help') help();
   else if (action === 'sources') sources();
-  else if (action === 'inspect-question') inspectQuestion(button.dataset.category);
-  else if (action === 'catalog-more') { catalogLimit += 48; catalogResults(); }
   else if (action === 'settings') settings();
   else if (action === 'stats') location.hash = '#stats';
   else if (action === 'close-modal') dialog.close();
@@ -343,20 +302,15 @@ document.addEventListener('click', async event => {
 });
 document.addEventListener('submit', event => {
   if (event.target.id === 'answer-form') { event.preventDefault(); submitAnswer($('#answer').value); }
-  if (event.target.id === 'check-answer-form') { event.preventDefault(); checkCatalogAnswer(event.target); }
 });
 document.addEventListener('input', event => {
-  if (event.target.id === 'catalog-search') { catalogLimit = 48; catalogResults(); }
   if (event.target.id === 'answer' && run?.phase === 'answering') { run.draft = event.target.value; save(); }
-  if (event.target.matches('[data-search]')) updateAnswerList(event.target.closest('details'));
 });
 document.addEventListener('change', event => {
-  if (event.target.id === 'catalog-pack') { catalogLimit = 48; catalogResults(); }
   if (event.target.dataset.setting) { store.settings[event.target.dataset.setting] = event.target.checked; applySettings(); save(); if (event.target.dataset.setting === 'sound') sound(); }
   if (event.target.id === 'chapter-select') location.hash = `#pack/${run.pack}/${event.target.value}`;
   if (event.target.id === 'import-file') importData(event.target.files[0]);
 });
-document.addEventListener('toggle', event => { if (event.target.matches?.('.reveal-item[open]')) updateAnswerList(event.target); }, true);
 dialog.addEventListener('click', event => { if (event.target === dialog) { const box = dialog.getBoundingClientRect(); if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close(); } });
 dialog.addEventListener('close', () => modalReturnFocus?.isConnected && modalReturnFocus.focus({ preventScroll: true }));
 window.addEventListener('hashchange', navigate);

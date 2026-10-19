@@ -31,11 +31,11 @@ Open **http://localhost:4173**. Stop the server with Ctrl+C. To use another port
 - Seven themed constellations with 30 chapters each: everyday life, nature, words, Spain, science, culture, and the wider world.
 - 56 genuinely different active questions, each with at least 100 canonical answers (aliases do not count toward the minimum). The 231,944-key dictionary remains available: 13.56 times the initial 17,100 lemmas, including documented inflections.
 - Global topics such as cuisines, films, musicians, footballers, brands, science and landscapes, valued for an audience in Spain. Repetitive letter and word-length variants are retired from new games.
-- A searchable question explorer with answer checking, topic filters, canonical-answer counts, score previews and source evidence. Messi, Leo Messi, CR7 and metro ligero are directly accepted.
+- Questions are shown during play. The public interface has no question catalog, answer browser, off-round checker or suggested 100-point solutions. Old catalog links redirect to the daily mission.
 - Current scoring: 0 for a miss, then 10, 30, 60, 85 and 100; rarer answers earn more, with multiple 100-point answers possible. Legacy games retain the 15-point editorial tier. Maximum: 700. Each point advances the ship 10 km.
 - A 3-second preview, then 25 seconds. Invalid answers allow retries; one accepted answer ends the round. At zero, the current draft receives one exact final check.
 - Accent-insensitive matching, aliases and gender/plural variants where supplied, and confirmation of unambiguous one-character typo suggestions. The letter ñ remains distinct.
-- A source-aware result for each round and searchable, tier-filtered answer reveals after the mission.
+- A source-aware result for each round and a final recap limited to the player’s own answers and points.
 - Autosave, draft and timer recovery after reload, local history, daily streaks, score distribution, and five unlockable ship paints.
 - Spoiler-free share text and challenge links that reproduce the same seven prompts and compare the sender's score on completion.
 - Sound, reduced motion, keyboard interaction, responsive layout, JSON export/import, and a visible explanation of data provenance and scoring.
@@ -64,7 +64,7 @@ See [DATA-EXPANSION.md](DATA-EXPANSION.md) for counts, methodology, and limitati
 npm test
 ```
 
-The tests cover all 56 question boundaries, the canonical minimum of 100, familiar examples in every category, Messi/CR7/metro ligero, rarity bands, INE and readership provenance, all 210 chapters, timers, normalization, saved-game compatibility and score totals. Browser QA includes a complete seven-round archive mission and the catalog answer checker; it does not consume the daily mission.
+The tests cover all 56 question boundaries, the canonical minimum of 100, familiar examples in every category, Messi/CR7/metro ligero, rarity bands, INE and readership provenance, all 210 chapters, timers, normalization, saved-game compatibility and score totals. Browser QA includes a complete seven-round archive mission and the retired-catalog redirect and a recap without answer lists; it does not consume the daily mission.
 
 ## Files
 
@@ -75,3 +75,7 @@ For data maintenance, install Python 3.12+ dependencies with `python -m pip inst
 Version 1 and 2 completed results remain saved. Their challenge links retain their question selection. The two older broad transport/footballer questions also receive the improved answers and aliases; already recorded scores are not recalculated. New missions use version 3 and separate save keys, so today's revised edition is accessible without deleting history. Daily statistics deduplicate by civil date.
 
 This local implementation does not include OAuth, cloud sync, payments, advertising, a central friends leaderboard, a live global percentile service, or Krillion's multiplayer party game. Local streaks and challenge scores are not protected against someone deliberately editing browser storage or links.
+
+## Visibility of the answer bank
+
+The website does not offer a question/answer catalog or reveal the solution lists after playing. This is interface-level concealment: GitHub Pages serves a static client, so a technical user can still inspect downloaded game data. The public source repository is also readable. Actual server-side secrecy would require a backend to select prompts and validate answers without sending the bank to the browser.

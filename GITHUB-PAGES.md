@@ -24,7 +24,7 @@ git commit -m "Update Orbita"
 git push
 ```
 
-`npm run pages:build` recreates `_site/` from the current files, checks relative asset references, includes source attribution, and writes `.nojekyll`. `_site/` is generated and ignored by Git. The upload artifact uses its contents as the website root, so the URL has no `/dist/` suffix. Hash routes such as `#daily` and `#catalog` work on GitHub Pages without server rewrites.
+`npm run pages:build` recreates `_site/` from the current files, checks relative asset references, includes source attribution, and writes `.nojekyll`. `_site/` is generated and ignored by Git. The upload artifact uses its contents as the website root, so the URL has no `/dist/` suffix. Hash routes such as `#daily` and `#packs` work on GitHub Pages without server rewrites.
 
 The data is already bundled: deployments do not rerun the external source import or depend on live research APIs. Updating the research snapshot is a separate deliberate step described in README.md.
 
@@ -35,3 +35,5 @@ Browser storage at localhost and at github.io is separate. To transfer progress,
 ## What is public
 
 The hosted game and its bundled vocabulary are downloadable by visitors. A public repository also exposes its tracked source and documentation. `.cache/`, generated `_site/`, environment files, and local dependency folders are excluded. The game has no server-side credentials or online player accounts.
+
+The former `#catalog` route redirects to `#daily`. The public interface does not expose question previews, answer lists or an answer checker outside gameplay. Static hosting still sends the game data to the browser; this does not provide server-side access control.
