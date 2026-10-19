@@ -1,10 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { TIERS, DATA_VERSION, LEGACY_VERSION, normalize, madridDate, dateOffset, pickPrompts, createRun, startRound, advanceClock, finishRound, matchAnswer, totalScore, validateRun, streaks, tierFor, band } from '../dist/engine.js';
+import { TIERS, DATA_VERSION, PREVIOUS_VERSION, LEGACY_VERSION, normalize, madridDate, dateOffset, pickPrompts, createRun, startRound, advanceClock, finishRound, matchAnswer, totalScore, validateRun, streaks, tierFor, recognitionBand, band } from '../dist/engine.js';
 import { buildCategories, PACKS } from '../dist/categories.js';
 
 const data = JSON.parse(await readFile(new URL('../dist/data.json', import.meta.url), 'utf8'));
+data.curated = JSON.parse(await readFile(new URL('../dist/repertory.json', import.meta.url), 'utf8'));
 const categories = buildCategories(data);
 const category = id => categories.find(c => c.id === id);
 function completedDaily(date) {
@@ -155,20 +156,89 @@ test('paella is common using the Spain cohort: 100 percent of 122, and never an 
   for (const c of categories.filter(c => !c.legacy)) for (const a of c.answers.filter(a => a.word === 'paella')) assert.equal(tierFor(a, c), 'common');
 });
 test('v2 rankings use Spain-specific recognition or Spain-located readership, never pan-Hispanic counts or population', () => {
-  const active = categories.filter(c => !c.legacy);
+  const active = categories.filter(c => c.dataVersion === PREVIOUS_VERSION);
   assert.ok(active.length >= 400);
   assert.ok(active.some(c => c.id === 'es-topic-elements'));
   assert.ok(active.some(c => c.id === 'es-world-actors'));
   assert.ok(active.some(c => c.id === 'es-world-films'));
   for (const c of active) {
     assert.ok(['recognition-es', 'interest-es'].includes(c.metric));
-    assert.ok(c.answers.every(a => Number.isFinite(a.count)));
+    const original = c.answers.filter(a => !a.revised);
+    assert.ok(original.every(a => Number.isFinite(a.count)));
     if (c.metric === 'recognition-es') {
-      assert.ok(c.answers.every(a => a.count >= 0 && a.count <= 100 && a.sample >= 30 && typeof a.measuredWord === 'string'));
+      assert.ok(original.every(a => a.count >= 0 && a.count <= 100 && a.sample >= 30 && typeof a.measuredWord === 'string'));
       assert.ok(c.answers.find(a => a.word === c.gem).count < 90);
-      if (c.pack !== 'words') assert.ok(c.answers.every(a => normalize(a.word) === normalize(a.measuredWord)), c.id);
-    } else assert.ok(c.answers.every(a => a.daysListed >= 3));
+      if (c.pack !== 'words') assert.ok(original.every(a => normalize(a.word) === normalize(a.measuredWord)), c.id);
+    } else assert.ok(original.every(a => a.daysListed >= 3));
   }
+});
+test('all 56 current questions have at least 100 canonical answers and no letter/length padding', () => {
+  const active = categories.filter(c => !c.legacy);
+  assert.equal(active.length, 56);
+  assert.equal(new Set(active.map(c => c.text)).size, 56);
+  for (const c of active) {
+    const distinct = new Set(c.answers.map(a => normalize(a.word)));
+    assert.ok(distinct.size >= 100, c.id);
+    assert.equal(distinct.size, c.answers.length, c.id);
+    assert.ok(!/\bletras?\b|empiece|termine|contenga|ocho|diez/i.test(c.text), c.text);
+    assert.equal(c.dataVersion, DATA_VERSION);
+    assert.ok(['curated-es', 'dictionary-es-2026'].includes(c.metric));
+  }
+  for (const pack of Object.keys(PACKS).filter(p => p !== 'all')) assert.equal(active.filter(c => c.pack === pack).length, 8);
+});
+test('Messi, Leo Messi, CR7 and metro ligero validate directly in current and previously shared broad questions', () => {
+  for (const id of ['q3-footballers', 'es-world-footballers']) for (const answer of ['Messi', 'Leo Messi', 'Lionel Messi', 'CR7']) {
+    const result = matchAnswer(answer, category(id), false);
+    assert.ok(result.accepted, `${id}: ${answer}`);
+    assert.equal(result.score, 10);
+  }
+  for (const id of ['q3-transport', 'es-topic-transport']) assert.equal(matchAnswer('Metro ligero', category(id), false).score, 30);
+});
+test('2026 evidence has real periods and unknown interest never becomes zero', () => {
+  const bank = data.curated;
+  assert.equal(bank.checked, '2026-10-19');
+  assert.equal(bank.ine.reference, '2025-01-01');
+  assert.equal(bank.ine.published, '2026-04-23');
+  assert.equal(bank.interestPeriod.country, 'ES');
+  const bases = new Set();
+  for (const c of categories.filter(c => !c.legacy && c.metric === 'curated-es')) for (const a of c.answers) {
+    bases.add(a.basis);
+    if (a.basis === 'interest-2026') assert.ok(a.count > 0 && a.daysListed >= 3);
+    if (a.basis === 'editorial-historical') assert.ok(a.historicalRecognition >= 0 && a.historicalSample >= 30 && a.count === null);
+    if (a.basis.startsWith('ine-')) assert.ok(a.count >= 20);
+    assert.ok([10, 30, 60, 85, 100].includes(tierFor(a, c) && TIERS[tierFor(a, c)].score));
+  }
+  for (const basis of ['interest-2026', 'ine-names-2026', 'ine-surnames-2026', 'editorial-historical', 'editorial-2026']) assert.ok(bases.has(basis));
+});
+test('lower familiarity consistently earns more points; multiple 100-point answers are supported', () => {
+  assert.deepEqual([100, 98, 97, 90, 89, 65, 64, 35, 34, 0].map(v => TIERS[recognitionBand(v)].score), [10, 10, 30, 30, 60, 60, 85, 85, 100, 100]);
+  const c = category('q3-surnames');
+  assert.equal(matchAnswer('García', c, false).score, 10);
+  assert.ok(c.answers.filter(a => tierFor(a, c) === 'gem').length > 100);
+  assert.equal(matchAnswer('Antonio', category('q3-first-names'), false).score, 10);
+  assert.equal(category('q3-elements').answers.length, 118);
+});
+test('v2 missions still validate and preserve version-specific seeds after the repertory replacement', () => {
+  const previous = createRun(categories, { seed: '2026-10-19', dataVersion: PREVIOUS_VERSION });
+  assert.ok(previous.prompts.every(id => category(id).dataVersion === PREVIOUS_VERSION));
+  assert.ok(validateRun(advanceClock(startRound(previous, 1000), categories, 4000), categories));
+  assert.equal(validateRun({ ...previous, dataVersion: DATA_VERSION }, categories), false);
+});
+test('reviewed boundaries reject bad translated taxonomy candidates and unrelated people', () => {
+  for (const [id, word] of [['q3-trees', 'ratón'], ['q3-trees', 'ababol'], ['q3-fish', 'gallipato de mar'], ['q3-footballers', 'Paulino Uzcudun'], ['q3-materials', 'pirimidine'], ['q3-health', 'flebótomo'], ['q3-transport', 'misil sidewinder']]) assert.equal(matchAnswer(word, category(id), false).accepted, false, `${id}: ${word}`);
+});
+test('basic Spanish answers work across every revised question, including gender and common aliases', () => {
+  const examples = {
+    transport:'metro ligero', market:'arroz', menu:'paella', kitchen:'sartén', home:'sofá', sports:'fútbol', drinks:'agua', desserts:'flan',
+    mammals:'perro', birds:'gorrión', fish:'sardina', invertebrates:'araña', reptiles:'rana', plants:'romero', phenomena:'lluvia', trees:'pino',
+    jobs:'enfermera', wardrobe:'camisa', instruments:'piano', tools:'martillo', feelings:'alegría', containers:'botella', dictionary:'curiosidad', 'sports-equipment':'balón',
+    'spanish-towns':'Madrid', 'spanish-clubs':'Real Madrid', 'spanish-food':'tortilla de patatas', 'first-names':'Antonio', surnames:'García', 'spanish-landscapes':'Ebro', 'spanish-artists':'Pablo Picasso', demonym:'madrileño',
+    elements:'hidrógeno', math:'suma', anatomy:'corazón', materials:'acero', inventions:'teléfono', disciplines:'biología', health:'gripe', astronomy:'Luna',
+    films:'Titanic', series:'Los Simpson', actors:'Brad Pitt', music:'Shakira', books:'Don Quijote', characters:'Harry Potter', videogames:'Minecraft', directors:'Steven Spielberg',
+    footballers:'Messi', 'football-clubs':'Barcelona', countries:'España', cities:'París', geography:'Nilo', scientists:'Albert Einstein', writers:'Cervantes', brands:'Zara'
+  };
+  assert.equal(Object.keys(examples).length, 56);
+  for (const [id, word] of Object.entries(examples)) assert.ok(matchAnswer(word, category('q3-' + id), false).accepted, `${id}: ${word}`);
 });
 test('absolute recognition levels keep equally common words equally common', () => {
   const c = { metric: 'recognition-es', gem: 'rare', clever: [], answers: [{ word: 'a', count: 100 }, { word: 'b', count: 100 }, { word: 'rare', count: 20 }] };

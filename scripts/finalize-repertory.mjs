@@ -1,0 +1,13 @@
+import { readFile, writeFile } from 'node:fs/promises';
+const url = new URL('../dist/data.json', import.meta.url);
+const data = JSON.parse(await readFile(url, 'utf8'));
+const bank = JSON.parse(await readFile(new URL('../dist/repertory.json', import.meta.url), 'utf8'));
+data.version = bank.version;
+data.expansion.activeQuestions = bank.questions.length;
+data.expansion.minimumAnswersPerQuestion = bank.minimumAnswers;
+data.expansion.reviewed = bank.checked;
+data.expansion.questionCountsByPack = Object.fromEntries([...new Set(bank.questions.map(q => q.pack))].map(pack => [pack, bank.questions.filter(q => q.pack === pack).length]));
+data.expansion.currentEvidenceFile = 'repertory.json';
+data.expansion.rankingPolicy = 'Recent Spain data where available; explicitly labelled editorial estimates otherwise. Historical recognition is not a 2026 measurement.';
+await writeFile(url, JSON.stringify(data));
+console.log(`Repertory ${bank.version}: ${bank.questions.length} questions, minimum ${bank.minimumAnswers} canonical answers.`);

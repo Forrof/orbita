@@ -1,5 +1,19 @@
 # Data and asset attribution
 
+## Version 3: reviewed 2026 repertoire
+
+The explicit Spanish question/answer lists and alias decisions in `content/` are independently curated for this game. Historical lexical evidence retains the SPALEX / Wiktionary / FrequencyWords attribution below. Historical recognition is labelled as an editorial reference, not a 2026 survey. The complete current derived answer-bank data is supplied under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), subject to the source-specific notices retained here; source authors do not endorse the game.
+
+**INE, www.ine.es:** [Nombres y apellidos más frecuentes](https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177009&idp=1254735572981&menu=resultados), published 23 April 2026, reference 1 January 2025. [Names workbook](https://www.ine.es/daco/daco42/nombyapel/nombres_por_edad_media.xlsx), [surnames workbook](https://www.ine.es/daco/daco42/nombyapel/apellidos_frecuencia.xls). Changes: selected published aggregate frequencies >=20, joined matching first names across sexes, normalized equivalent spellings, selected first-surname frequency, and applied documented score bands. These are aggregate counts, not individual records. Responsibility for the derived scoring and transformed data rests with Órbita, not the INE.
+
+**Wikimedia Foundation / Wikimedia Analytics:** country-ES top-page statistics, all access, Spanish Wikipedia, 1 September through 18 October 2026. [API documentation](https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/reference/page-views.html). Changes: filtered namespaces and project, required at least three listed days, summed published rounded values, matched titles and applied score bands. Unlisted days are unknown. No complete visit totals or recognition percentages are claimed.
+
+**Wikipedia contributors and Wikidata contributors:** titles, public category memberships, entity membership and aliases through the public MediaWiki API and Wikidata Query Service. [Wikipedia reuse terms](https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), [Wikidata structured-data CC0](https://www.wikidata.org/wiki/Wikidata:Licensing). Article names identify source pages and their attribution histories; source query URLs and hashes are bundled. Changes: selected thematic membership, normalized titles, merged aliases and added reviewed Spanish anchors. Worldwide metadata establishes coverage only, not Spanish familiarity. No article prose or original-game answer bank is reproduced.
+
+**GeoNames:** [GeoNames geographical database](https://www.geonames.org/), [daily downloads and attribution terms](https://www.geonames.org/export/). Source files `cities15000.zip` and `ES.zip`. Changes: selected populated places and defined natural-feature codes, added Spanish exonyms and merged spelling variants. Population is used only to select a finite place catalogue; its varying observation dates are not claimed as 2026 population statistics and never determine scores. GeoNames is credited under its Creative Commons Attribution terms.
+
+The rejected automatic WordNet taxonomy expansion is not included in the current game. Vocabulary questions use explicit reviewed Spanish lists. Source manifests and SHA-256 hashes for the current inputs are in `dist/repertory.json`; older editions remain in `dist/data.json`.
+
 ## Version 2: SPALEX recognition data
 
 **Aguasvivas, José, et al. · SPALEX, Word information, version 4.** [Dataset and authorship](https://figshare.com/articles/dataset/Word_information/5924794), DOI [10.6084/m9.figshare.5924794.v4](https://doi.org/10.6084/m9.figshare.5924794.v4). Distributed under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/). Original file: [word_info.csv](https://ndownloader.figshare.com/files/11826623).

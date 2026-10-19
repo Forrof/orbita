@@ -1,10 +1,11 @@
-import { normalize } from './engine.js';
-import { buildSpainCategories } from './spain-categories.js';
+import { normalize, LEGACY_VERSION, PREVIOUS_VERSION } from './engine.js?v=3';
+import { buildSpainCategories } from './spain-categories.js?v=3';
+import { buildCuratedCategories } from './curated-categories.js?v=3';
 export const PACKS = {
   all: { name: 'Universo abierto', subtitle: 'Un poco de todo, un montón por descubrir.', icon: '◎' },
   everyday: { name: 'Sobremesa', subtitle: 'Lo cotidiano tiene palabras extraordinarias.', icon: '♧' },
   nature: { name: 'Planeta vivo', subtitle: 'De las raíces a las alas.', icon: '❋' },
-  words: { name: 'Entre letras', subtitle: 'Un universo escondido en el diccionario.', icon: 'Aa' },
+  words: { name: 'Cajón de ideas', subtitle: 'Oficios, objetos, emociones y palabras con historia.', icon: 'Aa' },
   spain: { name: 'Kilómetro cero', subtitle: 'Cultura y lugares de aquí, con mirada de España.', icon: '⌖' },
   science: { name: 'Laboratorio', subtitle: 'Del átomo al universo: ciencia y descubrimientos.', icon: '⚛' },
   culture: { name: 'Escena abierta', subtitle: 'Cine, música, libros, arte e imaginación.', icon: '✴' },
@@ -120,6 +121,8 @@ export function buildCategories(data) {
   lexical('start-s', 'Nombra un sustantivo que empiece por S.', w => w.startsWith('s'), 'sotana', 'n');
   lexical('start-t', 'Nombra un sustantivo que empiece por T.', w => w.startsWith('t'), 'tahalí', 'n');
   lexical('vowel-bookends', 'Nombra una palabra que empiece y termine en vocal.', w => /^[aáeéiíoóuú].*[aáeéiíoóuú]$/.test(w), 'albedrío');
-  categories.forEach(c => { c.legacy = true; });
-  return [...categories, ...buildSpainCategories(data, categories)];
+  categories.forEach(c => { c.legacy = true; c.dataVersion = LEGACY_VERSION; });
+  const previous = buildSpainCategories(data, categories);
+  previous.forEach(c => { c.legacy = true; c.dataVersion = PREVIOUS_VERSION; });
+  return [...categories, ...previous, ...buildCuratedCategories(data, previous)];
 }

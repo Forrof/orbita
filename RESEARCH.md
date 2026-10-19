@@ -1,6 +1,6 @@
 # Krillion investigation and Órbita implementation
 
-**Version 2 data update:** the original mechanics investigation below is retained as a historical record. New games now use 474 questions and Spain-specific recognition/readership evidence. See [DATA-EXPANSION.md](DATA-EXPANSION.md) for the current dataset and scoring; descriptions of the initial corpus and 71-question repertory below refer to version 1.
+**Version 3 data update:** the original mechanics investigation below is historical. New games use 56 distinct question themes with at least 100 canonical answers each, replacing 474 repetitive/sparse version 2 questions. The October 2026 edition uses recent Spanish readership, the INE publication of April 2026, and explicitly labelled editorial estimates. See [DATA-EXPANSION.md](DATA-EXPANSION.md).
 
 Investigated on **19 October 2026** using the public website, an actual daily-game round, unlimited-mode UI, public pages, and the client JavaScript delivered by the website. This is a mechanics inventory, not a claim to possess the creator's private answer database or server implementation.
 

@@ -1,6 +1,6 @@
 {
   "name": "orbita-palabras",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
   "type": "module",
   "description": "Una expedición diaria por las palabras menos obvias del español.",
@@ -9,7 +9,7 @@
     "dev": "node server.mjs",
     "test": "node --test tests/*.test.mjs",
     "pages:build": "node scripts/build-pages.mjs",
-    "data:refresh": "node scripts/import-country-interest.mjs && node scripts/import-spain-data.mjs"
+    "data:refresh": "python scripts/import-repertory-sources.py && python scripts/import-coverage.py && node scripts/import-current-interest.mjs && python scripts/compile-repertory.py && node scripts/finalize-repertory.mjs"
   },
   "engines": { "node": ">=22" }
 }

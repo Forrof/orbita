@@ -1,16 +1,17 @@
 export const ROUNDS = 7;
 export const PREVIEW_MS = 3000;
 export const ANSWER_MS = 25000;
-export const DATA_VERSION = '2026-10-19.2';
+export const DATA_VERSION = '2026-10-19.3';
+export const PREVIOUS_VERSION = '2026-10-19.2';
 export const LEGACY_VERSION = '2026-10-19.1';
-export const SUPPORTED_VERSIONS = new Set([LEGACY_VERSION, DATA_VERSION]);
+export const SUPPORTED_VERSIONS = new Set([LEGACY_VERSION, PREVIOUS_VERSION, DATA_VERSION]);
 export const TIERS = {
   common: { name: 'En tierra', score: 10, color: '#a0a7ad', symbol: '●', emoji: '⬜', text: 'La primera que se nos viene a la cabeza. Hay mucho cielo por explorar.' },
   clever: { name: 'Falsa pista', score: 15, color: '#db927b', symbol: '✳', emoji: '🟧', text: 'Parece una elección rarísima… pero es la rareza de siempre. Selección editorial.' },
   familiar: { name: 'Despegue', score: 30, color: '#94b6c8', symbol: '↗', emoji: '🟦', text: 'Una buena respuesta. Ya te has separado de lo más evidente.' },
   rare: { name: 'Estratosfera', score: 60, color: '#a9c7a8', symbol: '✦', emoji: '🟩', text: 'Poco frecuente. Tu vocabulario empieza a desafiar la gravedad.' },
   deep: { name: 'Espacio profundo', score: 85, color: '#c0add0', symbol: '✧', emoji: '🟪', text: 'Una auténtica joya escondida. Pocas palabras llegan tan lejos.' },
-  gem: { name: 'Órbita', score: 100, color: '#edc677', symbol: '✷', emoji: '🌟', text: 'La joya de esta categoría. Has encontrado nuestra estrella.' },
+  gem: { name: 'Órbita', score: 100, color: '#edc677', symbol: '✷', emoji: '🌟', text: 'Una joya de esta categoría. Has encontrado una estrella.' },
   miss: { name: 'Sin señal', score: 0, color: '#70777d', symbol: '—', emoji: '⬛', text: 'Esta señal no ha llegado. La siguiente palabra es otra oportunidad.' }
 };
 export function normalize(value) {
@@ -43,7 +44,15 @@ export function band(score) {
   return score >= 450 ? 'gem' : score >= 351 ? 'deep' : score >= 251 ? 'rare' : score >= 151 ? 'familiar' : 'common';
 }
 const rarityIndexes = new WeakMap();
+export function recognitionBand(value) {
+  return value >= 98 ? 'common' : value >= 90 ? 'familiar' : value >= 65 ? 'rare' : value >= 35 ? 'deep' : 'gem';
+}
+export function belongsToVersion(category, version) {
+  return category.dataVersion ? category.dataVersion === version : version === LEGACY_VERSION ? category.legacy !== false : category.legacy === false;
+}
 export function tierFor(answer, category) {
+  if (category.metric === 'curated-es' || answer.revised) return answer.scoreTier;
+  if (category.metric === 'dictionary-es-2026') return recognitionBand(answer.count);
   if (normalize(answer.word) === normalize(category.gem)) return 'gem';
   if (category.clever?.some(x => normalize(x) === normalize(answer.word))) return 'clever';
   if (answer.count == null) return 'deep';
@@ -84,7 +93,13 @@ export function matchAnswer(raw, category, autocorrect = true) {
   if (!input) return { accepted: false };
   if (index.has(input)) {
     const answer = index.get(input), tier = tierFor(answer, category);
-    return { accepted: true, answer: answer.word, tier, score: TIERS[tier].score, count: answer.count, metric: category.metric, ...(answer.measuredWord ? { measuredWord: answer.measuredWord, sample: answer.sample } : {}), ...(answer.daysListed ? { daysListed: answer.daysListed } : {}) };
+    const dictionary = category.metric === 'dictionary-es-2026';
+    return { accepted: true, answer: answer.word, tier, score: TIERS[tier].score,
+      count: dictionary ? null : answer.count, metric: dictionary || answer.revised ? 'curated-es' : category.metric,
+      ...(dictionary ? { basis: 'editorial-historical', historicalRecognition: answer.count, historicalSample: answer.sample, measuredWord: answer.measuredWord } : {}),
+      ...(answer.basis ? { basis: answer.basis } : {}),
+      ...(answer.historicalRecognition != null ? { historicalRecognition: answer.historicalRecognition, historicalSample: answer.historicalSample } : {}),
+      ...(!dictionary && answer.measuredWord ? { measuredWord: answer.measuredWord, sample: answer.sample } : {}), ...(answer.daysListed ? { daysListed: answer.daysListed } : {}) };
   }
   if (!autocorrect || input.length < 4 || input.length > 48) return { accepted: false };
   const candidates = new Map(), alphabet = 'abcdefghijklmnñopqrstuvwxyz ';
@@ -100,7 +115,7 @@ export function matchAnswer(raw, category, autocorrect = true) {
 }
 export function pickPrompts(categories, seed, pack = 'all', version = DATA_VERSION) {
   const legacy = version === LEGACY_VERSION;
-  const pool = categories.filter(c => legacy ? c.legacy !== false : c.legacy === false);
+  const pool = categories.filter(c => belongsToVersion(c, version));
   if (!legacy && pack === 'all') {
     const packs = shuffled([...new Set(pool.map(c => c.pack))], `packs:${seed}`);
     const selected = packs.slice(0, ROUNDS).map(p => shuffled(pool.filter(c => c.pack === p), `${version}:${seed}:${p}`)[0]);
@@ -136,7 +151,7 @@ export function advanceClock(run, categories, now = Date.now(), autocorrect = tr
 }
 export function totalScore(run) { return run.results.reduce((n, r) => n + r.score, 0); }
 export function validateRun(run, categories) {
-  if (!run || run.schema !== 1 || !SUPPORTED_VERSIONS.has(run.dataVersion) || !['daily', 'unlimited', 'archive', 'pack', 'challenge'].includes(run.mode) || typeof run.seed !== 'string' || run.seed.length > 100 || !Array.isArray(run.prompts) || run.prompts.length !== ROUNDS || new Set(run.prompts).size !== ROUNDS || !run.prompts.every(id => categories.some(c => c.id === id && (run.dataVersion === LEGACY_VERSION ? c.legacy !== false : c.legacy === false))) || !Array.isArray(run.results) || run.results.length > ROUNDS || !['intro', 'preview', 'answering', 'feedback', 'done'].includes(run.phase) || !Number.isInteger(run.round) || run.round < 0 || run.round >= ROUNDS) return false;
+  if (!run || run.schema !== 1 || !SUPPORTED_VERSIONS.has(run.dataVersion) || !['daily', 'unlimited', 'archive', 'pack', 'challenge'].includes(run.mode) || typeof run.seed !== 'string' || run.seed.length > 100 || !Array.isArray(run.prompts) || run.prompts.length !== ROUNDS || new Set(run.prompts).size !== ROUNDS || !run.prompts.every(id => categories.some(c => c.id === id && belongsToVersion(c, run.dataVersion))) || !Array.isArray(run.results) || run.results.length > ROUNDS || !['intro', 'preview', 'answering', 'feedback', 'done'].includes(run.phase) || !Number.isInteger(run.round) || run.round < 0 || run.round >= ROUNDS) return false;
   if (run.results.some((r, i) => !r || r.prompt !== run.prompts[i] || !TIERS[r.tier] || r.score !== TIERS[r.tier].score)) return false;
   if (['answering', 'preview'].includes(run.phase) && (!Number.isFinite(run.deadline) || run.results.length !== run.round)) return false;
   if (run.phase === 'feedback' && run.results.length !== run.round + 1 || run.phase === 'done' && run.results.length !== ROUNDS || run.phase === 'intro' && run.results.length !== 0) return false;
