@@ -1,0 +1,1226 @@
+{
+  "checked": "2026-10-20",
+  "previousCommit": "4bb871e08e58466357407a00e16197ba443fbce7",
+  "activeQuestions": 152,
+  "previousAnswerSlots": 760724,
+  "currentAnswerSlots": 886502,
+  "uniqueNewCanonicalLabels": 114047,
+  "questions": [
+    {
+      "id": "q4-transport",
+      "previous": 283,
+      "current": 322,
+      "newRecognizedSpellings": 177,
+      "retiredCanonicalLabels": 2,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-menu",
+      "previous": 535,
+      "current": 612,
+      "newRecognizedSpellings": 219,
+      "retiredCanonicalLabels": 2,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-sports",
+      "previous": 315,
+      "current": 400,
+      "newRecognizedSpellings": 169,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-drinks",
+      "previous": 340,
+      "current": 365,
+      "newRecognizedSpellings": 148,
+      "retiredCanonicalLabels": 5,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-desserts",
+      "previous": 342,
+      "current": 385,
+      "newRecognizedSpellings": 146,
+      "retiredCanonicalLabels": 4,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-mammals",
+      "previous": 569,
+      "current": 1036,
+      "newRecognizedSpellings": 859,
+      "retiredCanonicalLabels": 2,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-birds",
+      "previous": 519,
+      "current": 5722,
+      "newRecognizedSpellings": 5887,
+      "retiredCanonicalLabels": 6,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-fish",
+      "previous": 434,
+      "current": 2437,
+      "newRecognizedSpellings": 2255,
+      "retiredCanonicalLabels": 9,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-invertebrates",
+      "previous": 522,
+      "current": 44019,
+      "newRecognizedSpellings": 43863,
+      "retiredCanonicalLabels": 3,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-plants",
+      "previous": 999,
+      "current": 13318,
+      "newRecognizedSpellings": 14457,
+      "retiredCanonicalLabels": 4,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-trees",
+      "previous": 272,
+      "current": 548,
+      "newRecognizedSpellings": 402,
+      "retiredCanonicalLabels": 3,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-jobs",
+      "previous": 349,
+      "current": 450,
+      "newRecognizedSpellings": 529,
+      "retiredCanonicalLabels": 2,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-wardrobe",
+      "previous": 315,
+      "current": 374,
+      "newRecognizedSpellings": 164,
+      "retiredCanonicalLabels": 3,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-instruments",
+      "previous": 486,
+      "current": 532,
+      "newRecognizedSpellings": 179,
+      "retiredCanonicalLabels": 5,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-tools",
+      "previous": 329,
+      "current": 433,
+      "newRecognizedSpellings": 313,
+      "retiredCanonicalLabels": 1,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-feelings",
+      "previous": 300,
+      "current": 360,
+      "newRecognizedSpellings": 124,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-containers",
+      "previous": 460,
+      "current": 548,
+      "newRecognizedSpellings": 326,
+      "retiredCanonicalLabels": 1,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-sports-equipment",
+      "previous": 355,
+      "current": 440,
+      "newRecognizedSpellings": 327,
+      "retiredCanonicalLabels": 2,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-spanish-towns",
+      "previous": 24704,
+      "current": 24704,
+      "newRecognizedSpellings": 11414,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-spanish-clubs",
+      "previous": 404,
+      "current": 404,
+      "newRecognizedSpellings": 9,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-spanish-food",
+      "previous": 380,
+      "current": 497,
+      "newRecognizedSpellings": 134,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-first-names",
+      "previous": 62438,
+      "current": 62438,
+      "newRecognizedSpellings": 2,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-surnames",
+      "previous": 86487,
+      "current": 86487,
+      "newRecognizedSpellings": 76,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-demonym",
+      "previous": 286,
+      "current": 388,
+      "newRecognizedSpellings": 175,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-elements",
+      "previous": 118,
+      "current": 118,
+      "newRecognizedSpellings": 0,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-materials",
+      "previous": 1539,
+      "current": 1596,
+      "newRecognizedSpellings": 330,
+      "retiredCanonicalLabels": 17,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-disciplines",
+      "previous": 403,
+      "current": 514,
+      "newRecognizedSpellings": 262,
+      "retiredCanonicalLabels": 1,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-health",
+      "previous": 5169,
+      "current": 5513,
+      "newRecognizedSpellings": 1643,
+      "retiredCanonicalLabels": 2,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films",
+      "previous": 36484,
+      "current": 36481,
+      "newRecognizedSpellings": 13894,
+      "retiredCanonicalLabels": 6,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-series",
+      "previous": 10823,
+      "current": 10843,
+      "newRecognizedSpellings": 3673,
+      "retiredCanonicalLabels": 1,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-actors",
+      "previous": 31840,
+      "current": 31840,
+      "newRecognizedSpellings": 2541,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-books",
+      "previous": 2553,
+      "current": 2641,
+      "newRecognizedSpellings": 1760,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-characters",
+      "previous": 1316,
+      "current": 1634,
+      "newRecognizedSpellings": 508,
+      "retiredCanonicalLabels": 3,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-videogames",
+      "previous": 10415,
+      "current": 10419,
+      "newRecognizedSpellings": 1962,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-directors",
+      "previous": 4218,
+      "current": 5365,
+      "newRecognizedSpellings": 1464,
+      "retiredCanonicalLabels": 1,
+      "retiredRecognizedSpellings": 1
+    },
+    {
+      "id": "q4-footballers",
+      "previous": 2559,
+      "current": 17256,
+      "newRecognizedSpellings": 15474,
+      "retiredCanonicalLabels": 1,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-football-clubs",
+      "previous": 807,
+      "current": 1304,
+      "newRecognizedSpellings": 566,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-countries",
+      "previous": 200,
+      "current": 200,
+      "newRecognizedSpellings": 27,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-cities",
+      "previous": 29976,
+      "current": 52092,
+      "newRecognizedSpellings": 285766,
+      "retiredCanonicalLabels": 4070,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-scientists",
+      "previous": 2021,
+      "current": 2364,
+      "newRecognizedSpellings": 529,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-writers",
+      "previous": 6873,
+      "current": 9049,
+      "newRecognizedSpellings": 2782,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-brands",
+      "previous": 553,
+      "current": 706,
+      "newRecognizedSpellings": 191,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-actors-spain",
+      "previous": 2543,
+      "current": 2543,
+      "newRecognizedSpellings": 53,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-actors-usa",
+      "previous": 10183,
+      "current": 10183,
+      "newRecognizedSpellings": 260,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-actors-france",
+      "previous": 1119,
+      "current": 1119,
+      "newRecognizedSpellings": 93,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-actors-mexico",
+      "previous": 2316,
+      "current": 2316,
+      "newRecognizedSpellings": 23,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-actors-england",
+      "previous": 2551,
+      "current": 2551,
+      "newRecognizedSpellings": 169,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-actors-argentina",
+      "previous": 2304,
+      "current": 2304,
+      "newRecognizedSpellings": 13,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-actors-italy",
+      "previous": 963,
+      "current": 963,
+      "newRecognizedSpellings": 24,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-actors-india",
+      "previous": 351,
+      "current": 351,
+      "newRecognizedSpellings": 2,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-actors-japan",
+      "previous": 473,
+      "current": 473,
+      "newRecognizedSpellings": 3,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-actors-korea",
+      "previous": 1119,
+      "current": 1119,
+      "newRecognizedSpellings": 1536,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-actors-germany",
+      "previous": 977,
+      "current": 977,
+      "newRecognizedSpellings": 37,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-actors-brazil",
+      "previous": 520,
+      "current": 520,
+      "newRecognizedSpellings": 0,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-actors-canada",
+      "previous": 951,
+      "current": 951,
+      "newRecognizedSpellings": 50,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-actors-australia",
+      "previous": 1056,
+      "current": 1056,
+      "newRecognizedSpellings": 64,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-voice-actors",
+      "previous": 1912,
+      "current": 1912,
+      "newRecognizedSpellings": 34,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-animation",
+      "previous": 1407,
+      "current": 1420,
+      "newRecognizedSpellings": 808,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-horror",
+      "previous": 2988,
+      "current": 2989,
+      "newRecognizedSpellings": 1274,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-science-fiction",
+      "previous": 1901,
+      "current": 1905,
+      "newRecognizedSpellings": 751,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-comedy",
+      "previous": 8592,
+      "current": 8597,
+      "newRecognizedSpellings": 3497,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-fantasy",
+      "previous": 1709,
+      "current": 1712,
+      "newRecognizedSpellings": 891,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-action",
+      "previous": 3630,
+      "current": 3630,
+      "newRecognizedSpellings": 1184,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-thriller",
+      "previous": 3724,
+      "current": 3727,
+      "newRecognizedSpellings": 1574,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-musical",
+      "previous": 1786,
+      "current": 1786,
+      "newRecognizedSpellings": 787,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-spain",
+      "previous": 3933,
+      "current": 3934,
+      "newRecognizedSpellings": 1855,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-france",
+      "previous": 2592,
+      "current": 2592,
+      "newRecognizedSpellings": 1250,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-italy",
+      "previous": 1665,
+      "current": 1665,
+      "newRecognizedSpellings": 772,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-japan",
+      "previous": 1191,
+      "current": 1192,
+      "newRecognizedSpellings": 425,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-mexico",
+      "previous": 1878,
+      "current": 1878,
+      "newRecognizedSpellings": 911,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-argentina",
+      "previous": 2543,
+      "current": 2543,
+      "newRecognizedSpellings": 1138,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-usa",
+      "previous": 13375,
+      "current": 13378,
+      "newRecognizedSpellings": 5347,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-series-animation",
+      "previous": 641,
+      "current": 650,
+      "newRecognizedSpellings": 320,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-series-comedy",
+      "previous": 2057,
+      "current": 2073,
+      "newRecognizedSpellings": 753,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-series-scifi",
+      "previous": 358,
+      "current": 362,
+      "newRecognizedSpellings": 167,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-series-spanish",
+      "previous": 843,
+      "current": 846,
+      "newRecognizedSpellings": 381,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-1980",
+      "previous": 3284,
+      "current": 3284,
+      "newRecognizedSpellings": 1395,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-1990",
+      "previous": 4161,
+      "current": 4162,
+      "newRecognizedSpellings": 1692,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-2000",
+      "previous": 7264,
+      "current": 7265,
+      "newRecognizedSpellings": 2695,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-2010",
+      "previous": 8771,
+      "current": 8771,
+      "newRecognizedSpellings": 3165,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-films-2020",
+      "previous": 5036,
+      "current": 5036,
+      "newRecognizedSpellings": 1930,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-novels",
+      "previous": 2374,
+      "current": 2401,
+      "newRecognizedSpellings": 1534,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-singers",
+      "previous": 2448,
+      "current": 2839,
+      "newRecognizedSpellings": 534,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-bands",
+      "previous": 1906,
+      "current": 2740,
+      "newRecognizedSpellings": 1593,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-composers",
+      "previous": 1630,
+      "current": 1630,
+      "newRecognizedSpellings": 44,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-rappers",
+      "previous": 817,
+      "current": 817,
+      "newRecognizedSpellings": 45,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-basketball",
+      "previous": 1345,
+      "current": 2480,
+      "newRecognizedSpellings": 1205,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-tennis",
+      "previous": 844,
+      "current": 1693,
+      "newRecognizedSpellings": 903,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-cycling",
+      "previous": 3531,
+      "current": 3531,
+      "newRecognizedSpellings": 54,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-f1-drivers",
+      "previous": 350,
+      "current": 350,
+      "newRecognizedSpellings": 16,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-painters",
+      "previous": 3750,
+      "current": 4510,
+      "newRecognizedSpellings": 1121,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-philosophers",
+      "previous": 738,
+      "current": 738,
+      "newRecognizedSpellings": 47,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-physicists",
+      "previous": 417,
+      "current": 547,
+      "newRecognizedSpellings": 180,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-mathematicians",
+      "previous": 526,
+      "current": 725,
+      "newRecognizedSpellings": 258,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-chemists",
+      "previous": 323,
+      "current": 363,
+      "newRecognizedSpellings": 60,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-cancers",
+      "previous": 412,
+      "current": 446,
+      "newRecognizedSpellings": 371,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-infections",
+      "previous": 580,
+      "current": 625,
+      "newRecognizedSpellings": 123,
+      "retiredCanonicalLabels": 1,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-mental-health",
+      "previous": 221,
+      "current": 263,
+      "newRecognizedSpellings": 168,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-neurology",
+      "previous": 229,
+      "current": 281,
+      "newRecognizedSpellings": 117,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-circulation",
+      "previous": 305,
+      "current": 340,
+      "newRecognizedSpellings": 89,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-respiratory",
+      "previous": 211,
+      "current": 244,
+      "newRecognizedSpellings": 79,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-digestive",
+      "previous": 359,
+      "current": 395,
+      "newRecognizedSpellings": 114,
+      "retiredCanonicalLabels": 1,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-skin",
+      "previous": 302,
+      "current": 345,
+      "newRecognizedSpellings": 93,
+      "retiredCanonicalLabels": 1,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-musculoskeletal",
+      "previous": 382,
+      "current": 428,
+      "newRecognizedSpellings": 125,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-cities-es",
+      "previous": 545,
+      "current": 1197,
+      "newRecognizedSpellings": 7183,
+      "retiredCanonicalLabels": 19,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-cities-fr",
+      "previous": 657,
+      "current": 1782,
+      "newRecognizedSpellings": 16202,
+      "retiredCanonicalLabels": 59,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-cities-it",
+      "previous": 598,
+      "current": 1914,
+      "newRecognizedSpellings": 6747,
+      "retiredCanonicalLabels": 12,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-cities-de",
+      "previous": 957,
+      "current": 2617,
+      "newRecognizedSpellings": 19715,
+      "retiredCanonicalLabels": 37,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-cities-gb",
+      "previous": 798,
+      "current": 1706,
+      "newRecognizedSpellings": 10188,
+      "retiredCanonicalLabels": 14,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-cities-us",
+      "previous": 2704,
+      "current": 4825,
+      "newRecognizedSpellings": 52985,
+      "retiredCanonicalLabels": 426,
+      "retiredRecognizedSpellings": 3
+    },
+    {
+      "id": "q4-cities-mx",
+      "previous": 607,
+      "current": 1445,
+      "newRecognizedSpellings": 7682,
+      "retiredCanonicalLabels": 77,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-cities-ar",
+      "previous": 301,
+      "current": 574,
+      "newRecognizedSpellings": 5402,
+      "retiredCanonicalLabels": 11,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-cities-br",
+      "previous": 2197,
+      "current": 3278,
+      "newRecognizedSpellings": 10461,
+      "retiredCanonicalLabels": 399,
+      "retiredRecognizedSpellings": 3
+    },
+    {
+      "id": "q4-cities-jp",
+      "previous": 1170,
+      "current": 1388,
+      "newRecognizedSpellings": 11344,
+      "retiredCanonicalLabels": 126,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-cities-in",
+      "previous": 3631,
+      "current": 5993,
+      "newRecognizedSpellings": 17190,
+      "retiredCanonicalLabels": 117,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-cities-pt",
+      "previous": 173,
+      "current": 505,
+      "newRecognizedSpellings": 2342,
+      "retiredCanonicalLabels": 4,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-towns-51",
+      "previous": 2593,
+      "current": 2540,
+      "newRecognizedSpellings": 2784,
+      "retiredCanonicalLabels": 53,
+      "retiredRecognizedSpellings": 1
+    },
+    {
+      "id": "q4-towns-56",
+      "previous": 1777,
+      "current": 1748,
+      "newRecognizedSpellings": 1007,
+      "retiredCanonicalLabels": 29,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-towns-60",
+      "previous": 1246,
+      "current": 1233,
+      "newRecognizedSpellings": 1501,
+      "retiredCanonicalLabels": 13,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-towns-29",
+      "previous": 280,
+      "current": 277,
+      "newRecognizedSpellings": 397,
+      "retiredCanonicalLabels": 3,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-towns-58",
+      "previous": 4126,
+      "current": 2858,
+      "newRecognizedSpellings": 1101,
+      "retiredCanonicalLabels": 1268,
+      "retiredRecognizedSpellings": 10
+    },
+    {
+      "id": "q4-towns-55",
+      "previous": 5611,
+      "current": 5463,
+      "newRecognizedSpellings": 3268,
+      "retiredCanonicalLabels": 148,
+      "retiredRecognizedSpellings": 3
+    },
+    {
+      "id": "q4-towns-54",
+      "previous": 1678,
+      "current": 1651,
+      "newRecognizedSpellings": 995,
+      "retiredCanonicalLabels": 27,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-towns-52",
+      "previous": 1521,
+      "current": 1503,
+      "newRecognizedSpellings": 717,
+      "retiredCanonicalLabels": 18,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-towns-59",
+      "previous": 1126,
+      "current": 1092,
+      "newRecognizedSpellings": 936,
+      "retiredCanonicalLabels": 34,
+      "retiredRecognizedSpellings": 1
+    },
+    {
+      "id": "q4-towns-57",
+      "previous": 654,
+      "current": 648,
+      "newRecognizedSpellings": 781,
+      "retiredCanonicalLabels": 6,
+      "retiredRecognizedSpellings": 1
+    },
+    {
+      "id": "q4-towns-53",
+      "previous": 704,
+      "current": 687,
+      "newRecognizedSpellings": 472,
+      "retiredCanonicalLabels": 17,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-rivers-spain",
+      "previous": 3416,
+      "current": 3316,
+      "newRecognizedSpellings": 1280,
+      "retiredCanonicalLabels": 106,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-mountains-spain",
+      "previous": 2671,
+      "current": 2656,
+      "newRecognizedSpellings": 793,
+      "retiredCanonicalLabels": 15,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-lakes-spain",
+      "previous": 149,
+      "current": 147,
+      "newRecognizedSpellings": 39,
+      "retiredCanonicalLabels": 3,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-appliances",
+      "previous": 162,
+      "current": 269,
+      "newRecognizedSpellings": 323,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-furniture",
+      "previous": 177,
+      "current": 273,
+      "newRecognizedSpellings": 304,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-car-models",
+      "previous": 816,
+      "current": 1348,
+      "newRecognizedSpellings": 1230,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-dog-breeds",
+      "previous": 187,
+      "current": 358,
+      "newRecognizedSpellings": 250,
+      "retiredCanonicalLabels": 1,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-minerals",
+      "previous": 700,
+      "current": 700,
+      "newRecognizedSpellings": 9,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-planets-fiction",
+      "previous": 116,
+      "current": 340,
+      "newRecognizedSpellings": 318,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-board-games",
+      "previous": 314,
+      "current": 500,
+      "newRecognizedSpellings": 227,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-dances",
+      "previous": 110,
+      "current": 401,
+      "newRecognizedSpellings": 366,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-musical-genres",
+      "previous": 371,
+      "current": 589,
+      "newRecognizedSpellings": 294,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-currencies",
+      "previous": 521,
+      "current": 521,
+      "newRecognizedSpellings": 7,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-dinosaurs",
+      "previous": 678,
+      "current": 678,
+      "newRecognizedSpellings": 0,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-flowers",
+      "previous": 387,
+      "current": 536,
+      "newRecognizedSpellings": 247,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-volcanoes",
+      "previous": 107,
+      "current": 185,
+      "newRecognizedSpellings": 89,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-rivers-world",
+      "previous": 3465,
+      "current": 3465,
+      "newRecognizedSpellings": 12,
+      "retiredCanonicalLabels": 1,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-market",
+      "previous": 1619,
+      "current": 1962,
+      "newRecognizedSpellings": 845,
+      "retiredCanonicalLabels": 11,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-phenomena",
+      "previous": 293,
+      "current": 408,
+      "newRecognizedSpellings": 264,
+      "retiredCanonicalLabels": 1,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-dictionary",
+      "previous": 233911,
+      "current": 233911,
+      "newRecognizedSpellings": 0,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-math",
+      "previous": 505,
+      "current": 659,
+      "newRecognizedSpellings": 352,
+      "retiredCanonicalLabels": 4,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-astronomy",
+      "previous": 467,
+      "current": 583,
+      "newRecognizedSpellings": 280,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-writers-spain",
+      "previous": 4121,
+      "current": 4121,
+      "newRecognizedSpellings": 256,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-injuries",
+      "previous": 628,
+      "current": 690,
+      "newRecognizedSpellings": 461,
+      "retiredCanonicalLabels": 0,
+      "retiredRecognizedSpellings": 0
+    },
+    {
+      "id": "q4-symptoms",
+      "previous": 222,
+      "current": 342,
+      "newRecognizedSpellings": 283,
+      "retiredCanonicalLabels": 1,
+      "retiredRecognizedSpellings": 0
+    }
+  ]
+}

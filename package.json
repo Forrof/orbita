@@ -9,7 +9,7 @@
     "dev": "node server.mjs",
     "test": "node --test tests/*.test.mjs",
     "pages:build": "node scripts/build-pages.mjs",
-    "data:refresh": "python scripts/import-repertory-sources.py && python scripts/import-coverage.py && python scripts/import-topic-sources.py && node scripts/import-current-interest.mjs && python scripts/import-focused-sources.py && python scripts/merge-focused-coverage.py && python scripts/expand-geographic-coverage.py && python scripts/compile-repertory.py && python scripts/compile-focused-repertory.py && node scripts/finalize-repertory.mjs",
+    "data:refresh": "python scripts/import-repertory-sources.py && python scripts/import-coverage.py && python scripts/import-topic-sources.py && node scripts/import-current-interest.mjs && python scripts/import-focused-sources.py && python scripts/import-expanded-coverage.py && python scripts/import-work-coverage.py && python scripts/import-official-species.py && python scripts/import-expanded-geography.py && python scripts/merge-focused-coverage.py && python scripts/expand-geographic-coverage.py && python scripts/compile-repertory.py && python scripts/compile-focused-repertory.py && node scripts/finalize-repertory.mjs",
     "data:compile": "python scripts/merge-focused-coverage.py && python scripts/expand-geographic-coverage.py && python scripts/compile-repertory.py && python scripts/compile-focused-repertory.py && node scripts/finalize-repertory.mjs"
   },
   "engines": {

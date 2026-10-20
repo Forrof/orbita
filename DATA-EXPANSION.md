@@ -2,7 +2,7 @@
 
 ## Alcance y comprobaciones
 
-152 preguntas activas, frente a las 56 de la edición anterior. La pregunta general de interpretación admite 31.840 actores y actrices. Mobiliario y electrodomésticos se separan: 177 y 162 respuestas respectivamente. Todas tienen al menos 100 respuestas canónicas al ignorar tildes y mayúsculas; los alias, los plurales equivalentes y las variantes no cuentan para alcanzar el mínimo. Se retiran las preguntas repetidas de letras, terminaciones y longitudes del repertorio activo. El diccionario conserva las 231.944 claves documentadas de la edición anterior y añade vocabulario revisado, atestiguado en el léxico fuente, que carecía de encuesta de reconocimiento. Su puntuación se identifica como editorial y no modifica el diccionario de partidas antiguas.
+152 preguntas activas, frente a las 56 de la edición anterior. La pregunta general de interpretación admite 31.840 actores y actrices. Mobiliario y electrodomésticos se separan: 273 y 269 respuestas respectivamente. Todas tienen al menos 100 respuestas canónicas al ignorar tildes y mayúsculas; los alias, los plurales equivalentes y las variantes no cuentan para alcanzar el mínimo. Se retiran las preguntas repetidas de letras, terminaciones y longitudes del repertorio activo. El diccionario conserva las 231.944 claves documentadas de la edición anterior y añade vocabulario revisado, atestiguado en el léxico fuente, que carecía de encuesta de reconocimiento. Su puntuación se identifica como editorial y no modifica el diccionario de partidas antiguas.
 
 La cobertura no depende de aparecer en una lista de popularidad reciente. Las preguntas culturales, deportivas y geográficas admiten temas de todo el mundo.
 
@@ -89,3 +89,32 @@ El repertorio específico se guarda en `dist/focused-repertory.json`. Reutiliza 
 Para futuras ediciones se debe añadir un periodo con fecha de inicio futura y conservar sin modificar los periodos publicados. Las versiones y los identificadores anteriores se mantienen para reproducir retos y partidas guardadas. Las puntuaciones ya registradas no se recalculan. El constructor de Pages rechaza un calendario de prueba o bancos incompatibles.
 
 Las relaciones entre categorías se declaran expresamente: una respuesta válida de una subcategoría también entra en su categoría general, sin convertir automáticamente todo uso de evidencia compartida en una pertenencia. Por ejemplo, filósofos y científicos pueden compartir referencias de un nombre, pero los filósofos no se añaden indiscriminadamente a científicos. Las preguntas generales históricas compatibles incorporan los nuevos nombres y alias, conservando la puntuación de los resultados ya registrados. Los artículos sobre técnicas, equipamiento, asociaciones o edificios se excluyen de las listas de instancias.
+
+## Ampliación de todas las categorías · revisión aditiva 2026-10-20.4
+
+Se revisan las 152 preguntas activas y se amplían los repertorios por tema y las formas habituales de escribir una respuesta. La comparación con el commit 4bb871e08e58466357407a00e16197ba443fbce7 queda registrada, pregunta por pregunta, en `content/coverage-expansion-audit.json`.
+
+El banco pasa de 760.724 a 886.502 entradas al sumar todas las preguntas. Un nombre puede aparecer en varias subcategorías. La comparación normalizada identifica 114.047 etiquetas canónicas nuevas y distintas en el conjunto; los alias se contabilizan aparte.
+
+| Pregunta | Antes | Ahora |
+| --- | ---: | ---: |
+| Electrodomésticos | 162 | 269 |
+| Muebles | 177 | 273 |
+| Razas caninas y cruces con nombre propio | 187 | 358 |
+| Lugares ficticios | 116 | 340 |
+| Futbolistas | 2.559 | 17.256 |
+| Aves | 519 | 5.722 |
+| Peces | 434 | 2.437 |
+| Invertebrados | 522 | 44.019 |
+| Plantas | 999 | 13.318 |
+| Ciudades del mundo | 29.976 | 52.092 |
+
+«Air frier», «air fryer», «airfryer», «airfrier» y «freidora sin aceite» identifican la misma freidora de aire y conservan la misma puntuación dentro de su pregunta. También se aceptan variantes de puntuación, artículos omitidos en títulos cuando resultan inequívocos, plurales documentados y formas femeninas documentadas de profesiones y gentilicios. Los alias no se suman al mínimo canónico. Una grafía canónica tiene prioridad sobre los alias de otras respuestas.
+
+Las listas oficiales vigentes del MITECO aportan nombres comunes y científicos, filtrados por reino, clase y rango de especie. Los hongos no entran en plantas. Las nuevas ciudades y sus nombres alternativos proceden de GeoNames; la población del registro define su cobertura y no calcula puntos. Se revisan aparte los nombres compartidos por lugares de países o comunidades diferentes. Los artículos sobre premios, técnicas, plataformas y equipamiento no cuentan como personas, modelos de coche o volcanes.
+
+Los títulos conocidos se resuelven mediante categorías y redirecciones de Wikipedia. Las fechas de estreno se contrastan con P577 de Wikidata, usando el primer año no descartado y evitando que un reestreno cambie la década. Esto permite validar títulos españoles y originales en las subpreguntas correspondientes sin trasladar automáticamente un alias entre películas homónimas de distinto país.
+
+`content/expanded-review.json` contiene la revisión editorial; `content/reviewed-expanded-memberships.json`, los nuevos títulos aprobados; `content/imported-work-coverage.json`, los títulos y metadatos contrastados; los manifiestos conservan las peticiones y hashes. Las listas cerradas, como los 118 elementos químicos, conservan sus límites reales. Los datos y las estimaciones de rareza siguen referidos a España y sus bases se identifican en cada resultado.
+
+Esta revisión conserva las ediciones, los identificadores y los conjuntos diarios publicados. Ampliar las respuestas no vuelve a sortear las siete preguntas de una fecha ni recalcula las puntuaciones guardadas.

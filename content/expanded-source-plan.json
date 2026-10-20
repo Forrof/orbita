@@ -1,0 +1,299 @@
+{
+  "footballers": {
+    "categories": [
+      "Futbolistas de Brasil",
+      "Futbolistas de Argentina",
+      "Futbolistas de Francia",
+      "Futbolistas de Italia",
+      "Futbolistas de Alemania",
+      "Futbolistas de Inglaterra",
+      "Futbolistas de Portugal",
+      "Futbolistas de Uruguay",
+      "Futbolistas de Colombia",
+      "Futbolistas de Chile",
+      "Futbolistas de México",
+      "Futbolistas de Japón",
+      "Futbolistas de Nigeria",
+      "Futbolistas de Marruecos",
+      "Futbolistas de Croacia",
+      "Futbolistas de Países Bajos"
+    ]
+  },
+  "football-clubs": {
+    "categories": [
+      "Equipos de fútbol de Inglaterra",
+      "Equipos de fútbol de Francia",
+      "Equipos de fútbol de Alemania",
+      "Equipos de fútbol de Italia",
+      "Equipos de fútbol de Portugal",
+      "Equipos de fútbol de México",
+      "Equipos de fútbol de Uruguay",
+      "Equipos de fútbol de Colombia",
+      "Equipos de fútbol de Chile",
+      "Equipos de fútbol de Japón"
+    ]
+  },
+  "directors": {
+    "categories": [
+      "Directores de cine de Alemania",
+      "Directores de cine de Argentina",
+      "Directores de cine de México",
+      "Directores de cine de Japón",
+      "Directores de cine de India",
+      "Directores de cine de Corea del Sur",
+      "Directores de cine de China",
+      "Directores de cine de Brasil",
+      "Directores de cine de Chile",
+      "Directores de cine de Colombia",
+      "Directores de cine de Canadá",
+      "Directores de cine de Australia",
+      "Directores de cine de Irán",
+      "Directores de cine de Suecia",
+      "Directores de cine de Dinamarca",
+      "Directores de cine de Rusia"
+    ]
+  },
+  "singers": {
+    "categories": [
+      "Cantantes de Puerto Rico",
+      "Cantantes de Perú",
+      "Cantantes de Uruguay",
+      "Cantantes de Venezuela",
+      "Cantantes de Brasil",
+      "Cantantes de Alemania",
+      "Cantantes de Canadá",
+      "Cantantes de Australia",
+      "Cantantes de Corea del Sur",
+      "Cantantes de Japón"
+    ]
+  },
+  "bands": {
+    "categories": [
+      "Grupos de pop de Estados Unidos",
+      "Grupos de rock de Canadá",
+      "Grupos de rock de Australia",
+      "Grupos de rock de Francia",
+      "Grupos de rock de Chile",
+      "Grupos de rock de Colombia",
+      "Grupos de pop de México",
+      "Grupos de heavy metal de Reino Unido",
+      "Grupos de heavy metal de España"
+    ]
+  },
+  "writers": {
+    "categories": [
+      "Escritores de Italia del siglo XIX",
+      "Escritores de Italia del siglo XXI",
+      "Escritores de Alemania del siglo XIX",
+      "Escritores de Alemania del siglo XXI",
+      "Escritores de México del siglo XIX",
+      "Escritores de México del siglo XXI",
+      "Escritores de Chile del siglo XIX",
+      "Escritores de Chile del siglo XXI",
+      "Escritores de Colombia del siglo XIX",
+      "Escritores de Colombia del siglo XXI",
+      "Escritores de Perú del siglo XIX",
+      "Escritores de Perú del siglo XXI",
+      "Escritores de Uruguay del siglo XIX",
+      "Escritores de Uruguay del siglo XXI",
+      "Escritores de Japón del siglo XIX",
+      "Escritores de Japón del siglo XXI",
+      "Escritores de Rusia del siglo XIX",
+      "Escritores de Rusia del siglo XXI",
+      "Escritores de Estados Unidos del siglo XIX",
+      "Escritores de Estados Unidos del siglo XXI",
+      "Escritores de Reino Unido del siglo XIX",
+      "Escritores de Reino Unido del siglo XXI",
+      "Escritores de Francia del siglo XIX",
+      "Escritores de Francia del siglo XXI"
+    ]
+  },
+  "physicists": {
+    "categories": [
+      "Físicos de Italia del siglo XIX",
+      "Físicos de Italia del siglo XX",
+      "Físicos de Reino Unido del siglo XIX",
+      "Físicos de Reino Unido del siglo XX",
+      "Físicos de Rusia del siglo XIX",
+      "Físicos de Rusia del siglo XX",
+      "Físicos de Japón del siglo XIX",
+      "Físicos de Japón del siglo XX",
+      "Físicos de India del siglo XIX",
+      "Físicos de India del siglo XX"
+    ]
+  },
+  "mathematicians": {
+    "categories": [
+      "Matemáticos de Italia del siglo XIX",
+      "Matemáticos de Italia del siglo XX",
+      "Matemáticos de Reino Unido del siglo XIX",
+      "Matemáticos de Reino Unido del siglo XX",
+      "Matemáticos de Rusia del siglo XIX",
+      "Matemáticos de Rusia del siglo XX",
+      "Matemáticos de Japón del siglo XIX",
+      "Matemáticos de Japón del siglo XX",
+      "Matemáticos de India del siglo XIX",
+      "Matemáticos de India del siglo XX"
+    ]
+  },
+  "chemists": {
+    "categories": [
+      "Químicos de Italia del siglo XIX",
+      "Químicos de Italia del siglo XX",
+      "Químicos de Reino Unido del siglo XIX",
+      "Químicos de Reino Unido del siglo XX",
+      "Químicos de Rusia del siglo XIX",
+      "Químicos de Rusia del siglo XX",
+      "Químicos de Japón del siglo XIX",
+      "Químicos de Japón del siglo XX",
+      "Químicos de India del siglo XIX",
+      "Químicos de India del siglo XX"
+    ]
+  },
+  "painters": {
+    "categories": [
+      "Pintores de España del siglo XVIII",
+      "Pintores de España del siglo XXI",
+      "Pintores de Francia del siglo XVIII",
+      "Pintores de Francia del siglo XXI",
+      "Pintores de Italia del siglo XVIII",
+      "Pintores de Italia del siglo XXI",
+      "Pintores de Alemania del siglo XVIII",
+      "Pintores de Alemania del siglo XXI",
+      "Pintores de Países Bajos del siglo XVIII",
+      "Pintores de Países Bajos del siglo XXI",
+      "Pintores de Reino Unido del siglo XVIII",
+      "Pintores de Reino Unido del siglo XXI",
+      "Pintores de México del siglo XVIII",
+      "Pintores de México del siglo XXI"
+    ]
+  },
+  "basketball": {
+    "categories": [
+      "Baloncestistas de Croacia",
+      "Baloncestistas de Lituania",
+      "Baloncestistas de Eslovenia",
+      "Baloncestistas de Italia",
+      "Baloncestistas de Alemania",
+      "Baloncestistas de Grecia",
+      "Baloncestistas de Brasil",
+      "Baloncestistas de Australia",
+      "Baloncestistas de Canadá"
+    ]
+  },
+  "tennis": {
+    "categories": [
+      "Tenistas masculinos de Francia",
+      "Tenistas femeninas de Francia",
+      "Tenistas masculinos de Italia",
+      "Tenistas femeninas de Italia",
+      "Tenistas masculinos de Alemania",
+      "Tenistas femeninas de Alemania",
+      "Tenistas masculinos de Australia",
+      "Tenistas femeninas de Australia",
+      "Tenistas masculinos de Rusia",
+      "Tenistas femeninas de Rusia",
+      "Tenistas masculinos de Suiza",
+      "Tenistas femeninas de Suiza",
+      "Tenistas masculinos de Serbia",
+      "Tenistas femeninas de Serbia"
+    ]
+  },
+  "mammals": {
+    "categories": [
+      "Mamíferos de América del Sur",
+      "Mamíferos de América del Norte",
+      "Mamíferos de Australia",
+      "Canis",
+      "Felis",
+      "Panthera",
+      "Ursus"
+    ]
+  },
+  "birds": {
+    "categories": [
+      "Aves de América del Sur",
+      "Aves de América del Norte",
+      "Aves de Australia",
+      "Anas",
+      "Anser",
+      "Amazona",
+      "Ara"
+    ]
+  },
+  "fish": {
+    "categories": [
+      "Carcharhinus",
+      "Squalus",
+      "Etmopterus",
+      "Scyliorhinus",
+      "Galeus",
+      "Apristurus",
+      "Mustelus",
+      "Halaelurus",
+      "Heterodontus",
+      "Orectolobus",
+      "Squatina"
+    ]
+  },
+  "invertebrates": {
+    "categories": [
+      "Papilio",
+      "Morpho",
+      "Heliconius",
+      "Polyommatus",
+      "Colias",
+      "Vanessa",
+      "Danaus",
+      "Charaxes",
+      "Catocala",
+      "Antheraea"
+    ]
+  },
+  "volcanoes": {
+    "categories": [
+      "Volcanes de Estados Unidos",
+      "Volcanes de Rusia",
+      "Volcanes de Filipinas",
+      "Volcanes de Nueva Zelanda",
+      "Volcanes de Guatemala",
+      "Volcanes de Costa Rica",
+      "Volcanes de Perú",
+      "Volcanes de Argentina",
+      "Volcanes de Colombia",
+      "Volcanes de Tanzania"
+    ]
+  },
+  "car-models": {
+    "categories": [
+      "Modelos de Audi",
+      "Modelos de Škoda",
+      "Modelos de Kia",
+      "Modelos de Hyundai",
+      "Modelos de Nissan",
+      "Modelos de Honda",
+      "Modelos de Mazda",
+      "Modelos de Tesla",
+      "Modelos de Ferrari",
+      "Modelos de Porsche",
+      "Modelos de Fiat",
+      "Modelos de Dacia",
+      "Modelos de Volvo"
+    ]
+  },
+  "dog-breeds": {
+    "categories": [
+      "Razas de perro de Rusia",
+      "Razas de perro de Suiza",
+      "Razas de perro de China",
+      "Razas de perro de Canadá",
+      "Razas de perro de Australia",
+      "Razas de perro de Polonia",
+      "Razas de perro de Portugal",
+      "Razas de perro de Hungría",
+      "Razas de perro de Irlanda",
+      "Razas de perro de Suecia",
+      "Razas de perro de Finlandia"
+    ]
+  }
+}

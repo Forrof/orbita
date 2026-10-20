@@ -81,3 +81,9 @@ This local implementation does not include OAuth, cloud sync, payments, advertis
 The website does not offer a question/answer catalog or reveal the solution lists after playing. This is interface-level concealment: GitHub Pages serves a static client, so a technical user can still inspect downloaded game data. The public source repository is also readable. Actual server-side secrecy would require a backend to select prompts and validate answers without sending the bank to the browser.
 
 The expanded repertory can be rebuilt from the cached source snapshots with `npm run data:compile`. A full network refresh uses `npm run data:refresh`. Future daily editions must begin on a future date; published daily pools must remain unchanged. The Pages build rejects an unpublished draft catalogue or incompatible data snapshots.
+
+## Additive vocabulary release · 20 October 2026
+
+The 152-question bank now contains 886,502 answer entries across its overlapping prompts, including 114,047 newly registered distinct normalized canonical labels. Appliances accept “air frier”, “air fryer”, “airfryer” and documented plural forms. The expansion also covers everyday vocabulary, scientific species, people, works, places, canine breeds and named crosses, fiction and games. Source classifications, region boundaries, aliases, canonical precedence and shared daily compatibility are checked in the test suite.
+
+MITECO, GeoNames, Wikipedia memberships/redirects and Wikidata release dates establish validity. Spain observations and explicitly labelled editorial estimates establish scores. Source manifests and the per-question expansion audit are committed in `content/`. Research refreshes produce candidates for further review; new Wikipedia candidates do not silently replace the approved membership list or activate deferred questions.

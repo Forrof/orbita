@@ -1,4 +1,4 @@
-import { DAILY_EDITIONS } from './daily-catalog.js?v=4';
+import { DAILY_EDITIONS } from './daily-catalog.js?v=4.1';
 
 export const ROUNDS = 7;
 export const PREVIEW_MS = 3000;
@@ -83,6 +83,11 @@ function indexFor(category) {
   }
   if (!indexes.has(category)) {
     const idx = new Map();
+    // An alias must not steal another answer's explicit canonical spelling.
+    for (const a of category.answers) {
+      const key = a.key || normalize(a.word);
+      if (!idx.has(key)) idx.set(key, a);
+    }
     for (const a of category.answers) for (const alias of [a.word, ...(a.aliases || [])]) {
       const key = alias === a.word && a.key ? a.key : normalize(alias); if (!idx.has(key)) idx.set(key, a);
     }

@@ -7,6 +7,7 @@ import argparse
 import bisect
 import collections
 import hashlib
+import importlib.util
 import json
 import pathlib
 import re
@@ -18,6 +19,9 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 VERSION = '2026-10-20.4'
 TIER = {'common': 10, 'familiar': 30, 'rare': 60, 'deep': 85, 'gem': 100}
 LATIN = str.maketrans({'ø': 'o', 'Ø': 'O', 'ł': 'l', 'Ł': 'L', 'đ': 'd', 'Đ': 'D', 'ð': 'd', 'þ': 'th', 'æ': 'ae', 'œ': 'oe', 'ß': 'ss', 'ı': 'i'})
+variant_spec = importlib.util.spec_from_file_location('answer_variants', ROOT / 'scripts/answer-variants.py')
+variants = importlib.util.module_from_spec(variant_spec)
+variant_spec.loader.exec_module(variants)
 
 
 def read(path):
@@ -51,8 +55,23 @@ def main():
     signals = {norm(r['title']): r for r in read('.cache/current-interest-2026.json')['entries'] if r['daysListed'] >= 3}
     signal_values = sorted(r['publishedViews'] for r in signals.values())
     review = read('content/focused-review.json') if (ROOT / 'content/focused-review.json').exists() else {}
+    expanded = read('content/expanded-review.json')
+    sourced = read('content/reviewed-expanded-memberships.json')
+    species = read('content/imported-official-species.json')
+    works = read('content/imported-work-coverage.json')
+    exclusions = read('content/expanded-source-exclusions.json').get('questions', {})
+    # Answer additions must never silently promote a previously deferred prompt.
+    # The published dated catalogue is the registry of this edition's questions.
+    daily_path = ROOT / 'dist/daily-catalog.js'
+    published = None
+    if daily_path.exists() and not daily_path.read_text(encoding='utf-8').startswith('// DRAFT'):
+        editions = json.loads(daily_path.read_text(encoding='utf-8').split(' = ', 1)[1].strip().removesuffix(';'))
+        edition = next((e for e in editions if e['version'] == VERSION), None)
+        if edition:
+            published = {q[0] for q in edition['pool']}
     base = read('dist/data.json')
-    cities = list(geo_rows('cities15000.zip', 'cities15000.txt'))
+    attested = {word.casefold(): word for word, pos, _ in base['forms'] if set(pos.split('|')) & {'n', 'adj'}}
+    cities = list(geo_rows('cities5000.zip', 'cities5000.txt'))
     spain = list(geo_rows('geonames-ES.zip', 'ES.txt'))
     indexes = {}
     for key, parent in parents.items():
@@ -90,11 +109,23 @@ def main():
             continue
         records, record_aliases = {}, {}
 
-        def add(word, aliases=None, score=None, article=None):
+        def add(word, aliases=None, score=None, article=None, coalesce=False):
             word = word.strip()
             if not norm(word) or re.search('[\u0400-\u04ff]', word):
                 return
             candidates = [word, *(aliases or [])]
+            if coalesce:
+                linked = {norm(v) for v in candidates if norm(v) in records} | {record_aliases[norm(v)] for v in candidates if norm(v) in record_aliases}
+                if len(linked) > 1:
+                    preferred = norm(word) if norm(word) in linked else sorted(linked)[0]
+                    primary = records[preferred]
+                    joined = set(primary[1])
+                    for other_key in linked - {preferred}:
+                        other = records.pop(other_key)
+                        joined.update([other[0], *other[1]])
+                    records[preferred] = [primary[0], sorted(a for a in joined if norm(a) != preferred), *primary[2:]]
+                    for label in [primary[0], *joined]:
+                        record_aliases[norm(label)] = preferred
             existing = next((idx.get(norm(v)) for v in candidates if idx.get(norm(v))), None)
             # Merge equivalent spellings/aliases of an already selected concept.
             selected_key = next((record_aliases[norm(v)] for v in candidates if norm(v) in record_aliases), None)
@@ -139,7 +170,8 @@ def main():
                     continue
                 if geo.get('codes') and row[7] not in geo['codes']:
                     continue
-                add(row[1], [row[2]])
+                alternatives = [a for a in row[3].split(',') if a and len(a) <= 100 and all(unicodedata.category(c)[0] != 'L' or 'LATIN' in unicodedata.name(c, '') for c in a)]
+                add(row[1], list(dict.fromkeys([row[2], *alternatives])))
         elif spec.get('icdPrefixes'):
             for row in clinical:
                 if row['code'][0] in spec['icdPrefixes'] and not any(row['code'].startswith(prefix) for prefix in spec.get('excludeClinicalPrefixes', [])):
@@ -155,6 +187,10 @@ def main():
             result['all'] = True
             records = {norm(a[0]): a for a in parent['answers']}
 
+        for key, row in records.items():
+            for label in [row[0], *row[1]]:
+                record_aliases.setdefault(norm(label), key)
+
         # Explicit review aliases can join canonical answers but cannot silently
         # introduce an out-of-scope answer or count aliases as extra concepts.
         if spec['id'] == 'car-models':
@@ -165,8 +201,34 @@ def main():
                     record_aliases[norm(short)] = key
         for term in review.get(spec['id'], {}).get('additions', []):
             word, *aliases = term.split('~')
-            add(word, aliases)
+            add(word, aliases, coalesce=False)
+        for title in sourced.get(spec['id'], []):
+            simple = re.sub(r' \([^)]*\)$', '', title)
+            add(simple, [title] if simple != title else [], article=title)
+        for row in species['entries'].get(spec['id'], []):
+            add(row['word'], row['aliases'])
+        for row in works['memberships'].get(spec['id'], []):
+            add(row['word'], row['aliases'], article=row['article'])
+        for term in expanded.get(spec['id'], {}).get('additions', []):
+            word, *aliases = term.split('~')
+            # Titles can be homonyms (Cadena perpetua, 1979 and 1994).
+            # Keep independently sourced works distinct, even when a translated
+            # title is a valid alternative spelling in one of their subsets.
+            family = 'films' if spec['id'].startswith('films') else 'series' if spec['id'].startswith('series') else spec['id']
+            add(word, aliases, coalesce=family not in variants.WORKS)
+        if spec['id'] == 'cities':
+            # Broaden the register without losing previously reviewed exonyms
+            # or smaller historical capitals from the published answer bank.
+            for row in parent['answers']:
+                add(row[0], row[1])
+        if spec['id'] == 'car-models':
+            brands = r'SEAT|Volkswagen|Renault|Peugeot|Citroën|Ford|Toyota|Opel|BMW|Mercedes-Benz|Audi|Škoda|Kia|Hyundai|Nissan|Honda|Mazda|Tesla|Ferrari|Porsche|Fiat|Dacia|Volvo'
+            for key, row in list(records.items()):
+                short = re.sub(r'^(?:' + brands + r')\s+', '', row[0], flags=re.I)
+                if short != row[0]:
+                    records[key] = [row[0], sorted(set([*row[1], short])), *row[2:]]
         overrides = {norm(k): v for k, v in review.get(spec['id'], {}).get('scores', {}).items()}
+        overrides.update({norm(k): v for k, v in expanded.get(spec['id'], {}).get('scores', {}).items()})
         for key, row in list(records.items()):
             score = next((overrides[norm(v)] for v in [row[0], *row[1]] if norm(v) in overrides), None)
             if score is not None:
@@ -179,8 +241,15 @@ def main():
             row = records[key]
             records[key] = [row[0], sorted(set([*row[1], *aliases])), *row[2:]]
 
+        if spec['id'] in {'plants', 'trees', 'flowers'}:
+            fungal = {norm(name) for name in species['excludedFungi']}
+            fungal.update({'hongo', 'seta', 'champiñon', 'amanita', 'niscalo', 'boletus', 'trufa', 'rebozuelo'})
+            records = {key: row for key, row in records.items() if not any(norm(name) in fungal for name in [row[0], *row[1]])}
+        excluded = {norm(name) for name in exclusions.get(spec['id'], [])}
+        if excluded:
+            records = {key: row for key, row in records.items() if not any(norm(name) in excluded for name in [row[0], *row[1]])}
         resolved[spec['id']] = records
-        if len(records) < 100:
+        if len(records) < 100 or published is not None and result['id'] not in published:
             deferred.append({'id': spec['id'], 'count': len(records), 'reason': 'Fewer than 100 independently sourced canonical concepts; not published.'})
             print(f'DEFERRED {spec["id"]}: {len(records)}', flush=True)
             continue
@@ -207,6 +276,8 @@ def main():
         result['count'] = len(records)
         if spec.get('manual'):
             result['hint'] = 'Muebles, sin aparatos eléctricos.' if spec['manual'] == 'furniture' else 'Aparatos eléctricos del hogar: cocina, limpieza, climatización, cuidado personal y entretenimiento.'
+        if spec['id'] == 'dog-breeds':
+            result['hint'] = 'Razas caninas y cruces con nombre propio de uso establecido.'
         compiled.append(result)
         print(f'{result["id"]}: {len(records)}', flush=True)
 
@@ -262,10 +333,65 @@ def main():
         result.update(refs=refs, count=len(records))
         if additions:
             result['answers'] = additions
+    # A spelling added to a broad category must also work in a subset where the
+    # same concept was independently selected. This shares aliases, not members.
+    for identity, children in upward.items():
+        index = collections.defaultdict(dict)
+        for row in resolved[identity].values():
+            for label in [row[0], *row[1]]:
+                index[norm(label)][norm(row[0])] = row
+        for child in children:
+            for key, row in list(resolved.get(child, {}).items()):
+                candidates = {k: value for label in [row[0], *row[1]] for k, value in index.get(norm(label), {}).items()}
+                if len(candidates) == 1:
+                    broad = next(iter(candidates.values()))
+                    names = sorted(a for a in set([*row[1], broad[0], *broad[1]]) if norm(a) != key)
+                    resolved[child][key] = [row[0], names, *row[2:]]
+    # Alias changes do not create a new answer or alter its score. Generate only
+    # punctuation variants and unambiguous omitted articles in works' titles.
+    for result in compiled:
+        if result.get('dictionary'):
+            continue
+        identity = result['id'][3:]
+        records = resolved[identity]
+        owners = collections.defaultdict(set)
+        for key, row in records.items():
+            for label in [row[0], *row[1]]:
+                owners[norm(label)].add(key)
+        proposed = collections.defaultdict(dict)
+        for key, row in records.items():
+            for label in [row[0], *row[1]]:
+                gender = variants.feminine_variants(label, identity, attested)
+                inflections = variants.plural_variants(label, identity, attested)
+                for form in gender:
+                    inflections |= variants.plural_variants(form, identity, attested)
+                for variant in variants.spelling_variants(label, identity) | inflections | gender:
+                    proposed[norm(variant)][key] = variant
+        for name, choices in proposed.items():
+            if len(choices) != 1:
+                continue
+            key, variant = next(iter(choices.items()))
+            if owners.get(name, set()) - {key}:
+                continue
+            row = records[key]
+            if name != key:
+                records[key] = [row[0], sorted(set([*row[1], variant])), *row[2:]]
+        spec = next(s for s in specs if s['id'] == identity)
+        parent_rows = {norm(a[0]): a for a in parents.get(spec.get('parent'), {}).get('answers', [])}
+        result.pop('all', None)
+        result.pop('answers', None)
+        if result.get('parent'):
+            result['refs'] = [key for key, row in sorted(records.items()) if row == parent_rows.get(key)]
+        else:
+            result.pop('refs', None)
+        additions = [row for key, row in sorted(records.items()) if row != parent_rows.get(key)]
+        if additions:
+            result['answers'] = additions
+        result['count'] = len(records)
     packs = collections.Counter(q['pack'] for q in compiled)
     if any(packs[p] < 7 for p in ['everyday', 'nature', 'words', 'spain', 'science', 'culture', 'world']):
         raise RuntimeError(f'Each themed mission needs at least seven prompts: {packs}')
-    source_hashes = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in ['content/focused-questions.json', 'content/focused-review.json', 'content/imported-focused-memberships.json', 'content/manual-focused-20261020.json', 'content/focused-source-manifest.json', 'dist/repertory.json'] if (ROOT / name).exists()}
+    source_hashes = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in ['content/focused-questions.json', 'content/focused-review.json', 'content/imported-focused-memberships.json', 'content/manual-focused-20261020.json', 'content/focused-source-manifest.json', 'content/expanded-review.json', 'content/reviewed-expanded-memberships.json', 'content/expanded-source-plan.json', 'content/expanded-source-manifest.json', 'content/imported-official-species.json', 'content/imported-work-coverage.json', 'content/work-source-manifest.json', 'content/expanded-source-exclusions.json', 'content/expanded-geography-source.json', 'scripts/answer-variants.py', 'dist/repertory.json'] if (ROOT / name).exists()}
     output = {'version': VERSION, 'checked': '2026-10-20', 'parentRevision': bank['coverageRevision'], 'minimumAnswers': 100, 'actorCount': len(resolved['actors']), 'sourceHashes': source_hashes, 'questions': compiled}
     (ROOT / 'dist/focused-repertory.json').write_text(json.dumps(output, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
     audit = {'version': VERSION, 'checked': '2026-10-20', 'questions': [], 'deferred': deferred}
@@ -282,6 +408,12 @@ def main():
         elif not sources:
             sources += previous_audit[spec['parent']]['sources']
         sources += review.get(spec['id'], {}).get('sources', [])
+        expansion_plan = read('content/expanded-source-plan.json').get(spec['id'], {})
+        sources += ['https://es.wikipedia.org/wiki/Categoría:' + urllib.parse.quote(c.replace(' ', '_')) for c in expansion_plan.get('categories', [])]
+        sources += expanded.get(spec['id'], {}).get('sources', [])
+        if spec['id'] in species['entries']:
+            sources.append(species['source'])
+        sources += ['https://es.wikipedia.org/wiki/' + urllib.parse.quote(row['article'].replace(' ', '_')) for row in works['memberships'].get(spec['id'], [])]
         audit['questions'].append({'id': q['id'], 'count': q['count'], 'sources': sources, 'rarity': 'Inherited Spain evidence where available; explicitly identified editorial estimates otherwise.'})
     audited = {q['id']: q for q in audit['questions']}
     for identity, children in upward.items():

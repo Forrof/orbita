@@ -1,4 +1,4 @@
-import { normalize, hash } from './engine.js?v=4';
+import { normalize, hash } from './engine.js?v=4.1';
 import { TOPICS } from './topics.js';
 
 const SOURCE = 'SPALEX · reconocimiento de vocabulario por participantes nativos de España (NTS), 2014–2017. Las formas flexionadas heredan la medida de su lema cuando no existe una observación directa.';

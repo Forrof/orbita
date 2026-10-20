@@ -301,6 +301,6 @@ for path in sorted((ROOT / 'content').glob('*.json')):
     if path.name.startswith(('manual-', 'imported-')) or path.name in ('aliases.json', 'category-source-audit.json', 'focused-source-manifest.json', 'focused-source-exclusions.json'):
         manifests.append({'file': 'content/' + path.name, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(), 'role': 'Coverage and editorial review; not a rarity measurement'})
 bank = {'version': VERSION, 'checked': '2026-10-20', 'minimumAnswers': 100, 'interestPeriod': current['period'], 'ine': {'reference': '2025-01-01', 'published': '2026-04-23', 'nameUrl': 'https://www.ine.es/daco/daco42/nombyapel/nombres_por_edad_media.xlsx', 'surnameUrl': 'https://www.ine.es/daco/daco42/nombyapel/apellidos_frecuencia.xls', 'nameRows': 'Frecuencia de nombres, suma de ambos sexos cuando coinciden', 'surnameRows': 'Frecuencia como primer apellido'}, 'sourceManifest': manifests, 'countryDailyHashes': current['hashes'], 'questions': compiled}
-bank['coverageRevision'] = '2026-10-20.3'
+bank['coverageRevision'] = '2026-10-20.4'
 (ROOT / 'dist/repertory.json').write_text(json.dumps(bank, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
 print(f'Compiled {len(compiled)} different questions with at least 100 distinct answers each.')

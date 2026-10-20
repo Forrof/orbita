@@ -1,4 +1,4 @@
-import { DATA_VERSION, normalize, TIERS, tierFor } from './engine.js?v=4';
+import { DATA_VERSION, normalize, TIERS, tierFor } from './engine.js?v=4.1';
 
 const byPoints = new Map(Object.entries(TIERS).map(([key, tier]) => [tier.score, key]));
 export function buildFocusedCategories(data, previous) {
@@ -28,7 +28,7 @@ export function buildFocusedCategories(data, previous) {
   });
   // Existing broad questions keep their meaning and saved scores, while gaining
   // newly reviewed valid answers/aliases from their more specific descendants.
-  const compatible = {
+  const compatible = Object.assign(Object.fromEntries(previous.filter(c => c.id.startsWith('q3-')).map(c => [c.id.slice(3), [c.id.slice(3)]])), {
     actors: ['actors'], films: ['films'], series: ['series'], books: ['books'],
     music: ['singers', 'bands', 'composers', 'rappers'],
     scientists: ['scientists'], writers: ['writers'], health: ['health', 'injuries', 'symptoms'],
@@ -39,7 +39,7 @@ export function buildFocusedCategories(data, previous) {
     mammals: ['mammals'], birds: ['birds'], fish: ['fish'], plants: ['plants'],
     invertebrates: ['invertebrates'], home: ['furniture', 'appliances'],
     reptiles: ['dinosaurs'], market: ['market'], drinks: ['drinks']
-  };
+  });
   for (const [identity, children] of Object.entries(compatible)) {
     const old = parents.get('q3-' + identity);
     if (!old) continue;

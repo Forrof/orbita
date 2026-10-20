@@ -1,4 +1,4 @@
-import { CURATED_VERSION, TIERS, normalize, recognitionBand } from './engine.js?v=4';
+import { CURATED_VERSION, TIERS, normalize, recognitionBand } from './engine.js?v=4.1';
 
 const byPoints = new Map(Object.entries(TIERS).map(([key, tier]) => [tier.score, key]));
 export function buildCuratedCategories(data, previous) {

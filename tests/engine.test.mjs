@@ -513,3 +513,66 @@ test('source category essays, equipment, venues and techniques never masquerade 
   assert.equal(matchAnswer('gripe',category('q4-injuries'),false).accepted,false);
   assert.equal(matchAnswer('pterodáctilo',category('q4-dinosaurs'),false).accepted,false);
 });
+
+test('the expanded editorial vocabulary and all explicit spellings are playable in their own question', async () => {
+  const review = JSON.parse(await readFile(new URL('../content/expanded-review.json', import.meta.url), 'utf8'));
+  const failures = [];
+  for (const [identity, { additions }] of Object.entries(review)) {
+    const c = category('q4-' + identity);
+    assert.ok(c, identity);
+    for (const term of additions) for (const spelling of term.split('~')) {
+      if (!matchAnswer(spelling, c, false).accepted) failures.push(`${identity}: ${spelling}`);
+    }
+  }
+  assert.deepEqual(failures, []);
+});
+
+test('every air-fryer spelling identifies one appliance with the same points, also in the historical daily', () => {
+  for (const id of ['q4-appliances', 'q3-home']) {
+    const c = category(id), expected = matchAnswer('freidora de aire', c, false);
+    for (const spelling of ['air frier', 'air fryer', 'airfryer', 'airfrier', 'freidora sin aceite', 'freidoras de aire']) {
+      const answer = matchAnswer(spelling, c, false);
+      assert.ok(answer.accepted, `${id}: ${spelling}`);
+      assert.equal(answer.answer, expected.answer);
+      assert.equal(answer.score, expected.score);
+    }
+  }
+  assert.equal(matchAnswer('air frier', category('q4-furniture'), false).accepted, false);
+  assert.equal(matchAnswer('air frier', category('q4-brands'), false).accepted, false);
+});
+
+test('a canonical spelling keeps its own answer and score when a source also lists it as an alias', () => {
+  const original = category('q4-actors');
+  const c = { ...original, answers: [
+    { ...original.answers[0], word: 'Nombre artístico', key: 'nombre artistico', aliases: ['Nombre propio'], scoreTier: 'gem' },
+    { ...original.answers[1], word: 'Nombre propio', key: 'nombre propio', aliases: [], scoreTier: 'common' }
+  ] };
+  const answer = matchAnswer('Nombre propio', c, false);
+  assert.equal(answer.answer, 'Nombre propio');
+  assert.equal(answer.score, 10);
+});
+
+test('spelling tolerance handles attested plurals, job genders and omitted title articles', () => {
+  for (const [id, spelling] of [
+    ['appliances', 'freidoras de aire'], ['jobs', 'diseñadora gráfica'],
+    ['jobs', 'ingeniera de software'], ['wardrobe', 'camisetas de tirantes'],
+    ['tools', 'llaves de carraca'], ['films', 'Shawshank Redemption'],
+    ['films', 'The Shawshank Redemption'], ['characters', 'Spiderman']
+  ]) assert.ok(matchAnswer(spelling, category('q4-' + id), false).accepted, `${id}: ${spelling}`);
+  assert.equal(matchAnswer('botón de aire', category('q4-appliances'), false).accepted, false);
+  assert.equal(matchAnswer('ingeniera de software', category('q4-actors'), false).accepted, false);
+  assert.ok(matchAnswer('The Shawshank Redemption', category('q4-films-1990'), false).accepted);
+  assert.ok(matchAnswer('Cadena perpetua', category('q4-films-1990'), false).accepted);
+  assert.equal(matchAnswer('The Shawshank Redemption', category('q4-films-mexico'), false).accepted, false);
+});
+
+test('official species stay in their taxonomic categories and metadata never becomes an answer', () => {
+  for (const [id, word] of [['mammals', 'Lynx pardinus'], ['birds', 'Turdus merula'], ['fish', 'Sardina pilchardus'], ['plants', 'Quercus ilex'], ['invertebrates', 'Apis mellifera']]) {
+    assert.ok(matchAnswer(word, category('q4-' + id), false).accepted, `${id}: ${word}`);
+  }
+  for (const [id, word] of [['birds', 'Lynx pardinus'], ['plants', 'Amanita muscaria'], ['football-clubs', 'Equipos grandes del fútbol uruguayo'], ['directors', 'Premios y nominaciones de Leopoldo Torre Nilsson'], ['car-models', 'Honda Goldwing'], ['volcanoes', 'Mina de diamantes Williamson']]) {
+    assert.equal(matchAnswer(word, category('q4-' + id), false).accepted, false, `${id}: ${word}`);
+  }
+  assert.equal(matchAnswer('Gasteiz', category('q4-cities-br'), false).accepted, false);
+  assert.equal(matchAnswer('Beijing', category('q4-cities-us'), false).accepted, false);
+});

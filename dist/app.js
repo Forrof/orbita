@@ -1,6 +1,6 @@
-import { TIERS, ROUNDS, ANSWER_MS, DATA_VERSION, CURATED_VERSION, SUPPORTED_VERSIONS, dailyMission, dailyDiscoveries, madridDate, dateOffset, missionNumber, band, normalize, createRun, validateRun, startRound, finishRound, advanceClock, matchAnswer, totalScore, streaks } from './engine.js?v=4';
-import { buildCategories, PACKS } from './categories.js?v=4';
-import { sourcePanel } from './sources-panel.js?v=4';
+import { TIERS, ROUNDS, ANSWER_MS, DATA_VERSION, CURATED_VERSION, SUPPORTED_VERSIONS, dailyMission, dailyDiscoveries, madridDate, dateOffset, missionNumber, band, normalize, createRun, validateRun, startRound, finishRound, advanceClock, matchAnswer, totalScore, streaks } from './engine.js?v=4.1';
+import { buildCategories, PACKS } from './categories.js?v=4.1';
+import { sourcePanel } from './sources-panel.js?v=4.1';
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const main = $('#main'), dialog = $('#modal');
@@ -187,7 +187,7 @@ function dailySolutions() {
   return `<section class="daily-discoveries" aria-labelledby="discoveries-title"><div class="section-label"><span class="mono">LOS HALLAZGOS DEL DIARIO</span><p>Soluciones desbloqueadas al completar las siete señales.</p></div><h2 id="discoveries-title">Las respuestas que llegaban más lejos.</h2><p>Tres respuestas de mayor puntuación por pregunta. Puede haber más respuestas empatadas: esto es una selección, no un porcentaje de elecciones de otros jugadores.</p><div class="discoveries-grid">${discoveries.map((d, i) => `<article class="discovery-card"><span class="mono">SEÑAL ${String(i + 1).padStart(2, '0')}</span><h3>${esc(d.text)}</h3><p class="discovery-own">Tu respuesta: <strong>${esc(d.ownAnswer || 'Sin señal')}</strong> · ${d.ownScore} puntos</p><ol>${d.answers.map(a => `<li class="${normalize(a.word) === normalize(d.ownAnswer) ? 'discovered' : ''}"><span><strong>${esc(a.word)}</strong><small>${esc(basisLabel(a.basis))}</small></span><b>+${a.score}</b></li>`).join('')}</ol></article>`).join('')}</div></section>`;
 }
 function databaseBanner() {
-  return `<section class="database-banner" aria-label="Base de preguntas ampliada"><div><span class="mono">LA MISMA CURIOSIDAD. MUCHO MÁS UNIVERSO.</span><p><strong>${fmt(categories.filter(c => !c.legacy).length)}</strong> preguntas diferentes · <strong>100+</strong> respuestas por pregunta · 7 constelaciones</p><small>Edición de octubre de 2026 · ${fmt(data.focused.actorCount)} actores y actrices. Rareza desde España, con datos y estimaciones identificados.</small></div></section>`;
+  return `<section class="database-banner" aria-label="Base de preguntas ampliada"><div><span class="mono">LA MISMA CURIOSIDAD. MUCHO MÁS UNIVERSO.</span><p><strong>${fmt(categories.filter(c => !c.legacy).length)}</strong> preguntas diferentes · <strong>100+</strong> respuestas por pregunta · 7 constelaciones</p><small>${fmt(data.focused.questions.reduce((total, q) => total + q.count, 0))} respuestas registradas entre todas las categorías. Rareza desde España, con datos y estimaciones identificados.</small></div></section>`;
 }
 function packsScreen() {
   main.innerHTML = `<div class="page-heading"><div class="eyebrow"><span class="status-dot"></span>SIETE UNIVERSOS, LA MISMA CURIOSIDAD</div><h1>Constelaciones.</h1><p>Elige un tema y explora sus 30 capítulos. Los temas recorren el mundo; la rareza se valora desde España.</p></div><div class="pack-grid">${Object.entries(PACKS).filter(([id]) => id !== 'all').map(([id, p]) => { const done = new Set(completed().filter(r => r.mode === 'pack' && r.pack === id).map(r => r.seed)).size; return `<article class="pack-card"><span class="pack-icon" aria-hidden="true">${p.icon}</span><span class="mono" style="font-size:9px;color:var(--muted)">${categories.filter(c => !c.legacy && c.pack === id).length} CATEGORÍAS · 30 CAPÍTULOS</span><h2>${p.name}</h2><p>${p.subtitle}</p><a class="secondary" href="#pack/${id}/${store.chapters[id] || 1}">Explorar constelación ↗</a><span class="pack-progress">${done} / 30</span></article>`; }).join('')}</div><p class="archive-note">Cada capítulo combina siete categorías del tema. Algunas categorías reaparecen para que puedas probar respuestas distintas.</p>`;
@@ -339,7 +339,7 @@ window.addEventListener('storage', event => {
 
 async function init() {
   try {
-    const responses = await Promise.all([fetch('./data.json?v=4', { cache: 'no-cache' }), fetch('./repertory.json?v=4', { cache: 'no-cache' }), fetch('./focused-repertory.json?v=4', { cache: 'no-cache' })]);
+    const responses = await Promise.all([fetch('./data.json?v=4.1', { cache: 'no-cache' }), fetch('./repertory.json?v=4.1', { cache: 'no-cache' }), fetch('./focused-repertory.json?v=4.1', { cache: 'no-cache' })]);
     if (responses.some(response => !response.ok)) throw new Error('No se ha podido cargar el repertorio.');
     const [base, curated, focused] = await Promise.all(responses.map(response => response.json()));
     if (base.version !== DATA_VERSION || curated.version !== CURATED_VERSION || focused.version !== DATA_VERSION) throw new Error('Actualización incompleta. Recarga la página.');

@@ -250,7 +250,10 @@
     "id": "cities",
     "pack": "world",
     "text": "Elige un destino: nombra una ciudad del mundo.",
-    "parent": "q3-cities"
+    "parent": "q3-cities",
+    "geo": {
+      "type": "city"
+    }
   },
   {
     "id": "scientists",

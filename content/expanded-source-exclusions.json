@@ -1,0 +1,85 @@
+{
+  "all": [
+    "Equipos grandes del fútbol uruguayo",
+    "Honda ATC200",
+    "Honda Goldwing",
+    "Kia Granbird",
+    "Plataforma de Arquitectura Compacta Modular",
+    "Premios y nominaciones de Leopoldo Torre Nilsson",
+    "Razas de perro de Portugal"
+  ],
+  "volcanoes": [
+    "Arco volcánico centroamericano",
+    "Arco volcánico del Perú",
+    "Cadena volcánica de los Coconucos",
+    "Campo volcánico de Aguas Zarcas",
+    "Campo volcánico de Auckland",
+    "Campo volcánico de San Pablo",
+    "Cinturón de fuego del Pacífico",
+    "Erupción de Oruanui",
+    "Grupo de Joló",
+    "Hogg Rock",
+    "Lago de Cote",
+    "Lago del Cráter",
+    "Laguna Poco Sol",
+    "Laguna de Hule",
+    "Laguna de Río Cuarto",
+    "Laguna de San Diego",
+    "Mina de diamantes Williamson",
+    "Monte Dulang-dulang",
+    "Monte Kitanglad",
+    "Parque nacional Volcán Poás",
+    "Phantom Ship",
+    "Toba de Huckleberry Ridge",
+    "Toba de Lava Creek",
+    "Toba de Mesa Falls",
+    "Volcanes de Pocho",
+    "Zona volcánica de Taupo"
+  ],
+  "speciesTitlePolicy": "Species-level binomial only for broad Wikipedia biological candidates; official MITECO classification imported separately.",
+  "questions": {
+    "directors": [
+      "Premios y nominaciones de Leopoldo Torre Nilsson"
+    ],
+    "football-clubs": [
+      "Equipos grandes del fútbol uruguayo"
+    ],
+    "dog-breeds": [
+      "Razas de perro de Portugal"
+    ],
+    "car-models": [
+      "Honda Goldwing",
+      "Honda ATC200",
+      "Kia Granbird",
+      "Plataforma de Arquitectura Compacta Modular"
+    ],
+    "volcanoes": [
+      "Arco volcánico centroamericano",
+      "Arco volcánico del Perú",
+      "Cadena volcánica de los Coconucos",
+      "Campo volcánico de Aguas Zarcas",
+      "Campo volcánico de Auckland",
+      "Campo volcánico de San Pablo",
+      "Cinturón de fuego del Pacífico",
+      "Erupción de Oruanui",
+      "Grupo de Joló",
+      "Hogg Rock",
+      "Lago de Cote",
+      "Lago del Cráter",
+      "Laguna Poco Sol",
+      "Laguna de Hule",
+      "Laguna de Río Cuarto",
+      "Laguna de San Diego",
+      "Mina de diamantes Williamson",
+      "Monte Dulang-dulang",
+      "Monte Kitanglad",
+      "Parque nacional Volcán Poás",
+      "Phantom Ship",
+      "Toba de Huckleberry Ridge",
+      "Toba de Lava Creek",
+      "Toba de Mesa Falls",
+      "Volcanes de Pocho",
+      "Zona volcánica de Taupo"
+    ]
+  }
+}

@@ -69,7 +69,7 @@
   "cities-us": "Nueva York|Los Ángeles|Chicago",
   "cities-mx": "Ciudad de México|Guadalajara|Monterrey",
   "cities-ar": "Buenos Aires|Córdoba|Rosario",
-  "cities-br": "Río de Janeiro|São Paulo|Brasilia",
+  "cities-br": "Río de Janeiro|São Paulo|Brasilia|San Pablo",
   "cities-jp": "Tokio|Kioto|Osaka",
   "cities-in": "Nueva Delhi|Bombay|Calcuta",
   "cities-pt": "Lisboa|Oporto|Faro",
@@ -90,9 +90,9 @@
   "appliances": "lavadora|frigorífico|freidora de aire",
   "furniture": "silla|sofá|bargueño",
   "car-models": "Ibiza|Golf|Corolla",
-  "dog-breeds": "pastor alemán|labrador|chihuahua",
+  "dog-breeds": "pastor alemán|labrador|chihuahua|xoloitzcuintle|crestado chino|shih tzu|lhasa apso|pequinés|shar pei|chow chow|husky|pastor australiano|bichón habanero|coton de tuléar|caniche toy|cockapoo|labradoodle|goldendoodle|cavapoo|pomsky|pitbull|mastín tibetano|dogo argentino|fila brasileño|cane corso|presa canario",
   "minerals": "cuarzo|pirita|calcita",
-  "planets-fiction": "Hogwarts|Gotham|Mordor",
+  "planets-fiction": "Hogwarts|Gotham|Mordor|Braavos|Pentos|Essos|Poniente|Valyria|Dorne|Cair Paravel|Archenland|Calormen|Arendelle|Agrabah|País de las Maravillas|Oz|Isla Nublar|Isla Sorna|Ciudad Celeste|Ciudad Carmín|Kanto|Johto|Hoenn|Sinnoh|Teselia|Kalos|Alola|Galar|Paldea|Reino Champiñón|Isla Yoshi|Hyrule|Termina|Azeroth|Ventormenta|Orgrimmar|Rapture|Columbia|Ciudad 17|Black Mesa|Los Santos|Vice City|Liberty City|San Fierro|Las Venturas|Silent Hill|Raccoon City|Midgar|Spira|Zanarkand|Ivalice|Eorzea|Nirn|Tamriel|Skyrim|Morrowind|Cyrodiil|Ba Sing Se|Pandora|Arrakis|Trántor|Terminus|Mundo Anillo|Krypton|Cybertron",
   "board-games": "ajedrez|Catán|Monopoly",
   "dances": "flamenco|salsa|tango",
   "musical-genres": "rock|pop|flamenco",
@@ -104,5 +104,7 @@
   "writers-spain": "Cervantes|Lorca|Quevedo",
   "injuries": "fractura de fémur|esguince de tobillo|luxación de hombro|quemadura|tendinitis",
   "symptoms": "fiebre|tos|dolor de cabeza",
-  "health": "gripe|asma|cáncer de próstata"
+  "health": "gripe|asma|cáncer de próstata",
+  "characters": "Simba|Nala|Mufasa|Scar|Timón|Pumba|Elsa|Anna|Olaf|Stitch|Lilo|Vaiana|Maui|Mirabel Madrigal|Shrek|Fiona|Asno|Gato con Botas|Po|Hipo|Desdentao|Gru|Saitama|Light Yagami|Ryuk|Edward Elric|Sakura Kinomoto|Sailor Moon|Seiya|Hatsune Miku|Fox McCloud|Aloy|CJ|Trevor Philips|Leon Kennedy|Jill Valentine|Tifa Lockhart|Riku|Kairi|Triss Merigold|Yennefer",
+  "videogames": "Core Keeper|V Rising|Lethal Company|Content Warning"
 }

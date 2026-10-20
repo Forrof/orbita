@@ -4,7 +4,7 @@
   "questions": [
     {
       "id": "q4-transport",
-      "count": 283,
+      "count": 322,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ATipos_de_autom%C3%B3viles",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEmbarcaciones",
@@ -15,7 +15,7 @@
     },
     {
       "id": "q4-menu",
-      "count": 535,
+      "count": 612,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APlatos_de_pollo",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APlatos_de_pasta",
@@ -27,7 +27,7 @@
     },
     {
       "id": "q4-sports",
-      "count": 315,
+      "count": 400,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ADeportes_de_equipo",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ADeportes_acu%C3%A1ticos",
@@ -39,7 +39,7 @@
     },
     {
       "id": "q4-drinks",
-      "count": 340,
+      "count": 365,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AC%C3%B3cteles",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ATipos_de_caf%C3%A9",
@@ -54,7 +54,7 @@
     },
     {
       "id": "q4-desserts",
-      "count": 342,
+      "count": 385,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APostres_y_dulces_de_Espa%C3%B1a",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APostres_y_dulces_de_Francia",
@@ -64,11 +64,19 @@
     },
     {
       "id": "q4-mammals",
-      "count": 569,
+      "count": 1036,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AMam%C3%ADferos_de_Europa",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AMam%C3%ADferos_de_Asia",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AMam%C3%ADferos_de_%C3%81frica",
+        "https://es.wikipedia.org/wiki/Categoría:Mam%C3%ADferos_de_Am%C3%A9rica_del_Sur",
+        "https://es.wikipedia.org/wiki/Categoría:Mam%C3%ADferos_de_Am%C3%A9rica_del_Norte",
+        "https://es.wikipedia.org/wiki/Categoría:Mam%C3%ADferos_de_Australia",
+        "https://es.wikipedia.org/wiki/Categoría:Canis",
+        "https://es.wikipedia.org/wiki/Categoría:Felis",
+        "https://es.wikipedia.org/wiki/Categoría:Panthera",
+        "https://es.wikipedia.org/wiki/Categoría:Ursus",
+        "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/recursos/listas/lista-patron-especies-silvestres.xlsx",
         "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Espa%C3%B1a",
         "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Alemania",
         "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Francia",
@@ -77,7 +85,22 @@
         "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Estados_Unidos",
         "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Italia",
         "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_B%C3%A9lgica",
-        "https://es.wikipedia.org/wiki/pastor_alemán"
+        "https://es.wikipedia.org/wiki/pastor_alemán",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Rusia",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Suiza",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_China",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Canad%C3%A1",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Australia",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Polonia",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Portugal",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Hungr%C3%ADa",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Irlanda",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Suecia",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Finlandia",
+        "https://fci.be/es/Nomenclature/Default.aspx",
+        "https://www.fci.be/EN/nomenclature/XOLOITZCUINTLE-234.html",
+        "https://www.fci.be/es/Nomenclature/publication.aspx",
+        "https://es.wikipedia.org/wiki/Labradoodle"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise.",
       "includesReviewedSubsets": [
@@ -86,11 +109,19 @@
     },
     {
       "id": "q4-birds",
-      "count": 519,
+      "count": 5722,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AAves_de_Europa",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AAves_de_Asia",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AAves_de_%C3%81frica",
+        "https://es.wikipedia.org/wiki/Categoría:Aves_de_Am%C3%A9rica_del_Sur",
+        "https://es.wikipedia.org/wiki/Categoría:Aves_de_Am%C3%A9rica_del_Norte",
+        "https://es.wikipedia.org/wiki/Categoría:Aves_de_Australia",
+        "https://es.wikipedia.org/wiki/Categoría:Anas",
+        "https://es.wikipedia.org/wiki/Categoría:Anser",
+        "https://es.wikipedia.org/wiki/Categoría:Amazona",
+        "https://es.wikipedia.org/wiki/Categoría:Ara",
+        "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/recursos/listas/lista-patron-especies-silvestres.xlsx",
         "https://es.wikipedia.org/wiki/Categoría:Anatidae",
         "https://es.wikipedia.org/wiki/Anas_platyrhynchos",
         "https://es.wikipedia.org/wiki/Categoría:Psittacidae",
@@ -106,11 +137,23 @@
     },
     {
       "id": "q4-fish",
-      "count": 434,
+      "count": 2437,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APeces_del_oc%C3%A9ano_Atl%C3%A1ntico",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APeces_del_oc%C3%A9ano_Pac%C3%ADfico",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APeces_de_agua_dulce",
+        "https://es.wikipedia.org/wiki/Categoría:Carcharhinus",
+        "https://es.wikipedia.org/wiki/Categoría:Squalus",
+        "https://es.wikipedia.org/wiki/Categoría:Etmopterus",
+        "https://es.wikipedia.org/wiki/Categoría:Scyliorhinus",
+        "https://es.wikipedia.org/wiki/Categoría:Galeus",
+        "https://es.wikipedia.org/wiki/Categoría:Apristurus",
+        "https://es.wikipedia.org/wiki/Categoría:Mustelus",
+        "https://es.wikipedia.org/wiki/Categoría:Halaelurus",
+        "https://es.wikipedia.org/wiki/Categoría:Heterodontus",
+        "https://es.wikipedia.org/wiki/Categoría:Orectolobus",
+        "https://es.wikipedia.org/wiki/Categoría:Squatina",
+        "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/recursos/listas/lista-patron-especies-silvestres.xlsx",
         "https://es.wikipedia.org/wiki/Categoría:Carcharhinidae",
         "https://es.wikipedia.org/wiki/Categoría:Sphyrnidae",
         "https://es.wikipedia.org/wiki/Categoría:Lamnidae",
@@ -126,12 +169,23 @@
     },
     {
       "id": "q4-invertebrates",
-      "count": 522,
+      "count": 44019,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ACrust%C3%A1ceos",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AMoluscos",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AInsectos",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AAr%C3%A1cnidos",
+        "https://es.wikipedia.org/wiki/Categoría:Papilio",
+        "https://es.wikipedia.org/wiki/Categoría:Morpho",
+        "https://es.wikipedia.org/wiki/Categoría:Heliconius",
+        "https://es.wikipedia.org/wiki/Categoría:Polyommatus",
+        "https://es.wikipedia.org/wiki/Categoría:Colias",
+        "https://es.wikipedia.org/wiki/Categoría:Vanessa",
+        "https://es.wikipedia.org/wiki/Categoría:Danaus",
+        "https://es.wikipedia.org/wiki/Categoría:Charaxes",
+        "https://es.wikipedia.org/wiki/Categoría:Catocala",
+        "https://es.wikipedia.org/wiki/Categoría:Antheraea",
+        "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/recursos/listas/lista-patron-especies-silvestres.xlsx",
         "https://es.wikipedia.org/wiki/Categoría:Papilionidae",
         "https://es.wikipedia.org/wiki/Categoría:Nymphalidae",
         "https://es.wikipedia.org/wiki/Categoría:Pieridae",
@@ -147,11 +201,12 @@
     },
     {
       "id": "q4-plants",
-      "count": 999,
+      "count": 13318,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APlantas_medicinales",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APlantas_ornamentales",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APlantas_acu%C3%A1ticas",
+        "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/recursos/listas/lista-patron-especies-silvestres.xlsx",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3A%C3%81rboles_y_arbustos",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3A%C3%81rboles_frutales",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AArbustos",
@@ -168,7 +223,7 @@
     },
     {
       "id": "q4-trees",
-      "count": 272,
+      "count": 548,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3A%C3%81rboles_y_arbustos",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3A%C3%81rboles_frutales",
@@ -178,72 +233,79 @@
     },
     {
       "id": "q4-jobs",
-      "count": 349,
+      "count": 450,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AOcupaciones",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AProfesiones",
-        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AOficios"
+        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AOficios",
+        "https://dle.rae.es/"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-wardrobe",
-      "count": 315,
+      "count": 374,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AIndumentaria",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APrendas_de_vestir",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ACalzado",
-        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ASombreros"
+        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ASombreros",
+        "https://dle.rae.es/"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-instruments",
-      "count": 486,
+      "count": 532,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AInstrumentos_de_cuerda",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AInstrumentos_de_viento",
-        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AInstrumentos_de_percusi%C3%B3n"
+        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AInstrumentos_de_percusi%C3%B3n",
+        "https://dle.rae.es/"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-tools",
-      "count": 329,
+      "count": 433,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AHerramientas_manuales",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AHerramientas_de_carpintero",
-        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AHerramientas_de_jardiner%C3%ADa"
+        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AHerramientas_de_jardiner%C3%ADa",
+        "https://dle.rae.es/"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-feelings",
-      "count": 300,
+      "count": 360,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEmociones",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ASentimientos",
-        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEstados_mentales"
+        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEstados_mentales",
+        "https://dle.rae.es/"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-containers",
-      "count": 460,
+      "count": 548,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ARecipientes",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEnvases",
-        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEmbalaje"
+        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEmbalaje",
+        "https://dle.rae.es/"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-sports-equipment",
-      "count": 355,
+      "count": 440,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEquipamiento_deportivo",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ABalones",
-        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEquipamiento_de_ciclismo"
+        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEquipamiento_de_ciclismo",
+        "https://dle.rae.es/"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -293,7 +355,7 @@
     },
     {
       "id": "q4-spanish-food",
-      "count": 380,
+      "count": 497,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APlatos_de_pescado_de_Espa%C3%B1a",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APostres_y_dulces_de_Espa%C3%B1a",
@@ -319,12 +381,13 @@
     },
     {
       "id": "q4-demonym",
-      "count": 286,
+      "count": 388,
       "sources": [
         "https://es.wikipedia.org/wiki/Anexo%3AGentilicios_de_Espa%C3%B1a",
         "https://dle.rae.es/tarrasense",
         "https://dle.rae.es/egarense",
-        "https://torrent.es/equipamiento/conocer-torrent/"
+        "https://torrent.es/equipamiento/conocer-torrent/",
+        "https://dle.rae.es/"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -338,7 +401,7 @@
     },
     {
       "id": "q4-materials",
-      "count": 1539,
+      "count": 1596,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AMateriales",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AMinerales",
@@ -360,20 +423,22 @@
     },
     {
       "id": "q4-disciplines",
-      "count": 403,
+      "count": 514,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ADisciplinas_acad%C3%A9micas",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ARamas_de_la_biolog%C3%ADa",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ARamas_de_la_f%C3%ADsica",
-        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ACiencias_sociales"
+        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ACiencias_sociales",
+        "https://dle.rae.es/"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-health",
-      "count": 5169,
+      "count": 5513,
       "sources": [
-        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx"
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/2026_CIE10ES_Tomo_I_Diagnosticos.pdf"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise.",
       "includesReviewedSubsets": [
@@ -390,7 +455,7 @@
     },
     {
       "id": "q4-films",
-      "count": 36484,
+      "count": 36481,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APel%C3%ADculas_de_1972",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APel%C3%ADculas_de_1977",
@@ -442,6 +507,142 @@
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APel%C3%ADculas_de_2007",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APel%C3%ADculas_de_2008",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APel%C3%ADculas_de_2009",
+        "https://es.wikipedia.org/wiki/A_Beautiful_Mind",
+        "https://es.wikipedia.org/wiki/A_Fish_Called_Wanda",
+        "https://es.wikipedia.org/wiki/A_dos_metros_de_ti",
+        "https://es.wikipedia.org/wiki/Airplane%21",
+        "https://es.wikipedia.org/wiki/Amores_perros",
+        "https://es.wikipedia.org/wiki/Am%C3%A9lie",
+        "https://es.wikipedia.org/wiki/Atlantis%3A_El_imperio_perdido",
+        "https://es.wikipedia.org/wiki/Back_to_the_Future",
+        "https://es.wikipedia.org/wiki/Back_to_the_Future_Part_II",
+        "https://es.wikipedia.org/wiki/Back_to_the_Future_Part_III",
+        "https://es.wikipedia.org/wiki/Blade_Runner",
+        "https://es.wikipedia.org/wiki/Cinema_Paradiso",
+        "https://es.wikipedia.org/wiki/Con_Air",
+        "https://es.wikipedia.org/wiki/Cuerpo_de_%C3%A9lite_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/C%C3%B3mo_entrenar_a_tu_drag%C3%B3n_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Dark_City",
+        "https://es.wikipedia.org/wiki/Dead_Poets_Society",
+        "https://es.wikipedia.org/wiki/Demolition_Man",
+        "https://es.wikipedia.org/wiki/Die_Hard",
+        "https://es.wikipedia.org/wiki/Doce_monos",
+        "https://es.wikipedia.org/wiki/Dune",
+        "https://es.wikipedia.org/wiki/D%C3%ADas_extra%C3%B1os",
+        "https://es.wikipedia.org/wiki/E.T.%2C_el_extraterrestre",
+        "https://es.wikipedia.org/wiki/EXistenZ",
+        "https://es.wikipedia.org/wiki/El_Gran_Hotel_Budapest",
+        "https://es.wikipedia.org/wiki/El_cuento_de_la_princesa_Kaguya",
+        "https://es.wikipedia.org/wiki/El_laberinto_del_fauno",
+        "https://es.wikipedia.org/wiki/El_ni%C3%B1o_y_la_bestia",
+        "https://es.wikipedia.org/wiki/El_origen_de_los_guardianes",
+        "https://es.wikipedia.org/wiki/El_planeta_del_tesoro",
+        "https://es.wikipedia.org/wiki/El_protegido",
+        "https://es.wikipedia.org/wiki/El_pr%C3%ADncipe_de_Egipto",
+        "https://es.wikipedia.org/wiki/El_quinto_elemento",
+        "https://es.wikipedia.org/wiki/El_recuerdo_de_Marnie",
+        "https://es.wikipedia.org/wiki/El_renacido",
+        "https://es.wikipedia.org/wiki/El_rey_le%C3%B3n",
+        "https://es.wikipedia.org/wiki/El_secreto_de_sus_ojos",
+        "https://es.wikipedia.org/wiki/El_tiempo_contigo",
+        "https://es.wikipedia.org/wiki/El_viaje_de_Chihiro",
+        "https://es.wikipedia.org/wiki/Encanto_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Enredados",
+        "https://es.wikipedia.org/wiki/Eternal_Sunshine_of_the_Spotless_Mind",
+        "https://es.wikipedia.org/wiki/Fantastic_Mr._Fox",
+        "https://es.wikipedia.org/wiki/Gake_no_ue_no_Ponyo",
+        "https://es.wikipedia.org/wiki/Gattaca",
+        "https://es.wikipedia.org/wiki/Get_Out",
+        "https://es.wikipedia.org/wiki/Gladiator",
+        "https://es.wikipedia.org/wiki/Good_Will_Hunting",
+        "https://es.wikipedia.org/wiki/Grease",
+        "https://es.wikipedia.org/wiki/Groundhog_Day",
+        "https://es.wikipedia.org/wiki/Hereditary",
+        "https://es.wikipedia.org/wiki/Inside_Out_%28pel%C3%ADcula_de_2015%29",
+        "https://es.wikipedia.org/wiki/Inside_Out_2",
+        "https://es.wikipedia.org/wiki/Interstellar",
+        "https://es.wikipedia.org/wiki/It_Follows",
+        "https://es.wikipedia.org/wiki/John_Wick",
+        "https://es.wikipedia.org/wiki/Kimitachi_wa_D%C5%8D_Ikiru_ka_%28pel%C3%ADcula_de_2023%29",
+        "https://es.wikipedia.org/wiki/Knives_Out",
+        "https://es.wikipedia.org/wiki/Koe_no_Katachi_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Kung_Fu_Panda",
+        "https://es.wikipedia.org/wiki/La_chica_que_saltaba_a_trav%C3%A9s_del_tiempo",
+        "https://es.wikipedia.org/wiki/La_dolce_vita",
+        "https://es.wikipedia.org/wiki/La_mujer_en_la_ventana",
+        "https://es.wikipedia.org/wiki/La_princesa_Mononoke",
+        "https://es.wikipedia.org/wiki/La_sustancia",
+        "https://es.wikipedia.org/wiki/La_tumba_de_las_luci%C3%A9rnagas",
+        "https://es.wikipedia.org/wiki/La_ventana_indiscreta",
+        "https://es.wikipedia.org/wiki/La_vida_de_Brian",
+        "https://es.wikipedia.org/wiki/La_vida_es_bella",
+        "https://es.wikipedia.org/wiki/Labyrinth_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Les_Choristes",
+        "https://es.wikipedia.org/wiki/Lilo_%26_Stitch",
+        "https://es.wikipedia.org/wiki/Lo_que_queda_del_d%C3%ADa_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Longlegs",
+        "https://es.wikipedia.org/wiki/Los_Croods",
+        "https://es.wikipedia.org/wiki/Los_Goonies",
+        "https://es.wikipedia.org/wiki/Los_misterios_de_Laura",
+        "https://es.wikipedia.org/wiki/Los_p%C3%A1jaros",
+        "https://es.wikipedia.org/wiki/Los_siete_samur%C3%A1is",
+        "https://es.wikipedia.org/wiki/Los_tipos_malos",
+        "https://es.wikipedia.org/wiki/Majo_no_Takky%C5%ABbin",
+        "https://es.wikipedia.org/wiki/Mar_adentro",
+        "https://es.wikipedia.org/wiki/Matar_un_ruise%C3%B1or",
+        "https://es.wikipedia.org/wiki/Matrix",
+        "https://es.wikipedia.org/wiki/Megamind",
+        "https://es.wikipedia.org/wiki/Mi_vecino_Totoro",
+        "https://es.wikipedia.org/wiki/Millennium_Actress",
+        "https://es.wikipedia.org/wiki/Moana_%28pel%C3%ADcula_de_2016%29",
+        "https://es.wikipedia.org/wiki/Moana_2",
+        "https://es.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail",
+        "https://es.wikipedia.org/wiki/Moonrise_Kingdom",
+        "https://es.wikipedia.org/wiki/Mulan",
+        "https://es.wikipedia.org/wiki/North_by_Northwest",
+        "https://es.wikipedia.org/wiki/Noruwei_no_Mori",
+        "https://es.wikipedia.org/wiki/Nueve_reinas",
+        "https://es.wikipedia.org/wiki/Ocho_apellidos_vascos",
+        "https://es.wikipedia.org/wiki/Onward",
+        "https://es.wikipedia.org/wiki/Perfect_Blue",
+        "https://es.wikipedia.org/wiki/Porco_Rosso",
+        "https://es.wikipedia.org/wiki/Pulp_Fiction",
+        "https://es.wikipedia.org/wiki/Pumpkinhead_II%3A_Blood_Wings",
+        "https://es.wikipedia.org/wiki/Quiero_comerme_tu_p%C3%A1ncreas",
+        "https://es.wikipedia.org/wiki/Ralph_Breaks_the_Internet",
+        "https://es.wikipedia.org/wiki/Raya_y_el_%C3%BAltimo_drag%C3%B3n",
+        "https://es.wikipedia.org/wiki/Relatos_salvajes",
+        "https://es.wikipedia.org/wiki/Respira",
+        "https://es.wikipedia.org/wiki/RoboCop",
+        "https://es.wikipedia.org/wiki/Robot_Dreams",
+        "https://es.wikipedia.org/wiki/Romper_el_c%C3%ADrculo",
+        "https://es.wikipedia.org/wiki/Rosemary%27s_Baby_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Seven",
+        "https://es.wikipedia.org/wiki/Shrek",
+        "https://es.wikipedia.org/wiki/Summer_Wars",
+        "https://es.wikipedia.org/wiki/Susurros_del_coraz%C3%B3n",
+        "https://es.wikipedia.org/wiki/Suzume",
+        "https://es.wikipedia.org/wiki/The_Blair_Witch_Project",
+        "https://es.wikipedia.org/wiki/The_Conjuring",
+        "https://es.wikipedia.org/wiki/The_Dark_Crystal",
+        "https://es.wikipedia.org/wiki/The_Dark_Knight",
+        "https://es.wikipedia.org/wiki/The_Emperor%27s_New_Groove",
+        "https://es.wikipedia.org/wiki/The_Green_Mile",
+        "https://es.wikipedia.org/wiki/The_Princess_and_the_Frog",
+        "https://es.wikipedia.org/wiki/The_Shawshank_Redemption",
+        "https://es.wikipedia.org/wiki/The_Terminator",
+        "https://es.wikipedia.org/wiki/The_Thirteenth_Floor",
+        "https://es.wikipedia.org/wiki/To_Catch_a_Thief",
+        "https://es.wikipedia.org/wiki/Tokyo_Godfathers",
+        "https://es.wikipedia.org/wiki/Total_Recall",
+        "https://es.wikipedia.org/wiki/Toy_Story",
+        "https://es.wikipedia.org/wiki/True_Lies",
+        "https://es.wikipedia.org/wiki/Vecinos_invasores",
+        "https://es.wikipedia.org/wiki/Volver_a_empezar",
+        "https://es.wikipedia.org/wiki/Wreck-It_Ralph",
+        "https://es.wikipedia.org/wiki/Y_tu_mam%C3%A1_tambi%C3%A9n",
+        "https://es.wikipedia.org/wiki/Zootopia",
+        "https://es.wikipedia.org/wiki/%C5%8Ckami_Kodomo_no_Ame_to_Yuki",
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_animaci%C3%B3n",
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_terror",
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_ciencia_ficci%C3%B3n",
@@ -531,7 +732,7 @@
     },
     {
       "id": "q4-series",
-      "count": 10823,
+      "count": 10843,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ASeries_de_televisi%C3%B3n_iniciadas_en_1990",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ASeries_de_televisi%C3%B3n_iniciadas_en_1994",
@@ -568,6 +769,129 @@
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ASeries_de_televisi%C3%B3n_iniciadas_en_2007",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ASeries_de_televisi%C3%B3n_iniciadas_en_2008",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ASeries_de_televisi%C3%B3n_iniciadas_en_2009",
+        "https://es.wikipedia.org/wiki/4_estrellas",
+        "https://es.wikipedia.org/wiki/Acacias_38",
+        "https://es.wikipedia.org/wiki/Al_salir_de_clase",
+        "https://es.wikipedia.org/wiki/Ally_McBeal",
+        "https://es.wikipedia.org/wiki/All%C3%AD_abajo",
+        "https://es.wikipedia.org/wiki/Amar_en_tiempos_revueltos",
+        "https://es.wikipedia.org/wiki/Amar_es_para_siempre",
+        "https://es.wikipedia.org/wiki/Anclados",
+        "https://es.wikipedia.org/wiki/Barrio_S%C3%A9samo",
+        "https://es.wikipedia.org/wiki/Beverly_Hills%2C_90210",
+        "https://es.wikipedia.org/wiki/Bienvenidos_a_Ed%C3%A9n",
+        "https://es.wikipedia.org/wiki/Bob_Esponja",
+        "https://es.wikipedia.org/wiki/Buffy_the_Vampire_Slayer_%28serie_de_televisi%C3%B3n%29",
+        "https://es.wikipedia.org/wiki/Camera_Caf%C3%A9",
+        "https://es.wikipedia.org/wiki/Charmed",
+        "https://es.wikipedia.org/wiki/Chiringuito_de_Pepe",
+        "https://es.wikipedia.org/wiki/Cu%C3%A9ntame_c%C3%B3mo_pas%C3%B3",
+        "https://es.wikipedia.org/wiki/David_el_Gnomo",
+        "https://es.wikipedia.org/wiki/Dawson%27s_Creek",
+        "https://es.wikipedia.org/wiki/Desperate_Housewives",
+        "https://es.wikipedia.org/wiki/Detective_Tour%C3%A9",
+        "https://es.wikipedia.org/wiki/Doctor_Mateo",
+        "https://es.wikipedia.org/wiki/Doctor_Who",
+        "https://es.wikipedia.org/wiki/D%C3%ADas_de_Navidad",
+        "https://es.wikipedia.org/wiki/El_Ministerio_del_Tiempo",
+        "https://es.wikipedia.org/wiki/El_Peque%C3%B1o_Reino_de_Ben_y_Holly",
+        "https://es.wikipedia.org/wiki/El_caso_Asunta",
+        "https://es.wikipedia.org/wiki/El_cuerpo_en_llamas",
+        "https://es.wikipedia.org/wiki/El_fin_de_la_comedia",
+        "https://es.wikipedia.org/wiki/El_hombre_de_tu_vida",
+        "https://es.wikipedia.org/wiki/El_internado",
+        "https://es.wikipedia.org/wiki/Estoy_vivo",
+        "https://es.wikipedia.org/wiki/Familia_Teler%C3%ADn",
+        "https://es.wikipedia.org/wiki/Family_Matters",
+        "https://es.wikipedia.org/wiki/Friends",
+        "https://es.wikipedia.org/wiki/Full_House",
+        "https://es.wikipedia.org/wiki/F%C3%ADsica_o_qu%C3%ADmica",
+        "https://es.wikipedia.org/wiki/Gilmore_Girls",
+        "https://es.wikipedia.org/wiki/Gym_Tony",
+        "https://es.wikipedia.org/wiki/Hill_Street_Blues",
+        "https://es.wikipedia.org/wiki/Knight_Rider",
+        "https://es.wikipedia.org/wiki/La_Moderna",
+        "https://es.wikipedia.org/wiki/La_casa_de_Mickey_Mouse",
+        "https://es.wikipedia.org/wiki/La_casa_de_papel",
+        "https://es.wikipedia.org/wiki/La_cocinera_de_Castamar",
+        "https://es.wikipedia.org/wiki/La_embajada",
+        "https://es.wikipedia.org/wiki/La_familia_Mata",
+        "https://es.wikipedia.org/wiki/La_guardia_del_le%C3%B3n",
+        "https://es.wikipedia.org/wiki/La_mes%C3%ADas",
+        "https://es.wikipedia.org/wiki/La_que_se_avecina",
+        "https://es.wikipedia.org/wiki/La_templanza",
+        "https://es.wikipedia.org/wiki/La_unidad_%28serie_de_televisi%C3%B3n%29",
+        "https://es.wikipedia.org/wiki/La_valla",
+        "https://es.wikipedia.org/wiki/La_vuelta_al_mundo_de_Willy_Fog",
+        "https://es.wikipedia.org/wiki/La_v%C3%ADctima_n%C3%BAmero_8",
+        "https://es.wikipedia.org/wiki/Las_abogadas",
+        "https://es.wikipedia.org/wiki/Las_chicas_del_cable",
+        "https://es.wikipedia.org/wiki/Las_de_la_%C3%BAltima_fila",
+        "https://es.wikipedia.org/wiki/Las_tres_mellizas",
+        "https://es.wikipedia.org/wiki/Los_Farad",
+        "https://es.wikipedia.org/wiki/Los_Serrano",
+        "https://es.wikipedia.org/wiki/Los_Simpson",
+        "https://es.wikipedia.org/wiki/Los_favoritos_de_Midas",
+        "https://es.wikipedia.org/wiki/Los_hombres_de_Paco",
+        "https://es.wikipedia.org/wiki/Los_misterios_de_Laura",
+        "https://es.wikipedia.org/wiki/Los_mundos_de_Yupi",
+        "https://es.wikipedia.org/wiki/Lost",
+        "https://es.wikipedia.org/wiki/Luz_de_luna",
+        "https://es.wikipedia.org/wiki/Maid",
+        "https://es.wikipedia.org/wiki/Malviviendo",
+        "https://es.wikipedia.org/wiki/Maple_Town_Monogatari",
+        "https://es.wikipedia.org/wiki/Mar_de_pl%C3%A1stico",
+        "https://es.wikipedia.org/wiki/Maric%C3%B3n_perdido",
+        "https://es.wikipedia.org/wiki/Miami_Vice",
+        "https://es.wikipedia.org/wiki/Mira_lo_que_has_hecho",
+        "https://es.wikipedia.org/wiki/Muertos_S.L.",
+        "https://es.wikipedia.org/wiki/Murder%2C_She_Wrote",
+        "https://es.wikipedia.org/wiki/Ni_una_m%C3%A1s",
+        "https://es.wikipedia.org/wiki/Normal_People",
+        "https://es.wikipedia.org/wiki/Northern_Exposure",
+        "https://es.wikipedia.org/wiki/Olmos_y_Robles",
+        "https://es.wikipedia.org/wiki/PAW_Patrol",
+        "https://es.wikipedia.org/wiki/Padre_de_familia",
+        "https://es.wikipedia.org/wiki/Paquita_Salas",
+        "https://es.wikipedia.org/wiki/Peppa_Pig",
+        "https://es.wikipedia.org/wiki/Pepper_Ann",
+        "https://es.wikipedia.org/wiki/Perfect_Strangers_%28serie_de_televisi%C3%B3n_de_1986%29",
+        "https://es.wikipedia.org/wiki/Pingu",
+        "https://es.wikipedia.org/wiki/Pocoy%C3%B3",
+        "https://es.wikipedia.org/wiki/Poquita_fe",
+        "https://es.wikipedia.org/wiki/Prison_Break",
+        "https://es.wikipedia.org/wiki/Querer",
+        "https://es.wikipedia.org/wiki/Recess",
+        "https://es.wikipedia.org/wiki/Sabrina_the_Teenage_Witch_%28serie_de_televisi%C3%B3n%29",
+        "https://es.wikipedia.org/wiki/Sagrada_familia",
+        "https://es.wikipedia.org/wiki/Seis_hermanas",
+        "https://es.wikipedia.org/wiki/Servir_y_proteger",
+        "https://es.wikipedia.org/wiki/Sex_and_the_City",
+        "https://es.wikipedia.org/wiki/Sky_Rojo",
+        "https://es.wikipedia.org/wiki/Star_Trek",
+        "https://es.wikipedia.org/wiki/Stranger_Things",
+        "https://es.wikipedia.org/wiki/Supernormal",
+        "https://es.wikipedia.org/wiki/S%C3%A9_qui%C3%A9n_eres",
+        "https://es.wikipedia.org/wiki/The_A-Team",
+        "https://es.wikipedia.org/wiki/The_Big_Bang_Theory",
+        "https://es.wikipedia.org/wiki/The_Fresh_Prince_of_Bel-Air",
+        "https://es.wikipedia.org/wiki/The_Littles_%28serie_de_televisi%C3%B3n%29",
+        "https://es.wikipedia.org/wiki/The_Vampire_Diaries_%28serie_de_televisi%C3%B3n%29",
+        "https://es.wikipedia.org/wiki/The_Wonder_Years",
+        "https://es.wikipedia.org/wiki/The_X-Files",
+        "https://es.wikipedia.org/wiki/Todas_las_veces_que_nos_enamoramos",
+        "https://es.wikipedia.org/wiki/Todos_mienten",
+        "https://es.wikipedia.org/wiki/Toy_Boy",
+        "https://es.wikipedia.org/wiki/Valle_salvaje",
+        "https://es.wikipedia.org/wiki/Vamos_Juan",
+        "https://es.wikipedia.org/wiki/Velvet_Colecci%C3%B3n",
+        "https://es.wikipedia.org/wiki/Venga_Juan",
+        "https://es.wikipedia.org/wiki/Vivir_sin_permiso",
+        "https://es.wikipedia.org/wiki/Vota_Juan",
+        "https://es.wikipedia.org/wiki/%C3%81guila_Roja",
+        "https://es.wikipedia.org/wiki/%C3%89rase_una_vez..._el_espacio",
+        "https://es.wikipedia.org/wiki/%C3%89rase_una_vez..._el_hombre",
+        "https://es.wikipedia.org/wiki/%C3%89rase_una_vez..._la_Vida",
         "https://es.wikipedia.org/wiki/Categoría:Series_de_televisi%C3%B3n_animadas",
         "https://es.wikipedia.org/wiki/Categoría:Series_de_televisi%C3%B3n_de_comedia",
         "https://es.wikipedia.org/wiki/Categoría:Series_de_televisi%C3%B3n_de_ciencia_ficci%C3%B3n",
@@ -716,7 +1040,7 @@
     },
     {
       "id": "q4-books",
-      "count": 2553,
+      "count": 2641,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ANovelas_de_1850",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ANovelas_de_1860",
@@ -773,6 +1097,97 @@
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ANovelas_de_2007",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ANovelas_de_2008",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ANovelas_de_2009",
+        "https://es.wikipedia.org/wiki/1Q84",
+        "https://es.wikipedia.org/wiki/Al_sur_de_la_frontera%2C_al_oeste_del_sol",
+        "https://es.wikipedia.org/wiki/Alas_de_%C3%B3nix",
+        "https://es.wikipedia.org/wiki/Aleaci%C3%B3n_de_ley",
+        "https://es.wikipedia.org/wiki/American_Gods",
+        "https://es.wikipedia.org/wiki/Bajo_la_misma_estrella",
+        "https://es.wikipedia.org/wiki/Brujer%C3%ADas",
+        "https://es.wikipedia.org/wiki/Buenos_presagios",
+        "https://es.wikipedia.org/wiki/Buscando_a_Alaska",
+        "https://es.wikipedia.org/wiki/Cien_a%C3%B1os_de_soledad",
+        "https://es.wikipedia.org/wiki/Ciudades_de_papel",
+        "https://es.wikipedia.org/wiki/Conversaciones_entre_amigos",
+        "https://es.wikipedia.org/wiki/Coraline",
+        "https://es.wikipedia.org/wiki/Cr%C3%B3nica_del_p%C3%A1jaro_que_da_cuerda_al_mundo",
+        "https://es.wikipedia.org/wiki/Dioses_menores",
+        "https://es.wikipedia.org/wiki/Don_Quijote_de_la_Mancha",
+        "https://es.wikipedia.org/wiki/Dune",
+        "https://es.wikipedia.org/wiki/El_Se%C3%B1or_de_los_Anillos",
+        "https://es.wikipedia.org/wiki/El_aliento_de_los_dioses",
+        "https://es.wikipedia.org/wiki/El_camino_de_los_reyes",
+        "https://es.wikipedia.org/wiki/El_caso_Alaska_Sanders",
+        "https://es.wikipedia.org/wiki/El_castillo_ambulante",
+        "https://es.wikipedia.org/wiki/El_desorden_que_dejas",
+        "https://es.wikipedia.org/wiki/El_enigma_de_la_habitaci%C3%B3n_622",
+        "https://es.wikipedia.org/wiki/El_extranjero",
+        "https://es.wikipedia.org/wiki/El_fin_del_mundo_y_un_despiadado_pa%C3%ADs_de_las_maravillas",
+        "https://es.wikipedia.org/wiki/El_hobbit",
+        "https://es.wikipedia.org/wiki/El_h%C3%A9roe_de_las_eras",
+        "https://es.wikipedia.org/wiki/El_imperio_final",
+        "https://es.wikipedia.org/wiki/El_libro_de_los_Baltimore",
+        "https://es.wikipedia.org/wiki/El_libro_del_cementerio",
+        "https://es.wikipedia.org/wiki/El_metal_perdido",
+        "https://es.wikipedia.org/wiki/El_nombre_del_viento",
+        "https://es.wikipedia.org/wiki/El_oc%C3%A9ano_al_final_del_camino",
+        "https://es.wikipedia.org/wiki/El_pozo_de_la_ascensi%C3%B3n",
+        "https://es.wikipedia.org/wiki/El_principito",
+        "https://es.wikipedia.org/wiki/El_proceso",
+        "https://es.wikipedia.org/wiki/El_pr%C3%ADncipe_cruel",
+        "https://es.wikipedia.org/wiki/El_retorno_del_Rey",
+        "https://es.wikipedia.org/wiki/El_ritmo_de_la_guerra",
+        "https://es.wikipedia.org/wiki/El_temor_de_un_hombre_sabio",
+        "https://es.wikipedia.org/wiki/El_teorema_Katherine",
+        "https://es.wikipedia.org/wiki/El_tiempo_entre_costuras",
+        "https://es.wikipedia.org/wiki/Elantris",
+        "https://es.wikipedia.org/wiki/En_el_otro_viento",
+        "https://es.wikipedia.org/wiki/Fangirl",
+        "https://es.wikipedia.org/wiki/Flores_para_Algernon",
+        "https://es.wikipedia.org/wiki/Harry_Potter_y_la_piedra_filosofal",
+        "https://es.wikipedia.org/wiki/Jonathan_Strange_y_el_se%C3%B1or_Norrell",
+        "https://es.wikipedia.org/wiki/Juramentada",
+        "https://es.wikipedia.org/wiki/Kafka_en_la_orilla",
+        "https://es.wikipedia.org/wiki/La_Comunidad_del_Anillo",
+        "https://es.wikipedia.org/wiki/La_biblioteca_de_la_medianoche",
+        "https://es.wikipedia.org/wiki/La_canci%C3%B3n_de_Aquiles",
+        "https://es.wikipedia.org/wiki/La_costa_m%C3%A1s_lejana",
+        "https://es.wikipedia.org/wiki/La_dependienta",
+        "https://es.wikipedia.org/wiki/La_desaparici%C3%B3n_de_Stephanie_Mailer",
+        "https://es.wikipedia.org/wiki/La_librer%C3%ADa_encantada",
+        "https://es.wikipedia.org/wiki/La_mano_izquierda_de_la_oscuridad",
+        "https://es.wikipedia.org/wiki/La_metamorfosis",
+        "https://es.wikipedia.org/wiki/La_m%C3%BAsica_del_silencio",
+        "https://es.wikipedia.org/wiki/La_paciente_silenciosa",
+        "https://es.wikipedia.org/wiki/La_peste",
+        "https://es.wikipedia.org/wiki/La_princesa_prometida",
+        "https://es.wikipedia.org/wiki/La_verdad_sobre_el_caso_Harry_Quebert",
+        "https://es.wikipedia.org/wiki/La_vida_invisible_de_Addie_LaRue",
+        "https://es.wikipedia.org/wiki/Las_dos_torres",
+        "https://es.wikipedia.org/wiki/Las_tumbas_de_Atuan",
+        "https://es.wikipedia.org/wiki/Los_a%C3%B1os_de_peregrinaci%C3%B3n_del_chico_sin_color",
+        "https://es.wikipedia.org/wiki/Los_despose%C3%ADdos",
+        "https://es.wikipedia.org/wiki/Los_hijos_de_H%C3%BArin",
+        "https://es.wikipedia.org/wiki/Los_pacientes_del_doctor_Garc%C3%ADa",
+        "https://es.wikipedia.org/wiki/Los_siete_maridos_de_Evelyn_Hugo",
+        "https://es.wikipedia.org/wiki/Matar_un_ruise%C3%B1or",
+        "https://es.wikipedia.org/wiki/Mort",
+        "https://es.wikipedia.org/wiki/Nunca_me_abandones",
+        "https://es.wikipedia.org/wiki/Palabras_radiantes",
+        "https://es.wikipedia.org/wiki/Pap%C3%A1_Puerco",
+        "https://es.wikipedia.org/wiki/Parque_Jur%C3%A1sico_%28novela%29",
+        "https://es.wikipedia.org/wiki/Pretty_Little_Liars_%28novela%29",
+        "https://es.wikipedia.org/wiki/Quiero_comerme_tu_p%C3%A1ncreas",
+        "https://es.wikipedia.org/wiki/Rechicero",
+        "https://es.wikipedia.org/wiki/Ritos_iguales",
+        "https://es.wikipedia.org/wiki/Sputnik%2C_mi_amor",
+        "https://es.wikipedia.org/wiki/Tehanu",
+        "https://es.wikipedia.org/wiki/The_Catcher_in_the_Rye",
+        "https://es.wikipedia.org/wiki/The_Silence_of_the_Lambs_%28novela%29",
+        "https://es.wikipedia.org/wiki/Todos_quieren_a_Daisy_Jones",
+        "https://es.wikipedia.org/wiki/Un_cuento_perfecto_%28novela%29",
+        "https://es.wikipedia.org/wiki/Un_mago_de_Terramar",
+        "https://es.wikipedia.org/wiki/Ve_y_pon_un_centinela",
         "https://es.wikipedia.org/wiki/Categoría:Novelas_de_1813",
         "https://es.wikipedia.org/wiki/Categoría:Novelas_de_1818",
         "https://es.wikipedia.org/wiki/Categoría:Novelas_de_1847",
@@ -841,7 +1256,7 @@
     },
     {
       "id": "q4-characters",
-      "count": 1316,
+      "count": 1634,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APersonajes_de_Marvel_Comics",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APersonajes_de_DC_Comics",
@@ -856,13 +1271,18 @@
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APersonajes_de_One_Piece",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APersonajes_de_Naruto",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APersonajes_de_Pok%C3%A9mon",
-        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APersonajes_de_Juego_de_tronos"
+        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APersonajes_de_Juego_de_tronos",
+        "https://www.playstation.com/es-es/horizon/",
+        "https://es.wikipedia.org/wiki/Simba",
+        "https://es.wikipedia.org/wiki/Shrek_(personaje)",
+        "https://www.viz.com/one-punch-man",
+        "https://es.wikipedia.org/wiki/Anexo:Personajes_de_Resident_Evil"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-videogames",
-      "count": 10415,
+      "count": 10419,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AVideojuegos_de_1985",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AVideojuegos_de_1986",
@@ -910,13 +1330,17 @@
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AVideojuegos_de_2002",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AVideojuegos_de_2003",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AVideojuegos_de_2006",
-        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AVideojuegos_de_2007"
+        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AVideojuegos_de_2007",
+        "https://store.steampowered.com/app/1621690/Core_Keeper/",
+        "https://store.steampowered.com/app/1604030/V_Rising/",
+        "https://store.steampowered.com/app/1966720/Lethal_Company/",
+        "https://store.steampowered.com/app/2881650/Content_Warning/"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-directors",
-      "count": 4218,
+      "count": 5365,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ADirectores_de_cine_de_Estados_Unidos",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ADirectores_de_cine_de_Espa%C3%B1a",
@@ -927,13 +1351,29 @@
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ADirectores_de_cine_de_Jap%C3%B3n",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ADirectores_de_cine_de_Corea_del_Sur",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ADirectores_de_cine_de_Argentina",
-        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ADirectoras_de_cine_de_Espa%C3%B1a"
+        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ADirectoras_de_cine_de_Espa%C3%B1a",
+        "https://es.wikipedia.org/wiki/Categoría:Directores_de_cine_de_Alemania",
+        "https://es.wikipedia.org/wiki/Categoría:Directores_de_cine_de_Argentina",
+        "https://es.wikipedia.org/wiki/Categoría:Directores_de_cine_de_M%C3%A9xico",
+        "https://es.wikipedia.org/wiki/Categoría:Directores_de_cine_de_Jap%C3%B3n",
+        "https://es.wikipedia.org/wiki/Categoría:Directores_de_cine_de_India",
+        "https://es.wikipedia.org/wiki/Categoría:Directores_de_cine_de_Corea_del_Sur",
+        "https://es.wikipedia.org/wiki/Categoría:Directores_de_cine_de_China",
+        "https://es.wikipedia.org/wiki/Categoría:Directores_de_cine_de_Brasil",
+        "https://es.wikipedia.org/wiki/Categoría:Directores_de_cine_de_Chile",
+        "https://es.wikipedia.org/wiki/Categoría:Directores_de_cine_de_Colombia",
+        "https://es.wikipedia.org/wiki/Categoría:Directores_de_cine_de_Canad%C3%A1",
+        "https://es.wikipedia.org/wiki/Categoría:Directores_de_cine_de_Australia",
+        "https://es.wikipedia.org/wiki/Categoría:Directores_de_cine_de_Ir%C3%A1n",
+        "https://es.wikipedia.org/wiki/Categoría:Directores_de_cine_de_Suecia",
+        "https://es.wikipedia.org/wiki/Categoría:Directores_de_cine_de_Dinamarca",
+        "https://es.wikipedia.org/wiki/Categoría:Directores_de_cine_de_Rusia"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-footballers",
-      "count": 2559,
+      "count": 17256,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AFutbolistas_de_la_selecci%C3%B3n_de_f%C3%BAtbol_de_Espa%C3%B1a",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AFutbolistas_de_la_selecci%C3%B3n_femenina_de_f%C3%BAtbol_de_Espa%C3%B1a",
@@ -953,13 +1393,29 @@
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AFutbolistas_de_la_selecci%C3%B3n_femenina_de_f%C3%BAtbol_de_Portugal",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AFutbolistas_de_la_selecci%C3%B3n_de_f%C3%BAtbol_de_Pa%C3%ADses_Bajos",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AFutbolistas_de_la_selecci%C3%B3n_femenina_de_f%C3%BAtbol_de_Pa%C3%ADses_Bajos",
-        "https://www.uefa.com/european-qualifiers/teams/101/squad/"
+        "https://www.uefa.com/european-qualifiers/teams/101/squad/",
+        "https://es.wikipedia.org/wiki/Categoría:Futbolistas_de_Brasil",
+        "https://es.wikipedia.org/wiki/Categoría:Futbolistas_de_Argentina",
+        "https://es.wikipedia.org/wiki/Categoría:Futbolistas_de_Francia",
+        "https://es.wikipedia.org/wiki/Categoría:Futbolistas_de_Italia",
+        "https://es.wikipedia.org/wiki/Categoría:Futbolistas_de_Alemania",
+        "https://es.wikipedia.org/wiki/Categoría:Futbolistas_de_Inglaterra",
+        "https://es.wikipedia.org/wiki/Categoría:Futbolistas_de_Portugal",
+        "https://es.wikipedia.org/wiki/Categoría:Futbolistas_de_Uruguay",
+        "https://es.wikipedia.org/wiki/Categoría:Futbolistas_de_Colombia",
+        "https://es.wikipedia.org/wiki/Categoría:Futbolistas_de_Chile",
+        "https://es.wikipedia.org/wiki/Categoría:Futbolistas_de_M%C3%A9xico",
+        "https://es.wikipedia.org/wiki/Categoría:Futbolistas_de_Jap%C3%B3n",
+        "https://es.wikipedia.org/wiki/Categoría:Futbolistas_de_Nigeria",
+        "https://es.wikipedia.org/wiki/Categoría:Futbolistas_de_Marruecos",
+        "https://es.wikipedia.org/wiki/Categoría:Futbolistas_de_Croacia",
+        "https://es.wikipedia.org/wiki/Categoría:Futbolistas_de_Pa%C3%ADses_Bajos"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-football-clubs",
-      "count": 807,
+      "count": 1304,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEquipos_de_la_Premier_League",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEquipos_de_la_Primera_Divisi%C3%B3n_de_Espa%C3%B1a",
@@ -986,7 +1442,17 @@
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEquipos_de_f%C3%BAtbol_de_la_provincia_de_Alicante",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEquipos_de_f%C3%BAtbol_de_la_provincia_de_Zaragoza",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEquipos_de_f%C3%BAtbol_de_la_provincia_de_Pontevedra",
-        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEquipos_de_f%C3%BAtbol_de_la_provincia_de_La_Coru%C3%B1a"
+        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEquipos_de_f%C3%BAtbol_de_la_provincia_de_La_Coru%C3%B1a",
+        "https://es.wikipedia.org/wiki/Categoría:Equipos_de_f%C3%BAtbol_de_Inglaterra",
+        "https://es.wikipedia.org/wiki/Categoría:Equipos_de_f%C3%BAtbol_de_Francia",
+        "https://es.wikipedia.org/wiki/Categoría:Equipos_de_f%C3%BAtbol_de_Alemania",
+        "https://es.wikipedia.org/wiki/Categoría:Equipos_de_f%C3%BAtbol_de_Italia",
+        "https://es.wikipedia.org/wiki/Categoría:Equipos_de_f%C3%BAtbol_de_Portugal",
+        "https://es.wikipedia.org/wiki/Categoría:Equipos_de_f%C3%BAtbol_de_M%C3%A9xico",
+        "https://es.wikipedia.org/wiki/Categoría:Equipos_de_f%C3%BAtbol_de_Uruguay",
+        "https://es.wikipedia.org/wiki/Categoría:Equipos_de_f%C3%BAtbol_de_Colombia",
+        "https://es.wikipedia.org/wiki/Categoría:Equipos_de_f%C3%BAtbol_de_Chile",
+        "https://es.wikipedia.org/wiki/Categoría:Equipos_de_f%C3%BAtbol_de_Jap%C3%B3n"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise.",
       "includesReviewedSubsets": [
@@ -1004,10 +1470,10 @@
     },
     {
       "id": "q4-cities",
-      "count": 29976,
+      "count": 52092,
       "sources": [
-        "https://download.geonames.org/export/dump/cities15000.zip",
-        "https://download.geonames.org/export/dump/readme.txt"
+        "https://download.geonames.org/export/dump/readme.txt",
+        "https://es.wikipedia.org/wiki/São_Paulo"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise.",
       "includesReviewedSubsets": [
@@ -1027,7 +1493,7 @@
     },
     {
       "id": "q4-scientists",
-      "count": 2021,
+      "count": 2364,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AF%C3%ADsicos_de_Alemania_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AF%C3%ADsicos_de_Estados_Unidos_del_siglo_XX",
@@ -1049,16 +1515,46 @@
         "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Alemania_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Francia_del_siglo_XX",
         "https://www.nobelprize.org/prizes/lists/all-nobel-prizes-in-physics/",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Italia_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Italia_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Reino_Unido_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Reino_Unido_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Rusia_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Rusia_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Jap%C3%B3n_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Jap%C3%B3n_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_India_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_India_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Espa%C3%B1a_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Estados_Unidos_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Alemania_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Francia_del_siglo_XX",
         "https://mathshistory.st-andrews.ac.uk/Biographies/",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Italia_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Italia_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Reino_Unido_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Reino_Unido_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Rusia_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Rusia_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Jap%C3%B3n_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Jap%C3%B3n_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_India_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_India_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Espa%C3%B1a_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Estados_Unidos_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Alemania_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Francia_del_siglo_XX",
-        "https://www.nobelprize.org/prizes/lists/all-nobel-prizes-in-chemistry/"
+        "https://www.nobelprize.org/prizes/lists/all-nobel-prizes-in-chemistry/",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Italia_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Italia_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Reino_Unido_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Reino_Unido_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Rusia_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Rusia_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Jap%C3%B3n_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Jap%C3%B3n_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_India_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_India_del_siglo_XX"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise.",
       "includesReviewedSubsets": [
@@ -1069,7 +1565,7 @@
     },
     {
       "id": "q4-writers",
-      "count": 6873,
+      "count": 9049,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEscritores_de_Espa%C3%B1a_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEscritores_de_Estados_Unidos_del_siglo_XX",
@@ -1082,6 +1578,30 @@
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEscritoras_de_M%C3%A9xico",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEscritoras_de_Argentina",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEscritoras_de_Reino_Unido",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Italia_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Italia_del_siglo_XXI",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Alemania_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Alemania_del_siglo_XXI",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_M%C3%A9xico_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_M%C3%A9xico_del_siglo_XXI",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Chile_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Chile_del_siglo_XXI",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Colombia_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Colombia_del_siglo_XXI",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Per%C3%BA_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Per%C3%BA_del_siglo_XXI",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Uruguay_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Uruguay_del_siglo_XXI",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Jap%C3%B3n_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Jap%C3%B3n_del_siglo_XXI",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Rusia_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Rusia_del_siglo_XXI",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Estados_Unidos_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Estados_Unidos_del_siglo_XXI",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Reino_Unido_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Reino_Unido_del_siglo_XXI",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Francia_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Francia_del_siglo_XXI",
         "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Espa%C3%B1a_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:Escritores_de_Espa%C3%B1a_del_siglo_XXI",
         "https://www.cervantesvirtual.com/portales/literatura/"
@@ -1093,7 +1613,7 @@
     },
     {
       "id": "q4-brands",
-      "count": 553,
+      "count": 706,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AMarcas_de_indumentaria",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AMarcas_de_electrodom%C3%A9sticos",
@@ -1275,41 +1795,196 @@
     },
     {
       "id": "q4-films-animation",
-      "count": 1407,
+      "count": 1420,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_animaci%C3%B3n"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_animaci%C3%B3n",
+        "https://es.wikipedia.org/wiki/Atlantis%3A_El_imperio_perdido",
+        "https://es.wikipedia.org/wiki/C%C3%B3mo_entrenar_a_tu_drag%C3%B3n_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/El_cuento_de_la_princesa_Kaguya",
+        "https://es.wikipedia.org/wiki/El_ni%C3%B1o_y_la_bestia",
+        "https://es.wikipedia.org/wiki/El_origen_de_los_guardianes",
+        "https://es.wikipedia.org/wiki/El_planeta_del_tesoro",
+        "https://es.wikipedia.org/wiki/El_pr%C3%ADncipe_de_Egipto",
+        "https://es.wikipedia.org/wiki/El_recuerdo_de_Marnie",
+        "https://es.wikipedia.org/wiki/El_tiempo_contigo",
+        "https://es.wikipedia.org/wiki/El_viaje_de_Chihiro",
+        "https://es.wikipedia.org/wiki/Encanto_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Enredados",
+        "https://es.wikipedia.org/wiki/Fantastic_Mr._Fox",
+        "https://es.wikipedia.org/wiki/Gake_no_ue_no_Ponyo",
+        "https://es.wikipedia.org/wiki/Inside_Out_%28pel%C3%ADcula_de_2015%29",
+        "https://es.wikipedia.org/wiki/Inside_Out_2",
+        "https://es.wikipedia.org/wiki/Kimitachi_wa_D%C5%8D_Ikiru_ka_%28pel%C3%ADcula_de_2023%29",
+        "https://es.wikipedia.org/wiki/Koe_no_Katachi_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Kung_Fu_Panda",
+        "https://es.wikipedia.org/wiki/La_chica_que_saltaba_a_trav%C3%A9s_del_tiempo",
+        "https://es.wikipedia.org/wiki/La_princesa_Mononoke",
+        "https://es.wikipedia.org/wiki/La_tumba_de_las_luci%C3%A9rnagas",
+        "https://es.wikipedia.org/wiki/Lilo_%26_Stitch",
+        "https://es.wikipedia.org/wiki/Los_Croods",
+        "https://es.wikipedia.org/wiki/Los_tipos_malos",
+        "https://es.wikipedia.org/wiki/Majo_no_Takky%C5%ABbin",
+        "https://es.wikipedia.org/wiki/Megamind",
+        "https://es.wikipedia.org/wiki/Mi_vecino_Totoro",
+        "https://es.wikipedia.org/wiki/Moana_%28pel%C3%ADcula_de_2016%29",
+        "https://es.wikipedia.org/wiki/Moana_2",
+        "https://es.wikipedia.org/wiki/Mulan",
+        "https://es.wikipedia.org/wiki/Onward",
+        "https://es.wikipedia.org/wiki/Porco_Rosso",
+        "https://es.wikipedia.org/wiki/Ralph_Breaks_the_Internet",
+        "https://es.wikipedia.org/wiki/Raya_y_el_%C3%BAltimo_drag%C3%B3n",
+        "https://es.wikipedia.org/wiki/Robot_Dreams",
+        "https://es.wikipedia.org/wiki/Shrek",
+        "https://es.wikipedia.org/wiki/Susurros_del_coraz%C3%B3n",
+        "https://es.wikipedia.org/wiki/Suzume",
+        "https://es.wikipedia.org/wiki/The_Dark_Crystal",
+        "https://es.wikipedia.org/wiki/The_Emperor%27s_New_Groove",
+        "https://es.wikipedia.org/wiki/The_Princess_and_the_Frog",
+        "https://es.wikipedia.org/wiki/Tokyo_Godfathers",
+        "https://es.wikipedia.org/wiki/Toy_Story",
+        "https://es.wikipedia.org/wiki/Vecinos_invasores",
+        "https://es.wikipedia.org/wiki/Wreck-It_Ralph",
+        "https://es.wikipedia.org/wiki/Zootopia"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-films-horror",
-      "count": 2988,
+      "count": 2989,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_terror"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_terror",
+        "https://es.wikipedia.org/wiki/Get_Out",
+        "https://es.wikipedia.org/wiki/Hereditary",
+        "https://es.wikipedia.org/wiki/It_Follows",
+        "https://es.wikipedia.org/wiki/La_sustancia",
+        "https://es.wikipedia.org/wiki/Longlegs",
+        "https://es.wikipedia.org/wiki/Los_p%C3%A1jaros",
+        "https://es.wikipedia.org/wiki/Pumpkinhead_II%3A_Blood_Wings",
+        "https://es.wikipedia.org/wiki/Rosemary%27s_Baby_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/The_Blair_Witch_Project",
+        "https://es.wikipedia.org/wiki/The_Conjuring"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-films-science-fiction",
-      "count": 1901,
+      "count": 1905,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_ciencia_ficci%C3%B3n"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_ciencia_ficci%C3%B3n",
+        "https://es.wikipedia.org/wiki/Atlantis%3A_El_imperio_perdido",
+        "https://es.wikipedia.org/wiki/Back_to_the_Future",
+        "https://es.wikipedia.org/wiki/Back_to_the_Future_Part_II",
+        "https://es.wikipedia.org/wiki/Back_to_the_Future_Part_III",
+        "https://es.wikipedia.org/wiki/Blade_Runner",
+        "https://es.wikipedia.org/wiki/Dark_City",
+        "https://es.wikipedia.org/wiki/Demolition_Man",
+        "https://es.wikipedia.org/wiki/Doce_monos",
+        "https://es.wikipedia.org/wiki/D%C3%ADas_extra%C3%B1os",
+        "https://es.wikipedia.org/wiki/E.T.%2C_el_extraterrestre",
+        "https://es.wikipedia.org/wiki/EXistenZ",
+        "https://es.wikipedia.org/wiki/El_planeta_del_tesoro",
+        "https://es.wikipedia.org/wiki/El_protegido",
+        "https://es.wikipedia.org/wiki/El_quinto_elemento",
+        "https://es.wikipedia.org/wiki/Enredados",
+        "https://es.wikipedia.org/wiki/Eternal_Sunshine_of_the_Spotless_Mind",
+        "https://es.wikipedia.org/wiki/Gattaca",
+        "https://es.wikipedia.org/wiki/Groundhog_Day",
+        "https://es.wikipedia.org/wiki/Interstellar",
+        "https://es.wikipedia.org/wiki/La_chica_que_saltaba_a_trav%C3%A9s_del_tiempo",
+        "https://es.wikipedia.org/wiki/Lilo_%26_Stitch",
+        "https://es.wikipedia.org/wiki/Matrix",
+        "https://es.wikipedia.org/wiki/Ralph_Breaks_the_Internet",
+        "https://es.wikipedia.org/wiki/RoboCop",
+        "https://es.wikipedia.org/wiki/The_Terminator",
+        "https://es.wikipedia.org/wiki/The_Thirteenth_Floor",
+        "https://es.wikipedia.org/wiki/Total_Recall"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-films-comedy",
-      "count": 8592,
+      "count": 8597,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_c%C3%B3micas"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_c%C3%B3micas",
+        "https://es.wikipedia.org/wiki/A_Fish_Called_Wanda",
+        "https://es.wikipedia.org/wiki/Airplane%21",
+        "https://es.wikipedia.org/wiki/Am%C3%A9lie",
+        "https://es.wikipedia.org/wiki/Back_to_the_Future",
+        "https://es.wikipedia.org/wiki/Back_to_the_Future_Part_II",
+        "https://es.wikipedia.org/wiki/Back_to_the_Future_Part_III",
+        "https://es.wikipedia.org/wiki/Cuerpo_de_%C3%A9lite_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/C%C3%B3mo_entrenar_a_tu_drag%C3%B3n_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/El_Gran_Hotel_Budapest",
+        "https://es.wikipedia.org/wiki/Encanto_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Enredados",
+        "https://es.wikipedia.org/wiki/Fantastic_Mr._Fox",
+        "https://es.wikipedia.org/wiki/Get_Out",
+        "https://es.wikipedia.org/wiki/Groundhog_Day",
+        "https://es.wikipedia.org/wiki/Inside_Out_%28pel%C3%ADcula_de_2015%29",
+        "https://es.wikipedia.org/wiki/Knives_Out",
+        "https://es.wikipedia.org/wiki/Kung_Fu_Panda",
+        "https://es.wikipedia.org/wiki/La_dolce_vita",
+        "https://es.wikipedia.org/wiki/La_vida_de_Brian",
+        "https://es.wikipedia.org/wiki/Lilo_%26_Stitch",
+        "https://es.wikipedia.org/wiki/Los_Croods",
+        "https://es.wikipedia.org/wiki/Los_Goonies",
+        "https://es.wikipedia.org/wiki/Los_tipos_malos",
+        "https://es.wikipedia.org/wiki/Megamind",
+        "https://es.wikipedia.org/wiki/Moana_%28pel%C3%ADcula_de_2016%29",
+        "https://es.wikipedia.org/wiki/Moana_2",
+        "https://es.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail",
+        "https://es.wikipedia.org/wiki/Moonrise_Kingdom",
+        "https://es.wikipedia.org/wiki/Ocho_apellidos_vascos",
+        "https://es.wikipedia.org/wiki/Onward",
+        "https://es.wikipedia.org/wiki/Ralph_Breaks_the_Internet",
+        "https://es.wikipedia.org/wiki/Raya_y_el_%C3%BAltimo_drag%C3%B3n",
+        "https://es.wikipedia.org/wiki/Robot_Dreams",
+        "https://es.wikipedia.org/wiki/Shrek",
+        "https://es.wikipedia.org/wiki/The_Emperor%27s_New_Groove",
+        "https://es.wikipedia.org/wiki/The_Princess_and_the_Frog",
+        "https://es.wikipedia.org/wiki/Toy_Story",
+        "https://es.wikipedia.org/wiki/True_Lies",
+        "https://es.wikipedia.org/wiki/Vecinos_invasores",
+        "https://es.wikipedia.org/wiki/Wreck-It_Ralph",
+        "https://es.wikipedia.org/wiki/Y_tu_mam%C3%A1_tambi%C3%A9n",
+        "https://es.wikipedia.org/wiki/Zootopia"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-films-fantasy",
-      "count": 1709,
+      "count": 1712,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_fantas%C3%ADa"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_fantas%C3%ADa",
+        "https://es.wikipedia.org/wiki/C%C3%B3mo_entrenar_a_tu_drag%C3%B3n_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/El_cuento_de_la_princesa_Kaguya",
+        "https://es.wikipedia.org/wiki/El_laberinto_del_fauno",
+        "https://es.wikipedia.org/wiki/El_origen_de_los_guardianes",
+        "https://es.wikipedia.org/wiki/El_quinto_elemento",
+        "https://es.wikipedia.org/wiki/El_recuerdo_de_Marnie",
+        "https://es.wikipedia.org/wiki/El_viaje_de_Chihiro",
+        "https://es.wikipedia.org/wiki/Encanto_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Enredados",
+        "https://es.wikipedia.org/wiki/Gake_no_ue_no_Ponyo",
+        "https://es.wikipedia.org/wiki/Groundhog_Day",
+        "https://es.wikipedia.org/wiki/Inside_Out_2",
+        "https://es.wikipedia.org/wiki/La_princesa_Mononoke",
+        "https://es.wikipedia.org/wiki/Labyrinth_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Majo_no_Takky%C5%ABbin",
+        "https://es.wikipedia.org/wiki/Mi_vecino_Totoro",
+        "https://es.wikipedia.org/wiki/Millennium_Actress",
+        "https://es.wikipedia.org/wiki/Moana_%28pel%C3%ADcula_de_2016%29",
+        "https://es.wikipedia.org/wiki/Moana_2",
+        "https://es.wikipedia.org/wiki/Onward",
+        "https://es.wikipedia.org/wiki/Ralph_Breaks_the_Internet",
+        "https://es.wikipedia.org/wiki/Raya_y_el_%C3%BAltimo_drag%C3%B3n",
+        "https://es.wikipedia.org/wiki/Shrek",
+        "https://es.wikipedia.org/wiki/Suzume",
+        "https://es.wikipedia.org/wiki/The_Dark_Crystal",
+        "https://es.wikipedia.org/wiki/The_Emperor%27s_New_Groove",
+        "https://es.wikipedia.org/wiki/The_Green_Mile",
+        "https://es.wikipedia.org/wiki/The_Princess_and_the_Frog",
+        "https://es.wikipedia.org/wiki/%C5%8Ckami_Kodomo_no_Ame_to_Yuki"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -1317,15 +1992,63 @@
       "id": "q4-films-action",
       "count": 3630,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_acci%C3%B3n"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_acci%C3%B3n",
+        "https://es.wikipedia.org/wiki/Back_to_the_Future_Part_III",
+        "https://es.wikipedia.org/wiki/Blade_Runner",
+        "https://es.wikipedia.org/wiki/Con_Air",
+        "https://es.wikipedia.org/wiki/Cuerpo_de_%C3%A9lite_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/C%C3%B3mo_entrenar_a_tu_drag%C3%B3n_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Demolition_Man",
+        "https://es.wikipedia.org/wiki/Die_Hard",
+        "https://es.wikipedia.org/wiki/D%C3%ADas_extra%C3%B1os",
+        "https://es.wikipedia.org/wiki/El_quinto_elemento",
+        "https://es.wikipedia.org/wiki/Gladiator",
+        "https://es.wikipedia.org/wiki/John_Wick",
+        "https://es.wikipedia.org/wiki/Kung_Fu_Panda",
+        "https://es.wikipedia.org/wiki/Matrix",
+        "https://es.wikipedia.org/wiki/Porco_Rosso",
+        "https://es.wikipedia.org/wiki/Raya_y_el_%C3%BAltimo_drag%C3%B3n",
+        "https://es.wikipedia.org/wiki/RoboCop",
+        "https://es.wikipedia.org/wiki/The_Dark_Knight",
+        "https://es.wikipedia.org/wiki/The_Terminator",
+        "https://es.wikipedia.org/wiki/True_Lies"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-films-thriller",
-      "count": 3724,
+      "count": 3727,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_suspenso"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_suspenso",
+        "https://es.wikipedia.org/wiki/Amores_perros",
+        "https://es.wikipedia.org/wiki/Blade_Runner",
+        "https://es.wikipedia.org/wiki/Con_Air",
+        "https://es.wikipedia.org/wiki/Demolition_Man",
+        "https://es.wikipedia.org/wiki/Doce_monos",
+        "https://es.wikipedia.org/wiki/D%C3%ADas_extra%C3%B1os",
+        "https://es.wikipedia.org/wiki/El_protegido",
+        "https://es.wikipedia.org/wiki/El_secreto_de_sus_ojos",
+        "https://es.wikipedia.org/wiki/Gattaca",
+        "https://es.wikipedia.org/wiki/Get_Out",
+        "https://es.wikipedia.org/wiki/Hereditary",
+        "https://es.wikipedia.org/wiki/It_Follows",
+        "https://es.wikipedia.org/wiki/John_Wick",
+        "https://es.wikipedia.org/wiki/Knives_Out",
+        "https://es.wikipedia.org/wiki/La_mujer_en_la_ventana",
+        "https://es.wikipedia.org/wiki/La_ventana_indiscreta",
+        "https://es.wikipedia.org/wiki/Los_p%C3%A1jaros",
+        "https://es.wikipedia.org/wiki/Matrix",
+        "https://es.wikipedia.org/wiki/North_by_Northwest",
+        "https://es.wikipedia.org/wiki/Nueve_reinas",
+        "https://es.wikipedia.org/wiki/Perfect_Blue",
+        "https://es.wikipedia.org/wiki/Relatos_salvajes",
+        "https://es.wikipedia.org/wiki/Respira",
+        "https://es.wikipedia.org/wiki/RoboCop",
+        "https://es.wikipedia.org/wiki/Seven",
+        "https://es.wikipedia.org/wiki/The_Conjuring",
+        "https://es.wikipedia.org/wiki/The_Dark_Knight",
+        "https://es.wikipedia.org/wiki/To_Catch_a_Thief",
+        "https://es.wikipedia.org/wiki/True_Lies"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -1333,15 +2056,35 @@
       "id": "q4-films-musical",
       "count": 1786,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_musicales"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_musicales",
+        "https://es.wikipedia.org/wiki/El_pr%C3%ADncipe_de_Egipto",
+        "https://es.wikipedia.org/wiki/El_rey_le%C3%B3n",
+        "https://es.wikipedia.org/wiki/Encanto_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Enredados",
+        "https://es.wikipedia.org/wiki/Grease",
+        "https://es.wikipedia.org/wiki/Labyrinth_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Les_Choristes",
+        "https://es.wikipedia.org/wiki/Moana_%28pel%C3%ADcula_de_2016%29",
+        "https://es.wikipedia.org/wiki/Moana_2",
+        "https://es.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail",
+        "https://es.wikipedia.org/wiki/Mulan",
+        "https://es.wikipedia.org/wiki/Robot_Dreams",
+        "https://es.wikipedia.org/wiki/The_Princess_and_the_Frog"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-films-spain",
-      "count": 3933,
+      "count": 3934,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_Espa%C3%B1a"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_Espa%C3%B1a",
+        "https://es.wikipedia.org/wiki/Cuerpo_de_%C3%A9lite_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/El_laberinto_del_fauno",
+        "https://es.wikipedia.org/wiki/El_secreto_de_sus_ojos",
+        "https://es.wikipedia.org/wiki/Mar_adentro",
+        "https://es.wikipedia.org/wiki/Ocho_apellidos_vascos",
+        "https://es.wikipedia.org/wiki/Robot_Dreams",
+        "https://es.wikipedia.org/wiki/Volver_a_empezar"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -1349,7 +2092,13 @@
       "id": "q4-films-france",
       "count": 2592,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_Francia"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_Francia",
+        "https://es.wikipedia.org/wiki/Am%C3%A9lie",
+        "https://es.wikipedia.org/wiki/El_quinto_elemento",
+        "https://es.wikipedia.org/wiki/La_sustancia",
+        "https://es.wikipedia.org/wiki/Les_Choristes",
+        "https://es.wikipedia.org/wiki/Mar_adentro",
+        "https://es.wikipedia.org/wiki/Robot_Dreams"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -1357,15 +2106,38 @@
       "id": "q4-films-italy",
       "count": 1665,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_Italia"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_Italia",
+        "https://es.wikipedia.org/wiki/Cinema_Paradiso",
+        "https://es.wikipedia.org/wiki/La_vida_es_bella",
+        "https://es.wikipedia.org/wiki/Mar_adentro"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-films-japan",
-      "count": 1191,
+      "count": 1192,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_Jap%C3%B3n"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_Jap%C3%B3n",
+        "https://es.wikipedia.org/wiki/El_cuento_de_la_princesa_Kaguya",
+        "https://es.wikipedia.org/wiki/El_ni%C3%B1o_y_la_bestia",
+        "https://es.wikipedia.org/wiki/El_tiempo_contigo",
+        "https://es.wikipedia.org/wiki/El_viaje_de_Chihiro",
+        "https://es.wikipedia.org/wiki/Gake_no_ue_no_Ponyo",
+        "https://es.wikipedia.org/wiki/Get_Out",
+        "https://es.wikipedia.org/wiki/Kimitachi_wa_D%C5%8D_Ikiru_ka_%28pel%C3%ADcula_de_2023%29",
+        "https://es.wikipedia.org/wiki/Koe_no_Katachi_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/La_princesa_Mononoke",
+        "https://es.wikipedia.org/wiki/La_tumba_de_las_luci%C3%A9rnagas",
+        "https://es.wikipedia.org/wiki/Los_siete_samur%C3%A1is",
+        "https://es.wikipedia.org/wiki/Majo_no_Takky%C5%ABbin",
+        "https://es.wikipedia.org/wiki/Mi_vecino_Totoro",
+        "https://es.wikipedia.org/wiki/Millennium_Actress",
+        "https://es.wikipedia.org/wiki/Noruwei_no_Mori",
+        "https://es.wikipedia.org/wiki/Perfect_Blue",
+        "https://es.wikipedia.org/wiki/Porco_Rosso",
+        "https://es.wikipedia.org/wiki/Susurros_del_coraz%C3%B3n",
+        "https://es.wikipedia.org/wiki/Suzume",
+        "https://es.wikipedia.org/wiki/Tokyo_Godfathers"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -1373,7 +2145,10 @@
       "id": "q4-films-mexico",
       "count": 1878,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_M%C3%A9xico"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_M%C3%A9xico",
+        "https://es.wikipedia.org/wiki/Amores_perros",
+        "https://es.wikipedia.org/wiki/El_laberinto_del_fauno",
+        "https://es.wikipedia.org/wiki/Y_tu_mam%C3%A1_tambi%C3%A9n"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -1381,47 +2156,280 @@
       "id": "q4-films-argentina",
       "count": 2543,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_Argentina"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_Argentina",
+        "https://es.wikipedia.org/wiki/El_secreto_de_sus_ojos",
+        "https://es.wikipedia.org/wiki/Nueve_reinas",
+        "https://es.wikipedia.org/wiki/Relatos_salvajes",
+        "https://es.wikipedia.org/wiki/Respira"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-films-usa",
-      "count": 13375,
+      "count": 13378,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_Estados_Unidos"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_Estados_Unidos",
+        "https://es.wikipedia.org/wiki/A_Beautiful_Mind",
+        "https://es.wikipedia.org/wiki/A_Fish_Called_Wanda",
+        "https://es.wikipedia.org/wiki/A_dos_metros_de_ti",
+        "https://es.wikipedia.org/wiki/Airplane%21",
+        "https://es.wikipedia.org/wiki/Back_to_the_Future",
+        "https://es.wikipedia.org/wiki/Back_to_the_Future_Part_II",
+        "https://es.wikipedia.org/wiki/Back_to_the_Future_Part_III",
+        "https://es.wikipedia.org/wiki/Blade_Runner",
+        "https://es.wikipedia.org/wiki/Con_Air",
+        "https://es.wikipedia.org/wiki/C%C3%B3mo_entrenar_a_tu_drag%C3%B3n_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Dark_City",
+        "https://es.wikipedia.org/wiki/Dead_Poets_Society",
+        "https://es.wikipedia.org/wiki/Demolition_Man",
+        "https://es.wikipedia.org/wiki/Die_Hard",
+        "https://es.wikipedia.org/wiki/Doce_monos",
+        "https://es.wikipedia.org/wiki/D%C3%ADas_extra%C3%B1os",
+        "https://es.wikipedia.org/wiki/E.T.%2C_el_extraterrestre",
+        "https://es.wikipedia.org/wiki/El_origen_de_los_guardianes",
+        "https://es.wikipedia.org/wiki/El_planeta_del_tesoro",
+        "https://es.wikipedia.org/wiki/El_protegido",
+        "https://es.wikipedia.org/wiki/El_renacido",
+        "https://es.wikipedia.org/wiki/El_rey_le%C3%B3n",
+        "https://es.wikipedia.org/wiki/Encanto_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Enredados",
+        "https://es.wikipedia.org/wiki/Eternal_Sunshine_of_the_Spotless_Mind",
+        "https://es.wikipedia.org/wiki/Fantastic_Mr._Fox",
+        "https://es.wikipedia.org/wiki/Gattaca",
+        "https://es.wikipedia.org/wiki/Get_Out",
+        "https://es.wikipedia.org/wiki/Gladiator",
+        "https://es.wikipedia.org/wiki/Good_Will_Hunting",
+        "https://es.wikipedia.org/wiki/Grease",
+        "https://es.wikipedia.org/wiki/Groundhog_Day",
+        "https://es.wikipedia.org/wiki/Hereditary",
+        "https://es.wikipedia.org/wiki/Inside_Out_%28pel%C3%ADcula_de_2015%29",
+        "https://es.wikipedia.org/wiki/Inside_Out_2",
+        "https://es.wikipedia.org/wiki/Interstellar",
+        "https://es.wikipedia.org/wiki/It_Follows",
+        "https://es.wikipedia.org/wiki/John_Wick",
+        "https://es.wikipedia.org/wiki/Knives_Out",
+        "https://es.wikipedia.org/wiki/Kung_Fu_Panda",
+        "https://es.wikipedia.org/wiki/La_mujer_en_la_ventana",
+        "https://es.wikipedia.org/wiki/La_sustancia",
+        "https://es.wikipedia.org/wiki/La_ventana_indiscreta",
+        "https://es.wikipedia.org/wiki/Lilo_%26_Stitch",
+        "https://es.wikipedia.org/wiki/Lo_que_queda_del_d%C3%ADa_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Longlegs",
+        "https://es.wikipedia.org/wiki/Los_Croods",
+        "https://es.wikipedia.org/wiki/Los_Goonies",
+        "https://es.wikipedia.org/wiki/Los_p%C3%A1jaros",
+        "https://es.wikipedia.org/wiki/Los_tipos_malos",
+        "https://es.wikipedia.org/wiki/Matrix",
+        "https://es.wikipedia.org/wiki/Megamind",
+        "https://es.wikipedia.org/wiki/Moana_%28pel%C3%ADcula_de_2016%29",
+        "https://es.wikipedia.org/wiki/Moana_2",
+        "https://es.wikipedia.org/wiki/Moonrise_Kingdom",
+        "https://es.wikipedia.org/wiki/Mulan",
+        "https://es.wikipedia.org/wiki/North_by_Northwest",
+        "https://es.wikipedia.org/wiki/Onward",
+        "https://es.wikipedia.org/wiki/Pulp_Fiction",
+        "https://es.wikipedia.org/wiki/Pumpkinhead_II%3A_Blood_Wings",
+        "https://es.wikipedia.org/wiki/Ralph_Breaks_the_Internet",
+        "https://es.wikipedia.org/wiki/Raya_y_el_%C3%BAltimo_drag%C3%B3n",
+        "https://es.wikipedia.org/wiki/RoboCop",
+        "https://es.wikipedia.org/wiki/Romper_el_c%C3%ADrculo",
+        "https://es.wikipedia.org/wiki/Rosemary%27s_Baby_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Seven",
+        "https://es.wikipedia.org/wiki/Shrek",
+        "https://es.wikipedia.org/wiki/The_Blair_Witch_Project",
+        "https://es.wikipedia.org/wiki/The_Conjuring",
+        "https://es.wikipedia.org/wiki/The_Dark_Crystal",
+        "https://es.wikipedia.org/wiki/The_Dark_Knight",
+        "https://es.wikipedia.org/wiki/The_Emperor%27s_New_Groove",
+        "https://es.wikipedia.org/wiki/The_Green_Mile",
+        "https://es.wikipedia.org/wiki/The_Princess_and_the_Frog",
+        "https://es.wikipedia.org/wiki/The_Shawshank_Redemption",
+        "https://es.wikipedia.org/wiki/The_Terminator",
+        "https://es.wikipedia.org/wiki/The_Thirteenth_Floor",
+        "https://es.wikipedia.org/wiki/To_Catch_a_Thief",
+        "https://es.wikipedia.org/wiki/Total_Recall",
+        "https://es.wikipedia.org/wiki/True_Lies",
+        "https://es.wikipedia.org/wiki/Vecinos_invasores",
+        "https://es.wikipedia.org/wiki/Zootopia"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-series-animation",
-      "count": 641,
+      "count": 650,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Series_de_televisi%C3%B3n_animadas"
+        "https://es.wikipedia.org/wiki/Categoría:Series_de_televisi%C3%B3n_animadas",
+        "https://es.wikipedia.org/wiki/Bob_Esponja",
+        "https://es.wikipedia.org/wiki/David_el_Gnomo",
+        "https://es.wikipedia.org/wiki/El_Peque%C3%B1o_Reino_de_Ben_y_Holly",
+        "https://es.wikipedia.org/wiki/Familia_Teler%C3%ADn",
+        "https://es.wikipedia.org/wiki/La_casa_de_Mickey_Mouse",
+        "https://es.wikipedia.org/wiki/La_guardia_del_le%C3%B3n",
+        "https://es.wikipedia.org/wiki/La_vuelta_al_mundo_de_Willy_Fog",
+        "https://es.wikipedia.org/wiki/Las_tres_mellizas",
+        "https://es.wikipedia.org/wiki/Los_Simpson",
+        "https://es.wikipedia.org/wiki/Maple_Town_Monogatari",
+        "https://es.wikipedia.org/wiki/PAW_Patrol",
+        "https://es.wikipedia.org/wiki/Padre_de_familia",
+        "https://es.wikipedia.org/wiki/Peppa_Pig",
+        "https://es.wikipedia.org/wiki/Pepper_Ann",
+        "https://es.wikipedia.org/wiki/Pingu",
+        "https://es.wikipedia.org/wiki/Pocoy%C3%B3",
+        "https://es.wikipedia.org/wiki/Recess",
+        "https://es.wikipedia.org/wiki/The_Littles_%28serie_de_televisi%C3%B3n%29",
+        "https://es.wikipedia.org/wiki/%C3%89rase_una_vez..._el_espacio",
+        "https://es.wikipedia.org/wiki/%C3%89rase_una_vez..._el_hombre",
+        "https://es.wikipedia.org/wiki/%C3%89rase_una_vez..._la_Vida"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-series-comedy",
-      "count": 2057,
+      "count": 2073,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Series_de_televisi%C3%B3n_de_comedia"
+        "https://es.wikipedia.org/wiki/Categoría:Series_de_televisi%C3%B3n_de_comedia",
+        "https://es.wikipedia.org/wiki/4_estrellas",
+        "https://es.wikipedia.org/wiki/Ally_McBeal",
+        "https://es.wikipedia.org/wiki/All%C3%AD_abajo",
+        "https://es.wikipedia.org/wiki/Amar_es_para_siempre",
+        "https://es.wikipedia.org/wiki/Anclados",
+        "https://es.wikipedia.org/wiki/Camera_Caf%C3%A9",
+        "https://es.wikipedia.org/wiki/Charmed",
+        "https://es.wikipedia.org/wiki/Chiringuito_de_Pepe",
+        "https://es.wikipedia.org/wiki/Cu%C3%A9ntame_c%C3%B3mo_pas%C3%B3",
+        "https://es.wikipedia.org/wiki/David_el_Gnomo",
+        "https://es.wikipedia.org/wiki/Desperate_Housewives",
+        "https://es.wikipedia.org/wiki/Doctor_Mateo",
+        "https://es.wikipedia.org/wiki/El_fin_de_la_comedia",
+        "https://es.wikipedia.org/wiki/El_hombre_de_tu_vida",
+        "https://es.wikipedia.org/wiki/Estoy_vivo",
+        "https://es.wikipedia.org/wiki/Familia_Teler%C3%ADn",
+        "https://es.wikipedia.org/wiki/Family_Matters",
+        "https://es.wikipedia.org/wiki/Full_House",
+        "https://es.wikipedia.org/wiki/Gilmore_Girls",
+        "https://es.wikipedia.org/wiki/Gym_Tony",
+        "https://es.wikipedia.org/wiki/La_familia_Mata",
+        "https://es.wikipedia.org/wiki/La_que_se_avecina",
+        "https://es.wikipedia.org/wiki/Las_de_la_%C3%BAltima_fila",
+        "https://es.wikipedia.org/wiki/Los_Simpson",
+        "https://es.wikipedia.org/wiki/Los_hombres_de_Paco",
+        "https://es.wikipedia.org/wiki/Luz_de_luna",
+        "https://es.wikipedia.org/wiki/Malviviendo",
+        "https://es.wikipedia.org/wiki/Maric%C3%B3n_perdido",
+        "https://es.wikipedia.org/wiki/Mira_lo_que_has_hecho",
+        "https://es.wikipedia.org/wiki/Muertos_S.L.",
+        "https://es.wikipedia.org/wiki/Northern_Exposure",
+        "https://es.wikipedia.org/wiki/Olmos_y_Robles",
+        "https://es.wikipedia.org/wiki/PAW_Patrol",
+        "https://es.wikipedia.org/wiki/Paquita_Salas",
+        "https://es.wikipedia.org/wiki/Perfect_Strangers_%28serie_de_televisi%C3%B3n_de_1986%29",
+        "https://es.wikipedia.org/wiki/Pingu",
+        "https://es.wikipedia.org/wiki/Poquita_fe",
+        "https://es.wikipedia.org/wiki/Supernormal",
+        "https://es.wikipedia.org/wiki/The_Big_Bang_Theory",
+        "https://es.wikipedia.org/wiki/The_Fresh_Prince_of_Bel-Air",
+        "https://es.wikipedia.org/wiki/The_Littles_%28serie_de_televisi%C3%B3n%29",
+        "https://es.wikipedia.org/wiki/The_Wonder_Years",
+        "https://es.wikipedia.org/wiki/Todas_las_veces_que_nos_enamoramos",
+        "https://es.wikipedia.org/wiki/Vamos_Juan",
+        "https://es.wikipedia.org/wiki/Venga_Juan",
+        "https://es.wikipedia.org/wiki/Vota_Juan",
+        "https://es.wikipedia.org/wiki/%C3%89rase_una_vez..._la_Vida"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-series-scifi",
-      "count": 358,
+      "count": 362,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Series_de_televisi%C3%B3n_de_ciencia_ficci%C3%B3n"
+        "https://es.wikipedia.org/wiki/Categoría:Series_de_televisi%C3%B3n_de_ciencia_ficci%C3%B3n",
+        "https://es.wikipedia.org/wiki/Doctor_Who",
+        "https://es.wikipedia.org/wiki/El_internado",
+        "https://es.wikipedia.org/wiki/Estoy_vivo",
+        "https://es.wikipedia.org/wiki/Knight_Rider",
+        "https://es.wikipedia.org/wiki/La_valla",
+        "https://es.wikipedia.org/wiki/Padre_de_familia",
+        "https://es.wikipedia.org/wiki/Star_Trek",
+        "https://es.wikipedia.org/wiki/Stranger_Things",
+        "https://es.wikipedia.org/wiki/The_X-Files"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-series-spanish",
-      "count": 843,
+      "count": 846,
       "sources": [
-        "https://es.wikipedia.org/wiki/Categoría:Series_de_televisi%C3%B3n_de_Espa%C3%B1a"
+        "https://es.wikipedia.org/wiki/Categoría:Series_de_televisi%C3%B3n_de_Espa%C3%B1a",
+        "https://es.wikipedia.org/wiki/4_estrellas",
+        "https://es.wikipedia.org/wiki/Acacias_38",
+        "https://es.wikipedia.org/wiki/Al_salir_de_clase",
+        "https://es.wikipedia.org/wiki/All%C3%AD_abajo",
+        "https://es.wikipedia.org/wiki/Amar_en_tiempos_revueltos",
+        "https://es.wikipedia.org/wiki/Amar_es_para_siempre",
+        "https://es.wikipedia.org/wiki/Anclados",
+        "https://es.wikipedia.org/wiki/Barrio_S%C3%A9samo",
+        "https://es.wikipedia.org/wiki/Bienvenidos_a_Ed%C3%A9n",
+        "https://es.wikipedia.org/wiki/Camera_Caf%C3%A9",
+        "https://es.wikipedia.org/wiki/Chiringuito_de_Pepe",
+        "https://es.wikipedia.org/wiki/Cu%C3%A9ntame_c%C3%B3mo_pas%C3%B3",
+        "https://es.wikipedia.org/wiki/David_el_Gnomo",
+        "https://es.wikipedia.org/wiki/Detective_Tour%C3%A9",
+        "https://es.wikipedia.org/wiki/Doctor_Mateo",
+        "https://es.wikipedia.org/wiki/D%C3%ADas_de_Navidad",
+        "https://es.wikipedia.org/wiki/El_Ministerio_del_Tiempo",
+        "https://es.wikipedia.org/wiki/El_caso_Asunta",
+        "https://es.wikipedia.org/wiki/El_cuerpo_en_llamas",
+        "https://es.wikipedia.org/wiki/El_fin_de_la_comedia",
+        "https://es.wikipedia.org/wiki/El_internado",
+        "https://es.wikipedia.org/wiki/Estoy_vivo",
+        "https://es.wikipedia.org/wiki/Familia_Teler%C3%ADn",
+        "https://es.wikipedia.org/wiki/F%C3%ADsica_o_qu%C3%ADmica",
+        "https://es.wikipedia.org/wiki/Gym_Tony",
+        "https://es.wikipedia.org/wiki/La_Moderna",
+        "https://es.wikipedia.org/wiki/La_casa_de_papel",
+        "https://es.wikipedia.org/wiki/La_cocinera_de_Castamar",
+        "https://es.wikipedia.org/wiki/La_embajada",
+        "https://es.wikipedia.org/wiki/La_familia_Mata",
+        "https://es.wikipedia.org/wiki/La_mes%C3%ADas",
+        "https://es.wikipedia.org/wiki/La_que_se_avecina",
+        "https://es.wikipedia.org/wiki/La_templanza",
+        "https://es.wikipedia.org/wiki/La_unidad_%28serie_de_televisi%C3%B3n%29",
+        "https://es.wikipedia.org/wiki/La_valla",
+        "https://es.wikipedia.org/wiki/La_vuelta_al_mundo_de_Willy_Fog",
+        "https://es.wikipedia.org/wiki/La_v%C3%ADctima_n%C3%BAmero_8",
+        "https://es.wikipedia.org/wiki/Las_abogadas",
+        "https://es.wikipedia.org/wiki/Las_chicas_del_cable",
+        "https://es.wikipedia.org/wiki/Las_de_la_%C3%BAltima_fila",
+        "https://es.wikipedia.org/wiki/Los_Farad",
+        "https://es.wikipedia.org/wiki/Los_favoritos_de_Midas",
+        "https://es.wikipedia.org/wiki/Los_hombres_de_Paco",
+        "https://es.wikipedia.org/wiki/Los_misterios_de_Laura",
+        "https://es.wikipedia.org/wiki/Los_mundos_de_Yupi",
+        "https://es.wikipedia.org/wiki/Mar_de_pl%C3%A1stico",
+        "https://es.wikipedia.org/wiki/Maric%C3%B3n_perdido",
+        "https://es.wikipedia.org/wiki/Mira_lo_que_has_hecho",
+        "https://es.wikipedia.org/wiki/Muertos_S.L.",
+        "https://es.wikipedia.org/wiki/Ni_una_m%C3%A1s",
+        "https://es.wikipedia.org/wiki/Olmos_y_Robles",
+        "https://es.wikipedia.org/wiki/Pocoy%C3%B3",
+        "https://es.wikipedia.org/wiki/Poquita_fe",
+        "https://es.wikipedia.org/wiki/Querer",
+        "https://es.wikipedia.org/wiki/Sagrada_familia",
+        "https://es.wikipedia.org/wiki/Seis_hermanas",
+        "https://es.wikipedia.org/wiki/Servir_y_proteger",
+        "https://es.wikipedia.org/wiki/Sky_Rojo",
+        "https://es.wikipedia.org/wiki/Supernormal",
+        "https://es.wikipedia.org/wiki/S%C3%A9_qui%C3%A9n_eres",
+        "https://es.wikipedia.org/wiki/Todas_las_veces_que_nos_enamoramos",
+        "https://es.wikipedia.org/wiki/Todos_mienten",
+        "https://es.wikipedia.org/wiki/Toy_Boy",
+        "https://es.wikipedia.org/wiki/Valle_salvaje",
+        "https://es.wikipedia.org/wiki/Vamos_Juan",
+        "https://es.wikipedia.org/wiki/Velvet_Colecci%C3%B3n",
+        "https://es.wikipedia.org/wiki/Venga_Juan",
+        "https://es.wikipedia.org/wiki/Vivir_sin_permiso",
+        "https://es.wikipedia.org/wiki/Vota_Juan",
+        "https://es.wikipedia.org/wiki/%C3%81guila_Roja"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -1438,13 +2446,31 @@
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_1986",
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_1987",
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_1988",
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_1989"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_1989",
+        "https://es.wikipedia.org/wiki/A_Fish_Called_Wanda",
+        "https://es.wikipedia.org/wiki/Airplane%21",
+        "https://es.wikipedia.org/wiki/Back_to_the_Future",
+        "https://es.wikipedia.org/wiki/Back_to_the_Future_Part_II",
+        "https://es.wikipedia.org/wiki/Blade_Runner",
+        "https://es.wikipedia.org/wiki/Cinema_Paradiso",
+        "https://es.wikipedia.org/wiki/Dead_Poets_Society",
+        "https://es.wikipedia.org/wiki/Die_Hard",
+        "https://es.wikipedia.org/wiki/E.T.%2C_el_extraterrestre",
+        "https://es.wikipedia.org/wiki/La_tumba_de_las_luci%C3%A9rnagas",
+        "https://es.wikipedia.org/wiki/Labyrinth_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Los_Goonies",
+        "https://es.wikipedia.org/wiki/Majo_no_Takky%C5%ABbin",
+        "https://es.wikipedia.org/wiki/Mi_vecino_Totoro",
+        "https://es.wikipedia.org/wiki/RoboCop",
+        "https://es.wikipedia.org/wiki/The_Dark_Crystal",
+        "https://es.wikipedia.org/wiki/The_Terminator",
+        "https://es.wikipedia.org/wiki/Volver_a_empezar"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-films-1990",
-      "count": 4161,
+      "count": 4162,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_1990",
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_1991",
@@ -1455,13 +2481,44 @@
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_1996",
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_1997",
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_1998",
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_1999"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_1999",
+        "https://es.wikipedia.org/wiki/Back_to_the_Future_Part_III",
+        "https://es.wikipedia.org/wiki/Con_Air",
+        "https://es.wikipedia.org/wiki/Dark_City",
+        "https://es.wikipedia.org/wiki/Demolition_Man",
+        "https://es.wikipedia.org/wiki/Doce_monos",
+        "https://es.wikipedia.org/wiki/D%C3%ADas_extra%C3%B1os",
+        "https://es.wikipedia.org/wiki/EXistenZ",
+        "https://es.wikipedia.org/wiki/El_pr%C3%ADncipe_de_Egipto",
+        "https://es.wikipedia.org/wiki/El_quinto_elemento",
+        "https://es.wikipedia.org/wiki/El_rey_le%C3%B3n",
+        "https://es.wikipedia.org/wiki/Gattaca",
+        "https://es.wikipedia.org/wiki/Good_Will_Hunting",
+        "https://es.wikipedia.org/wiki/Groundhog_Day",
+        "https://es.wikipedia.org/wiki/La_princesa_Mononoke",
+        "https://es.wikipedia.org/wiki/La_vida_es_bella",
+        "https://es.wikipedia.org/wiki/Lo_que_queda_del_d%C3%ADa_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Matrix",
+        "https://es.wikipedia.org/wiki/Mulan",
+        "https://es.wikipedia.org/wiki/Perfect_Blue",
+        "https://es.wikipedia.org/wiki/Porco_Rosso",
+        "https://es.wikipedia.org/wiki/Pulp_Fiction",
+        "https://es.wikipedia.org/wiki/Pumpkinhead_II%3A_Blood_Wings",
+        "https://es.wikipedia.org/wiki/Seven",
+        "https://es.wikipedia.org/wiki/Susurros_del_coraz%C3%B3n",
+        "https://es.wikipedia.org/wiki/The_Blair_Witch_Project",
+        "https://es.wikipedia.org/wiki/The_Green_Mile",
+        "https://es.wikipedia.org/wiki/The_Shawshank_Redemption",
+        "https://es.wikipedia.org/wiki/The_Thirteenth_Floor",
+        "https://es.wikipedia.org/wiki/Total_Recall",
+        "https://es.wikipedia.org/wiki/Toy_Story",
+        "https://es.wikipedia.org/wiki/True_Lies"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-films-2000",
-      "count": 7264,
+      "count": 7265,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_2000",
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_2001",
@@ -1472,7 +2529,35 @@
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_2006",
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_2007",
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_2008",
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_2009"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_2009",
+        "https://es.wikipedia.org/wiki/A_Beautiful_Mind",
+        "https://es.wikipedia.org/wiki/Amores_perros",
+        "https://es.wikipedia.org/wiki/Am%C3%A9lie",
+        "https://es.wikipedia.org/wiki/Atlantis%3A_El_imperio_perdido",
+        "https://es.wikipedia.org/wiki/El_laberinto_del_fauno",
+        "https://es.wikipedia.org/wiki/El_planeta_del_tesoro",
+        "https://es.wikipedia.org/wiki/El_protegido",
+        "https://es.wikipedia.org/wiki/El_secreto_de_sus_ojos",
+        "https://es.wikipedia.org/wiki/El_viaje_de_Chihiro",
+        "https://es.wikipedia.org/wiki/Eternal_Sunshine_of_the_Spotless_Mind",
+        "https://es.wikipedia.org/wiki/Fantastic_Mr._Fox",
+        "https://es.wikipedia.org/wiki/Gake_no_ue_no_Ponyo",
+        "https://es.wikipedia.org/wiki/Gladiator",
+        "https://es.wikipedia.org/wiki/Kung_Fu_Panda",
+        "https://es.wikipedia.org/wiki/La_chica_que_saltaba_a_trav%C3%A9s_del_tiempo",
+        "https://es.wikipedia.org/wiki/Les_Choristes",
+        "https://es.wikipedia.org/wiki/Lilo_%26_Stitch",
+        "https://es.wikipedia.org/wiki/Mar_adentro",
+        "https://es.wikipedia.org/wiki/Millennium_Actress",
+        "https://es.wikipedia.org/wiki/Nueve_reinas",
+        "https://es.wikipedia.org/wiki/Shrek",
+        "https://es.wikipedia.org/wiki/Summer_Wars",
+        "https://es.wikipedia.org/wiki/The_Dark_Knight",
+        "https://es.wikipedia.org/wiki/The_Emperor%27s_New_Groove",
+        "https://es.wikipedia.org/wiki/The_Princess_and_the_Frog",
+        "https://es.wikipedia.org/wiki/Tokyo_Godfathers",
+        "https://es.wikipedia.org/wiki/Vecinos_invasores",
+        "https://es.wikipedia.org/wiki/Y_tu_mam%C3%A1_tambi%C3%A9n"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -1489,7 +2574,39 @@
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_2016",
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_2017",
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_2018",
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_2019"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_2019",
+        "https://es.wikipedia.org/wiki/A_dos_metros_de_ti",
+        "https://es.wikipedia.org/wiki/Cuerpo_de_%C3%A9lite_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/C%C3%B3mo_entrenar_a_tu_drag%C3%B3n_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/El_Gran_Hotel_Budapest",
+        "https://es.wikipedia.org/wiki/El_cuento_de_la_princesa_Kaguya",
+        "https://es.wikipedia.org/wiki/El_ni%C3%B1o_y_la_bestia",
+        "https://es.wikipedia.org/wiki/El_origen_de_los_guardianes",
+        "https://es.wikipedia.org/wiki/El_recuerdo_de_Marnie",
+        "https://es.wikipedia.org/wiki/El_renacido",
+        "https://es.wikipedia.org/wiki/El_tiempo_contigo",
+        "https://es.wikipedia.org/wiki/Enredados",
+        "https://es.wikipedia.org/wiki/Get_Out",
+        "https://es.wikipedia.org/wiki/Hereditary",
+        "https://es.wikipedia.org/wiki/Inside_Out_%28pel%C3%ADcula_de_2015%29",
+        "https://es.wikipedia.org/wiki/Interstellar",
+        "https://es.wikipedia.org/wiki/It_Follows",
+        "https://es.wikipedia.org/wiki/John_Wick",
+        "https://es.wikipedia.org/wiki/Knives_Out",
+        "https://es.wikipedia.org/wiki/Koe_no_Katachi_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Los_Croods",
+        "https://es.wikipedia.org/wiki/Megamind",
+        "https://es.wikipedia.org/wiki/Moana_%28pel%C3%ADcula_de_2016%29",
+        "https://es.wikipedia.org/wiki/Moonrise_Kingdom",
+        "https://es.wikipedia.org/wiki/Noruwei_no_Mori",
+        "https://es.wikipedia.org/wiki/Ocho_apellidos_vascos",
+        "https://es.wikipedia.org/wiki/Quiero_comerme_tu_p%C3%A1ncreas",
+        "https://es.wikipedia.org/wiki/Ralph_Breaks_the_Internet",
+        "https://es.wikipedia.org/wiki/Relatos_salvajes",
+        "https://es.wikipedia.org/wiki/The_Conjuring",
+        "https://es.wikipedia.org/wiki/Wreck-It_Ralph",
+        "https://es.wikipedia.org/wiki/Zootopia",
+        "https://es.wikipedia.org/wiki/%C5%8Ckami_Kodomo_no_Ame_to_Yuki"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -1503,13 +2620,27 @@
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_2023",
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_2024",
         "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_2025",
-        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_2026"
+        "https://es.wikipedia.org/wiki/Categoría:Pel%C3%ADculas_de_2026",
+        "https://es.wikipedia.org/wiki/Encanto_%28pel%C3%ADcula%29",
+        "https://es.wikipedia.org/wiki/Inside_Out_2",
+        "https://es.wikipedia.org/wiki/Kimitachi_wa_D%C5%8D_Ikiru_ka_%28pel%C3%ADcula_de_2023%29",
+        "https://es.wikipedia.org/wiki/La_mujer_en_la_ventana",
+        "https://es.wikipedia.org/wiki/La_sustancia",
+        "https://es.wikipedia.org/wiki/Longlegs",
+        "https://es.wikipedia.org/wiki/Los_tipos_malos",
+        "https://es.wikipedia.org/wiki/Moana_2",
+        "https://es.wikipedia.org/wiki/Onward",
+        "https://es.wikipedia.org/wiki/Raya_y_el_%C3%BAltimo_drag%C3%B3n",
+        "https://es.wikipedia.org/wiki/Respira",
+        "https://es.wikipedia.org/wiki/Robot_Dreams",
+        "https://es.wikipedia.org/wiki/Romper_el_c%C3%ADrculo",
+        "https://es.wikipedia.org/wiki/Suzume"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-novels",
-      "count": 2374,
+      "count": 2401,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:Novelas_de_1813",
         "https://es.wikipedia.org/wiki/Categoría:Novelas_de_1818",
@@ -1566,13 +2697,104 @@
         "https://es.wikipedia.org/wiki/Categoría:Novelas_de_2024",
         "https://es.wikipedia.org/wiki/Categoría:Novelas_de_2025",
         "https://es.wikipedia.org/wiki/Categoría:Novelas_de_2026",
-        "https://www.cervantesvirtual.com/"
+        "https://www.cervantesvirtual.com/",
+        "https://es.wikipedia.org/wiki/1Q84",
+        "https://es.wikipedia.org/wiki/Al_sur_de_la_frontera%2C_al_oeste_del_sol",
+        "https://es.wikipedia.org/wiki/Alas_de_%C3%B3nix",
+        "https://es.wikipedia.org/wiki/Aleaci%C3%B3n_de_ley",
+        "https://es.wikipedia.org/wiki/American_Gods",
+        "https://es.wikipedia.org/wiki/Bajo_la_misma_estrella",
+        "https://es.wikipedia.org/wiki/Brujer%C3%ADas",
+        "https://es.wikipedia.org/wiki/Buenos_presagios",
+        "https://es.wikipedia.org/wiki/Buscando_a_Alaska",
+        "https://es.wikipedia.org/wiki/Cien_a%C3%B1os_de_soledad",
+        "https://es.wikipedia.org/wiki/Ciudades_de_papel",
+        "https://es.wikipedia.org/wiki/Conversaciones_entre_amigos",
+        "https://es.wikipedia.org/wiki/Coraline",
+        "https://es.wikipedia.org/wiki/Cr%C3%B3nica_del_p%C3%A1jaro_que_da_cuerda_al_mundo",
+        "https://es.wikipedia.org/wiki/Dioses_menores",
+        "https://es.wikipedia.org/wiki/Don_Quijote_de_la_Mancha",
+        "https://es.wikipedia.org/wiki/Dune",
+        "https://es.wikipedia.org/wiki/El_Se%C3%B1or_de_los_Anillos",
+        "https://es.wikipedia.org/wiki/El_aliento_de_los_dioses",
+        "https://es.wikipedia.org/wiki/El_camino_de_los_reyes",
+        "https://es.wikipedia.org/wiki/El_caso_Alaska_Sanders",
+        "https://es.wikipedia.org/wiki/El_castillo_ambulante",
+        "https://es.wikipedia.org/wiki/El_desorden_que_dejas",
+        "https://es.wikipedia.org/wiki/El_enigma_de_la_habitaci%C3%B3n_622",
+        "https://es.wikipedia.org/wiki/El_extranjero",
+        "https://es.wikipedia.org/wiki/El_fin_del_mundo_y_un_despiadado_pa%C3%ADs_de_las_maravillas",
+        "https://es.wikipedia.org/wiki/El_hobbit",
+        "https://es.wikipedia.org/wiki/El_h%C3%A9roe_de_las_eras",
+        "https://es.wikipedia.org/wiki/El_imperio_final",
+        "https://es.wikipedia.org/wiki/El_libro_de_los_Baltimore",
+        "https://es.wikipedia.org/wiki/El_libro_del_cementerio",
+        "https://es.wikipedia.org/wiki/El_metal_perdido",
+        "https://es.wikipedia.org/wiki/El_nombre_del_viento",
+        "https://es.wikipedia.org/wiki/El_oc%C3%A9ano_al_final_del_camino",
+        "https://es.wikipedia.org/wiki/El_pozo_de_la_ascensi%C3%B3n",
+        "https://es.wikipedia.org/wiki/El_principito",
+        "https://es.wikipedia.org/wiki/El_proceso",
+        "https://es.wikipedia.org/wiki/El_pr%C3%ADncipe_cruel",
+        "https://es.wikipedia.org/wiki/El_retorno_del_Rey",
+        "https://es.wikipedia.org/wiki/El_ritmo_de_la_guerra",
+        "https://es.wikipedia.org/wiki/El_temor_de_un_hombre_sabio",
+        "https://es.wikipedia.org/wiki/El_teorema_Katherine",
+        "https://es.wikipedia.org/wiki/El_tiempo_entre_costuras",
+        "https://es.wikipedia.org/wiki/Elantris",
+        "https://es.wikipedia.org/wiki/En_el_otro_viento",
+        "https://es.wikipedia.org/wiki/Fangirl",
+        "https://es.wikipedia.org/wiki/Flores_para_Algernon",
+        "https://es.wikipedia.org/wiki/Harry_Potter_y_la_piedra_filosofal",
+        "https://es.wikipedia.org/wiki/Jonathan_Strange_y_el_se%C3%B1or_Norrell",
+        "https://es.wikipedia.org/wiki/Juramentada",
+        "https://es.wikipedia.org/wiki/Kafka_en_la_orilla",
+        "https://es.wikipedia.org/wiki/La_Comunidad_del_Anillo",
+        "https://es.wikipedia.org/wiki/La_biblioteca_de_la_medianoche",
+        "https://es.wikipedia.org/wiki/La_canci%C3%B3n_de_Aquiles",
+        "https://es.wikipedia.org/wiki/La_costa_m%C3%A1s_lejana",
+        "https://es.wikipedia.org/wiki/La_dependienta",
+        "https://es.wikipedia.org/wiki/La_desaparici%C3%B3n_de_Stephanie_Mailer",
+        "https://es.wikipedia.org/wiki/La_librer%C3%ADa_encantada",
+        "https://es.wikipedia.org/wiki/La_mano_izquierda_de_la_oscuridad",
+        "https://es.wikipedia.org/wiki/La_metamorfosis",
+        "https://es.wikipedia.org/wiki/La_m%C3%BAsica_del_silencio",
+        "https://es.wikipedia.org/wiki/La_paciente_silenciosa",
+        "https://es.wikipedia.org/wiki/La_peste",
+        "https://es.wikipedia.org/wiki/La_princesa_prometida",
+        "https://es.wikipedia.org/wiki/La_verdad_sobre_el_caso_Harry_Quebert",
+        "https://es.wikipedia.org/wiki/La_vida_invisible_de_Addie_LaRue",
+        "https://es.wikipedia.org/wiki/Las_dos_torres",
+        "https://es.wikipedia.org/wiki/Las_tumbas_de_Atuan",
+        "https://es.wikipedia.org/wiki/Los_a%C3%B1os_de_peregrinaci%C3%B3n_del_chico_sin_color",
+        "https://es.wikipedia.org/wiki/Los_despose%C3%ADdos",
+        "https://es.wikipedia.org/wiki/Los_hijos_de_H%C3%BArin",
+        "https://es.wikipedia.org/wiki/Los_pacientes_del_doctor_Garc%C3%ADa",
+        "https://es.wikipedia.org/wiki/Los_siete_maridos_de_Evelyn_Hugo",
+        "https://es.wikipedia.org/wiki/Matar_un_ruise%C3%B1or",
+        "https://es.wikipedia.org/wiki/Mort",
+        "https://es.wikipedia.org/wiki/Nunca_me_abandones",
+        "https://es.wikipedia.org/wiki/Palabras_radiantes",
+        "https://es.wikipedia.org/wiki/Pap%C3%A1_Puerco",
+        "https://es.wikipedia.org/wiki/Parque_Jur%C3%A1sico_%28novela%29",
+        "https://es.wikipedia.org/wiki/Pretty_Little_Liars_%28novela%29",
+        "https://es.wikipedia.org/wiki/Quiero_comerme_tu_p%C3%A1ncreas",
+        "https://es.wikipedia.org/wiki/Rechicero",
+        "https://es.wikipedia.org/wiki/Ritos_iguales",
+        "https://es.wikipedia.org/wiki/Sputnik%2C_mi_amor",
+        "https://es.wikipedia.org/wiki/Tehanu",
+        "https://es.wikipedia.org/wiki/The_Catcher_in_the_Rye",
+        "https://es.wikipedia.org/wiki/The_Silence_of_the_Lambs_%28novela%29",
+        "https://es.wikipedia.org/wiki/Todos_quieren_a_Daisy_Jones",
+        "https://es.wikipedia.org/wiki/Un_cuento_perfecto_%28novela%29",
+        "https://es.wikipedia.org/wiki/Un_mago_de_Terramar",
+        "https://es.wikipedia.org/wiki/Ve_y_pon_un_centinela"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-singers",
-      "count": 2448,
+      "count": 2839,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:Cantantes_de_Espa%C3%B1a",
         "https://es.wikipedia.org/wiki/Categoría:Cantantes_de_Argentina",
@@ -1583,13 +2805,23 @@
         "https://es.wikipedia.org/wiki/Categoría:Cantantes_de_Francia",
         "https://es.wikipedia.org/wiki/Categoría:Cantantes_de_Italia",
         "https://es.wikipedia.org/wiki/Categoría:Cantantes_masculinos_de_Estados_Unidos",
-        "https://es.wikipedia.org/wiki/Categoría:Cantantes_femeninas_de_Estados_Unidos"
+        "https://es.wikipedia.org/wiki/Categoría:Cantantes_femeninas_de_Estados_Unidos",
+        "https://es.wikipedia.org/wiki/Categoría:Cantantes_de_Puerto_Rico",
+        "https://es.wikipedia.org/wiki/Categoría:Cantantes_de_Per%C3%BA",
+        "https://es.wikipedia.org/wiki/Categoría:Cantantes_de_Uruguay",
+        "https://es.wikipedia.org/wiki/Categoría:Cantantes_de_Venezuela",
+        "https://es.wikipedia.org/wiki/Categoría:Cantantes_de_Brasil",
+        "https://es.wikipedia.org/wiki/Categoría:Cantantes_de_Alemania",
+        "https://es.wikipedia.org/wiki/Categoría:Cantantes_de_Canad%C3%A1",
+        "https://es.wikipedia.org/wiki/Categoría:Cantantes_de_Australia",
+        "https://es.wikipedia.org/wiki/Categoría:Cantantes_de_Corea_del_Sur",
+        "https://es.wikipedia.org/wiki/Categoría:Cantantes_de_Jap%C3%B3n"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-bands",
-      "count": 1906,
+      "count": 2740,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:Grupos_de_rock_de_Espa%C3%B1a",
         "https://es.wikipedia.org/wiki/Categoría:Grupos_de_rock_de_Estados_Unidos",
@@ -1598,7 +2830,16 @@
         "https://es.wikipedia.org/wiki/Categoría:Grupos_de_rock_de_M%C3%A9xico",
         "https://es.wikipedia.org/wiki/Categoría:Grupos_de_pop_de_Espa%C3%B1a",
         "https://es.wikipedia.org/wiki/Categoría:Grupos_de_pop_de_Reino_Unido",
-        "https://es.wikipedia.org/wiki/Categoría:Grupos_de_heavy_metal_de_Alemania"
+        "https://es.wikipedia.org/wiki/Categoría:Grupos_de_heavy_metal_de_Alemania",
+        "https://es.wikipedia.org/wiki/Categoría:Grupos_de_pop_de_Estados_Unidos",
+        "https://es.wikipedia.org/wiki/Categoría:Grupos_de_rock_de_Canad%C3%A1",
+        "https://es.wikipedia.org/wiki/Categoría:Grupos_de_rock_de_Australia",
+        "https://es.wikipedia.org/wiki/Categoría:Grupos_de_rock_de_Francia",
+        "https://es.wikipedia.org/wiki/Categoría:Grupos_de_rock_de_Chile",
+        "https://es.wikipedia.org/wiki/Categoría:Grupos_de_rock_de_Colombia",
+        "https://es.wikipedia.org/wiki/Categoría:Grupos_de_pop_de_M%C3%A9xico",
+        "https://es.wikipedia.org/wiki/Categoría:Grupos_de_heavy_metal_de_Reino_Unido",
+        "https://es.wikipedia.org/wiki/Categoría:Grupos_de_heavy_metal_de_Espa%C3%B1a"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -1629,7 +2870,7 @@
     },
     {
       "id": "q4-basketball",
-      "count": 1345,
+      "count": 2480,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:Baloncestistas_de_Espa%C3%B1a",
         "https://es.wikipedia.org/wiki/Categoría:Baloncestistas_de_Estados_Unidos",
@@ -1637,13 +2878,22 @@
         "https://es.wikipedia.org/wiki/Categoría:Baloncestistas_de_Francia",
         "https://es.wikipedia.org/wiki/Categoría:Baloncestistas_de_Serbia",
         "https://pr.nba.com/nba-75th-anniversary-team-announced/",
-        "https://www.fiba.basketball/"
+        "https://www.fiba.basketball/",
+        "https://es.wikipedia.org/wiki/Categoría:Baloncestistas_de_Croacia",
+        "https://es.wikipedia.org/wiki/Categoría:Baloncestistas_de_Lituania",
+        "https://es.wikipedia.org/wiki/Categoría:Baloncestistas_de_Eslovenia",
+        "https://es.wikipedia.org/wiki/Categoría:Baloncestistas_de_Italia",
+        "https://es.wikipedia.org/wiki/Categoría:Baloncestistas_de_Alemania",
+        "https://es.wikipedia.org/wiki/Categoría:Baloncestistas_de_Grecia",
+        "https://es.wikipedia.org/wiki/Categoría:Baloncestistas_de_Brasil",
+        "https://es.wikipedia.org/wiki/Categoría:Baloncestistas_de_Australia",
+        "https://es.wikipedia.org/wiki/Categoría:Baloncestistas_de_Canad%C3%A1"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-tennis",
-      "count": 844,
+      "count": 1693,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:Tenistas_masculinos_de_Espa%C3%B1a",
         "https://es.wikipedia.org/wiki/Categoría:Tenistas_femeninas_de_Espa%C3%B1a",
@@ -1651,7 +2901,21 @@
         "https://es.wikipedia.org/wiki/Categoría:Tenistas_femeninas_de_Estados_Unidos",
         "https://es.wikipedia.org/wiki/Categoría:Tenistas_masculinos_de_Argentina",
         "https://www.atptour.com/en/players",
-        "https://www.wtatennis.com/players"
+        "https://www.wtatennis.com/players",
+        "https://es.wikipedia.org/wiki/Categoría:Tenistas_masculinos_de_Francia",
+        "https://es.wikipedia.org/wiki/Categoría:Tenistas_femeninas_de_Francia",
+        "https://es.wikipedia.org/wiki/Categoría:Tenistas_masculinos_de_Italia",
+        "https://es.wikipedia.org/wiki/Categoría:Tenistas_femeninas_de_Italia",
+        "https://es.wikipedia.org/wiki/Categoría:Tenistas_masculinos_de_Alemania",
+        "https://es.wikipedia.org/wiki/Categoría:Tenistas_femeninas_de_Alemania",
+        "https://es.wikipedia.org/wiki/Categoría:Tenistas_masculinos_de_Australia",
+        "https://es.wikipedia.org/wiki/Categoría:Tenistas_femeninas_de_Australia",
+        "https://es.wikipedia.org/wiki/Categoría:Tenistas_masculinos_de_Rusia",
+        "https://es.wikipedia.org/wiki/Categoría:Tenistas_femeninas_de_Rusia",
+        "https://es.wikipedia.org/wiki/Categoría:Tenistas_masculinos_de_Suiza",
+        "https://es.wikipedia.org/wiki/Categoría:Tenistas_femeninas_de_Suiza",
+        "https://es.wikipedia.org/wiki/Categoría:Tenistas_masculinos_de_Serbia",
+        "https://es.wikipedia.org/wiki/Categoría:Tenistas_femeninas_de_Serbia"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -1687,7 +2951,7 @@
     },
     {
       "id": "q4-painters",
-      "count": 3750,
+      "count": 4510,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:Pintores_de_Espa%C3%B1a_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:Pintores_de_Espa%C3%B1a_del_siglo_XIX",
@@ -1695,7 +2959,21 @@
         "https://es.wikipedia.org/wiki/Categoría:Pintores_de_Francia_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:Pintores_de_Italia_del_Renacimiento",
         "https://es.wikipedia.org/wiki/Categoría:Pintoras_de_Espa%C3%B1a",
-        "https://www.museothyssen.org/coleccion/artistas"
+        "https://www.museothyssen.org/coleccion/artistas",
+        "https://es.wikipedia.org/wiki/Categoría:Pintores_de_Espa%C3%B1a_del_siglo_XVIII",
+        "https://es.wikipedia.org/wiki/Categoría:Pintores_de_Espa%C3%B1a_del_siglo_XXI",
+        "https://es.wikipedia.org/wiki/Categoría:Pintores_de_Francia_del_siglo_XVIII",
+        "https://es.wikipedia.org/wiki/Categoría:Pintores_de_Francia_del_siglo_XXI",
+        "https://es.wikipedia.org/wiki/Categoría:Pintores_de_Italia_del_siglo_XVIII",
+        "https://es.wikipedia.org/wiki/Categoría:Pintores_de_Italia_del_siglo_XXI",
+        "https://es.wikipedia.org/wiki/Categoría:Pintores_de_Alemania_del_siglo_XVIII",
+        "https://es.wikipedia.org/wiki/Categoría:Pintores_de_Alemania_del_siglo_XXI",
+        "https://es.wikipedia.org/wiki/Categoría:Pintores_de_Pa%C3%ADses_Bajos_del_siglo_XVIII",
+        "https://es.wikipedia.org/wiki/Categoría:Pintores_de_Pa%C3%ADses_Bajos_del_siglo_XXI",
+        "https://es.wikipedia.org/wiki/Categoría:Pintores_de_Reino_Unido_del_siglo_XVIII",
+        "https://es.wikipedia.org/wiki/Categoría:Pintores_de_Reino_Unido_del_siglo_XXI",
+        "https://es.wikipedia.org/wiki/Categoría:Pintores_de_M%C3%A9xico_del_siglo_XVIII",
+        "https://es.wikipedia.org/wiki/Categoría:Pintores_de_M%C3%A9xico_del_siglo_XXI"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -1714,124 +2992,163 @@
     },
     {
       "id": "q4-physicists",
-      "count": 417,
+      "count": 547,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Espa%C3%B1a_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Estados_Unidos_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Alemania_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Francia_del_siglo_XX",
-        "https://www.nobelprize.org/prizes/lists/all-nobel-prizes-in-physics/"
+        "https://www.nobelprize.org/prizes/lists/all-nobel-prizes-in-physics/",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Italia_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Italia_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Reino_Unido_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Reino_Unido_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Rusia_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Rusia_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Jap%C3%B3n_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_Jap%C3%B3n_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_India_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:F%C3%ADsicos_de_India_del_siglo_XX"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-mathematicians",
-      "count": 526,
+      "count": 725,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Espa%C3%B1a_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Estados_Unidos_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Alemania_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Francia_del_siglo_XX",
-        "https://mathshistory.st-andrews.ac.uk/Biographies/"
+        "https://mathshistory.st-andrews.ac.uk/Biographies/",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Italia_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Italia_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Reino_Unido_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Reino_Unido_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Rusia_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Rusia_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Jap%C3%B3n_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_Jap%C3%B3n_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_India_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Matem%C3%A1ticos_de_India_del_siglo_XX"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-chemists",
-      "count": 323,
+      "count": 363,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Espa%C3%B1a_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Estados_Unidos_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Alemania_del_siglo_XX",
         "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Francia_del_siglo_XX",
-        "https://www.nobelprize.org/prizes/lists/all-nobel-prizes-in-chemistry/"
+        "https://www.nobelprize.org/prizes/lists/all-nobel-prizes-in-chemistry/",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Italia_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Italia_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Reino_Unido_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Reino_Unido_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Rusia_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Rusia_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Jap%C3%B3n_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_Jap%C3%B3n_del_siglo_XX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_India_del_siglo_XIX",
+        "https://es.wikipedia.org/wiki/Categoría:Qu%C3%ADmicos_de_India_del_siglo_XX"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-cancers",
-      "count": 412,
+      "count": 446,
       "sources": [
         "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
-        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx"
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/2026_CIE10ES_Tomo_I_Diagnosticos.pdf"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-infections",
-      "count": 580,
+      "count": 625,
       "sources": [
         "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
-        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx"
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/2026_CIE10ES_Tomo_I_Diagnosticos.pdf"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-mental-health",
-      "count": 221,
+      "count": 263,
       "sources": [
         "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
-        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx"
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/2026_CIE10ES_Tomo_I_Diagnosticos.pdf"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-neurology",
-      "count": 229,
+      "count": 281,
       "sources": [
         "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
-        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx"
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/2026_CIE10ES_Tomo_I_Diagnosticos.pdf"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-circulation",
-      "count": 305,
+      "count": 340,
       "sources": [
         "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
-        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx"
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/2026_CIE10ES_Tomo_I_Diagnosticos.pdf"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-respiratory",
-      "count": 211,
+      "count": 244,
       "sources": [
         "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
-        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx"
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/2026_CIE10ES_Tomo_I_Diagnosticos.pdf"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-digestive",
-      "count": 359,
+      "count": 395,
       "sources": [
         "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
-        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx"
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/2026_CIE10ES_Tomo_I_Diagnosticos.pdf"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-skin",
-      "count": 302,
+      "count": 345,
       "sources": [
         "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
-        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx"
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/2026_CIE10ES_Tomo_I_Diagnosticos.pdf"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-musculoskeletal",
-      "count": 382,
+      "count": 428,
       "sources": [
         "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
-        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx"
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/2026_CIE10ES_Tomo_I_Diagnosticos.pdf"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-cities-es",
-      "count": 545,
+      "count": 1197,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1839,7 +3156,7 @@
     },
     {
       "id": "q4-cities-fr",
-      "count": 657,
+      "count": 1782,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1847,7 +3164,7 @@
     },
     {
       "id": "q4-cities-it",
-      "count": 598,
+      "count": 1914,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1855,7 +3172,7 @@
     },
     {
       "id": "q4-cities-de",
-      "count": 957,
+      "count": 2617,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1863,7 +3180,7 @@
     },
     {
       "id": "q4-cities-gb",
-      "count": 798,
+      "count": 1706,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1871,7 +3188,7 @@
     },
     {
       "id": "q4-cities-us",
-      "count": 2704,
+      "count": 4825,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1879,7 +3196,7 @@
     },
     {
       "id": "q4-cities-mx",
-      "count": 607,
+      "count": 1445,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1887,7 +3204,7 @@
     },
     {
       "id": "q4-cities-ar",
-      "count": 301,
+      "count": 574,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1895,15 +3212,16 @@
     },
     {
       "id": "q4-cities-br",
-      "count": 2197,
+      "count": 3278,
       "sources": [
-        "https://download.geonames.org/export/dump/readme.txt"
+        "https://download.geonames.org/export/dump/readme.txt",
+        "https://es.wikipedia.org/wiki/São_Paulo"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-cities-jp",
-      "count": 1170,
+      "count": 1388,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1911,7 +3229,7 @@
     },
     {
       "id": "q4-cities-in",
-      "count": 3631,
+      "count": 5993,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1919,7 +3237,7 @@
     },
     {
       "id": "q4-cities-pt",
-      "count": 173,
+      "count": 505,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1927,7 +3245,7 @@
     },
     {
       "id": "q4-towns-51",
-      "count": 2593,
+      "count": 2540,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1935,7 +3253,7 @@
     },
     {
       "id": "q4-towns-56",
-      "count": 1777,
+      "count": 1748,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1943,7 +3261,7 @@
     },
     {
       "id": "q4-towns-60",
-      "count": 1246,
+      "count": 1233,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1951,7 +3269,7 @@
     },
     {
       "id": "q4-towns-29",
-      "count": 280,
+      "count": 277,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1959,7 +3277,7 @@
     },
     {
       "id": "q4-towns-58",
-      "count": 4126,
+      "count": 2858,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1967,7 +3285,7 @@
     },
     {
       "id": "q4-towns-55",
-      "count": 5611,
+      "count": 5463,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1975,7 +3293,7 @@
     },
     {
       "id": "q4-towns-54",
-      "count": 1678,
+      "count": 1651,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1983,7 +3301,7 @@
     },
     {
       "id": "q4-towns-52",
-      "count": 1521,
+      "count": 1503,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1991,7 +3309,7 @@
     },
     {
       "id": "q4-towns-59",
-      "count": 1126,
+      "count": 1092,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -1999,7 +3317,7 @@
     },
     {
       "id": "q4-towns-57",
-      "count": 654,
+      "count": 648,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -2007,7 +3325,7 @@
     },
     {
       "id": "q4-towns-53",
-      "count": 704,
+      "count": 687,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -2015,7 +3333,7 @@
     },
     {
       "id": "q4-rivers-spain",
-      "count": 3416,
+      "count": 3316,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt",
         "https://es.wikipedia.org/wiki/Anexo:Ríos_de_España"
@@ -2024,7 +3342,7 @@
     },
     {
       "id": "q4-mountains-spain",
-      "count": 2671,
+      "count": 2656,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -2032,7 +3350,7 @@
     },
     {
       "id": "q4-lakes-spain",
-      "count": 149,
+      "count": 147,
       "sources": [
         "https://download.geonames.org/export/dump/readme.txt"
       ],
@@ -2040,25 +3358,29 @@
     },
     {
       "id": "q4-appliances",
-      "count": 162,
+      "count": 269,
       "sources": [
         "https://es.wikipedia.org/wiki/Electrodoméstico",
-        "https://dle.rae.es/"
+        "https://dle.rae.es/",
+        "https://dle.rae.es/",
+        "https://www.philips.es/c-p/NA130_00/airfryer-serie-1000-6%2C2%C2%A0l",
+        "https://www.bosch-home.es/es/category/aspiradoras"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-furniture",
-      "count": 177,
+      "count": 273,
       "sources": [
         "https://es.wikipedia.org/wiki/Mobiliario",
+        "https://dle.rae.es/",
         "https://dle.rae.es/"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-car-models",
-      "count": 816,
+      "count": 1348,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:Modelos_de_SEAT",
         "https://es.wikipedia.org/wiki/Categoría:Modelos_de_Renault",
@@ -2072,13 +3394,26 @@
         "https://es.wikipedia.org/wiki/Categoría:Modelos_de_Mercedes-Benz",
         "https://www.dacia.es/",
         "https://www.nissan.es/vehiculos/nuevos-vehiculos.html",
-        "https://www.tesla.com/es_es"
+        "https://www.tesla.com/es_es",
+        "https://es.wikipedia.org/wiki/Categoría:Modelos_de_Audi",
+        "https://es.wikipedia.org/wiki/Categoría:Modelos_de_%C5%A0koda",
+        "https://es.wikipedia.org/wiki/Categoría:Modelos_de_Kia",
+        "https://es.wikipedia.org/wiki/Categoría:Modelos_de_Hyundai",
+        "https://es.wikipedia.org/wiki/Categoría:Modelos_de_Nissan",
+        "https://es.wikipedia.org/wiki/Categoría:Modelos_de_Honda",
+        "https://es.wikipedia.org/wiki/Categoría:Modelos_de_Mazda",
+        "https://es.wikipedia.org/wiki/Categoría:Modelos_de_Tesla",
+        "https://es.wikipedia.org/wiki/Categoría:Modelos_de_Ferrari",
+        "https://es.wikipedia.org/wiki/Categoría:Modelos_de_Porsche",
+        "https://es.wikipedia.org/wiki/Categoría:Modelos_de_Fiat",
+        "https://es.wikipedia.org/wiki/Categoría:Modelos_de_Dacia",
+        "https://es.wikipedia.org/wiki/Categoría:Modelos_de_Volvo"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-dog-breeds",
-      "count": 187,
+      "count": 358,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Espa%C3%B1a",
         "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Alemania",
@@ -2088,7 +3423,22 @@
         "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Estados_Unidos",
         "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Italia",
         "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_B%C3%A9lgica",
-        "https://es.wikipedia.org/wiki/pastor_alemán"
+        "https://es.wikipedia.org/wiki/pastor_alemán",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Rusia",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Suiza",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_China",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Canad%C3%A1",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Australia",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Polonia",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Portugal",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Hungr%C3%ADa",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Irlanda",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Suecia",
+        "https://es.wikipedia.org/wiki/Categoría:Razas_de_perro_de_Finlandia",
+        "https://fci.be/es/Nomenclature/Default.aspx",
+        "https://www.fci.be/EN/nomenclature/XOLOITZCUINTLE-234.html",
+        "https://www.fci.be/es/Nomenclature/publication.aspx",
+        "https://es.wikipedia.org/wiki/Labradoodle"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -2108,19 +3458,25 @@
     },
     {
       "id": "q4-planets-fiction",
-      "count": 116,
+      "count": 340,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:Lugares_de_Star_Wars",
         "https://es.wikipedia.org/wiki/Categoría:Lugares_de_la_Tierra_Media",
         "https://es.wikipedia.org/wiki/Categoría:Lugares_de_Harry_Potter",
         "https://es.wikipedia.org/wiki/Categoría:Lugares_de_DC_Comics",
-        "https://es.wikipedia.org/wiki/Categoría:Lugares_de_Marvel_Comics"
+        "https://es.wikipedia.org/wiki/Categoría:Lugares_de_Marvel_Comics",
+        "https://pokemonletsgo.pokemon.com/es-es/kanto-region/",
+        "https://www.pokemon.com/es/videojuegos-pokemon/pokemon-escarlata-y-pokemon-purpura/",
+        "https://es.wikipedia.org/wiki/Universo_de_Canción_de_hielo_y_fuego",
+        "https://es.wikipedia.org/wiki/Hyrule",
+        "https://es.wikipedia.org/wiki/Azeroth",
+        "https://www.wikidata.org/wiki/Q2734764"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-board-games",
-      "count": 314,
+      "count": 500,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:Juegos_de_mesa",
         "https://es.wikipedia.org/wiki/Categoría:Juegos_de_tablero",
@@ -2138,7 +3494,7 @@
     },
     {
       "id": "q4-dances",
-      "count": 110,
+      "count": 401,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:Danzas_de_Espa%C3%B1a",
         "https://es.wikipedia.org/wiki/Categoría:Bailes_de_sal%C3%B3n",
@@ -2154,7 +3510,7 @@
     },
     {
       "id": "q4-musical-genres",
-      "count": 371,
+      "count": 589,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:G%C3%A9neros_musicales",
         "https://es.wikipedia.org/wiki/Categoría:G%C3%A9neros_de_m%C3%BAsica_electr%C3%B3nica",
@@ -2198,7 +3554,7 @@
     },
     {
       "id": "q4-flowers",
-      "count": 387,
+      "count": 536,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:Plantas_ornamentales",
         "https://es.wikipedia.org/wiki/rosa"
@@ -2207,7 +3563,7 @@
     },
     {
       "id": "q4-volcanoes",
-      "count": 107,
+      "count": 185,
       "sources": [
         "https://es.wikipedia.org/wiki/Categoría:Volcanes_de_Chile",
         "https://es.wikipedia.org/wiki/Categoría:Volcanes_de_Ecuador",
@@ -2217,7 +3573,17 @@
         "https://es.wikipedia.org/wiki/Categoría:Volcanes_de_Islandia",
         "https://es.wikipedia.org/wiki/Categoría:Volcanes_de_Italia",
         "https://es.wikipedia.org/wiki/Categoría:Volcanes_de_Espa%C3%B1a",
-        "https://es.wikipedia.org/wiki/Teide"
+        "https://es.wikipedia.org/wiki/Teide",
+        "https://es.wikipedia.org/wiki/Categoría:Volcanes_de_Estados_Unidos",
+        "https://es.wikipedia.org/wiki/Categoría:Volcanes_de_Rusia",
+        "https://es.wikipedia.org/wiki/Categoría:Volcanes_de_Filipinas",
+        "https://es.wikipedia.org/wiki/Categoría:Volcanes_de_Nueva_Zelanda",
+        "https://es.wikipedia.org/wiki/Categoría:Volcanes_de_Guatemala",
+        "https://es.wikipedia.org/wiki/Categoría:Volcanes_de_Costa_Rica",
+        "https://es.wikipedia.org/wiki/Categoría:Volcanes_de_Per%C3%BA",
+        "https://es.wikipedia.org/wiki/Categoría:Volcanes_de_Argentina",
+        "https://es.wikipedia.org/wiki/Categoría:Volcanes_de_Colombia",
+        "https://es.wikipedia.org/wiki/Categoría:Volcanes_de_Tanzania"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -2239,7 +3605,7 @@
     },
     {
       "id": "q4-market",
-      "count": 1619,
+      "count": 1962,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AEspecias",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ACondimentos",
@@ -2287,11 +3653,12 @@
     },
     {
       "id": "q4-phenomena",
-      "count": 293,
+      "count": 408,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AFen%C3%B3menos_meteorol%C3%B3gicos",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AFen%C3%B3menos_%C3%B3pticos",
-        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AFen%C3%B3menos_geol%C3%B3gicos"
+        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AFen%C3%B3menos_geol%C3%B3gicos",
+        "https://dle.rae.es/"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -2306,23 +3673,25 @@
     },
     {
       "id": "q4-math",
-      "count": 505,
+      "count": 659,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AFiguras_geom%C3%A9tricas",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AConceptos_matem%C3%A1ticos",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AFunciones_matem%C3%A1ticas",
-        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APol%C3%ADgonos"
+        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3APol%C3%ADgonos",
+        "https://dle.rae.es/"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-astronomy",
-      "count": 467,
+      "count": 583,
       "sources": [
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AFen%C3%B3menos_astron%C3%B3micos",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AObjetos_astron%C3%B3micos",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3ATipos_de_estrellas",
-        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AConstelaciones"
+        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AConstelaciones",
+        "https://dle.rae.es/"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
@@ -2338,17 +3707,19 @@
     },
     {
       "id": "q4-injuries",
-      "count": 628,
+      "count": 690,
       "sources": [
-        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx"
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/2026_CIE10ES_Tomo_I_Diagnosticos.pdf"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     },
     {
       "id": "q4-symptoms",
-      "count": 222,
+      "count": 342,
       "sources": [
-        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx"
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx",
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/2026_CIE10ES_Tomo_I_Diagnosticos.pdf"
       ],
       "rarity": "Inherited Spain evidence where available; explicitly identified editorial estimates otherwise."
     }
