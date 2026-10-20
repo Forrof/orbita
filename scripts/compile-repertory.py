@@ -28,11 +28,38 @@ seeds = read(ROOT / 'content/seed-pools.json')
 geonames = read(CACHE / 'v3-geonames.json')
 current = read(CACHE / 'current-interest-2026.json')
 recognition = {norm(word): (word, percent, sample) for word, percent, sample in data['spainNorms']}
+noun_forms = collections.defaultdict(set)
+attested_forms = {}
+for word, pos, index in data['forms']:
+    if set(pos.split('|')) & {'n', 'adj'}:
+        attested_forms[norm(word)] = word
+    if 'n' in pos.split('|'):
+        noun_forms[norm(data['spainNorms'][index][0])].add(word)
 signals = {norm(r['title']): r for r in current['entries'] if r['daysListed'] >= 3}
 signal_values = sorted(r['publishedViews'] for r in signals.values())
 manual = {}
 for file in sorted((ROOT / 'content').glob('manual-*.json')):
-    manual.update(read(file))
+    pools = read(file)
+    duplicate = set(manual) & set(pools)
+    if duplicate:
+        raise RuntimeError(f'Duplicate editorial pool names: {duplicate}')
+    manual.update(pools)
+
+def attested_variants(word, gender=False):
+    """Accept regular forms only when independently attested; do not guess words."""
+    if ' ' in word:
+        return set()
+    stems = {word}
+    if gender:
+        for suffix, replacement in [('o', 'a'), ('or', 'ora'), ('án', 'ana'), ('és', 'esa'), ('ín', 'ina'), ('ón', 'ona'), ('z', 'za')]:
+            if word.endswith(suffix):
+                stems.add(word[:-len(suffix)] + replacement)
+    candidates = set(stems)
+    for stem in stems:
+        candidates.add(stem + ('s' if stem[-1:].lower() in 'aeiouáéíóú' else 'es'))
+        if stem.endswith('z'):
+            candidates.add(stem[:-1] + 'ces')
+    return {attested_forms[norm(s)] for s in candidates if norm(s) in attested_forms}
 
 def historical_score(value):
     return 10 if value >= 98 else 30 if value >= 90 else 60 if value >= 65 else 85 if value >= 35 else 100
@@ -141,6 +168,11 @@ def build(spec):
     output = []
     for row in records:
         word = row['word']
+        if not is_named:
+            forms = noun_forms.get(norm(word), set()) | attested_variants(word, identity in ('jobs', 'demonym'))
+            for form in forms:
+                if norm(form) not in aliases or aliases[norm(form)] is row:
+                    row['aliases'].add(form)
         count = None
         days = None
         history = None
@@ -202,6 +234,27 @@ for spec in questions:
     compiled.append(question)
     print(question['id'], len(question.get('answers', data['forms'] if question.get('dictionary') else [])), flush=True)
 
+# Validity does not require a recognition survey. Reviewed semantic vocabulary
+# attested in the source lexicon may have no SPALEX measurement at all.
+lexicon = {norm(row[0]) for row in data['lexicon']}
+dictionary_keys = {norm(row[0]) for row in data['forms']}
+supplement = {}
+for question in compiled:
+    if question.get('dictionary'):
+        continue
+    spec = next(s for s in questions if 'q3-' + s[0] == question['id'])
+    if len(spec) > 6 or spec[0] == 'countries':
+        continue  # Proper names do not become generic dictionary words.
+    for answer in question['answers']:
+        word = answer[0]
+        key = norm(word)
+        if ' ' not in word and word == word.lower() and key in lexicon and key not in dictionary_keys:
+            if key not in supplement or answer[2] < supplement[key][2]:
+                supplement[key] = [word, [], answer[2], answer[3], answer[4], answer[5], answer[6]]
+for question in compiled:
+    if question.get('dictionary'):
+        question['additions'] = sorted(supplement.values(), key=lambda a: norm(a[0]))
+
 manifests = []
 for file in ['v3-source-manifest.json', 'v3-coverage-manifest.json', 'v3-clubs-manifest.json']:
     path = CACHE / file
@@ -210,6 +263,6 @@ for file in ['v3-source-manifest.json', 'v3-coverage-manifest.json', 'v3-clubs-m
 for name in ['ine-nombres.xlsx', 'ine-apellidos.xls', 'current-interest-2026.json', 'v3-named-footballers.json', 'v3-geonames.json']:
     path = CACHE / name
     manifests.append({'file': name, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()})
-bank = {'version': VERSION, 'checked': '2026-10-19', 'minimumAnswers': 100, 'interestPeriod': current['period'], 'ine': {'reference': '2025-01-01', 'published': '2026-04-23', 'nameUrl': 'https://www.ine.es/daco/daco42/nombyapel/nombres_por_edad_media.xlsx', 'surnameUrl': 'https://www.ine.es/daco/daco42/nombyapel/apellidos_frecuencia.xls', 'nameRows': 'Frecuencia de nombres, suma de ambos sexos cuando coinciden', 'surnameRows': 'Frecuencia como primer apellido'}, 'sourceManifest': manifests, 'countryDailyHashes': current['hashes'], 'questions': compiled}
+bank = {'version': VERSION, 'checked': '2026-10-20', 'minimumAnswers': 100, 'interestPeriod': current['period'], 'ine': {'reference': '2025-01-01', 'published': '2026-04-23', 'nameUrl': 'https://www.ine.es/daco/daco42/nombyapel/nombres_por_edad_media.xlsx', 'surnameUrl': 'https://www.ine.es/daco/daco42/nombyapel/apellidos_frecuencia.xls', 'nameRows': 'Frecuencia de nombres, suma de ambos sexos cuando coinciden', 'surnameRows': 'Frecuencia como primer apellido'}, 'sourceManifest': manifests, 'countryDailyHashes': current['hashes'], 'questions': compiled}
 (ROOT / 'dist/repertory.json').write_text(json.dumps(bank, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
 print(f'Compiled {len(compiled)} different questions with at least 100 distinct answers each.')

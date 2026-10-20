@@ -2,9 +2,11 @@
 
 ## Alcance y comprobaciones
 
-56 preguntas realmente diferentes, ocho por constelación. Todas tienen al menos 100 respuestas canónicas al ignorar tildes y mayúsculas; los alias, los plurales equivalentes y las variantes no cuentan para alcanzar el mínimo. Se retiran las preguntas repetidas de letras, terminaciones y longitudes del repertorio activo. El diccionario conserva 231.944 claves documentadas, incluidas flexiones: 13,56 veces los 17.100 lemas iniciales, sin afirmar que sean lemas o mediciones independientes.
+56 preguntas realmente diferentes, ocho por constelación. Todas tienen al menos 100 respuestas canónicas al ignorar tildes y mayúsculas; los alias, los plurales equivalentes y las variantes no cuentan para alcanzar el mínimo. Se retiran las preguntas repetidas de letras, terminaciones y longitudes del repertorio activo. El diccionario conserva las 231.944 claves documentadas de la edición anterior y añade vocabulario revisado, atestiguado en el léxico fuente, que carecía de encuesta de reconocimiento. Su puntuación se identifica como editorial y no modifica el diccionario de partidas antiguas.
 
 La cobertura no depende de aparecer en una lista de popularidad reciente. Las preguntas culturales, deportivas y geográficas admiten temas de todo el mundo.
+
+Revisión de cobertura del **20 de octubre de 2026**: se recorren todas las páginas de las categorías de Wikipedia mediante su [continuación oficial](https://www.mediawiki.org/wiki/API:Categorymembers), incluidas páginas intermedias sin resultados. Se amplían los países de procedencia, los años de obras culturales, las localidades y el vocabulario revisado. Esta revisión amplía las respuestas, sin cambiar los enunciados, las semillas de las misiones ni los periodos de las estadísticas. Las variantes flexionadas se aceptan cuando están documentadas; las formas femeninas automáticas se limitan a profesiones y gentilicios.
 
 ## Fuentes recientes verificadas en internet
 
@@ -47,11 +49,12 @@ python -m pip install --target .cache/python-tools -r requirements-data.txt
 powershell -File scripts/import-ine.ps1
 npm run data:refresh
 npm test
+python -m unittest discover -s tests -p '*_test.py'
 npm run pages:build
 ```
 
 La importación cachea las respuestas públicas, limita el ritmo y respeta Retry-After. INE usa HTTPS con validación de certificados. Borrar cachés y descargar fuentes dinámicas puede cambiar la selección: se debe emitir una nueva versión y revisar las pruebas deliberadamente. `content/questions.json` contiene el enunciado y los grupos de vocabulario; `manual-*.json` y `aliases.json` son las listas editables. El compilador falla si alguna categoría tiene menos de 100 respuestas y agrupa los alias antes de contar.
 
-Versiones 1 y 2 siguen disponibles para historial y retos antiguos. Los resultados guardados no se recalculan. Las dos preguntas amplias antiguas de transporte y futbolistas reciben las nuevas respuestas para corregir sus rechazos. Las nuevas partidas tienen claves separadas por edición. Las estadísticas diarias deduplican por fecha y las rachas cuentan días, no ediciones.
+Versiones 1 y 2 siguen disponibles para historial y retos antiguos. Los resultados guardados no se recalculan. Las preguntas amplias antiguas de transporte, futbolistas y actores reciben las nuevas respuestas para corregir sus rechazos; en materiales naturales solo se incorporan sustancias que cumplen ese enunciado. Las nuevas partidas tienen claves separadas por edición. Las estadísticas diarias deduplican por fecha y las rachas cuentan días, no ediciones.
 
-Pruebas: límite mínimo en todas las categorías, ejemplos familiares en las 56 preguntas, alias y variantes habituales, exclusión de candidatos mal traducidos, fechas y muestras, puntuación, capítulos, temporizadores y compatibilidad de partidas. Comprobación de navegador: misión de archivo completa con siete respuestas, redirección de enlaces antiguos al catálogo, resultado sin listas de soluciones y consola sin errores.
+Pruebas: límite mínimo en todas las categorías, 718 respuestas de jugadores distribuidas entre las 56 preguntas, alias y variantes habituales, exclusión de candidatos ajenos al enunciado, fechas y muestras, puntuación, capítulos, temporizadores, compatibilidad de partidas y paginación de fuentes con peticiones simuladas. La interfaz pública mantiene ocultas las listas de soluciones.

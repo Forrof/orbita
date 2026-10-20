@@ -6,6 +6,7 @@ data.version = bank.version;
 data.expansion.activeQuestions = bank.questions.length;
 data.expansion.minimumAnswersPerQuestion = bank.minimumAnswers;
 data.expansion.reviewed = bank.checked;
+data.expansion.currentDictionarySpellings = data.expansion.uniqueNormalizedSpellings + (bank.questions.find(q => q.dictionary)?.additions?.length || 0);
 data.expansion.questionCountsByPack = Object.fromEntries([...new Set(bank.questions.map(q => q.pack))].map(pack => [pack, bank.questions.filter(q => q.pack === pack).length]));
 data.expansion.currentEvidenceFile = 'repertory.json';
 data.expansion.rankingPolicy = 'Recent Spain data where available; explicitly labelled editorial estimates otherwise. Historical recognition is not a 2026 measurement.';

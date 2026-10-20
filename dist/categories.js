@@ -1,6 +1,6 @@
 import { normalize, LEGACY_VERSION, PREVIOUS_VERSION } from './engine.js?v=3';
 import { buildSpainCategories } from './spain-categories.js?v=3';
-import { buildCuratedCategories } from './curated-categories.js?v=3';
+import { buildCuratedCategories } from './curated-categories.js?v=3.3';
 export const PACKS = {
   all: { name: 'Universo abierto', subtitle: 'Un poco de todo, un montón por descubrir.', icon: '◎' },
   everyday: { name: 'Sobremesa', subtitle: 'Lo cotidiano tiene palabras extraordinarias.', icon: '♧' },

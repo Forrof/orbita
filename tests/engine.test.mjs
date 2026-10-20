@@ -196,7 +196,7 @@ test('Messi, Leo Messi, CR7 and metro ligero validate directly in current and pr
 });
 test('2026 evidence has real periods and unknown interest never becomes zero', () => {
   const bank = data.curated;
-  assert.equal(bank.checked, '2026-10-19');
+  assert.equal(bank.checked, '2026-10-20');
   assert.equal(bank.ine.reference, '2025-01-01');
   assert.equal(bank.ine.published, '2026-04-23');
   assert.equal(bank.interestPeriod.country, 'ES');
@@ -247,6 +247,36 @@ test('basic Spanish answers work across every revised question, including gender
   };
   assert.equal(Object.keys(examples).length, 56);
   for (const [id, word] of Object.entries(examples)) assert.ok(matchAnswer(word, category('q3-' + id), false).accepted, `${id}: ${word}`);
+});
+
+test('reviewed player answers are accepted across all 56 questions', async () => {
+  const cases = JSON.parse(await readFile(new URL('./coverage-cases.json', import.meta.url), 'utf8'));
+  assert.equal(Object.keys(cases).length, 56);
+  const missing = [];
+  for (const [id, words] of Object.entries(cases)) for (const word of words.split('|')) {
+    if (!matchAnswer(word, category('q3-' + id), false).accepted) missing.push(`${id}: ${word}`);
+  }
+  assert.deepEqual(missing, []);
+});
+
+test('Tom Holland and lava work in current and previously shared broad questions', () => {
+  for (const id of ['q3-actors', 'es-world-actors']) assert.ok(matchAnswer('tom holland', category(id), false).accepted, id);
+  for (const id of ['q3-materials', 'es-topic-natural-materials']) assert.ok(matchAnswer('lava', category(id), false).accepted, id);
+  assert.equal(matchAnswer('lava', category('q3-materials'), false).basis, 'editorial-2026');
+  const word = matchAnswer('metamorfosis', category('q3-dictionary'), false);
+  assert.ok(word.accepted);
+  assert.equal(word.basis, 'editorial-2026');
+  assert.equal(word.count, null);
+  assert.equal(matchAnswer('metamorfosis', category('es-all-words'), false).accepted, false);
+});
+
+test('additional coverage keeps semantic boundaries and independently attested variants', () => {
+  for (const [id, word] of [['actors', 'lava'], ['materials', 'Tom Holland'], ['materials', 'mercurio rojo'], ['instruments', 'campanólogo'], ['footballers', 'Nora Mørk'], ['fish', 'tortuga']]) {
+    assert.equal(matchAnswer(word, category('q3-' + id), false).accepted, false, `${id}: ${word}`);
+  }
+  for (const [id, word] of [['demonym', 'catalanas'], ['demonym', 'cordobesas'], ['jobs', 'abogadas'], ['jobs', 'cajera'], ['materials', 'magma']]) {
+    assert.ok(matchAnswer(word, category('q3-' + id), false).accepted, `${id}: ${word}`);
+  }
 });
 test('absolute recognition levels keep equally common words equally common', () => {
   const c = { metric: 'recognition-es', gem: 'rare', clever: [], answers: [{ word: 'a', count: 100 }, { word: 'b', count: 100 }, { word: 'rare', count: 20 }] };

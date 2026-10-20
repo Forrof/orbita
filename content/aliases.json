@@ -1,11 +1,216 @@
 {
-  "fish": ["anchoa~boquerón", "jurel~chicharro", "caballa~verdel", "fletán~halibut", "llampuga~dorado~mahi mahi", "pirarucú~arapaima", "tintorera~tiburón azul", "breca~pagel", "barracuda~espetón", "pez ángel~pez escalar", "serviola~lecha", "japuta~palometa~brama", "bagre rayado~bagré rayado"],
-  "trees": ["lilo~lila", "glicinia~glicina", "pacano~pecán", "ombú~ombu", "espino albar~majuelo", "rosal silvestre~escaramujo", "alforfón~trigo sarraceno"],
-  "materials": ["PVC~policloruro de vinilo", "teflón~politetrafluoroetileno", "porexpán~poliestireno expandido", "tejano~denim", "licra~elastano", "viscosa~rayón", "lyocell~tencel", "sosa cáustica~hidróxido de sodio", "azúcar~sacarosa", "lejía~hipoclorito de sodio", "sal~cloruro de sodio", "glicerina~glicerol", "PLA~ácido poliláctico", "sílex~pedernal"],
-  "invertebrates": ["ciempiés~cienpiés", "sepia~choco", "abalón~oreja de mar", "pepino de mar~holoturia", "proturo"],
-  "disciplines": ["ciencia política~ciencias políticas", "marketing~mercadotecnia", "química física~fisicoquímica"],
-  "jobs": ["enfermero~enfermera", "médico~médica", "abogado~abogada", "ingeniero~ingeniera", "profesor~profesora", "maestro~maestra", "arquitecto~arquitecta", "cocinero~cocinera", "bombero~bombera", "policía~policía nacional", "camarero~camarera", "panadero~panadera", "carpintero~carpintera", "electricista~electricistas", "fontanero~fontanera", "pintor~pintora", "programador~programadora", "desarrollador~desarrolladora", "científico~científica", "investigador~investigadora", "biólogo~bióloga", "químico~química", "físico~física", "matemático~matemática", "psicólogo~psicóloga", "psiquiatra~psiquiatras", "cirujano~cirujana", "veterinario~veterinaria", "farmacéutico~farmacéutica", "conductor~conductora", "piloto~pilota", "agricultor~agricultora", "ganadero~ganadera", "pescador~pescadora", "actor~actriz", "escritor~escritora", "traductor~traductora", "editor~editora", "fotógrafo~fotógrafa", "bibliotecario~bibliotecaria", "arqueólogo~arqueóloga", "historiador~historiadora", "geólogo~geóloga", "juez~jueza", "notario~notaria", "procurador~procuradora", "registrador~registradora", "cartero~cartera", "peluquero~peluquera", "relojero~relojera", "joyero~joyera", "sastre~sastra", "zapatero~zapatera", "albañil~albañila", "minero~minera", "marinero~marinera", "soldado~soldada", "guardia civil~guardias civiles", "guía turístico~guía turística", "técnico de laboratorio~técnica de laboratorio"],
-  "transport": ["autobús~autobuses", "tren~trenes", "avión~aviones", "bicicleta~bicicletas", "metro ligero~metros ligeros", "barco~barcos", "coche~coches", "motocicleta~motocicletas~motos", "taxi~taxis"],
-  "footballers": ["Mágico González~Jorge Alberto González~Jorge González"],
-  "elements": ["wolframio~tungsteno", "cinc~zinc", "kriptón~criptón", "kryptón~kriptón", "lawrencio~laurencio"]
+  "fish": [
+    "anchoa~boquerón",
+    "jurel~chicharro",
+    "caballa~verdel",
+    "fletán~halibut",
+    "llampuga~dorado~mahi mahi",
+    "pirarucú~arapaima",
+    "tintorera~tiburón azul",
+    "breca~pagel",
+    "barracuda~espetón",
+    "pez ángel~pez escalar",
+    "serviola~lecha",
+    "japuta~palometa~brama",
+    "bagre rayado~bagré rayado",
+    "carpa dorada~pez dorado~pez rojo~carpín dorado"
+  ],
+  "trees": [
+    "lilo~lila",
+    "glicinia~glicina",
+    "pacano~pecán",
+    "ombú~ombu",
+    "espino albar~majuelo",
+    "rosal silvestre~escaramujo",
+    "alforfón~trigo sarraceno"
+  ],
+  "materials": [
+    "PVC~policloruro de vinilo",
+    "teflón~politetrafluoroetileno",
+    "porexpán~poliestireno expandido",
+    "tejano~denim",
+    "licra~elastano",
+    "viscosa~rayón",
+    "lyocell~tencel",
+    "sosa cáustica~hidróxido de sodio",
+    "azúcar~sacarosa",
+    "lejía~hipoclorito de sodio",
+    "sal~cloruro de sodio",
+    "glicerina~glicerol",
+    "PLA~ácido poliláctico",
+    "sílex~pedernal"
+  ],
+  "invertebrates": [
+    "ciempiés~cienpiés",
+    "sepia~choco",
+    "abalón~oreja de mar",
+    "pepino de mar~holoturia",
+    "proturo"
+  ],
+  "disciplines": [
+    "ciencia política~ciencias políticas",
+    "marketing~mercadotecnia",
+    "química física~fisicoquímica"
+  ],
+  "jobs": [
+    "enfermero~enfermera",
+    "médico~médica",
+    "abogado~abogada",
+    "ingeniero~ingeniera",
+    "profesor~profesora",
+    "maestro~maestra",
+    "arquitecto~arquitecta",
+    "cocinero~cocinera",
+    "bombero~bombera",
+    "policía~policía nacional",
+    "camarero~camarera",
+    "panadero~panadera",
+    "carpintero~carpintera",
+    "electricista~electricistas",
+    "fontanero~fontanera",
+    "pintor~pintora",
+    "programador~programadora",
+    "desarrollador~desarrolladora",
+    "científico~científica",
+    "investigador~investigadora",
+    "biólogo~bióloga",
+    "químico~química",
+    "físico~física",
+    "matemático~matemática",
+    "psicólogo~psicóloga",
+    "psiquiatra~psiquiatras",
+    "cirujano~cirujana",
+    "veterinario~veterinaria",
+    "farmacéutico~farmacéutica",
+    "conductor~conductora",
+    "piloto~pilota",
+    "agricultor~agricultora",
+    "ganadero~ganadera",
+    "pescador~pescadora",
+    "actor~actriz",
+    "escritor~escritora",
+    "traductor~traductora",
+    "editor~editora",
+    "fotógrafo~fotógrafa",
+    "bibliotecario~bibliotecaria",
+    "arqueólogo~arqueóloga",
+    "historiador~historiadora",
+    "geólogo~geóloga",
+    "juez~jueza",
+    "notario~notaria",
+    "procurador~procuradora",
+    "registrador~registradora",
+    "cartero~cartera",
+    "peluquero~peluquera",
+    "relojero~relojera",
+    "joyero~joyera",
+    "sastre~sastra",
+    "zapatero~zapatera",
+    "albañil~albañila",
+    "minero~minera",
+    "marinero~marinera",
+    "soldado~soldada",
+    "guardia civil~guardias civiles",
+    "guía turístico~guía turística",
+    "técnico de laboratorio~técnica de laboratorio"
+  ],
+  "transport": [
+    "autobús~autobuses",
+    "tren~trenes",
+    "avión~aviones",
+    "bicicleta~bicicletas",
+    "metro ligero~metros ligeros",
+    "barco~barcos",
+    "coche~coches",
+    "motocicleta~motocicletas~motos",
+    "taxi~taxis"
+  ],
+  "footballers": [
+    "Mágico González~Jorge Alberto González~Jorge González"
+  ],
+  "elements": [
+    "wolframio~tungsteno",
+    "cinc~zinc",
+    "kriptón~criptón",
+    "kryptón~kriptón",
+    "lawrencio~laurencio"
+  ],
+  "market": [
+    "bicarbonato sódico~bicarbonato~bicarbonato de sodio"
+  ],
+  "spanish-clubs": [
+    "Atlético de Madrid~Atleti"
+  ],
+  "football-clubs": [
+    "Atlético de Madrid~Atleti"
+  ],
+  "spanish-landscapes": [
+    "Ebro~río Ebro",
+    "Tajo~río Tajo",
+    "Duero~río Duero",
+    "Guadalquivir~río Guadalquivir",
+    "Guadiana~río Guadiana",
+    "Miño~río Miño",
+    "Segura~río Segura",
+    "Júcar~río Júcar",
+    "Turia~río Turia",
+    "Llobregat~río Llobregat",
+    "Ter~río Ter",
+    "Bidasoa~río Bidasoa",
+    "Nervión~río Nervión",
+    "Nalón~río Nalón",
+    "Sella~río Sella",
+    "Sil~río Sil",
+    "Genil~río Genil",
+    "Jarama~río Jarama",
+    "Manzanares~río Manzanares",
+    "Pisuerga~río Pisuerga",
+    "Tormes~río Tormes",
+    "Esla~río Esla"
+  ],
+  "countries": [
+    "Estados Unidos~Estados Unidos de América~EEUU~EE.UU.~USA~EE UU",
+    "Reino Unido~UK"
+  ],
+  "scientists": [
+    "Marie Curie~Curie"
+  ],
+  "demonym": [
+    "madrileño~madrileña",
+    "catalán~catalana",
+    "andaluz~andaluza",
+    "valenciano~valenciana",
+    "gaditano~gaditana"
+  ],
+  "actors": [
+    "Tom Cruise~Cruise",
+    "Tom Hanks~Hanks",
+    "Johnny Depp~Depp",
+    "Adam Sandler~Sandler",
+    "Alain Delon~Delon",
+    "Ester Expósito~Expósito",
+    "Anne Hathaway~Hathaway",
+    "Anthony Hopkins~Hopkins",
+    "Angela Bassett~Bassett",
+    "Orlando Bloom~Bloom",
+    "Christian Bale~Bale",
+    "Nicolas Cage~Cage",
+    "Russell Crowe~Crowe",
+    "Al Pacino~Pacino",
+    "Clint Eastwood~Eastwood",
+    "Sylvester Stallone~Stallone",
+    "Arnold Schwarzenegger~Schwarzenegger"
+  ],
+  "spanish-artists": [
+    "Miguel de Cervantes~Cervantes",
+    "Ester Expósito~Expósito"
+  ],
+  "music": [
+    "Alicia Keys~Keys",
+    "Hans Zimmer~Zimmer"
+  ],
+  "directors": [
+    "George Lucas~Lucas",
+    "Sergio Leone~Leone"
+  ]
 }

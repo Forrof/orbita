@@ -8,7 +8,8 @@
       "topic-transport"
     ],
     [
-      "transport"
+      "transport",
+      "review-transport"
     ]
   ],
   [
@@ -22,7 +23,8 @@
       "topic-spices"
     ],
     [
-      "ingredients"
+      "ingredients",
+      "review-market"
     ]
   ],
   [
@@ -35,7 +37,8 @@
       "topic-world-food"
     ],
     [
-      "dishes"
+      "dishes",
+      "review-menu"
     ]
   ],
   [
@@ -47,7 +50,8 @@
       "kitchen"
     ],
     [
-      "kitchen"
+      "kitchen",
+      "review-kitchen"
     ]
   ],
   [
@@ -57,7 +61,8 @@
     [],
     [],
     [
-      "home"
+      "home",
+      "review-home"
     ]
   ],
   [
@@ -69,7 +74,8 @@
       "sports"
     ],
     [
-      "sports"
+      "sports",
+      "review-sports"
     ]
   ],
   [
@@ -81,7 +87,8 @@
       "topic-drinks"
     ],
     [
-      "drinks"
+      "drinks",
+      "review-drinks"
     ]
   ],
   [
@@ -91,7 +98,8 @@
     [],
     [],
     [
-      "desserts"
+      "desserts",
+      "review-desserts"
     ]
   ],
   [
@@ -102,7 +110,9 @@
     [
       "mammals"
     ],
-    []
+    [
+      "review-mammals"
+    ]
   ],
   [
     "birds",
@@ -113,7 +123,8 @@
       "birds"
     ],
     [
-      "birds-reviewed"
+      "birds-reviewed",
+      "review-birds"
     ]
   ],
   [
@@ -125,7 +136,8 @@
       "fish"
     ],
     [
-      "fish-reviewed"
+      "fish-reviewed",
+      "review-fish"
     ]
   ],
   [
@@ -137,7 +149,8 @@
       "invertebrates"
     ],
     [
-      "invertebrates-reviewed"
+      "invertebrates-reviewed",
+      "review-invertebrates"
     ]
   ],
   [
@@ -149,7 +162,8 @@
       "reptiles"
     ],
     [
-      "reptiles"
+      "reptiles",
+      "review-reptiles"
     ]
   ],
   [
@@ -161,7 +175,11 @@
       "trees",
       "flowers"
     ],
-    []
+    [
+      "review-plants",
+      "trees-reviewed",
+      "patch-plants"
+    ]
   ],
   [
     "phenomena",
@@ -172,7 +190,8 @@
       "topic-weather"
     ],
     [
-      "phenomena"
+      "phenomena",
+      "review-phenomena"
     ]
   ],
   [
@@ -195,7 +214,9 @@
     [
       "jobs"
     ],
-    []
+    [
+      "review-jobs"
+    ]
   ],
   [
     "wardrobe",
@@ -204,7 +225,8 @@
     [],
     [],
     [
-      "clothing"
+      "clothing",
+      "review-wardrobe"
     ]
   ],
   [
@@ -216,7 +238,8 @@
       "instruments"
     ],
     [
-      "instruments"
+      "instruments",
+      "review-instruments"
     ]
   ],
   [
@@ -226,7 +249,8 @@
     [],
     [],
     [
-      "tools"
+      "tools",
+      "review-tools"
     ]
   ],
   [
@@ -236,7 +260,8 @@
     [],
     [],
     [
-      "feelings"
+      "feelings",
+      "review-feelings"
     ]
   ],
   [
@@ -246,7 +271,8 @@
     [],
     [],
     [
-      "containers-reviewed"
+      "containers-reviewed",
+      "review-containers"
     ]
   ],
   [
@@ -265,7 +291,9 @@
     [],
     [],
     [
-      "sports-equipment"
+      "sports-equipment",
+      "review-sports-equipment",
+      "patch-sports-equipment"
     ]
   ],
   [
@@ -274,7 +302,9 @@
     "Elige una escapada: nombra una localidad de España.",
     [],
     [],
-    [],
+    [
+      "review-spanish-towns"
+    ],
     "municipalities"
   ],
   [
@@ -369,7 +399,8 @@
     [],
     [],
     [
-      "math"
+      "math",
+      "review-math"
     ]
   ],
   [
@@ -381,7 +412,9 @@
       "topic-body",
       "topic-organs"
     ],
-    []
+    [
+      "review-anatomy"
+    ]
   ],
   [
     "materials",
@@ -392,7 +425,9 @@
       "topic-natural-materials"
     ],
     [
-      "materials-reviewed"
+      "materials-reviewed",
+      "review-materials",
+      "elements"
     ]
   ],
   [
@@ -404,7 +439,8 @@
       "topic-computing"
     ],
     [
-      "inventions"
+      "inventions",
+      "review-inventions"
     ]
   ],
   [
@@ -426,7 +462,8 @@
     [],
     [],
     [
-      "health"
+      "health",
+      "review-health"
     ]
   ],
   [
@@ -438,7 +475,8 @@
       "topic-astronomy"
     ],
     [
-      "astronomy"
+      "astronomy",
+      "review-astronomy"
     ]
   ],
   [
@@ -448,7 +486,8 @@
     [],
     [],
     [
-      "films"
+      "films",
+      "review-films"
     ],
     "films"
   ],
@@ -459,7 +498,8 @@
     [],
     [],
     [
-      "series"
+      "series",
+      "review-series"
     ],
     "series"
   ],
@@ -470,7 +510,8 @@
     [],
     [],
     [
-      "actors"
+      "actors",
+      "review-actors"
     ],
     "actors"
   ],
@@ -481,7 +522,8 @@
     [],
     [],
     [
-      "music"
+      "music",
+      "review-music"
     ],
     "musicians+bands"
   ],
@@ -514,7 +556,8 @@
     [],
     [],
     [
-      "videogames"
+      "videogames",
+      "review-videogames"
     ],
     "videogames"
   ],
@@ -536,7 +579,8 @@
     [],
     [],
     [
-      "footballers"
+      "footballers",
+      "review-footballers"
     ],
     "footballers"
   ],
@@ -582,7 +626,8 @@
     [],
     [],
     [
-      "geography"
+      "geography",
+      "review-geography"
     ],
     "geography"
   ],
