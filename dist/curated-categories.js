@@ -1,9 +1,9 @@
-import { DATA_VERSION, TIERS, normalize, recognitionBand } from './engine.js?v=3';
+import { CURATED_VERSION, TIERS, normalize, recognitionBand } from './engine.js?v=4';
 
 const byPoints = new Map(Object.entries(TIERS).map(([key, tier]) => [tier.score, key]));
 export function buildCuratedCategories(data, previous) {
   const bank = data.curated;
-  if (!bank || bank.version !== DATA_VERSION || bank.minimumAnswers !== 100) throw new Error('El repertorio actualizado está incompleto.');
+  if (!bank || bank.version !== CURATED_VERSION || bank.minimumAnswers !== 100) throw new Error('El repertorio actualizado está incompleto.');
   const dictionary = previous.find(c => c.id === 'es-all-words');
   const reviewed = new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Madrid' }).format(new Date(`${bank.checked}T12:00:00Z`));
   const decode = ([word, aliases, score, basis, count, days, history]) => ({
@@ -17,7 +17,7 @@ export function buildCuratedCategories(data, previous) {
     const gem = answers.find(a => (q.dictionary ? recognitionBand(a.count) : a.scoreTier) === 'gem');
     if (!gem) throw new Error(`Sin respuestas de 100 puntos: ${q.id}`);
     return { id: q.id, pack: q.pack, text: q.text, hint, answers, gem: gem.word, clever: [],
-      metric: q.dictionary ? 'dictionary-es-2026' : 'curated-es', dataVersion: DATA_VERSION, legacy: false,
+      metric: q.dictionary ? 'dictionary-es-2026' : 'curated-es', dataVersion: CURATED_VERSION, legacy: true,
       source: `Edición revisada el ${reviewed}. Datos españoles recientes cuando existen; las estimaciones editoriales y las referencias históricas se identifican en cada respuesta.` };
   });
   // Extend these broad, already shared questions without changing recorded results or seeds.

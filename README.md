@@ -29,13 +29,13 @@ Open **http://localhost:4173**. Stop the server with Ctrl+C. To use another port
 - One daily mission, shared by date, resetting at midnight in Europe/Madrid, including daylight-saving changes.
 - Unlimited missions and a date-based practice archive.
 - Seven themed constellations with 30 chapters each: everyday life, nature, words, Spain, science, culture, and the wider world.
-- 56 genuinely different active questions, each with at least 100 canonical answers (aliases do not count toward the minimum). The 231,944-key dictionary remains available: 13.56 times the initial 17,100 lemmas, including documented inflections.
+- 152 active questions, expanded from 56, each with at least 100 canonical answers (aliases do not count toward the minimum). The acting question includes 31,840 names. The 231,944-key dictionary remains available: 13.56 times the initial 17,100 lemmas, including documented inflections.
 - Global topics such as cuisines, films, musicians, footballers, brands, science and landscapes, valued for an audience in Spain. Repetitive letter and word-length variants are retired from new games.
-- Questions are shown during play. The public interface has no question catalog, answer browser, off-round checker or suggested 100-point solutions. Old catalog links redirect to the daily mission.
+- Questions are shown during play. The public interface has no question catalog, answer browser, off-round checker or pre-game suggested solutions. After completing the daily, three highest-scoring canonical answers are revealed for each of its seven questions, with editorial estimates identified and tied scores explained. Old catalog links redirect to the daily mission.
 - Current scoring: 0 for a miss, then 10, 30, 60, 85 and 100; rarer answers earn more, with multiple 100-point answers possible. Legacy games retain the 15-point editorial tier. Maximum: 700. Each point advances the ship 10 km.
 - A 3-second preview, then 25 seconds. Invalid answers allow retries; one accepted answer ends the round. At zero, the current draft receives one exact final check.
 - Accent-insensitive matching, aliases and gender/plural variants where supplied, and confirmation of unambiguous one-character typo suggestions. The letter ñ remains distinct.
-- A source-aware result for each round and a final recap limited to the player’s own answers and points.
+- A source-aware result for each round and a final recap with the player’s answers and points; completed dailies additionally unlock the top answers for the played questions.
 - Autosave, draft and timer recovery after reload, local history, daily streaks, score distribution, and five unlockable ship paints.
 - Spoiler-free share text and challenge links that reproduce the same seven prompts and compare the sender's score on completion.
 - Sound, reduced motion, keyboard interaction, responsive layout, JSON export/import, and a visible explanation of data provenance and scoring.
@@ -64,18 +64,20 @@ See [DATA-EXPANSION.md](DATA-EXPANSION.md) for counts, methodology, and limitati
 npm test
 ```
 
-The tests cover all 56 question boundaries, the canonical minimum of 100, familiar examples in every category, Messi/CR7/metro ligero, rarity bands, INE and readership provenance, all 210 chapters, timers, normalization, saved-game compatibility and score totals. Browser QA includes a complete seven-round archive mission and the retired-catalog redirect and a recap without answer lists; it does not consume the daily mission.
+The tests cover all 152 current questions and the 56 preserved previous questions, the canonical minimum of 100, familiar examples in every category, Messi/CR7/metro ligero, rarity bands, INE and readership provenance, all 210 chapters, timers, normalization, saved-game compatibility and score totals. Browser QA includes a complete seven-round archive mission and the retired-catalog redirect and daily alternatives that unlock only after all seven rounds; daily browser QA uses a separate local origin and does not consume the public daily mission.
 
 ## Files
 
-`dist/` is a buildless static site. `engine.js` handles game logic; `categories.js` and `spain-categories.js` preserve supported old editions; `curated-categories.js` loads the reviewed bank. `data.json` preserves the dictionary and older snapshots; `repertory.json` contains the current question bank, scores, evidence labels and source hashes. Editable question lists, reviewed answers and aliases live in `content/`. There are no production dependencies.
+`dist/` is a buildless static site. `engine.js` handles game logic; `categories.js` and `spain-categories.js` preserve supported old editions; `curated-categories.js` retains the previous reviewed bank; `focused-categories.js` builds the current scoped questions from stable references and sourced additions. `data.json` preserves the dictionary and older snapshots; `repertory.json` contains the compatible base bank, scores, evidence labels and source hashes; `focused-repertory.json` defines the current questions. `daily-catalog.js` freezes dated editions so database changes cannot silently replace a published daily mission. Editable question lists, reviewed answers and aliases live in `content/`. There are no production dependencies.
 
 For data maintenance, install Python 3.12+ dependencies with `python -m pip install --target .cache/python-tools -r requirements-data.txt`, then run `powershell -File scripts/import-ine.ps1` and `npm run data:refresh`. Network imports are cached and respect rate-limit responses. Existing bundled snapshots suffice for CI, testing, and hosting; deployment does not call external research services. INE download TLS verification remains enabled. Refreshing sources can change puzzles: deliberately bump data versions and retain compatibility fixtures.
 
-Version 1 and 2 completed results remain saved. Their challenge links retain their question selection. The two older broad transport/footballer questions also receive the improved answers and aliases; already recorded scores are not recalculated. New missions use version 3 and separate save keys, so today's revised edition is accessible without deleting history. Daily statistics deduplicate by civil date.
+Version 1 and 2 completed results remain saved. Their challenge links retain their question selection. Compatible broad questions also receive the reviewed answers and aliases from more specific categories; already recorded scores are not recalculated. Practice modes use version 4 and separate save keys. The shared daily retains the previous edition through 20 October 2026 and switches to version 4 on 21 October at Madrid midnight. Historical editions remain available without deleting history. Daily statistics deduplicate by civil date.
 
 This local implementation does not include OAuth, cloud sync, payments, advertising, a central friends leaderboard, a live global percentile service, or Krillion's multiplayer party game. Local streaks and challenge scores are not protected against someone deliberately editing browser storage or links.
 
 ## Visibility of the answer bank
 
 The website does not offer a question/answer catalog or reveal the solution lists after playing. This is interface-level concealment: GitHub Pages serves a static client, so a technical user can still inspect downloaded game data. The public source repository is also readable. Actual server-side secrecy would require a backend to select prompts and validate answers without sending the bank to the browser.
+
+The expanded repertory can be rebuilt from the cached source snapshots with `npm run data:compile`. A full network refresh uses `npm run data:refresh`. Future daily editions must begin on a future date; published daily pools must remain unchanged. The Pages build rejects an unpublished draft catalogue or incompatible data snapshots.

@@ -1,6 +1,7 @@
-import { normalize, LEGACY_VERSION, PREVIOUS_VERSION } from './engine.js?v=3';
+import { normalize, LEGACY_VERSION, PREVIOUS_VERSION } from './engine.js?v=4';
 import { buildSpainCategories } from './spain-categories.js?v=3';
-import { buildCuratedCategories } from './curated-categories.js?v=3.4';
+import { buildCuratedCategories } from './curated-categories.js?v=4';
+import { buildFocusedCategories } from './focused-categories.js?v=4';
 export const PACKS = {
   all: { name: 'Universo abierto', subtitle: 'Un poco de todo, un montón por descubrir.', icon: '◎' },
   everyday: { name: 'Sobremesa', subtitle: 'Lo cotidiano tiene palabras extraordinarias.', icon: '♧' },
@@ -124,5 +125,6 @@ export function buildCategories(data) {
   categories.forEach(c => { c.legacy = true; c.dataVersion = LEGACY_VERSION; });
   const previous = buildSpainCategories(data, categories);
   previous.forEach(c => { c.legacy = true; c.dataVersion = PREVIOUS_VERSION; });
-  return [...categories, ...previous, ...buildCuratedCategories(data, previous)];
+  const curated = buildCuratedCategories(data, previous);
+  return [...categories, ...previous, ...curated, ...buildFocusedCategories(data, curated)];
 }

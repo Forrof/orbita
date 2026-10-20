@@ -91,6 +91,7 @@ def ine_surnames():
     return result
 
 named_cache = {}
+source_exclusions = read(ROOT / 'content/focused-source-exclusions.json')
 def named_entries(kind):
     if kind == 'first-names':
         return ine_names()
@@ -106,6 +107,10 @@ def named_entries(kind):
                 raise RuntimeError(f'Missing coverage source: {part}')
             for row in read(path)['results']['bindings']:
                 title = row['name']['value']
+                if title in source_exclusions.get(part, []):
+                    continue
+                if part == 'films' and re.search(r'\((?:álbum|canción|miniserie|serie de televisión|videojuego|musical)\)', title, re.I):
+                    continue
                 simple = re.sub(r' \([^)]*\)$', '', title)
                 result.append({'word': simple, 'aliases': [title] if title != simple else [], 'article': title, 'source': 'wikimedia-coverage'})
     return result
@@ -115,7 +120,7 @@ def build(spec):
     kind = tail[0] if tail else None
     if kind == 'dictionary':
         return {'id': 'q3-' + identity, 'pack': pack, 'text': text, 'dictionary': True, 'hint': 'Se admiten palabras y flexiones documentadas. Rareza editorial de 2026 con referencia histórica identificada.'}
-    is_named = bool(kind) or identity == 'countries'
+    is_named = bool(kind) or identity in ('countries', 'brands')
     records, aliases = [], {}
     def add(entry, score=None, priority=0):
         word = entry['word'].strip()
@@ -148,7 +153,11 @@ def build(spec):
     # Only explicit reviewed Spanish vocabulary is admitted, never whole translated subtrees.
     if identity == 'health':
         for entry in read(ROOT / 'content/imported-health-2026.json')['entries']:
-            add(entry, score=entry['score'], priority=0)
+            variants = [entry['word'], *entry['aliases']]
+            # Ordinary Spanish permits the article-free compound form, e.g.
+            # "fractura de fémur" alongside the official "fractura del fémur".
+            ordinary = [re.sub(r'\b(?:de la|de las|de los|del)\b', 'de', name, flags=re.I) for name in variants]
+            add({**entry, 'aliases': list(dict.fromkeys([*entry['aliases'], *ordinary]))}, score=entry['score'], priority=0)
     for seed in seed_names:
         if seed not in seeds:
             raise RuntimeError(f'Missing seed pool: {seed}')
@@ -205,6 +214,7 @@ def build(spec):
                 score = 85
             if 'manualScore' in row:
                 score, basis = row['manualScore'], 'editorial-2026'
+                count, days = None, None
         else:
             old = recognition.get(norm(word))
             if old:
@@ -288,9 +298,9 @@ for name in ['ine-nombres.xlsx', 'ine-apellidos.xls', 'current-interest-2026.jso
     path = CACHE / name
     manifests.append({'file': name, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()})
 for path in sorted((ROOT / 'content').glob('*.json')):
-    if path.name.startswith(('manual-', 'imported-')) or path.name in ('aliases.json', 'category-source-audit.json'):
+    if path.name.startswith(('manual-', 'imported-')) or path.name in ('aliases.json', 'category-source-audit.json', 'focused-source-manifest.json', 'focused-source-exclusions.json'):
         manifests.append({'file': 'content/' + path.name, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(), 'role': 'Coverage and editorial review; not a rarity measurement'})
 bank = {'version': VERSION, 'checked': '2026-10-20', 'minimumAnswers': 100, 'interestPeriod': current['period'], 'ine': {'reference': '2025-01-01', 'published': '2026-04-23', 'nameUrl': 'https://www.ine.es/daco/daco42/nombyapel/nombres_por_edad_media.xlsx', 'surnameUrl': 'https://www.ine.es/daco/daco42/nombyapel/apellidos_frecuencia.xls', 'nameRows': 'Frecuencia de nombres, suma de ambos sexos cuando coinciden', 'surnameRows': 'Frecuencia como primer apellido'}, 'sourceManifest': manifests, 'countryDailyHashes': current['hashes'], 'questions': compiled}
-bank['coverageRevision'] = '2026-10-20.2'
+bank['coverageRevision'] = '2026-10-20.3'
 (ROOT / 'dist/repertory.json').write_text(json.dumps(bank, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
 print(f'Compiled {len(compiled)} different questions with at least 100 distinct answers each.')

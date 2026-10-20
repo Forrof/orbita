@@ -1,11 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { TIERS, DATA_VERSION, PREVIOUS_VERSION, LEGACY_VERSION, normalize, madridDate, dateOffset, pickPrompts, createRun, startRound, advanceClock, finishRound, matchAnswer, totalScore, validateRun, streaks, tierFor, recognitionBand, band } from '../dist/engine.js';
+import { createHash } from 'node:crypto';
+import { TIERS, DATA_VERSION, CURATED_VERSION, PREVIOUS_VERSION, dailyMission, dailyDiscoveries, LEGACY_VERSION, normalize, madridDate, dateOffset, pickPrompts, createRun, startRound, advanceClock, finishRound, matchAnswer, totalScore, validateRun, streaks, tierFor, recognitionBand, band } from '../dist/engine.js';
 import { buildCategories, PACKS } from '../dist/categories.js';
 
 const data = JSON.parse(await readFile(new URL('../dist/data.json', import.meta.url), 'utf8'));
 data.curated = JSON.parse(await readFile(new URL('../dist/repertory.json', import.meta.url), 'utf8'));
+data.focused = JSON.parse(await readFile(new URL('../dist/focused-repertory.json', import.meta.url), 'utf8'));
 const categories = buildCategories(data);
 const category = id => categories.find(c => c.id === id);
 function completedDaily(date) {
@@ -43,12 +45,12 @@ test('all categories have valid, finite answer sets and a reachable 100-point ge
   }
 });
 test('daily missions use seven unique prompts and reproduce the same date on any device', () => {
-  const a = pickPrompts(categories, '2026-10-19'), b = pickPrompts(categories, '2026-10-19');
+  const a = createRun(categories, {seed:'2026-10-21'}).prompts, b = createRun(categories, {seed:'2026-10-21'}).prompts;
   assert.deepEqual(a, b);
   assert.equal(a.length, 7);
   assert.equal(new Set(a).size, 7);
-  assert.notDeepEqual(a, pickPrompts(categories, '2026-10-20'));
-  assert.deepEqual(a, createRun(categories, { mode: 'challenge', seed: '2026-10-19' }).prompts);
+  assert.notDeepEqual(a, createRun(categories, {seed:'2026-10-22'}).prompts);
+  assert.deepEqual(a, createRun(categories, { mode: 'challenge', seed: '2026-10-21' }).prompts);
 });
 test('all 30 chapters in every pack can be played and keep seven unique prompts', () => {
   for (const pack of Object.keys(PACKS).filter(p => p !== 'all')) for (let i = 1; i <= 30; i++) {
@@ -172,10 +174,12 @@ test('v2 rankings use Spain-specific recognition or Spain-located readership, ne
     } else assert.ok(original.every(a => a.daysListed >= 3));
   }
 });
-test('all 56 current questions have at least 100 canonical answers and no letter/length padding', () => {
+test('the expanded current questions have at least 100 canonical answers and no letter/length padding', () => {
   const active = categories.filter(c => !c.legacy);
-  assert.equal(active.length, 56);
-  assert.equal(new Set(active.map(c => c.text)).size, 56);
+  assert.equal(active.length, data.focused.questions.length);
+  assert.ok(active.length >= 120);
+  assert.equal(categories.filter(c => c.dataVersion === CURATED_VERSION).length, 56);
+  assert.equal(new Set(active.map(c => c.text)).size, active.length);
   for (const c of active) {
     const distinct = new Set(c.answers.map(a => normalize(a.word)));
     assert.ok(distinct.size >= 100, c.id);
@@ -184,7 +188,7 @@ test('all 56 current questions have at least 100 canonical answers and no letter
     assert.equal(c.dataVersion, DATA_VERSION);
     assert.ok(['curated-es', 'dictionary-es-2026'].includes(c.metric));
   }
-  for (const pack of Object.keys(PACKS).filter(p => p !== 'all')) assert.equal(active.filter(c => c.pack === pack).length, 8);
+  for (const pack of Object.keys(PACKS).filter(p => p !== 'all')) assert.ok(active.filter(c => c.pack === pack).length >= 7);
 });
 test('Messi, Leo Messi, CR7 and metro ligero validate directly in current and previously shared broad questions', () => {
   for (const id of ['q3-footballers', 'es-world-footballers']) for (const answer of ['Messi', 'Leo Messi', 'Lionel Messi', 'CR7']) {
@@ -367,5 +371,145 @@ test('legacy puzzles and unfinished records remain reproducible with their origi
   const answering = advanceClock(startRound(legacy, 1000), categories, 4000);
   assert.ok(validateRun(JSON.parse(JSON.stringify(answering)), categories));
   assert.ok(legacy.prompts.every(id => category(id).legacy));
-  assert.ok(createRun(categories, { seed: '2026-10-19' }).prompts.every(id => !category(id).legacy));
+  assert.ok(createRun(categories, { seed: '2026-10-21' }).prompts.every(id => !category(id).legacy));
+  assert.ok(createRun(categories, { seed: '2026-10-20' }).prompts.every(id => category(id).dataVersion === CURATED_VERSION));
+});
+
+test('daily editions are frozen across database additions, reordering and independent devices', () => {
+  for (const seed of ['2026-08-16', '2026-10-20', '2026-10-21', '2027-03-28', '2027-10-31']) {
+    const a = createRun(categories, { seed });
+    const b = createRun([...categories].reverse().concat({ ...category('q4-actors'), id: 'unpublished-new-question' }), { seed });
+    assert.deepEqual(a.prompts, b.prompts);
+    assert.deepEqual(a.prompts, dailyMission(seed).prompts);
+    assert.equal(a.dataVersion, dailyMission(seed).dataVersion);
+    assert.deepEqual(a.prompts, createRun(categories, { mode: 'archive', seed }).prompts);
+  }
+  assert.equal(dailyMission('2026-10-20').dataVersion, CURATED_VERSION);
+  assert.equal(dailyMission('2026-10-21').dataVersion, DATA_VERSION);
+  assert.notDeepEqual(dailyMission('2026-10-20').prompts, dailyMission('2026-10-21').prompts);
+  assert.throws(() => dailyMission('2026-02-30'));
+  assert.throws(() => dailyMission('not-a-date'));
+  for (let n = 0; n < 365; n++) {
+    const date = dateOffset('2026-10-21', n);
+    const plan = dailyMission(date);
+    assert.equal(new Set(plan.prompts).size, 7);
+    assert.equal(new Set(plan.prompts.map(id => category(id).pack)).size, 7);
+    assert.notDeepEqual(plan.prompts, dailyMission(dateOffset(date, 1)).prompts);
+  }
+});
+
+test('daily discoveries unlock only after seven completed daily rounds, revealing only played questions', () => {
+  const done = completedDaily('2026-10-21');
+  assert.deepEqual(dailyDiscoveries({ ...done, phase: 'feedback' }, categories), []);
+  assert.deepEqual(dailyDiscoveries({ ...done, results: done.results.slice(0, 6) }, categories), []);
+  for (const mode of ['unlimited', 'archive', 'pack', 'challenge']) assert.deepEqual(dailyDiscoveries({ ...done, mode }, categories), []);
+  const top = dailyDiscoveries(done, categories);
+  assert.deepEqual(top.map(d => d.prompt), done.prompts);
+  assert.equal(top.length, 7);
+  for (const d of top) {
+    assert.equal(d.answers.length, 3);
+    assert.equal(new Set(d.answers.map(a => normalize(a.word))).size, 3);
+    const c = category(d.prompt);
+    const scores = c.answers.map(a => TIERS[tierFor(a, c)].score).sort((a, b) => b - a).slice(0, 3);
+    assert.deepEqual(d.answers.map(a => a.score), scores);
+    for (const a of d.answers) assert.equal(matchAnswer(a.word, c, false).score, a.score);
+  }
+});
+
+test('home furniture and electrical appliances have separate, explicit answer boundaries', () => {
+  assert.equal(category('q4-home'), undefined);
+  const appliance = category('q4-appliances'), furniture = category('q4-furniture');
+  assert.equal(appliance.text, 'Nombra un electrodoméstico.');
+  assert.equal(furniture.text, 'Nombra un mueble.');
+  for (const word of ['lavadora', 'nevera', 'freidora de aire', 'lavavajillas', 'secador de pelo']) assert.ok(matchAnswer(word, appliance, false).accepted, word);
+  for (const word of ['mesa', 'sofá', 'armario', 'bargueño', 'silla']) assert.ok(matchAnswer(word, furniture, false).accepted, word);
+  for (const word of ['mesa', 'sofá', 'armario']) assert.equal(matchAnswer(word, appliance, false).accepted, false, word);
+  for (const word of ['lavadora', 'microondas', 'televisor']) assert.equal(matchAnswer(word, furniture, false).accepted, false, word);
+  assert.ok(matchAnswer('sofá', category('q3-home'), false).accepted, 'The broad previous question remains compatible.');
+});
+
+test('specific geography and clinical questions use source metadata rather than arbitrary subsets', () => {
+  assert.ok(matchAnswer('Sevilla', category('q4-towns-51'), false).accepted);
+  assert.equal(matchAnswer('Barcelona', category('q4-towns-51'), false).accepted, false);
+  assert.ok(matchAnswer('París', category('q4-cities-fr'), false).accepted);
+  assert.equal(matchAnswer('Madrid', category('q4-cities-fr'), false).accepted, false);
+  assert.ok(matchAnswer('Ebro', category('q4-rivers-spain'), false).accepted);
+  assert.equal(matchAnswer('Teide', category('q4-rivers-spain'), false).accepted, false);
+  assert.ok(matchAnswer('cáncer de próstata', category('q4-cancers'), false).accepted);
+  assert.equal(matchAnswer('gripe', category('q4-cancers'), false).accepted, false);
+});
+
+test('the enlarged acting repertory accepts familiar performers and preserves Spain rarity', () => {
+  assert.ok(category('q4-actors').answers.length >= 27000);
+  for (const word of ['Tom Holland', 'Zendaya', 'Michelle Jenner', 'Mads Mikkelsen', 'Shah Rukh Khan', 'Phoebe Dynevor', 'Gustaf Skarsgård']) assert.ok(matchAnswer(word, category('q4-actors'), false).accepted, word);
+  assert.ok(matchAnswer('Penélope Cruz', category('q4-actors-spain'), false).accepted);
+  assert.equal(matchAnswer('Tom Holland', category('q4-actors-spain'), false).accepted, false);
+  assert.ok(matchAnswer('Tom Holland', category('q4-actors-england'), false).accepted);
+  assert.equal(matchAnswer('Pedro Pascal', category('q4-actors-england'), false).accepted, false);
+  for (const word of ['Tom Holland', 'Penélope Cruz']) assert.equal(matchAnswer(word, category('q3-actors'), false).score, matchAnswer(word, category('q4-actors'), false).score);
+});
+
+test('every current question has a checked source audit and metadata agrees with the playable bank', async () => {
+  const audit = JSON.parse(await readFile(new URL('../content/focused-source-audit.json', import.meta.url), 'utf8'));
+  assert.deepEqual(audit.questions.map(q => q.id), data.focused.questions.map(q => q.id));
+  assert.equal(data.expansion.activeQuestions, data.focused.questions.length);
+  for (const q of audit.questions) {
+    assert.ok(q.sources.length > 0 && q.sources.every(s => new URL(s).protocol === 'https:'), q.id);
+    assert.equal(q.count, category(q.id).answers.length);
+  }
+  for (const [file, expected] of Object.entries(data.focused.sourceHashes)) {
+    const bytes = await readFile(new URL('../' + file, import.meta.url));
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), expected, file);
+  }
+});
+
+test('brand familiarity never borrows recognition of an unrelated dictionary word', () => {
+  for (const id of ['q3-brands', 'q4-brands']) {
+    const a = matchAnswer('Balay', category(id), false);
+    assert.ok(a.accepted);
+    assert.equal(a.score, 10);
+    assert.equal(a.basis, 'editorial-2026');
+    assert.equal(a.historicalRecognition, undefined);
+  }
+});
+
+test('habitual answers work in every one of the 152 current questions, including scoped subsets', async () => {
+  const specific = JSON.parse(await readFile(new URL('./focused-cases.json', import.meta.url), 'utf8'));
+  const broad = JSON.parse(await readFile(new URL('./coverage-cases.json', import.meta.url), 'utf8'));
+  const missing = [];
+  for (const c of categories.filter(c => !c.legacy)) {
+    const identity = c.id.slice(3);
+    const cases = specific[identity] || broad[identity];
+    assert.ok(cases, `No independently reviewed examples for ${c.id}`);
+    for (const word of cases.split('|')) if (!matchAnswer(word, c, false).accepted) missing.push(`${c.id}: ${word}`);
+  }
+  assert.deepEqual(missing, []);
+});
+
+test('specific valid answers remain valid in their broader questions and compatible historical editions', () => {
+  for (const [specific, broad, word] of [
+    ['actors-england','actors','Emma Watson'], ['actors-korea','actors','Lee Jung-jae'],
+    ['films-france','films','Amélie'], ['series-animation','series','Padre de familia'],
+    ['novels','books','Don Quijote'], ['chemists','scientists','Mendeleev'],
+    ['writers-spain','writers','Cervantes'], ['cancers','health','cáncer de pulmón'],
+    ['cities-pt','cities','Oporto'], ['towns-59','spanish-towns','Vitoria-Gasteiz'],
+    ['flowers','plants','orquídea'], ['minerals','materials','cuarzo'],
+    ['dog-breeds','mammals','labrador']
+  ]) {
+    for (const id of ['q4-'+specific,'q4-'+broad,'q3-'+broad]) assert.ok(matchAnswer(word, category(id), false).accepted, `${id}: ${word}`);
+  }
+  for (const word of ['amigdalitis','epilepsia','quemadura','fiebre','dolor de cabeza']) assert.ok(matchAnswer(word, category('q3-health'), false).accepted, word);
+});
+
+test('source category essays, equipment, venues and techniques never masquerade as playable instances', () => {
+  for (const [id,word] of [
+    ['plants','Amarillamiento letal'],['plants','Capitel'],
+    ['drinks','Cristalería'],['drinks','Asociación Internacional de Bármanes'],
+    ['books','Teatro Sanpol'],['books','Obra de teatro'],
+    ['market','Panadería de México'],['board-games','Juego de tablero'],
+    ['planets-fiction','Geografía de la Tierra Media']
+  ]) assert.equal(matchAnswer(word,category('q4-'+id),false).accepted,false,`${id}: ${word}`);
+  assert.equal(matchAnswer('fractura de fémur',category('q4-health'),false).accepted,false);
+  assert.equal(matchAnswer('gripe',category('q4-injuries'),false).accepted,false);
+  assert.equal(matchAnswer('pterodáctilo',category('q4-dinosaurs'),false).accepted,false);
 });

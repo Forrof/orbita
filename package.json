@@ -1,6 +1,6 @@
 {
   "name": "orbita-palabras",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "private": true,
   "type": "module",
   "description": "Una expedición diaria por las palabras menos obvias del español.",
@@ -9,7 +9,10 @@
     "dev": "node server.mjs",
     "test": "node --test tests/*.test.mjs",
     "pages:build": "node scripts/build-pages.mjs",
-    "data:refresh": "python scripts/import-repertory-sources.py && python scripts/import-coverage.py && python scripts/import-topic-sources.py && node scripts/import-current-interest.mjs && python scripts/compile-repertory.py && node scripts/finalize-repertory.mjs"
+    "data:refresh": "python scripts/import-repertory-sources.py && python scripts/import-coverage.py && python scripts/import-topic-sources.py && node scripts/import-current-interest.mjs && python scripts/import-focused-sources.py && python scripts/merge-focused-coverage.py && python scripts/expand-geographic-coverage.py && python scripts/compile-repertory.py && python scripts/compile-focused-repertory.py && node scripts/finalize-repertory.mjs",
+    "data:compile": "python scripts/merge-focused-coverage.py && python scripts/expand-geographic-coverage.py && python scripts/compile-repertory.py && python scripts/compile-focused-repertory.py && node scripts/finalize-repertory.mjs"
   },
-  "engines": { "node": ">=22" }
+  "engines": {
+    "node": ">=22"
+  }
 }

@@ -40,6 +40,17 @@ for (const file of files.filter(f => /\.(html|js|css)$/.test(f))) {
   }
 }
 const data = JSON.parse(await readFile(path.join(destination, 'data.json'), 'utf8'));
+const focused = JSON.parse(await readFile(path.join(destination, 'focused-repertory.json'), 'utf8'));
+const curated = JSON.parse(await readFile(path.join(destination, 'repertory.json'), 'utf8'));
+const catalogue = await readFile(path.join(destination, 'daily-catalog.js'), 'utf8');
+if (catalogue.startsWith('// DRAFT')) throw new Error('The daily edition has not been frozen for publication.');
+if (data.version !== focused.version || focused.parentRevision !== curated.coverageRevision || data.expansion.activeQuestions !== focused.questions.length) throw new Error('Mismatched question snapshots.');
+const { DAILY_EDITIONS } = await import('../dist/daily-catalog.js');
+const ids = new Map([...curated.questions.map(q => [q.id, curated.version]), ...focused.questions.map(q => [q.id, focused.version])]);
+for (const edition of DAILY_EDITIONS) {
+  if (new Set(edition.pool.map(([id]) => id)).size !== edition.pool.length || edition.pool.some(([id]) => ids.get(id) !== edition.version)) throw new Error('Invalid frozen daily pool.');
+  if (new Set(edition.pool.map(([, pack]) => pack)).size !== 7) throw new Error('The daily edition needs all seven themes.');
+}
 const bytes = (await Promise.all(files.map(f => stat(f)))).reduce((sum, s) => sum + s.size, 0);
 console.log(`GitHub Pages ready: ${files.length} files, ${(bytes / 1024 / 1024).toFixed(1)} MiB, data ${data.version}.`);
 console.log('Publish _site/ at the repository URL. All checked assets use relative paths.');

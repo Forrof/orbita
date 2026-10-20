@@ -13,3 +13,18 @@
 
 
 .mission-recap{list-style:none;margin:0 0 22px;padding:0}.recap-row{display:grid;grid-template-columns:28px minmax(0,1fr) minmax(95px,200px) 45px;gap:18px;align-items:center;padding:19px 0;border-bottom:1px solid var(--line);font-size:13px}.recap-row .num{color:var(--muted);font:10px Consolas,monospace}.recap-answer{color:var(--tier);overflow-wrap:anywhere}.recap-points{text-align:right;color:var(--tier);font:12px Consolas,monospace}@media(max-width:700px){.recap-row{grid-template-columns:18px minmax(0,1fr) 40px;gap:8px;padding:15px 0;font-size:12px}.recap-answer{grid-column:2;grid-row:2}.recap-points{grid-column:3;grid-row:1 / span 2}}
+.daily-discoveries { margin: 36px 0; }
+.daily-discoveries > p { max-width: 760px; color: var(--muted); line-height: 1.6; }
+.daily-discoveries > h2 { font-family: Georgia, serif; font-weight: 400; font-size: clamp(27px, 4vw, 39px); }
+.discoveries-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 24px; }
+.discovery-card { padding: 24px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel, #17262b); }
+.discovery-card > .mono { color: var(--gold); font-size: 10px; }
+.discovery-card h3 { font-size: 19px; font-weight: 400; line-height: 1.4; margin: 12px 0; }
+.discovery-own { font-size: 12px; color: var(--muted); line-height: 1.6; }
+.discovery-card ol { list-style: none; margin: 16px 0 0; padding: 0; }
+.discovery-card li { display: flex; justify-content: space-between; gap: 16px; align-items: center; border-top: 1px solid var(--line); padding: 12px 0; }
+.discovery-card li strong { font-weight: 400; overflow-wrap: anywhere; }
+.discovery-card li small { display: block; color: var(--muted); font-size: 10px; margin-top: 5px; }
+.discovery-card li > b { color: var(--gold); font-family: Consolas, monospace; font-weight: 400; }
+.discovery-card li.discovered strong::after { content: ' · LA ENCONTRASTE'; color: var(--gold); font-size: 9px; }
+@media (max-width: 700px) { .discoveries-grid { grid-template-columns: 1fr; } .discovery-card { padding: 19px; } }

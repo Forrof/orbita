@@ -801,7 +801,10 @@
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AActores_de_cine_de_Chile",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AActrices_de_cine_de_Chile",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AActores_de_cine_de_Colombia",
-        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AActrices_de_cine_de_Colombia"
+        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AActrices_de_cine_de_Colombia",
+        "https://es.wikipedia.org/wiki/Phoebe_Dynevor",
+        "https://es.wikipedia.org/wiki/Categoría:Actores_de_televisión_de_España",
+        "https://es.wikipedia.org/wiki/Categoría:Actrices_de_televisión_de_Reino_Unido"
       ],
       "editorialPools": [
         "actors",
@@ -1185,7 +1188,8 @@
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AMarcas_de_indumentaria",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AMarcas_de_electrodom%C3%A9sticos",
         "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AMarcas_de_cosm%C3%A9ticos",
-        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AMarcas_de_productos_alimenticios"
+        "https://es.wikipedia.org/wiki/Categor%C3%ADa%3AMarcas_de_productos_alimenticios",
+        "https://www.balay.es/"
       ],
       "editorialPools": [
         "brands",

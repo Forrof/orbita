@@ -1,0 +1,1783 @@
+[
+  {
+    "id": "transport",
+    "pack": "everyday",
+    "text": "Nombra un medio de transporte.",
+    "parent": "q3-transport"
+  },
+  {
+    "id": "menu",
+    "pack": "everyday",
+    "text": "Nombra un plato de cocina.",
+    "parent": "q3-menu"
+  },
+  {
+    "id": "sports",
+    "pack": "everyday",
+    "text": "Nombra un deporte.",
+    "parent": "q3-sports"
+  },
+  {
+    "id": "drinks",
+    "pack": "everyday",
+    "text": "Nombra una bebida.",
+    "parent": "q3-drinks"
+  },
+  {
+    "id": "desserts",
+    "pack": "everyday",
+    "text": "Nombra un postre o dulce.",
+    "parent": "q3-desserts"
+  },
+  {
+    "id": "mammals",
+    "pack": "nature",
+    "text": "Nombra un mamífero.",
+    "parent": "q3-mammals"
+  },
+  {
+    "id": "birds",
+    "pack": "nature",
+    "text": "Nombra un ave.",
+    "parent": "q3-birds"
+  },
+  {
+    "id": "fish",
+    "pack": "nature",
+    "text": "Nombra un pez, de agua dulce o salada.",
+    "parent": "q3-fish"
+  },
+  {
+    "id": "invertebrates",
+    "pack": "nature",
+    "text": "Nombra un animal sin columna vertebral.",
+    "parent": "q3-invertebrates"
+  },
+  {
+    "id": "plants",
+    "pack": "nature",
+    "text": "Nombra una planta que podrías encontrar en el planeta.",
+    "parent": "q3-plants"
+  },
+  {
+    "id": "trees",
+    "pack": "nature",
+    "text": "Nombra un árbol o arbusto.",
+    "parent": "q3-trees"
+  },
+  {
+    "id": "jobs",
+    "pack": "words",
+    "text": "Nombra una profesión u oficio con el que alguien pueda ganarse la vida.",
+    "parent": "q3-jobs"
+  },
+  {
+    "id": "wardrobe",
+    "pack": "words",
+    "text": "Nombra una prenda de vestir o complemento de ropa.",
+    "parent": "q3-wardrobe"
+  },
+  {
+    "id": "instruments",
+    "pack": "words",
+    "text": "Nombra un instrumento musical.",
+    "parent": "q3-instruments"
+  },
+  {
+    "id": "tools",
+    "pack": "words",
+    "text": "Nombra una herramienta o utensilio de uso manual.",
+    "parent": "q3-tools"
+  },
+  {
+    "id": "feelings",
+    "pack": "words",
+    "text": "Nombra una emoción, sensación o estado de ánimo.",
+    "parent": "q3-feelings"
+  },
+  {
+    "id": "containers",
+    "pack": "words",
+    "text": "Nombra un recipiente que sirva para guardar o transportar algo.",
+    "parent": "q3-containers"
+  },
+  {
+    "id": "sports-equipment",
+    "pack": "words",
+    "text": "Nombra un objeto que se use al practicar un deporte.",
+    "parent": "q3-sports-equipment"
+  },
+  {
+    "id": "spanish-towns",
+    "pack": "spain",
+    "text": "Nombra una localidad de España.",
+    "parent": "q3-spanish-towns"
+  },
+  {
+    "id": "spanish-clubs",
+    "pack": "spain",
+    "text": "Nombra un club de fútbol español, actual o histórico.",
+    "parent": "q3-spanish-clubs"
+  },
+  {
+    "id": "spanish-food",
+    "pack": "spain",
+    "text": "Nombra un plato de la gastronomía española.",
+    "parent": "q3-spanish-food"
+  },
+  {
+    "id": "first-names",
+    "pack": "spain",
+    "text": "Nombra un nombre de pila registrado entre residentes en España.",
+    "parent": "q3-first-names"
+  },
+  {
+    "id": "surnames",
+    "pack": "spain",
+    "text": "Nombra un apellido registrado entre residentes en España.",
+    "parent": "q3-surnames"
+  },
+  {
+    "id": "demonym",
+    "pack": "spain",
+    "text": "Nombra un gentilicio de una localidad, provincia o comunidad de España.",
+    "parent": "q3-demonym"
+  },
+  {
+    "id": "elements",
+    "pack": "science",
+    "text": "Construye el universo: nombra un elemento químico.",
+    "parent": "q3-elements"
+  },
+  {
+    "id": "materials",
+    "pack": "science",
+    "text": "Nombra un material o sustancia.",
+    "parent": "q3-materials"
+  },
+  {
+    "id": "disciplines",
+    "pack": "science",
+    "text": "Nombra una ciencia, disciplina académica o área del conocimiento.",
+    "parent": "q3-disciplines"
+  },
+  {
+    "id": "health",
+    "pack": "science",
+    "text": "Nombra una enfermedad.",
+    "parent": "q3-health",
+    "icdPrefixes": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q"
+    ]
+  },
+  {
+    "id": "films",
+    "pack": "culture",
+    "text": "Nombra una película, de cualquier época o país.",
+    "parent": "q3-films"
+  },
+  {
+    "id": "series",
+    "pack": "culture",
+    "text": "Nombra una serie de televisión.",
+    "parent": "q3-series"
+  },
+  {
+    "id": "actors",
+    "pack": "culture",
+    "text": "Nombra un actor o una actriz.",
+    "parent": "q3-actors"
+  },
+  {
+    "id": "books",
+    "pack": "culture",
+    "text": "Nombra una obra literaria.",
+    "parent": "q3-books"
+  },
+  {
+    "id": "characters",
+    "pack": "culture",
+    "text": "Nombra un personaje de ficción.",
+    "parent": "q3-characters"
+  },
+  {
+    "id": "videogames",
+    "pack": "culture",
+    "text": "Nombra un videojuego.",
+    "parent": "q3-videogames"
+  },
+  {
+    "id": "directors",
+    "pack": "culture",
+    "text": "Nombra un director o una directora de cine.",
+    "parent": "q3-directors"
+  },
+  {
+    "id": "footballers",
+    "pack": "world",
+    "text": "Nombra un futbolista o una futbolista, de cualquier época.",
+    "parent": "q3-footballers"
+  },
+  {
+    "id": "football-clubs",
+    "pack": "world",
+    "text": "Nombra un club de fútbol de cualquier país.",
+    "parent": "q3-football-clubs"
+  },
+  {
+    "id": "countries",
+    "pack": "world",
+    "text": "Nombra un país del mundo.",
+    "parent": "q3-countries"
+  },
+  {
+    "id": "cities",
+    "pack": "world",
+    "text": "Elige un destino: nombra una ciudad del mundo.",
+    "parent": "q3-cities"
+  },
+  {
+    "id": "scientists",
+    "pack": "world",
+    "text": "Nombra una figura de la historia de la ciencia.",
+    "parent": "q3-scientists"
+  },
+  {
+    "id": "writers",
+    "pack": "world",
+    "text": "Nombra un escritor o una escritora.",
+    "parent": "q3-writers"
+  },
+  {
+    "id": "brands",
+    "pack": "world",
+    "text": "Nombra una marca que puedas encontrar en una tienda.",
+    "parent": "q3-brands"
+  },
+  {
+    "id": "actors-spain",
+    "pack": "culture",
+    "text": "Nombra un actor o una actriz de España.",
+    "categories": [
+      "Actores de cine de España",
+      "Actrices de cine de España",
+      "Actores de televisión de España",
+      "Actrices de televisión de España"
+    ],
+    "parent": "q3-actors"
+  },
+  {
+    "id": "actors-usa",
+    "pack": "culture",
+    "text": "Nombra un actor o una actriz de Estados Unidos.",
+    "categories": [
+      "Actores de cine de Estados Unidos",
+      "Actrices de cine de Estados Unidos",
+      "Actores de televisión de Estados Unidos",
+      "Actrices de televisión de Estados Unidos"
+    ],
+    "parent": "q3-actors"
+  },
+  {
+    "id": "actors-france",
+    "pack": "culture",
+    "text": "Nombra un actor o una actriz de Francia.",
+    "categories": [
+      "Actores de cine de Francia",
+      "Actrices de cine de Francia",
+      "Actores de televisión de Francia",
+      "Actrices de televisión de Francia"
+    ],
+    "parent": "q3-actors"
+  },
+  {
+    "id": "actors-mexico",
+    "pack": "culture",
+    "text": "Nombra un actor o una actriz de México.",
+    "categories": [
+      "Actores de cine de México",
+      "Actrices de cine de México",
+      "Actores de televisión de México",
+      "Actrices de televisión de México"
+    ],
+    "parent": "q3-actors"
+  },
+  {
+    "id": "actors-england",
+    "pack": "culture",
+    "text": "Nombra un actor o una actriz de Inglaterra.",
+    "categories": [
+      "Actores de cine de Inglaterra",
+      "Actrices de cine de Inglaterra",
+      "Actores de televisión de Inglaterra",
+      "Actrices de televisión de Inglaterra"
+    ],
+    "parent": "q3-actors"
+  },
+  {
+    "id": "actors-argentina",
+    "pack": "culture",
+    "text": "Nombra un actor o una actriz de Argentina.",
+    "categories": [
+      "Actores de cine de Argentina",
+      "Actrices de cine de Argentina",
+      "Actores de televisión de Argentina",
+      "Actrices de televisión de Argentina"
+    ],
+    "parent": "q3-actors"
+  },
+  {
+    "id": "actors-italy",
+    "pack": "culture",
+    "text": "Nombra un actor o una actriz de Italia.",
+    "categories": [
+      "Actores de cine de Italia",
+      "Actrices de cine de Italia",
+      "Actores de televisión de Italia",
+      "Actrices de televisión de Italia"
+    ],
+    "parent": "q3-actors"
+  },
+  {
+    "id": "actors-india",
+    "pack": "culture",
+    "text": "Nombra un actor o una actriz de India.",
+    "categories": [
+      "Actores de cine de India",
+      "Actrices de cine de India",
+      "Actores de televisión de India",
+      "Actrices de televisión de India"
+    ],
+    "parent": "q3-actors"
+  },
+  {
+    "id": "actors-japan",
+    "pack": "culture",
+    "text": "Nombra un actor o una actriz de Japón.",
+    "categories": [
+      "Actores de cine de Japón",
+      "Actrices de cine de Japón",
+      "Actores de televisión de Japón",
+      "Actrices de televisión de Japón"
+    ],
+    "parent": "q3-actors"
+  },
+  {
+    "id": "actors-korea",
+    "pack": "culture",
+    "text": "Nombra un actor o una actriz de Corea del Sur.",
+    "categories": [
+      "Actores de cine de Corea del Sur",
+      "Actrices de cine de Corea del Sur",
+      "Actores de televisión de Corea del Sur",
+      "Actrices de televisión de Corea del Sur"
+    ],
+    "parent": "q3-actors"
+  },
+  {
+    "id": "actors-germany",
+    "pack": "culture",
+    "text": "Nombra un actor o una actriz de Alemania.",
+    "categories": [
+      "Actores de cine de Alemania",
+      "Actrices de cine de Alemania",
+      "Actores de televisión de Alemania",
+      "Actrices de televisión de Alemania"
+    ],
+    "parent": "q3-actors"
+  },
+  {
+    "id": "actors-brazil",
+    "pack": "culture",
+    "text": "Nombra un actor o una actriz de Brasil.",
+    "categories": [
+      "Actores de cine de Brasil",
+      "Actrices de cine de Brasil",
+      "Actores de televisión de Brasil",
+      "Actrices de televisión de Brasil"
+    ],
+    "parent": "q3-actors"
+  },
+  {
+    "id": "actors-canada",
+    "pack": "culture",
+    "text": "Nombra un actor o una actriz de Canadá.",
+    "categories": [
+      "Actores de cine de Canadá",
+      "Actrices de cine de Canadá",
+      "Actores de televisión de Canadá",
+      "Actrices de televisión de Canadá"
+    ],
+    "parent": "q3-actors"
+  },
+  {
+    "id": "actors-australia",
+    "pack": "culture",
+    "text": "Nombra un actor o una actriz de Australia.",
+    "categories": [
+      "Actores de cine de Australia",
+      "Actrices de cine de Australia",
+      "Actores de televisión de Australia",
+      "Actrices de televisión de Australia"
+    ],
+    "parent": "q3-actors"
+  },
+  {
+    "id": "voice-actors",
+    "pack": "culture",
+    "text": "Nombra un actor o una actriz de doblaje.",
+    "categories": [
+      "Actores de voz de España",
+      "Actrices de voz de España",
+      "Actores de voz de Estados Unidos",
+      "Actrices de voz de Estados Unidos",
+      "Actores de voz de México",
+      "Actrices de voz de México",
+      "Actores de voz de Japón",
+      "Actrices de voz de Japón"
+    ],
+    "parent": "q3-actors"
+  },
+  {
+    "id": "films-animation",
+    "pack": "culture",
+    "text": "Nombra una película de animación.",
+    "categories": [
+      "Películas de animación"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-horror",
+    "pack": "culture",
+    "text": "Nombra una película de terror.",
+    "categories": [
+      "Películas de terror"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-science-fiction",
+    "pack": "culture",
+    "text": "Nombra una película de ciencia ficción.",
+    "categories": [
+      "Películas de ciencia ficción"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-comedy",
+    "pack": "culture",
+    "text": "Nombra una película de comedia.",
+    "categories": [
+      "Películas cómicas"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-fantasy",
+    "pack": "culture",
+    "text": "Nombra una película de fantasía.",
+    "categories": [
+      "Películas de fantasía"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-action",
+    "pack": "culture",
+    "text": "Nombra una película de acción.",
+    "categories": [
+      "Películas de acción"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-thriller",
+    "pack": "culture",
+    "text": "Nombra una película de suspense.",
+    "categories": [
+      "Películas de suspenso"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-musical",
+    "pack": "culture",
+    "text": "Nombra una película musical.",
+    "categories": [
+      "Películas musicales"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-spain",
+    "pack": "culture",
+    "text": "Nombra una película de España.",
+    "categories": [
+      "Películas de España"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-france",
+    "pack": "culture",
+    "text": "Nombra una película de Francia.",
+    "categories": [
+      "Películas de Francia"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-italy",
+    "pack": "culture",
+    "text": "Nombra una película de Italia.",
+    "categories": [
+      "Películas de Italia"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-japan",
+    "pack": "culture",
+    "text": "Nombra una película de Japón.",
+    "categories": [
+      "Películas de Japón"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-mexico",
+    "pack": "culture",
+    "text": "Nombra una película de México.",
+    "categories": [
+      "Películas de México"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-argentina",
+    "pack": "culture",
+    "text": "Nombra una película de Argentina.",
+    "categories": [
+      "Películas de Argentina"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-usa",
+    "pack": "culture",
+    "text": "Nombra una película de Estados Unidos.",
+    "categories": [
+      "Películas de Estados Unidos"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "series-animation",
+    "pack": "culture",
+    "text": "Nombra una serie de animación.",
+    "categories": [
+      "Series de televisión animadas"
+    ],
+    "parent": "q3-series"
+  },
+  {
+    "id": "series-comedy",
+    "pack": "culture",
+    "text": "Nombra una serie de comedia.",
+    "categories": [
+      "Series de televisión de comedia"
+    ],
+    "parent": "q3-series"
+  },
+  {
+    "id": "series-scifi",
+    "pack": "culture",
+    "text": "Nombra una serie de ciencia ficción.",
+    "categories": [
+      "Series de televisión de ciencia ficción"
+    ],
+    "parent": "q3-series"
+  },
+  {
+    "id": "series-spanish",
+    "pack": "culture",
+    "text": "Nombra una serie de España.",
+    "categories": [
+      "Series de televisión de España"
+    ],
+    "parent": "q3-series"
+  },
+  {
+    "id": "series-anime",
+    "pack": "culture",
+    "text": "Nombra una serie de anime.",
+    "categories": [
+      "Series de anime"
+    ],
+    "parent": "q3-series"
+  },
+  {
+    "id": "films-1980",
+    "pack": "culture",
+    "text": "Nombra una película estrenada entre 1980 y 1989.",
+    "categories": [
+      "Películas de 1980",
+      "Películas de 1981",
+      "Películas de 1982",
+      "Películas de 1983",
+      "Películas de 1984",
+      "Películas de 1985",
+      "Películas de 1986",
+      "Películas de 1987",
+      "Películas de 1988",
+      "Películas de 1989"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-1990",
+    "pack": "culture",
+    "text": "Nombra una película estrenada entre 1990 y 1999.",
+    "categories": [
+      "Películas de 1990",
+      "Películas de 1991",
+      "Películas de 1992",
+      "Películas de 1993",
+      "Películas de 1994",
+      "Películas de 1995",
+      "Películas de 1996",
+      "Películas de 1997",
+      "Películas de 1998",
+      "Películas de 1999"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-2000",
+    "pack": "culture",
+    "text": "Nombra una película estrenada entre 2000 y 2009.",
+    "categories": [
+      "Películas de 2000",
+      "Películas de 2001",
+      "Películas de 2002",
+      "Películas de 2003",
+      "Películas de 2004",
+      "Películas de 2005",
+      "Películas de 2006",
+      "Películas de 2007",
+      "Películas de 2008",
+      "Películas de 2009"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-2010",
+    "pack": "culture",
+    "text": "Nombra una película estrenada entre 2010 y 2019.",
+    "categories": [
+      "Películas de 2010",
+      "Películas de 2011",
+      "Películas de 2012",
+      "Películas de 2013",
+      "Películas de 2014",
+      "Películas de 2015",
+      "Películas de 2016",
+      "Películas de 2017",
+      "Películas de 2018",
+      "Películas de 2019"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "films-2020",
+    "pack": "culture",
+    "text": "Nombra una película de entre 2020 y 2026.",
+    "categories": [
+      "Películas de 2020",
+      "Películas de 2021",
+      "Películas de 2022",
+      "Películas de 2023",
+      "Películas de 2024",
+      "Películas de 2025",
+      "Películas de 2026"
+    ],
+    "parent": "q3-films"
+  },
+  {
+    "id": "novels",
+    "pack": "culture",
+    "text": "Nombra una novela.",
+    "categories": [
+      "Novelas de 1813",
+      "Novelas de 1818",
+      "Novelas de 1847",
+      "Novelas de 1850",
+      "Novelas de 1851",
+      "Novelas de 1860",
+      "Novelas de 1862",
+      "Novelas de 1865",
+      "Novelas de 1866",
+      "Novelas de 1869",
+      "Novelas de 1883",
+      "Novelas de 1886",
+      "Novelas de 1891",
+      "Novelas de 1897",
+      "Novelas de 1900",
+      "Novelas de 1920",
+      "Novelas de 1925",
+      "Novelas de 1930",
+      "Novelas de 1937",
+      "Novelas de 1940",
+      "Novelas de 1943",
+      "Novelas de 1949",
+      "Novelas de 1950",
+      "Novelas de 1954",
+      "Novelas de 1960",
+      "Novelas de 1967",
+      "Novelas de 1970",
+      "Novelas de 1980",
+      "Novelas de 1984",
+      "Novelas de 1990",
+      "Novelas de 1997",
+      "Novelas de 2000",
+      "Novelas de 2001",
+      "Novelas de 2003",
+      "Novelas de 2005",
+      "Novelas de 2007",
+      "Novelas de 2008",
+      "Novelas de 2009",
+      "Novelas de 2010",
+      "Novelas de 2011",
+      "Novelas de 2012",
+      "Novelas de 2013",
+      "Novelas de 2014",
+      "Novelas de 2015",
+      "Novelas de 2016",
+      "Novelas de 2017",
+      "Novelas de 2018",
+      "Novelas de 2019",
+      "Novelas de 2020",
+      "Novelas de 2021",
+      "Novelas de 2022",
+      "Novelas de 2023",
+      "Novelas de 2024",
+      "Novelas de 2025",
+      "Novelas de 2026"
+    ],
+    "parent": "q3-books"
+  },
+  {
+    "id": "poetry",
+    "pack": "culture",
+    "text": "Nombra un poema.",
+    "categories": [
+      "Poemas"
+    ],
+    "parent": "q3-books"
+  },
+  {
+    "id": "plays",
+    "pack": "culture",
+    "text": "Nombra una obra de teatro.",
+    "categories": [
+      "Obras de teatro"
+    ],
+    "parent": "q3-books"
+  },
+  {
+    "id": "singers",
+    "pack": "culture",
+    "text": "Nombra un cantante o una cantante.",
+    "categories": [
+      "Cantantes de España",
+      "Cantantes de Argentina",
+      "Cantantes de México",
+      "Cantantes de Chile",
+      "Cantantes de Colombia",
+      "Cantantes de Reino Unido",
+      "Cantantes de Francia",
+      "Cantantes de Italia",
+      "Cantantes masculinos de Estados Unidos",
+      "Cantantes femeninas de Estados Unidos"
+    ],
+    "parent": "q3-music"
+  },
+  {
+    "id": "bands",
+    "pack": "culture",
+    "text": "Nombra un grupo de música.",
+    "categories": [
+      "Grupos de rock de España",
+      "Grupos de rock de Estados Unidos",
+      "Grupos de rock de Inglaterra",
+      "Grupos de rock de Argentina",
+      "Grupos de rock de México",
+      "Grupos de pop de España",
+      "Grupos de pop de Reino Unido",
+      "Grupos de heavy metal de Alemania"
+    ],
+    "parent": "q3-music"
+  },
+  {
+    "id": "composers",
+    "pack": "culture",
+    "text": "Nombra un compositor o compositora.",
+    "categories": [
+      "Compositores de España",
+      "Compositores de Francia",
+      "Compositores de Italia",
+      "Compositores de Alemania",
+      "Compositores de Estados Unidos",
+      "Compositores de Argentina"
+    ],
+    "parent": "q3-music"
+  },
+  {
+    "id": "rappers",
+    "pack": "culture",
+    "text": "Nombra un rapero o rapera.",
+    "categories": [
+      "Raperos de España",
+      "Raperos de Estados Unidos",
+      "Raperas de Estados Unidos",
+      "Raperos de Argentina",
+      "Raperos de México"
+    ],
+    "parent": "q3-music"
+  },
+  {
+    "id": "basketball",
+    "pack": "world",
+    "text": "Nombra un jugador o jugadora de baloncesto.",
+    "categories": [
+      "Baloncestistas de España",
+      "Baloncestistas de Estados Unidos",
+      "Baloncestistas de Argentina",
+      "Baloncestistas de Francia",
+      "Baloncestistas de Serbia"
+    ]
+  },
+  {
+    "id": "tennis",
+    "pack": "world",
+    "text": "Nombra un tenista o una tenista.",
+    "categories": [
+      "Tenistas masculinos de España",
+      "Tenistas femeninas de España",
+      "Tenistas masculinos de Estados Unidos",
+      "Tenistas femeninas de Estados Unidos",
+      "Tenistas masculinos de Argentina"
+    ]
+  },
+  {
+    "id": "cycling",
+    "pack": "world",
+    "text": "Nombra un ciclista o una ciclista.",
+    "categories": [
+      "Ciclistas de España",
+      "Ciclistas de Francia",
+      "Ciclistas de Italia",
+      "Ciclistas de Bélgica",
+      "Ciclistas de Colombia"
+    ]
+  },
+  {
+    "id": "f1-drivers",
+    "pack": "world",
+    "text": "Nombra un piloto que haya participado en Fórmula 1.",
+    "categories": [
+      "Pilotos de Fórmula 1 de España",
+      "Pilotos de Fórmula 1 de Reino Unido",
+      "Pilotos de Fórmula 1 de Italia",
+      "Pilotos de Fórmula 1 de Francia",
+      "Pilotos de Fórmula 1 de Alemania",
+      "Pilotos de Fórmula 1 de Brasil",
+      "Pilotos de Fórmula 1 de Argentina",
+      "Pilotos de Fórmula 1 de Estados Unidos"
+    ]
+  },
+  {
+    "id": "painters",
+    "pack": "culture",
+    "text": "Nombra un pintor o una pintora.",
+    "categories": [
+      "Pintores de España del siglo XX",
+      "Pintores de España del siglo XIX",
+      "Pintores de Francia del siglo XIX",
+      "Pintores de Francia del siglo XX",
+      "Pintores de Italia del Renacimiento",
+      "Pintoras de España"
+    ],
+    "parent": "q3-spanish-artists"
+  },
+  {
+    "id": "philosophers",
+    "pack": "world",
+    "text": "Nombra un filósofo o una filósofa.",
+    "categories": [
+      "Filósofos de España del siglo XX",
+      "Filósofos de Alemania del siglo XIX",
+      "Filósofos de Francia del siglo XX",
+      "Filósofos de la Antigua Grecia",
+      "Filósofas"
+    ],
+    "parent": "q3-scientists"
+  },
+  {
+    "id": "physicists",
+    "pack": "science",
+    "text": "Nombra un físico o una física.",
+    "categories": [
+      "Físicos de España del siglo XX",
+      "Físicos de Estados Unidos del siglo XX",
+      "Físicos de Alemania del siglo XX",
+      "Físicos de Francia del siglo XX"
+    ],
+    "parent": "q3-scientists"
+  },
+  {
+    "id": "mathematicians",
+    "pack": "science",
+    "text": "Nombra un matemático o matemática.",
+    "categories": [
+      "Matemáticos de España del siglo XX",
+      "Matemáticos de Estados Unidos del siglo XX",
+      "Matemáticos de Alemania del siglo XX",
+      "Matemáticos de Francia del siglo XX"
+    ],
+    "parent": "q3-scientists"
+  },
+  {
+    "id": "chemists",
+    "pack": "science",
+    "text": "Nombra un químico o una química.",
+    "categories": [
+      "Químicos de España del siglo XX",
+      "Químicos de Estados Unidos del siglo XX",
+      "Químicos de Alemania del siglo XX",
+      "Químicos de Francia del siglo XX"
+    ],
+    "parent": "q3-scientists"
+  },
+  {
+    "id": "cancers",
+    "pack": "science",
+    "text": "Nombra un tipo de cáncer.",
+    "icdPrefixes": [
+      "C"
+    ],
+    "parent": "q3-health"
+  },
+  {
+    "id": "infections",
+    "pack": "science",
+    "text": "Nombra una enfermedad infecciosa.",
+    "icdPrefixes": [
+      "A",
+      "B"
+    ],
+    "parent": "q3-health"
+  },
+  {
+    "id": "mental-health",
+    "pack": "science",
+    "text": "Nombra un trastorno mental.",
+    "icdPrefixes": [
+      "F"
+    ],
+    "parent": "q3-health"
+  },
+  {
+    "id": "neurology",
+    "pack": "science",
+    "text": "Nombra una enfermedad del sistema nervioso.",
+    "icdPrefixes": [
+      "G"
+    ],
+    "parent": "q3-health"
+  },
+  {
+    "id": "circulation",
+    "pack": "science",
+    "text": "Nombra una enfermedad del aparato circulatorio.",
+    "icdPrefixes": [
+      "I"
+    ],
+    "parent": "q3-health"
+  },
+  {
+    "id": "respiratory",
+    "pack": "science",
+    "text": "Nombra una enfermedad respiratoria.",
+    "icdPrefixes": [
+      "J"
+    ],
+    "parent": "q3-health"
+  },
+  {
+    "id": "digestive",
+    "pack": "science",
+    "text": "Nombra una enfermedad del aparato digestivo.",
+    "icdPrefixes": [
+      "K"
+    ],
+    "parent": "q3-health"
+  },
+  {
+    "id": "skin",
+    "pack": "science",
+    "text": "Nombra una enfermedad de la piel.",
+    "icdPrefixes": [
+      "L"
+    ],
+    "parent": "q3-health"
+  },
+  {
+    "id": "musculoskeletal",
+    "pack": "science",
+    "text": "Nombra una enfermedad del aparato locomotor.",
+    "icdPrefixes": [
+      "M"
+    ],
+    "parent": "q3-health"
+  },
+  {
+    "id": "cities-es",
+    "pack": "world",
+    "text": "Nombra una ciudad de España.",
+    "geo": {
+      "country": "ES",
+      "type": "city"
+    },
+    "parent": "q3-cities"
+  },
+  {
+    "id": "cities-fr",
+    "pack": "world",
+    "text": "Nombra una ciudad de Francia.",
+    "geo": {
+      "country": "FR",
+      "type": "city"
+    },
+    "parent": "q3-cities"
+  },
+  {
+    "id": "cities-it",
+    "pack": "world",
+    "text": "Nombra una ciudad de Italia.",
+    "geo": {
+      "country": "IT",
+      "type": "city"
+    },
+    "parent": "q3-cities"
+  },
+  {
+    "id": "cities-de",
+    "pack": "world",
+    "text": "Nombra una ciudad de Alemania.",
+    "geo": {
+      "country": "DE",
+      "type": "city"
+    },
+    "parent": "q3-cities"
+  },
+  {
+    "id": "cities-gb",
+    "pack": "world",
+    "text": "Nombra una ciudad de Reino Unido.",
+    "geo": {
+      "country": "GB",
+      "type": "city"
+    },
+    "parent": "q3-cities"
+  },
+  {
+    "id": "cities-us",
+    "pack": "world",
+    "text": "Nombra una ciudad de Estados Unidos.",
+    "geo": {
+      "country": "US",
+      "type": "city"
+    },
+    "parent": "q3-cities"
+  },
+  {
+    "id": "cities-mx",
+    "pack": "world",
+    "text": "Nombra una ciudad de México.",
+    "geo": {
+      "country": "MX",
+      "type": "city"
+    },
+    "parent": "q3-cities"
+  },
+  {
+    "id": "cities-ar",
+    "pack": "world",
+    "text": "Nombra una ciudad de Argentina.",
+    "geo": {
+      "country": "AR",
+      "type": "city"
+    },
+    "parent": "q3-cities"
+  },
+  {
+    "id": "cities-br",
+    "pack": "world",
+    "text": "Nombra una ciudad de Brasil.",
+    "geo": {
+      "country": "BR",
+      "type": "city"
+    },
+    "parent": "q3-cities"
+  },
+  {
+    "id": "cities-jp",
+    "pack": "world",
+    "text": "Nombra una ciudad de Japón.",
+    "geo": {
+      "country": "JP",
+      "type": "city"
+    },
+    "parent": "q3-cities"
+  },
+  {
+    "id": "cities-in",
+    "pack": "world",
+    "text": "Nombra una ciudad de India.",
+    "geo": {
+      "country": "IN",
+      "type": "city"
+    },
+    "parent": "q3-cities"
+  },
+  {
+    "id": "cities-pt",
+    "pack": "world",
+    "text": "Nombra una ciudad de Portugal.",
+    "geo": {
+      "country": "PT",
+      "type": "city"
+    },
+    "parent": "q3-cities"
+  },
+  {
+    "id": "towns-51",
+    "pack": "spain",
+    "text": "Nombra una localidad de Andalucía.",
+    "geo": {
+      "admin1": "51",
+      "type": "town"
+    },
+    "parent": "q3-spanish-towns"
+  },
+  {
+    "id": "towns-56",
+    "pack": "spain",
+    "text": "Nombra una localidad de Cataluña.",
+    "geo": {
+      "admin1": "56",
+      "type": "town"
+    },
+    "parent": "q3-spanish-towns"
+  },
+  {
+    "id": "towns-60",
+    "pack": "spain",
+    "text": "Nombra una localidad de Comunidad Valenciana.",
+    "geo": {
+      "admin1": "60",
+      "type": "town"
+    },
+    "parent": "q3-spanish-towns"
+  },
+  {
+    "id": "towns-29",
+    "pack": "spain",
+    "text": "Nombra una localidad de Comunidad de Madrid.",
+    "geo": {
+      "admin1": "29",
+      "type": "town"
+    },
+    "parent": "q3-spanish-towns"
+  },
+  {
+    "id": "towns-58",
+    "pack": "spain",
+    "text": "Nombra una localidad de Galicia.",
+    "geo": {
+      "admin1": "58",
+      "type": "town"
+    },
+    "parent": "q3-spanish-towns"
+  },
+  {
+    "id": "towns-55",
+    "pack": "spain",
+    "text": "Nombra una localidad de Castilla y León.",
+    "geo": {
+      "admin1": "55",
+      "type": "town"
+    },
+    "parent": "q3-spanish-towns"
+  },
+  {
+    "id": "towns-54",
+    "pack": "spain",
+    "text": "Nombra una localidad de Castilla-La Mancha.",
+    "geo": {
+      "admin1": "54",
+      "type": "town"
+    },
+    "parent": "q3-spanish-towns"
+  },
+  {
+    "id": "towns-52",
+    "pack": "spain",
+    "text": "Nombra una localidad de Aragón.",
+    "geo": {
+      "admin1": "52",
+      "type": "town"
+    },
+    "parent": "q3-spanish-towns"
+  },
+  {
+    "id": "towns-59",
+    "pack": "spain",
+    "text": "Nombra una localidad de País Vasco.",
+    "geo": {
+      "admin1": "59",
+      "type": "town"
+    },
+    "parent": "q3-spanish-towns"
+  },
+  {
+    "id": "towns-57",
+    "pack": "spain",
+    "text": "Nombra una localidad de Extremadura.",
+    "geo": {
+      "admin1": "57",
+      "type": "town"
+    },
+    "parent": "q3-spanish-towns"
+  },
+  {
+    "id": "towns-53",
+    "pack": "spain",
+    "text": "Nombra una localidad de Canarias.",
+    "geo": {
+      "admin1": "53",
+      "type": "town"
+    },
+    "parent": "q3-spanish-towns"
+  },
+  {
+    "id": "rivers-spain",
+    "pack": "spain",
+    "text": "Nombra un río de España.",
+    "geo": {
+      "type": "feature",
+      "codes": [
+        "STM"
+      ]
+    },
+    "parent": "q3-spanish-landscapes"
+  },
+  {
+    "id": "mountains-spain",
+    "pack": "spain",
+    "text": "Nombra una montaña de España.",
+    "geo": {
+      "type": "feature",
+      "codes": [
+        "MT",
+        "PK"
+      ]
+    },
+    "parent": "q3-spanish-landscapes"
+  },
+  {
+    "id": "lakes-spain",
+    "pack": "spain",
+    "text": "Nombra un lago o laguna de España.",
+    "geo": {
+      "type": "feature",
+      "codes": [
+        "LK",
+        "LKS"
+      ]
+    },
+    "parent": "q3-spanish-landscapes"
+  },
+  {
+    "id": "appliances",
+    "pack": "everyday",
+    "text": "Nombra un electrodoméstico.",
+    "manual": "appliances"
+  },
+  {
+    "id": "furniture",
+    "pack": "everyday",
+    "text": "Nombra un mueble.",
+    "manual": "furniture"
+  },
+  {
+    "id": "cheeses",
+    "pack": "everyday",
+    "text": "Nombra un queso.",
+    "categories": [
+      "Quesos de España",
+      "Quesos de Francia",
+      "Quesos de Italia",
+      "Quesos de Reino Unido",
+      "Quesos de Alemania",
+      "Quesos de Suiza"
+    ],
+    "parent": "q3-market"
+  },
+  {
+    "id": "breads",
+    "pack": "everyday",
+    "text": "Nombra un tipo de pan.",
+    "categories": [
+      "Panes de España",
+      "Panes de Francia",
+      "Panes de Italia",
+      "Panes de Alemania",
+      "Panes de México",
+      "Panes de India",
+      "Panes de Turquía",
+      "Panes de Portugal",
+      "Panes de Estados Unidos"
+    ],
+    "parent": "q3-market"
+  },
+  {
+    "id": "cocktails",
+    "pack": "everyday",
+    "text": "Nombra un cóctel.",
+    "categories": [
+      "Cócteles"
+    ],
+    "parent": "q3-drinks"
+  },
+  {
+    "id": "pasta",
+    "pack": "everyday",
+    "text": "Nombra un tipo de pasta alimenticia.",
+    "categories": [
+      "Pastas de Italia",
+      "Pastas alimenticias",
+      "Fideos"
+    ],
+    "parent": "q3-market"
+  },
+  {
+    "id": "car-models",
+    "pack": "everyday",
+    "text": "Nombra un modelo de automóvil.",
+    "categories": [
+      "Modelos de SEAT",
+      "Modelos de Renault",
+      "Modelos de Peugeot",
+      "Modelos de Citroën",
+      "Modelos de Ford",
+      "Modelos de Volkswagen",
+      "Modelos de Toyota",
+      "Modelos de Opel",
+      "Modelos de BMW",
+      "Modelos de Mercedes-Benz"
+    ],
+    "parent": "q3-transport"
+  },
+  {
+    "id": "dog-breeds",
+    "pack": "nature",
+    "text": "Nombra una raza de perro.",
+    "categories": [
+      "Razas de perro de España",
+      "Razas de perro de Alemania",
+      "Razas de perro de Francia",
+      "Razas de perro de Reino Unido",
+      "Razas de perro de Japón",
+      "Razas de perro de Estados Unidos",
+      "Razas de perro de Italia",
+      "Razas de perro de Bélgica"
+    ],
+    "parent": "q3-mammals"
+  },
+  {
+    "id": "sharks",
+    "pack": "nature",
+    "text": "Nombra un tiburón.",
+    "categories": [
+      "Carcharhinidae",
+      "Sphyrnidae",
+      "Lamnidae",
+      "Scyliorhinidae",
+      "Squalidae",
+      "Etmopteridae"
+    ],
+    "parent": "q3-fish"
+  },
+  {
+    "id": "ducks",
+    "pack": "nature",
+    "text": "Nombra un pato, ganso o cisne.",
+    "categories": [
+      "Anatidae"
+    ],
+    "parent": "q3-birds"
+  },
+  {
+    "id": "parrots",
+    "pack": "nature",
+    "text": "Nombra un tipo de loro, periquito o cacatúa.",
+    "categories": [
+      "Psittacidae",
+      "Psittaculidae",
+      "Cacatuidae"
+    ],
+    "parent": "q3-birds"
+  },
+  {
+    "id": "palms",
+    "pack": "nature",
+    "text": "Nombra una palmera.",
+    "categories": [
+      "Arecaceae"
+    ],
+    "parent": "q3-plants"
+  },
+  {
+    "id": "minerals",
+    "pack": "nature",
+    "text": "Nombra un mineral.",
+    "categories": [
+      "Minerales elementos",
+      "Minerales sulfuros",
+      "Minerales óxidos",
+      "Minerales silicatos",
+      "Minerales fosfatos",
+      "Minerales carbonatos"
+    ],
+    "parent": "q3-materials"
+  },
+  {
+    "id": "planets-fiction",
+    "pack": "culture",
+    "text": "Nombra un lugar ficticio.",
+    "categories": [
+      "Lugares de Star Wars",
+      "Lugares de la Tierra Media",
+      "Lugares de Harry Potter",
+      "Lugares de DC Comics",
+      "Lugares de Marvel Comics"
+    ]
+  },
+  {
+    "id": "board-games",
+    "pack": "words",
+    "text": "Nombra un juego de mesa.",
+    "categories": [
+      "Juegos de mesa",
+      "Juegos de tablero",
+      "Juegos de cartas",
+      "Juegos de dados",
+      "Juegos de naipes",
+      "Juegos de tablero temáticos",
+      "Juegos de tablero abstractos",
+      "Juegos ganadores del Spiel des Jahres",
+      "Juegos ganadores del premio Spiel des Jahres",
+      "Juegos de mesa de Alemania",
+      "Juegos de mesa de Estados Unidos"
+    ]
+  },
+  {
+    "id": "dances",
+    "pack": "words",
+    "text": "Nombra un baile.",
+    "categories": [
+      "Danzas de España",
+      "Bailes de salón",
+      "Danzas de Argentina",
+      "Danzas de México",
+      "Danzas de Colombia",
+      "Danzas de Perú",
+      "Danzas de Brasil",
+      "Danzas de India",
+      "Danzas de Francia"
+    ]
+  },
+  {
+    "id": "musical-genres",
+    "pack": "words",
+    "text": "Nombra un género musical.",
+    "categories": [
+      "Géneros musicales",
+      "Géneros de música electrónica",
+      "Géneros de rock",
+      "Géneros de jazz",
+      "Géneros de música pop",
+      "Subgéneros del metal"
+    ]
+  },
+  {
+    "id": "currencies",
+    "pack": "world",
+    "text": "Nombra una moneda, actual o histórica.",
+    "categories": [
+      "Monedas de Europa",
+      "Monedas de Asia",
+      "Monedas de América",
+      "Monedas de África",
+      "Monedas fuera de curso"
+    ]
+  },
+  {
+    "id": "dinosaurs",
+    "pack": "nature",
+    "text": "Nombra un dinosaurio no aviano.",
+    "categories": [
+      "Tyrannosauroidea",
+      "Ceratopsia",
+      "Hadrosauridae",
+      "Dromaeosauridae",
+      "Titanosauria",
+      "Diplodocoidea",
+      "Stegosauria",
+      "Ankylosauria",
+      "Therizinosauria",
+      "Abelisauridae"
+    ],
+    "parent": "q3-reptiles"
+  },
+  {
+    "id": "butterflies",
+    "pack": "nature",
+    "text": "Nombra una mariposa o polilla.",
+    "categories": [
+      "Papilionidae",
+      "Nymphalidae",
+      "Pieridae",
+      "Lycaenidae",
+      "Saturniidae",
+      "Sphingidae"
+    ],
+    "parent": "q3-invertebrates"
+  },
+  {
+    "id": "snakes",
+    "pack": "nature",
+    "text": "Nombra una serpiente.",
+    "categories": [
+      "Viperidae",
+      "Elapidae",
+      "Colubridae",
+      "Boidae",
+      "Pythonidae"
+    ],
+    "parent": "q3-reptiles"
+  },
+  {
+    "id": "flowers",
+    "pack": "nature",
+    "text": "Nombra una planta ornamental.",
+    "categories": [
+      "Plantas ornamentales"
+    ],
+    "parent": "q3-plants"
+  },
+  {
+    "id": "volcanoes",
+    "pack": "nature",
+    "text": "Nombra un volcán.",
+    "categories": [
+      "Volcanes de Chile",
+      "Volcanes de Ecuador",
+      "Volcanes de México",
+      "Volcanes de Japón",
+      "Volcanes de Indonesia",
+      "Volcanes de Islandia",
+      "Volcanes de Italia",
+      "Volcanes de España"
+    ],
+    "parent": "q3-geography"
+  },
+  {
+    "id": "rivers-world",
+    "pack": "nature",
+    "text": "Nombra un río del mundo.",
+    "categories": [
+      "Ríos de Francia",
+      "Ríos de Alemania",
+      "Ríos de Italia",
+      "Ríos de Portugal",
+      "Ríos de España",
+      "Ríos de Argentina",
+      "Ríos de México",
+      "Ríos de Estados Unidos"
+    ],
+    "parent": "q3-geography",
+    "geo": {
+      "type": "feature",
+      "codes": [
+        "STM"
+      ]
+    }
+  },
+  {
+    "id": "actor-coverage",
+    "pack": "culture",
+    "text": "Revisión del repertorio de interpretación.",
+    "importOnly": true,
+    "categories": [
+      "Actores de cine de Rusia",
+      "Actrices de cine de Rusia",
+      "Actores de cine de Unión Soviética",
+      "Actrices de cine de Unión Soviética",
+      "Actores de cine de Suecia",
+      "Actrices de cine de Suecia",
+      "Actores de cine de Noruega",
+      "Actrices de cine de Noruega",
+      "Actores de cine de Dinamarca",
+      "Actrices de cine de Dinamarca",
+      "Actores de cine de Finlandia",
+      "Actrices de cine de Finlandia",
+      "Actores de cine de Países Bajos",
+      "Actrices de cine de Países Bajos",
+      "Actores de cine de Bélgica",
+      "Actrices de cine de Bélgica",
+      "Actores de cine de Portugal",
+      "Actrices de cine de Portugal",
+      "Actores de cine de Polonia",
+      "Actrices de cine de Polonia",
+      "Actores de cine de Turquía",
+      "Actrices de cine de Turquía",
+      "Actores de cine de Irán",
+      "Actrices de cine de Irán",
+      "Actores de cine de Egipto",
+      "Actrices de cine de Egipto",
+      "Actores de cine de Sudáfrica",
+      "Actrices de cine de Sudáfrica",
+      "Actores de cine de Nueva Zelanda",
+      "Actrices de cine de Nueva Zelanda",
+      "Actores de cine de Cuba",
+      "Actrices de cine de Cuba",
+      "Actores de cine de Venezuela",
+      "Actrices de cine de Venezuela",
+      "Actores de cine de Perú",
+      "Actrices de cine de Perú",
+      "Actores de cine de Uruguay",
+      "Actrices de cine de Uruguay",
+      "Actores de cine de Taiwán",
+      "Actrices de cine de Taiwán",
+      "Actores de cine de Hong Kong",
+      "Actrices de cine de Hong Kong",
+      "Actores de cine de Filipinas",
+      "Actrices de cine de Filipinas",
+      "Actores de cine de Tailandia",
+      "Actrices de cine de Tailandia",
+      "Actores de cine de Indonesia",
+      "Actrices de cine de Indonesia",
+      "Actores de cine de Reino Unido",
+      "Actores de televisión de Reino Unido",
+      "Actrices de cine de Reino Unido",
+      "Actrices de televisión de Reino Unido"
+    ]
+  },
+  {
+    "id": "market",
+    "pack": "everyday",
+    "text": "Nombra un alimento.",
+    "parent": "q3-market"
+  },
+  {
+    "id": "phenomena",
+    "pack": "nature",
+    "text": "Nombra un fenómeno natural.",
+    "parent": "q3-phenomena"
+  },
+  {
+    "id": "dictionary",
+    "pack": "words",
+    "text": "Escribe una palabra del español.",
+    "parent": "q3-dictionary"
+  },
+  {
+    "id": "math",
+    "pack": "science",
+    "text": "Nombra un concepto matemático.",
+    "parent": "q3-math"
+  },
+  {
+    "id": "astronomy",
+    "pack": "science",
+    "text": "Nombra un concepto de astronomía.",
+    "parent": "q3-astronomy"
+  },
+  {
+    "id": "writers-spain",
+    "pack": "spain",
+    "text": "Nombra un escritor o una escritora de España.",
+    "parent": "q3-writers",
+    "categories": [
+      "Escritores de España del siglo XX",
+      "Escritores de España del siglo XXI"
+    ]
+  },
+  {
+    "id": "injuries",
+    "pack": "science",
+    "text": "Nombra una lesión corporal.",
+    "parent": "q3-health",
+    "icdPrefixes": [
+      "S",
+      "T"
+    ],
+    "excludeClinicalPrefixes": [
+      "T36",
+      "T37",
+      "T38",
+      "T39",
+      "T4",
+      "T5",
+      "T6",
+      "T7",
+      "T8",
+      "T9"
+    ]
+  },
+  {
+    "id": "symptoms",
+    "pack": "science",
+    "text": "Nombra un síntoma o signo clínico.",
+    "parent": "q3-health",
+    "icdPrefixes": [
+      "R"
+    ],
+    "excludeClinicalPrefixes": [
+      "R7",
+      "R8",
+      "R9"
+    ]
+  }
+]

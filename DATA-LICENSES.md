@@ -71,3 +71,10 @@ Wikipedia contributors and the lexical sources credited above supply additional 
 The rocket, planets, orbit graphics, icon, interface and CSS were created for this project. No Krillion artwork, sound files, text, question banks, answer sets or source-code implementations are included.
 
 [Krillion](https://krillion.io/) was studied as the requested game-design reference. Its name and assets belong to their respective owners. Órbita's source is an independent implementation of the observed gameplay rules.
+
+
+## Fourth-edition membership sources
+
+Additional public Wikipedia category memberships are retrieved with the MediaWiki API, preserving request URLs and SHA-256 hashes in `content/focused-source-manifest.json`. Sources are attributed per question in `content/focused-source-audit.json`. Wikipedia contributors provide the underlying category assignments and article titles, under the terms identified in the Wikipedia section above. No article prose, portraits or reference-game data are bundled. Common Spanish names and editorial score overrides are reviewed separately.
+
+The complete downloaded GeoNames city and Spanish locality snapshots are used with their country, administrative division and feature codes, under the GeoNames licence credited above. These geographic registers supply membership, not popularity statistics. The Spanish Ministry of Health's 2026 classification supplies the clinical families already credited above.

@@ -328,7 +328,8 @@
     [],
     [],
     [
-      "review-spanish-towns"
+      "review-spanish-towns",
+      "focused-town-anchors"
     ],
     "municipalities"
   ],
@@ -546,7 +547,8 @@
     [],
     [
       "actors",
-      "review-actors"
+      "review-actors",
+      "focused-actor-anchors"
     ],
     "actors"
   ],
@@ -654,7 +656,8 @@
     [],
     [],
     [
-      "cities"
+      "cities",
+      "focused-city-anchors"
     ],
     "cities"
   ],
@@ -702,7 +705,8 @@
     [],
     [
       "brands",
-      "audit-brands"
+      "audit-brands",
+      "focused-brand-anchors"
     ]
   ]
 ]

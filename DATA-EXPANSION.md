@@ -1,12 +1,12 @@
-# Repertorio revisado de Órbita · edición 2026-10-19.3
+# Repertorio revisado de Órbita · edición 2026-10-20.4
 
 ## Alcance y comprobaciones
 
-56 preguntas realmente diferentes, ocho por constelación. Todas tienen al menos 100 respuestas canónicas al ignorar tildes y mayúsculas; los alias, los plurales equivalentes y las variantes no cuentan para alcanzar el mínimo. Se retiran las preguntas repetidas de letras, terminaciones y longitudes del repertorio activo. El diccionario conserva las 231.944 claves documentadas de la edición anterior y añade vocabulario revisado, atestiguado en el léxico fuente, que carecía de encuesta de reconocimiento. Su puntuación se identifica como editorial y no modifica el diccionario de partidas antiguas.
+152 preguntas activas, frente a las 56 de la edición anterior. La pregunta general de interpretación admite 31.840 actores y actrices. Mobiliario y electrodomésticos se separan: 177 y 162 respuestas respectivamente. Todas tienen al menos 100 respuestas canónicas al ignorar tildes y mayúsculas; los alias, los plurales equivalentes y las variantes no cuentan para alcanzar el mínimo. Se retiran las preguntas repetidas de letras, terminaciones y longitudes del repertorio activo. El diccionario conserva las 231.944 claves documentadas de la edición anterior y añade vocabulario revisado, atestiguado en el léxico fuente, que carecía de encuesta de reconocimiento. Su puntuación se identifica como editorial y no modifica el diccionario de partidas antiguas.
 
 La cobertura no depende de aparecer en una lista de popularidad reciente. Las preguntas culturales, deportivas y geográficas admiten temas de todo el mundo.
 
-Revisión de cobertura del **20 de octubre de 2026**: se recorren todas las páginas de las categorías de Wikipedia mediante su [continuación oficial](https://www.mediawiki.org/wiki/API:Categorymembers), incluidas páginas intermedias sin resultados. Se amplían los países de procedencia, los años de obras culturales, las localidades y el vocabulario revisado. Esta revisión amplía las respuestas, sin cambiar los enunciados, las semillas de las misiones ni los periodos de las estadísticas. Las variantes flexionadas se aceptan cuando están documentadas; las formas femeninas automáticas se limitan a profesiones y gentilicios.
+La primera revisión de cobertura del **20 de octubre de 2026**: se recorren todas las páginas de las categorías de Wikipedia mediante su [continuación oficial](https://www.mediawiki.org/wiki/API:Categorymembers), incluidas páginas intermedias sin resultados. Se amplían los países de procedencia, los años de obras culturales, las localidades y el vocabulario revisado. Esta revisión amplía las respuestas, sin cambiar los enunciados, las semillas de las misiones ni los periodos de las estadísticas. Las variantes flexionadas se aceptan cuando están documentadas; las formas femeninas automáticas se limitan a profesiones y gentilicios.
 
 La segunda revisión de cobertura del mismo día registra las fuentes de **cada una de las 56 preguntas** en `content/category-source-audit.json`. Añade denominaciones compuestas, nombres cooficiales y variantes españolas de lugares, nomenclatura clínica de la CIE-10-ES 2026 y los símbolos de los 118 elementos confirmados. Las listas acotadas y los registros públicos se revisan sin inventar nuevas entradas para aumentar el tamaño. Los datos del INE conservan su umbral de publicación de 20 residentes; los países incluyen los constituyentes del Reino Unido, de acuerdo con el alcance amplio del enunciado.
 
@@ -50,11 +50,11 @@ Las excepciones manuales se etiquetan como editoriales aunque exista una señal 
 
 ## Presentación pública
 
-Las preguntas aparecen durante la partida. El resultado muestra únicamente lo que respondió el jugador y su puntuación; no ofrece listas de soluciones, ejemplos de 100 puntos ni un comprobador fuera de la partida. Los antiguos enlaces al catálogo llevan a la misión diaria.
+Las preguntas aparecen durante la partida. Solo al completar las siete rondas del diario se desbloquea una selección de tres respuestas de mayor puntuación de cada pregunta jugada, junto a la respuesta y puntuación del jugador. Los empates se indican y la procedencia de la rareza se etiqueta. No hay catálogo general ni comprobador fuera de la partida. Los antiguos enlaces al catálogo llevan a la misión diaria.
 
 ## Reproducibilidad y mantenimiento
 
-`dist/data.json` conserva las fuentes y preguntas antiguas; `dist/repertory.json` contiene la nueva edición, base de cada puntuación, metadatos de fechas y SHA-256. El formato compacto de cada respuesta es `[palabra, alias, puntos, base, valorPublicadoONull, diasONull, referenciaHistoricaONull]`.
+`dist/data.json` conserva las fuentes y preguntas antiguas; `dist/repertory.json` conserva la edición compatible anterior, con la base de cada puntuación, fechas y SHA-256; `dist/focused-repertory.json` define las 152 preguntas activas mediante referencias y ampliaciones revisadas. El formato compacto de cada respuesta es `[palabra, alias, puntos, base, valorPublicadoONull, diasONull, referenciaHistoricaONull]`.
 
 Para jugar, probar y desplegar se usan los ficheros incluidos: no hay API externa en tiempo de juego. Para mantener datos, con Python 3.12+, Node 22+ y PowerShell:
 
@@ -71,4 +71,21 @@ La importación cachea las respuestas públicas, limita el ritmo y respeta Retry
 
 Versiones 1 y 2 siguen disponibles para historial y retos antiguos. Los resultados guardados no se recalculan. Las preguntas amplias antiguas de transporte, futbolistas y actores reciben las nuevas respuestas para corregir sus rechazos; en materiales naturales solo se incorporan sustancias que cumplen ese enunciado. Las nuevas partidas tienen claves separadas por edición. Las estadísticas diarias deduplican por fecha y las rachas cuentan días, no ediciones.
 
-Pruebas: límite mínimo en todas las categorías, 718 respuestas de jugadores distribuidas entre las 56 preguntas, alias y variantes habituales, exclusión de candidatos ajenos al enunciado, fechas y muestras, puntuación, capítulos, temporizadores, compatibilidad de partidas y paginación de fuentes con peticiones simuladas. La interfaz pública mantiene ocultas las listas de soluciones.
+Pruebas: límite mínimo en todas las categorías, 718 respuestas de la edición anterior y 320 comprobaciones nuevas, con ejemplos revisados para las 152 preguntas activas, alias y variantes habituales, exclusión de candidatos ajenos al enunciado, fechas y muestras, puntuación, capítulos, temporizadores, compatibilidad de partidas y paginación de fuentes con peticiones simuladas. La interfaz oculta las alternativas hasta terminar el diario y limita su revelación a las siete preguntas jugadas.
+
+
+## Preguntas concretas y diario compartido · cuarta edición
+
+`content/focused-questions.json` define alcances concretos: mobiliario y electrodomésticos separados, interpretación por países y doblaje, cine por género o época, deportes, localidades por comunidad, ciudades por país y familias clínicas. Las pertenencias explícitas se recuperan de las categorías indicadas, sin aceptar automáticamente un árbol enciclopédico completo. Los grupos taxonómicos consultados se enumeran expresamente. Los nombres científicos pueden llevar nombres comunes españoles revisados.
+
+`content/imported-focused-memberships.json` y `content/focused-source-manifest.json` conservan los títulos recuperados y las huellas de las peticiones. `content/focused-review.json` contiene revisión de nombres, alias, exclusiones y puntuaciones editoriales. `content/focused-source-audit.json` registra las fuentes por pregunta y los candidatos aplazados por no alcanzar 100 conceptos. No se publican preguntas con menos de 100 ni se completan las listas con nombres inventados.
+
+Los registros descargados de GeoNames se procesan completos: se retira el límite anterior de las 10.000 ciudades y las 12.000 localidades españolas. Los filtros de país, comunidad y tipo geográfico determinan qué respuestas encajan; la población no determina los puntos.
+
+El repertorio específico se guarda en `dist/focused-repertory.json`. Reutiliza respuestas canónicas del repertorio anterior mediante referencias por clave estable, conservando su evidencia española; añade registros documentados cuando faltan. Los alias no cuentan como respuestas adicionales. Los nombres nuevos sin señal española reciben una estimación editorial identificada. La cobertura mundial no se presenta como estadística de España.
+
+`dist/daily-catalog.js` fija las ediciones y el orden de los conjuntos de preguntas que se sortean por fecha. La misma fecha selecciona las mismas siete preguntas para todos, independientemente del navegador, su historial, el orden de carga o ampliaciones posteriores de la base. La edición anterior se conserva hasta el 20 de octubre de 2026; la cuarta entra el 21 a medianoche de Madrid. Las preguntas nuevas se usan inmediatamente en los otros modos. El archivo conserva la selección de cada fecha.
+
+Para futuras ediciones se debe añadir un periodo con fecha de inicio futura y conservar sin modificar los periodos publicados. Las versiones y los identificadores anteriores se mantienen para reproducir retos y partidas guardadas. Las puntuaciones ya registradas no se recalculan. El constructor de Pages rechaza un calendario de prueba o bancos incompatibles.
+
+Las relaciones entre categorías se declaran expresamente: una respuesta válida de una subcategoría también entra en su categoría general, sin convertir automáticamente todo uso de evidencia compartida en una pertenencia. Por ejemplo, filósofos y científicos pueden compartir referencias de un nombre, pero los filósofos no se añaden indiscriminadamente a científicos. Las preguntas generales históricas compatibles incorporan los nuevos nombres y alias, conservando la puntuación de los resultados ya registrados. Los artículos sobre técnicas, equipamiento, asociaciones o edificios se excluyen de las listas de instancias.

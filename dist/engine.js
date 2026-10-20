@@ -1,10 +1,13 @@
+import { DAILY_EDITIONS } from './daily-catalog.js?v=4';
+
 export const ROUNDS = 7;
 export const PREVIEW_MS = 3000;
 export const ANSWER_MS = 25000;
-export const DATA_VERSION = '2026-10-19.3';
+export const DATA_VERSION = '2026-10-20.4';
+export const CURATED_VERSION = '2026-10-19.3';
 export const PREVIOUS_VERSION = '2026-10-19.2';
 export const LEGACY_VERSION = '2026-10-19.1';
-export const SUPPORTED_VERSIONS = new Set([LEGACY_VERSION, PREVIOUS_VERSION, DATA_VERSION]);
+export const SUPPORTED_VERSIONS = new Set([LEGACY_VERSION, PREVIOUS_VERSION, CURATED_VERSION, DATA_VERSION]);
 export const TIERS = {
   common: { name: 'En tierra', score: 10, color: '#a0a7ad', symbol: '●', emoji: '⬜', text: 'La primera que se nos viene a la cabeza. Hay mucho cielo por explorar.' },
   clever: { name: 'Falsa pista', score: 15, color: '#db927b', symbol: '✳', emoji: '🟧', text: 'Parece una elección rarísima… pero es la rareza de siempre. Selección editorial.' },
@@ -127,10 +130,41 @@ export function pickPrompts(categories, seed, pack = 'all', version = DATA_VERSI
   for (const [group, n] of [['everyday', 2], ['words', 2], ['spain', 2], ['nature', 1]]) result.push(...shuffled(pool.filter(c => c.pack === group), `${version}:${seed}:${group}`).slice(0, n));
   return shuffled(result, 'order:' + seed).map(c => c.id);
 }
-export function createRun(categories, { mode = 'daily', seed = madridDate(), pack = 'all', dataVersion = DATA_VERSION } = {}) {
-  const prompts = pickPrompts(categories, seed, pack, dataVersion);
+export function dailyMission(date) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !Number.isFinite(Date.parse(date + 'T12:00:00Z')) || new Date(date + 'T12:00:00Z').toISOString().slice(0, 10) !== date) throw new Error('Invalid mission date.');
+  const edition = DAILY_EDITIONS.findLast(e => e.from <= date) || DAILY_EDITIONS[0];
+  const pool = edition.pool.map(([id, pack]) => ({ id, pack, dataVersion: edition.version }));
+  return { dataVersion: edition.version, prompts: pickPrompts(pool, date, 'all', edition.version) };
+}
+export function createRun(categories, { mode = 'daily', seed = madridDate(), pack = 'all', dataVersion } = {}) {
+  const dated = ['daily', 'archive'].includes(mode) ? dailyMission(String(seed)) : null;
+  dataVersion ??= dated?.dataVersion || DATA_VERSION;
+  const prompts = dated && dataVersion === dated.dataVersion ? dated.prompts : pickPrompts(categories, seed, pack, dataVersion);
   if (prompts.length !== ROUNDS) throw new Error('A mission must have seven prompts.');
+  if (prompts.some(id => !categories.some(c => c.id === id && belongsToVersion(c, dataVersion)))) throw new Error('The daily edition is unavailable.');
   return { schema: 1, dataVersion, mode, seed: String(seed), pack, prompts, phase: 'intro', round: 0, results: [], deadline: null, draft: '', createdAt: Date.now() };
+}
+// Alternatives are revealed only after all seven daily rounds are completed.
+// Return canonical concepts, not aliases, and score using the category's rules.
+export function dailyDiscoveries(run, categories, limit = 3) {
+  if (run?.mode !== 'daily' || run.phase !== 'done' || !validateRun(run, categories)) return [];
+  const count = Math.max(1, Math.min(5, Number.isInteger(limit) ? limit : 3));
+  return run.results.map(result => {
+    const category = categories.find(c => c.id === result.prompt);
+    const seen = new Set();
+    const answers = [];
+    const compare = (a, b) => b.score - a.score || (a.key < b.key ? -1 : a.key > b.key ? 1 : 0);
+    for (const a of category.answers) {
+      const key = a.key || normalize(a.word);
+      if (seen.has(key)) continue;
+      seen.add(key);
+      const score = TIERS[tierFor(a, category)].score;
+      if (answers.length === count && (score < answers.at(-1).score || score === answers.at(-1).score && key >= answers.at(-1).key)) continue;
+      answers.push({ word: a.word, key, score, basis: a.basis || (category.metric === 'dictionary-es-2026' ? 'editorial-historical' : 'editorial-2026') });
+      answers.sort(compare); answers.length = Math.min(answers.length, count);
+    }
+    return { prompt: category.id, text: category.text, ownAnswer: result.answer || result.raw || '', ownScore: result.score, answers };
+  });
 }
 export function startRound(run, now = Date.now()) {
   if (!['intro', 'feedback'].includes(run.phase) || run.results.length >= ROUNDS) return run;
