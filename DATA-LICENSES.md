@@ -52,6 +52,16 @@ The imported source hash, URL and import date are included in `dist/data.json`. 
 
 Changes: parsed published integer population figures, added familiar Spanish and co-official place aliases, filtered category subsets, and derived rarity ranks. The exactness and reliability of the derived game scoring are the responsibility of Órbita, not the INE or BOE.
 
+## Clinical and thematic coverage · October 2026 revision
+
+**Ministerio de Sanidad, España:** [CIE-10-ES 6th edition, 2026, diagnostic reference table](https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/CIE10/2026/Diagnosticos_Tabla_Referencia_CIE10ES_2026.xlsx), linked from the [official classifications portal](https://www.sanidad.gob.es/estadEstudios/estadisticas/normalizacion/). The table credits its ICD-10-CM origin and Spanish translation. Órbita extracts factual condition names from selected diagnostic categories, excludes administrative and external-cause records, and adds editorial common-name aliases. It does not reproduce the manual, clinical definitions or coding advice. Classification membership is never presented as a familiarity statistic. Original source URL, diagnostic codes and source-file SHA-256 are retained in `content/imported-health-2026.json`.
+
+**US National Cancer Institute:** its [Spanish list of cancers by body location](https://www.cancer.gov/espanol/tipos/por-partes-cuerpo) was consulted to review common Spanish disease names. No US incidence statistics are used for game rarity.
+
+**Real Sociedad Española de Química:** the [periodic table](https://tablaperiodica.analesdequimica.es/) was consulted for official chemical symbols. Only the 118 confirmed elements are included; prospective elements displayed on educational tables are excluded. Symbols are aliases of existing elements, not extra canonical answers.
+
+Wikipedia contributors and the lexical sources credited above supply additional topic coverage. Candidate category pages do not automatically enter the game. Research sources are listed per question in `content/category-source-audit.json`; approved editorial vocabulary and alternative names are stored separately. The registry is maintenance data and is not a public in-game solution browser. Sources do not endorse Órbita or its scores.
+
 ## Fonts
 
 **DM Sans**, Colophon Foundry and its credited contributors, distributed under the SIL Open Font License 1.1. Font files are hosted locally. The complete license is at `dist/assets/DM-Sans-LICENSE.txt`. Downloaded from Google Fonts' official font service.

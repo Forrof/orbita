@@ -8,6 +8,14 @@ La cobertura no depende de aparecer en una lista de popularidad reciente. Las pr
 
 Revisión de cobertura del **20 de octubre de 2026**: se recorren todas las páginas de las categorías de Wikipedia mediante su [continuación oficial](https://www.mediawiki.org/wiki/API:Categorymembers), incluidas páginas intermedias sin resultados. Se amplían los países de procedencia, los años de obras culturales, las localidades y el vocabulario revisado. Esta revisión amplía las respuestas, sin cambiar los enunciados, las semillas de las misiones ni los periodos de las estadísticas. Las variantes flexionadas se aceptan cuando están documentadas; las formas femeninas automáticas se limitan a profesiones y gentilicios.
 
+La segunda revisión de cobertura del mismo día registra las fuentes de **cada una de las 56 preguntas** en `content/category-source-audit.json`. Añade denominaciones compuestas, nombres cooficiales y variantes españolas de lugares, nomenclatura clínica de la CIE-10-ES 2026 y los símbolos de los 118 elementos confirmados. Las listas acotadas y los registros públicos se revisan sin inventar nuevas entradas para aumentar el tamaño. Los datos del INE conservan su umbral de publicación de 20 residentes; los países incluyen los constituyentes del Reino Unido, de acuerdo con el alcance amplio del enunciado.
+
+## Cómo valida el juego de referencia
+
+La [FAQ pública de Krillion](https://krillion.io/faq) describe conjuntos finitos de respuestas que se agregan desde diccionarios, páginas y enciclopedias, se limpian y se completan con alias. La rareza depende de la pregunta: usa datos de familiaridad cuando es posible, o asistencia de modelos y revisión manual. Reconoce que pueden faltar respuestas válidas. Su [política de privacidad](https://krillion.io/privacy) indica que comprueba cada respuesta en su servidor. El código privado y las colecciones completas no se conocen; no se presupone un validador universal de IA en cada jugada.
+
+Órbita construye sus propios repertorios y los comprueba localmente para conservar el alojamiento estático en GitHub Pages. La validez se decide por pertenencia documentada al tema y alias revisados; la existencia de estadísticas es una cuestión independiente. Mover la comprobación a un servidor no ampliaría por sí solo la cobertura.
+
 ## Fuentes recientes verificadas en internet
 
 - **Wikimedia Analytics:** país ES, proyecto es.wikipedia, todos los accesos; 48 listas diarias del **1 de septiembre al 18 de octubre de 2026**. Tras filtrar espacios de nombres, hay 2.555 señales de artículos; solo se puntúa como estadística reciente con al menos tres días publicados. Se suman los valores redondeados `views_ceil`. Un día no publicado es desconocido, nunca cero. No son visitas completas, lectores únicos, reconocimiento ni elecciones de jugadores. [API oficial](https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/reference/page-views.html).
@@ -20,6 +28,12 @@ El usuario ha aceptado mantener cobertura amplia usando estimaciones editoriales
 SPALEX (Aguasvivas y colaboradores) aporta una referencia histórica del grupo nativo de España: `percent_nts` y `count_nts`, recogidos entre 2014 y 2017. No se mezclan las cohortes latinoamericanas. Se identifica la muestra; una flexión puede heredar la referencia del lema, que se indica en la respuesta. El reconocimiento de una forma escrita no mide todos sus significados.
 
 Los listados explícitos revisados de vocabulario viven en `content/`. Se descartó la ampliación automática por subárboles traducidos de WordNet, por introducir acepciones y nombres científicos que no encajaban. Wikipedia/Wikidata y GeoNames aportan cobertura de nombres y lugares. La población y los enlaces mundiales no se usan como estadísticas de familiaridad en España. Las listas no son exhaustivas y pueden faltar respuestas válidas.
+
+La CIE-10-ES de 2026 aporta categorías de diagnósticos y subcategorías generales de enfermedades, lesiones y síntomas. Se excluyen visitas, causas externas, estados administrativos, partos normales y rótulos inespecíficos. Se añaden variantes sin modificadores no esenciales entre paréntesis y sin siglas redundantes, siguiendo las convenciones de la clasificación. La terminología clínica no se usa como dato de popularidad ni la incidencia como reconocimiento. Los nombres comunes se revisan por separado.
+
+El vocabulario del léxico inicial documentado además en Spanish Data / Wiktionary puede validarse aunque no tenga encuesta SPALEX. En el diccionario actual recibe una estimación editorial identificada: se conserva la revisión temática cuando existe, se asignan bandas a voces habituales revisadas y se usa provisionalmente la banda editorial de 60 puntos para el resto sin medición. No se usan sus frecuencias panhispánicas para simular estadísticas de España. Las partidas antiguas mantienen su diccionario anterior.
+
+`scripts/import-topic-sources.py` recoge candidatos temáticos, pero no los aprueba automáticamente. Se revisan en `content/manual-topic-audit-20261020.json`; un artículo relacionado con un tema puede tratar una persona, un procedimiento o un evento que no responde al enunciado. El compilador comprueba las fuentes requeridas y conserva la procedencia y los hashes. El mínimo de 100 respuestas es un control de tamaño, no una garantía de exhaustividad.
 
 ## Puntuación
 

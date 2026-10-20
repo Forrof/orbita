@@ -1,6 +1,6 @@
 import { TIERS, ROUNDS, ANSWER_MS, DATA_VERSION, SUPPORTED_VERSIONS, madridDate, dateOffset, missionNumber, band, normalize, createRun, validateRun, startRound, finishRound, advanceClock, matchAnswer, totalScore, streaks } from './engine.js?v=3';
-import { buildCategories, PACKS } from './categories.js?v=3.3';
-import { sourcePanel } from './sources-panel.js?v=3.3';
+import { buildCategories, PACKS } from './categories.js?v=3.4';
+import { sourcePanel } from './sources-panel.js?v=3.4';
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const main = $('#main'), dialog = $('#modal');
@@ -328,7 +328,7 @@ window.addEventListener('storage', event => {
 
 async function init() {
   try {
-    const responses = await Promise.all([fetch('./data.json?v=3.3', { cache: 'no-cache' }), fetch('./repertory.json?v=3.3', { cache: 'no-cache' })]);
+    const responses = await Promise.all([fetch('./data.json?v=3.4', { cache: 'no-cache' }), fetch('./repertory.json?v=3.4', { cache: 'no-cache' })]);
     if (responses.some(response => !response.ok)) throw new Error('No se ha podido cargar el repertorio.');
     const [base, curated] = await Promise.all(responses.map(response => response.json()));
     if (base.version !== DATA_VERSION || curated.version !== DATA_VERSION) throw new Error('Actualización incompleta. Recarga la página.');

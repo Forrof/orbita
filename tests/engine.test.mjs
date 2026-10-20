@@ -278,6 +278,72 @@ test('additional coverage keeps semantic boundaries and independently attested v
     assert.ok(matchAnswer(word, category('q3-' + id), false).accepted, `${id}: ${word}`);
   }
 });
+
+test('prostate cancer and related compound diagnoses accept ordinary Spanish names without accents', () => {
+  const c = category('q3-health');
+  for (const word of ['cancer de prostata', 'CÁNCER DE PRÓSTATA', 'cáncer prostático', 'neoplasia maligna de próstata', 'cancer en la prostata', 'cancer prostata']) {
+    const result = matchAnswer(word, c, false);
+    assert.ok(result.accepted, word);
+    assert.equal(result.answer, 'cáncer de próstata');
+    assert.equal(result.score, 30);
+    assert.equal(result.basis, 'editorial-2026');
+    assert.equal(result.count, null); // Clinical classification is not a rarity statistic.
+  }
+  for (const word of ['cáncer de colon', 'cáncer de mama', 'cáncer de páncreas', 'diabetes tipo 2', 'diabetes gestacional', 'fractura de fémur', 'rotura de radio', 'esguince cervical', 'enfermedad renal crónica', 'trastorno por estrés postraumático', 'neuralgia del trigémino', 'intolerancia a la lactosa', 'infección de orina', 'trombosis venosa profunda']) {
+    assert.ok(matchAnswer(word, c, false).accepted, word);
+  }
+  assert.ok(c.answers.length > 6000);
+});
+
+test('medical research does not turn treatments, body parts or administrative encounters into illnesses', () => {
+  for (const word of ['quimioterapia', 'radioterapia', 'biopsia', 'mamografía', 'resonancia magnética', 'aspirina', 'cardiólogo', 'próstata', 'pulmón', 'consulta médica', 'alta médica', 'parto normal']) {
+    assert.equal(matchAnswer(word, category('q3-health'), false).accepted, false, word);
+  }
+});
+
+test('source-backed chemical symbols identify 118 existing elements, without hypothetical additions', () => {
+  assert.equal(category('q3-elements').answers.length, 118);
+  for (const [word, name] of [['Fe','hierro'],['Au','oro'],['Na','sodio'],['W','wolframio'],['Og','oganesón']]) {
+    const result = matchAnswer(word, category('q3-elements'), false);
+    assert.ok(result.accepted, word);
+    assert.equal(result.answer, name);
+  }
+  for (const word of ['Uue', 'Ubn', 'vibranium', 'unobtainium', 'fes']) assert.equal(matchAnswer(word, category('q3-elements'), false).accepted, false);
+});
+
+test('Spanish geographical names and co-official variants are accepted as the same answer', () => {
+  for (const [id, names] of [['cities', ['Londres','Fráncfort','Nueva York','Calcuta','El Cairo','Múnich','Pekín']], ['spanish-towns',['Lérida','Gerona','Orense','La Coruña','Fuenterrabía','Elx']], ['spanish-landscapes',['pico del Teide','pico Urriellu','río Ebro']]]) {
+    for (const word of names) assert.ok(matchAnswer(word, category('q3-' + id), false).accepted, `${id}: ${word}`);
+  }
+});
+
+test('international names also accept ordinary Latin transliterations used by Spanish players', () => {
+  for (const word of ['Martin Odegaard', 'Odegaard', 'Luka Modric', 'Haaland']) assert.ok(matchAnswer(word, category('q3-footballers'), false).accepted, word);
+});
+
+test('dictionary validity is independent of recognition measurement and cannot invent a survey', () => {
+  for (const word of ['investigación','completamente','responsabilidad','comportamiento','conmigo','metamorfosis']) {
+    const result = matchAnswer(word, category('q3-dictionary'), false);
+    assert.ok(result.accepted, word);
+    assert.equal(result.basis, 'editorial-2026');
+    assert.equal(result.count, null);
+  }
+  assert.equal(matchAnswer('zzzxpalabrainventada', category('q3-dictionary'), false).accepted, false);
+});
+
+test('all 56 questions have individually audited sources, including bounded public registers', async () => {
+  const audit = JSON.parse(await readFile(new URL('../content/category-source-audit.json', import.meta.url), 'utf8'));
+  assert.deepEqual(audit.questions.map(q => q.id), data.curated.questions.map(q => q.id));
+  for (const q of audit.questions) assert.ok(q.sources.length > 0 && q.sources.every(s => new URL(s).protocol === 'https:'), q.id);
+  assert.equal(audit.questions.find(q => q.id === 'q3-first-names').scope, 'published-register');
+  assert.equal(audit.questions.find(q => q.id === 'q3-elements').scope, 'bounded-list');
+});
+
+test('topic lists keep species, jobs and sporting roles in their intended questions', () => {
+  for (const [id, word] of [['fish','cachalote'],['birds','murciélago'],['plants','musgo de Islandia'],['jobs','ecología'],['sports','guardameta'],['instruments','campanólogo']]) {
+    assert.equal(matchAnswer(word, category('q3-' + id), false).accepted, false, `${id}: ${word}`);
+  }
+});
 test('absolute recognition levels keep equally common words equally common', () => {
   const c = { metric: 'recognition-es', gem: 'rare', clever: [], answers: [{ word: 'a', count: 100 }, { word: 'b', count: 100 }, { word: 'rare', count: 20 }] };
   assert.equal(tierFor(c.answers[0], c), 'common');

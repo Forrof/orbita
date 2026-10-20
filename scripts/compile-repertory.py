@@ -13,6 +13,7 @@ CACHE = ROOT / '.cache'
 sys.path.insert(0, str(CACHE / 'python-tools'))
 VERSION = '2026-10-19.3'
 TIER = {'common': 10, 'familiar': 30, 'rare': 60, 'deep': 85, 'gem': 100}
+LATIN_VARIANTS = str.maketrans({'ø': 'o', 'Ø': 'O', 'ł': 'l', 'Ł': 'L', 'đ': 'd', 'Đ': 'D', 'ð': 'd', 'Ð': 'D', 'þ': 'th', 'Þ': 'Th', 'æ': 'ae', 'Æ': 'Ae', 'œ': 'oe', 'Œ': 'Oe', 'ß': 'ss', 'ı': 'i'})
 
 def read(path):
     return json.loads(path.read_text(encoding='utf-8'))
@@ -101,11 +102,12 @@ def named_entries(kind):
             result.extend({**r, 'source': 'geonames'} for r in geonames[part])
         else:
             path = CACHE / f'v3-named-{part}.json'
-            if path.exists():
-                for row in read(path)['results']['bindings']:
-                    title = row['name']['value']
-                    simple = re.sub(r' \([^)]*\)$', '', title)
-                    result.append({'word': simple, 'aliases': [title] if title != simple else [], 'article': title, 'source': 'wikimedia-coverage'})
+            if not path.exists():
+                raise RuntimeError(f'Missing coverage source: {part}')
+            for row in read(path)['results']['bindings']:
+                title = row['name']['value']
+                simple = re.sub(r' \([^)]*\)$', '', title)
+                result.append({'word': simple, 'aliases': [title] if title != simple else [], 'article': title, 'source': 'wikimedia-coverage'})
     return result
 
 def build(spec):
@@ -120,6 +122,7 @@ def build(spec):
         if not norm(word) or re.search('[\u0400-\u04ff]', word):
             return
         variants = list(dict.fromkeys([word] + entry.get('aliases', [])))
+        variants = list(dict.fromkeys(variants + [v.translate(LATIN_VARIANTS) for v in variants]))
         keys = {norm(w) for w in variants if norm(w)}
         matched = list({id(aliases[k]): aliases[k] for k in keys if k in aliases}.values())
         row = matched[0] if matched else {'word': word, 'aliases': set(), 'priority': -1, 'source': entry.get('source', 'editorial')}
@@ -143,6 +146,9 @@ def build(spec):
             aliases[key] = row
     # Ontology roots in the specification are research notes, not an approval rule.
     # Only explicit reviewed Spanish vocabulary is admitted, never whole translated subtrees.
+    if identity == 'health':
+        for entry in read(ROOT / 'content/imported-health-2026.json')['entries']:
+            add(entry, score=entry['score'], priority=0)
     for seed in seed_names:
         if seed not in seeds:
             raise RuntimeError(f'Missing seed pool: {seed}')
@@ -169,7 +175,13 @@ def build(spec):
     for row in records:
         word = row['word']
         if not is_named:
-            forms = noun_forms.get(norm(word), set()) | attested_variants(word, identity in ('jobs', 'demonym'))
+            forms = set()
+            # A preferred label may change after synonym merging. Retain attested
+            # inflections of all lexical names, but never inflect symbols like Fe.
+            for label in {word, *row['aliases']}:
+                if label.islower():
+                    forms.update(noun_forms.get(norm(label), set()))
+                    forms.update(attested_variants(label, identity in ('jobs', 'demonym')))
             for form in forms:
                 if norm(form) not in aliases or aliases[norm(form)] is row:
                     row['aliases'].add(form)
@@ -253,16 +265,32 @@ for question in compiled:
                 supplement[key] = [word, [], answer[2], answer[3], answer[4], answer[5], answer[6]]
 for question in compiled:
     if question.get('dictionary'):
+        documented = read(ROOT / 'content/imported-dictionary-coverage.json')
+        dict_spec = next(s for s in questions if s[0] == 'dictionary')
+        editorial = {}
+        for pool in dict_spec[5]:
+            for tier, terms in manual[pool].items():
+                editorial.update({norm(term): TIER[tier] for term in terms.split('|')})
+        for word in documented['words']:
+            key = norm(word)
+            if key not in dictionary_keys and key not in supplement:
+                supplement[key] = [word, [], editorial.get(key, 60), 'editorial-2026', None, None, None]
+            elif key in supplement and key in editorial:
+                supplement[key][2:4] = [editorial[key], 'editorial-2026']
         question['additions'] = sorted(supplement.values(), key=lambda a: norm(a[0]))
 
 manifests = []
-for file in ['v3-source-manifest.json', 'v3-coverage-manifest.json', 'v3-clubs-manifest.json']:
+for file in ['v3-source-manifest.json', 'v3-coverage-manifest.json', 'v3-clubs-manifest.json', 'v3-topics-manifest.json']:
     path = CACHE / file
     if path.exists():
         manifests.extend(read(path))
 for name in ['ine-nombres.xlsx', 'ine-apellidos.xls', 'current-interest-2026.json', 'v3-named-footballers.json', 'v3-geonames.json']:
     path = CACHE / name
     manifests.append({'file': name, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()})
+for path in sorted((ROOT / 'content').glob('*.json')):
+    if path.name.startswith(('manual-', 'imported-')) or path.name in ('aliases.json', 'category-source-audit.json'):
+        manifests.append({'file': 'content/' + path.name, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(), 'role': 'Coverage and editorial review; not a rarity measurement'})
 bank = {'version': VERSION, 'checked': '2026-10-20', 'minimumAnswers': 100, 'interestPeriod': current['period'], 'ine': {'reference': '2025-01-01', 'published': '2026-04-23', 'nameUrl': 'https://www.ine.es/daco/daco42/nombyapel/nombres_por_edad_media.xlsx', 'surnameUrl': 'https://www.ine.es/daco/daco42/nombyapel/apellidos_frecuencia.xls', 'nameRows': 'Frecuencia de nombres, suma de ambos sexos cuando coinciden', 'surnameRows': 'Frecuencia como primer apellido'}, 'sourceManifest': manifests, 'countryDailyHashes': current['hashes'], 'questions': compiled}
+bank['coverageRevision'] = '2026-10-20.2'
 (ROOT / 'dist/repertory.json').write_text(json.dumps(bank, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
 print(f'Compiled {len(compiled)} different questions with at least 100 distinct answers each.')

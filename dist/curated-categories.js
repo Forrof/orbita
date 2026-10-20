@@ -11,11 +11,12 @@ export function buildCuratedCategories(data, previous) {
     ...(history ? { historicalRecognition: history[0], historicalSample: history[1] } : {})
   });
   const categories = bank.questions.map(q => {
+    const hint = q.id === 'q3-elements' ? 'Se aceptan los nombres y símbolos oficiales de los 118 elementos confirmados.' : ['q3-first-names', 'q3-surnames'].includes(q.id) ? 'Se admiten los registros publicados por el INE, con 20 o más residentes, y sus variantes ortográficas.' : q.hint;
     const answers = q.dictionary ? [...dictionary.answers, ...(q.additions || []).map(a => ({ ...decode(a), revised: true }))] : q.answers.map(decode);
     if (new Set(answers.map(a => a.key)).size < 100) throw new Error(`Menos de 100 respuestas: ${q.id}`);
     const gem = answers.find(a => (q.dictionary ? recognitionBand(a.count) : a.scoreTier) === 'gem');
     if (!gem) throw new Error(`Sin respuestas de 100 puntos: ${q.id}`);
-    return { id: q.id, pack: q.pack, text: q.text, hint: q.hint, answers, gem: gem.word, clever: [],
+    return { id: q.id, pack: q.pack, text: q.text, hint, answers, gem: gem.word, clever: [],
       metric: q.dictionary ? 'dictionary-es-2026' : 'curated-es', dataVersion: DATA_VERSION, legacy: false,
       source: `Edición revisada el ${reviewed}. Datos españoles recientes cuando existen; las estimaciones editoriales y las referencias históricas se identifican en cada respuesta.` };
   });

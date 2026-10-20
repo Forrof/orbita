@@ -30,6 +30,23 @@ CATEGORIES = {
  'directors': ['Directores de cine de Estados Unidos', 'Directores de cine de España', 'Directores de cine de Francia', 'Directores de cine de Reino Unido', 'Directores de cine de Italia'],
 }
 
+# Additional topic coverage. These lists supply membership, never rarity.
+CATEGORIES['actors'] += [f'{gender} de cine de {country}' for country in ['Alemania', 'Brasil', 'China', 'Chile', 'Colombia'] for gender in ['Actores', 'Actrices']]
+CATEGORIES['musicians'] += ['Cantantes de Chile', 'Cantantes de Colombia', 'Cantantes de Puerto Rico', 'Cantautores de España', 'Cantantes femeninas de Reino Unido', 'Cantantes masculinos de Reino Unido']
+CATEGORIES['bands'] += ['Grupos de pop de España', 'Grupos de rock de Argentina', 'Grupos de rock de México', 'Grupos de música de Corea del Sur']
+CATEGORIES['spanish-artists'] += ['Actrices de cine de España', 'Escritores de España del siglo XXI', 'Pintoras de España', 'Cantautoras de España']
+CATEGORIES['directors'] += ['Directores de cine de Alemania', 'Directores de cine de Japón', 'Directores de cine de Corea del Sur', 'Directores de cine de Argentina', 'Directoras de cine de España']
+CATEGORIES['scientists'] += ['Científicas de España', 'Biólogas', 'Físicas', 'Químicas', 'Astrónomas', 'Matemáticas', 'Premios Nobel de Física', 'Premios Nobel de Química', 'Premios Nobel de Fisiología o Medicina']
+CATEGORIES['writers'] += ['Escritores de España del siglo XXI', 'Escritores de Chile del siglo XX', 'Escritores de Colombia del siglo XX', 'Escritoras de México', 'Escritoras de Argentina', 'Escritoras de Reino Unido']
+CATEGORIES['footballers'] = [f'Futbolistas de la selección {gender}de fútbol de {country}' for country in ['España', 'Argentina', 'Brasil', 'Inglaterra', 'Francia', 'Alemania', 'Italia', 'Portugal', 'Países Bajos'] for gender in ['', 'femenina ']]
+CATEGORIES['spanish-clubs'] += [f'Equipos de fútbol de la provincia de {province}' for province in ['Madrid', 'Barcelona', 'Valencia', 'Sevilla', 'Cádiz', 'Málaga', 'Alicante', 'Zaragoza', 'Pontevedra', 'La Coruña']]
+CATEGORIES['clubs'] += ['Equipos de fútbol de Londres', 'Equipos de fútbol de Buenos Aires', 'Equipos de fútbol de São Paulo', 'Equipos de fútbol de Lisboa', 'Equipos de fútbol de Roma', 'Equipos de fútbol de París']
+CATEGORIES['films'] += [f'Películas de {year}' for year in [1939, 1940, 1954, 1957, 1960, 1968, 1975, 1976, 1980, 1982, 1985, 1989, 1990, 1993, 1995, 1996, 1998, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009]]
+CATEGORIES['series'] += [f'Series de televisión iniciadas en {year}' for year in [1989, 1993, 1995, 1997, 1998, 1999, 2001, 2002, 2003, 2004, 2006, 2007, 2008, 2009]]
+CATEGORIES['books'] += [f'Novelas de {year}' for year in [1813, 1818, 1847, 1851, 1862, 1865, 1866, 1869, 1883, 1886, 1891, 1897, 1925, 1937, 1943, 1949, 1954, 1967, 1984, 1997, 2001, 2003, 2007, 2008, 2009]]
+CATEGORIES['characters'] += ['Personajes de Disney', 'Personajes de Pixar', 'Personajes de One Piece', 'Personajes de Naruto', 'Personajes de Pokémon', 'Personajes de Juego de tronos']
+CATEGORIES['videogames'] += [f'Videojuegos de {year}' for year in [1980, 1981, 1982, 1983, 1984, 1987, 1988, 1989, 1991, 1992, 1993, 1994, 1996, 1997, 1998, 1999, 2002, 2003, 2006, 2007]]
+
 def category_members(title):
     params = {'action': 'query', 'format': 'json', 'list': 'categorymembers', 'cmtitle': 'Categoría:' + title, 'cmlimit': '500', 'cmnamespace': '0'}
     import hashlib

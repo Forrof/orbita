@@ -9,7 +9,8 @@
     ],
     [
       "transport",
-      "review-transport"
+      "review-transport",
+      "audit-transport"
     ]
   ],
   [
@@ -24,7 +25,8 @@
     ],
     [
       "ingredients",
-      "review-market"
+      "review-market",
+      "audit-market"
     ]
   ],
   [
@@ -38,7 +40,8 @@
     ],
     [
       "dishes",
-      "review-menu"
+      "review-menu",
+      "audit-menu"
     ]
   ],
   [
@@ -51,7 +54,8 @@
     ],
     [
       "kitchen",
-      "review-kitchen"
+      "review-kitchen",
+      "audit-kitchen"
     ]
   ],
   [
@@ -62,7 +66,8 @@
     [],
     [
       "home",
-      "review-home"
+      "review-home",
+      "audit-home"
     ]
   ],
   [
@@ -75,7 +80,8 @@
     ],
     [
       "sports",
-      "review-sports"
+      "review-sports",
+      "audit-sports"
     ]
   ],
   [
@@ -88,7 +94,8 @@
     ],
     [
       "drinks",
-      "review-drinks"
+      "review-drinks",
+      "audit-drinks"
     ]
   ],
   [
@@ -99,7 +106,8 @@
     [],
     [
       "desserts",
-      "review-desserts"
+      "review-desserts",
+      "audit-desserts"
     ]
   ],
   [
@@ -111,7 +119,8 @@
       "mammals"
     ],
     [
-      "review-mammals"
+      "review-mammals",
+      "audit-mammals"
     ]
   ],
   [
@@ -124,7 +133,8 @@
     ],
     [
       "birds-reviewed",
-      "review-birds"
+      "review-birds",
+      "audit-birds"
     ]
   ],
   [
@@ -137,7 +147,8 @@
     ],
     [
       "fish-reviewed",
-      "review-fish"
+      "review-fish",
+      "audit-fish"
     ]
   ],
   [
@@ -150,7 +161,8 @@
     ],
     [
       "invertebrates-reviewed",
-      "review-invertebrates"
+      "review-invertebrates",
+      "audit-invertebrates"
     ]
   ],
   [
@@ -163,7 +175,8 @@
     ],
     [
       "reptiles",
-      "review-reptiles"
+      "review-reptiles",
+      "audit-reptiles"
     ]
   ],
   [
@@ -178,7 +191,8 @@
     [
       "review-plants",
       "trees-reviewed",
-      "patch-plants"
+      "patch-plants",
+      "audit-plants"
     ]
   ],
   [
@@ -191,7 +205,8 @@
     ],
     [
       "phenomena",
-      "review-phenomena"
+      "review-phenomena",
+      "audit-phenomena"
     ]
   ],
   [
@@ -203,7 +218,8 @@
       "trees"
     ],
     [
-      "trees-reviewed"
+      "trees-reviewed",
+      "audit-trees"
     ]
   ],
   [
@@ -215,7 +231,8 @@
       "jobs"
     ],
     [
-      "review-jobs"
+      "review-jobs",
+      "audit-jobs"
     ]
   ],
   [
@@ -226,7 +243,8 @@
     [],
     [
       "clothing",
-      "review-wardrobe"
+      "review-wardrobe",
+      "audit-wardrobe"
     ]
   ],
   [
@@ -239,7 +257,8 @@
     ],
     [
       "instruments",
-      "review-instruments"
+      "review-instruments",
+      "audit-instruments"
     ]
   ],
   [
@@ -250,7 +269,8 @@
     [],
     [
       "tools",
-      "review-tools"
+      "review-tools",
+      "audit-tools"
     ]
   ],
   [
@@ -261,7 +281,8 @@
     [],
     [
       "feelings",
-      "review-feelings"
+      "review-feelings",
+      "audit-feelings"
     ]
   ],
   [
@@ -272,7 +293,8 @@
     [],
     [
       "containers-reviewed",
-      "review-containers"
+      "review-containers",
+      "audit-containers"
     ]
   ],
   [
@@ -281,7 +303,9 @@
     "Sorprende al diccionario: escribe una palabra del español.",
     [],
     [],
-    [],
+    [
+      "audit-dictionary"
+    ],
     "dictionary"
   ],
   [
@@ -293,7 +317,8 @@
     [
       "sports-equipment",
       "review-sports-equipment",
-      "patch-sports-equipment"
+      "patch-sports-equipment",
+      "audit-sports-equipment"
     ]
   ],
   [
@@ -327,7 +352,8 @@
       "food"
     ],
     [
-      "spanish-food"
+      "spanish-food",
+      "audit-spanish-food"
     ]
   ],
   [
@@ -355,7 +381,8 @@
     [],
     [],
     [
-      "spanish-geography"
+      "spanish-geography",
+      "audit-spanish-landscapes"
     ],
     "spanish-geography"
   ],
@@ -377,7 +404,8 @@
     [],
     [],
     [
-      "demonym"
+      "demonym",
+      "audit-demonym"
     ]
   ],
   [
@@ -400,7 +428,8 @@
     [],
     [
       "math",
-      "review-math"
+      "review-math",
+      "audit-math"
     ]
   ],
   [
@@ -413,7 +442,8 @@
       "topic-organs"
     ],
     [
-      "review-anatomy"
+      "review-anatomy",
+      "audit-anatomy"
     ]
   ],
   [
@@ -427,7 +457,8 @@
     [
       "materials-reviewed",
       "review-materials",
-      "elements"
+      "elements",
+      "audit-materials"
     ]
   ],
   [
@@ -440,7 +471,8 @@
     ],
     [
       "inventions",
-      "review-inventions"
+      "review-inventions",
+      "audit-inventions"
     ]
   ],
   [
@@ -452,7 +484,8 @@
       "topic-sciences"
     ],
     [
-      "disciplines-reviewed"
+      "disciplines-reviewed",
+      "audit-disciplines"
     ]
   ],
   [
@@ -463,7 +496,8 @@
     [],
     [
       "health",
-      "review-health"
+      "review-health",
+      "audit-health"
     ]
   ],
   [
@@ -476,7 +510,8 @@
     ],
     [
       "astronomy",
-      "review-astronomy"
+      "review-astronomy",
+      "audit-astronomy"
     ]
   ],
   [
@@ -534,7 +569,8 @@
     [],
     [],
     [
-      "books"
+      "books",
+      "audit-books"
     ],
     "books"
   ],
@@ -545,7 +581,8 @@
     [],
     [],
     [
-      "characters"
+      "characters",
+      "audit-characters"
     ],
     "characters"
   ],
@@ -580,7 +617,8 @@
     [],
     [
       "footballers",
-      "review-footballers"
+      "review-footballers",
+      "audit-footballers"
     ],
     "footballers"
   ],
@@ -605,7 +643,8 @@
       "countries"
     ],
     [
-      "countries"
+      "countries",
+      "audit-countries"
     ]
   ],
   [
@@ -627,7 +666,8 @@
     [],
     [
       "geography",
-      "review-geography"
+      "review-geography",
+      "audit-geography"
     ],
     "geography"
   ],
@@ -638,7 +678,8 @@
     [],
     [],
     [
-      "scientists"
+      "scientists",
+      "audit-scientists"
     ],
     "scientists"
   ],
@@ -660,7 +701,8 @@
     [],
     [],
     [
-      "brands"
+      "brands",
+      "audit-brands"
     ]
   ]
 ]

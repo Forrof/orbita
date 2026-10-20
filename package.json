@@ -9,7 +9,7 @@
     "dev": "node server.mjs",
     "test": "node --test tests/*.test.mjs",
     "pages:build": "node scripts/build-pages.mjs",
-    "data:refresh": "python scripts/import-repertory-sources.py && python scripts/import-coverage.py && node scripts/import-current-interest.mjs && python scripts/compile-repertory.py && node scripts/finalize-repertory.mjs"
+    "data:refresh": "python scripts/import-repertory-sources.py && python scripts/import-coverage.py && python scripts/import-topic-sources.py && node scripts/import-current-interest.mjs && python scripts/compile-repertory.py && node scripts/finalize-repertory.mjs"
   },
   "engines": { "node": ">=22" }
 }
